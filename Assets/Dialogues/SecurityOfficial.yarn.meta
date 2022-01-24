@@ -1,0 +1,47 @@
+fileFormatVersion: 2
+guid: 74ac321027654af4b87d70ff321efe10
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - SecurityOfficial-SecurityOfficial.Start-0
+  - SecurityOfficial-SecurityOfficial.Start-1
+  - SecurityOfficial-SecurityOfficial.Start-2
+  - SecurityOfficial-SecurityOfficial.Start-3
+  - SecurityOfficial-SecurityOfficial.Start-4
+  - SecurityOfficial-SecurityOfficial.Who-5
+  - SecurityOfficial-SecurityOfficial.Who-6
+  - SecurityOfficial-SecurityOfficial.Who-7
+  - SecurityOfficial-SecurityOfficial.Oldman-8
+  - SecurityOfficial-SecurityOfficial.Oldman-9
+  - SecurityOfficial-SecurityOfficial.Oldman-10
+  - SecurityOfficial-SecurityOfficial.Tramp-11
+  - SecurityOfficial-SecurityOfficial.Tramp-12
+  - SecurityOfficial-SecurityOfficial.Tramp-13
+  - SecurityOfficial-SecurityOfficial.Tramp-14
+  - SecurityOfficial-SecurityOfficial.Tramp-15
+  - SecurityOfficial-SecurityOfficial.NewGuy-16
+  - SecurityOfficial-SecurityOfficial.NewGuy-17
+  - SecurityOfficial-SecurityOfficial.NewGuy-18
+  - SecurityOfficial-SecurityOfficial.NewGuy-19
+  - SecurityOfficial-SecurityOfficial.NewGuy-20
+  - SecurityOfficial-SecurityOfficial.NewGuy-21
+  - SecurityOfficial-SecurityOfficial.NewGuy-22
+  - SecurityOfficial-SecurityOfficial.NewGuy-23
+  - SecurityOfficial-SecurityOfficial.NewGuy-24
+  - SecurityOfficial-SecurityOfficial.NewGuy-25
+  - SecurityOfficial-SecurityOfficial.NewGuy-26
+  - SecurityOfficial-SecurityOfficial.NewGuy-27
+  - SecurityOfficial-SecurityOfficial.Veteran-28
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 74ac321027654af4b87d70ff321efe10,
+    type: 3}
+  localizations: []

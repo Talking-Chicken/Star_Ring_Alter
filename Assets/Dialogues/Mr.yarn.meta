@@ -1,0 +1,60 @@
+fileFormatVersion: 2
+guid: 4ed709906161e094ba3ee323b9d67f5e
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: 
+  stringIDs:
+  - Mr-MrRabbit.Fourth_Loop-0
+  - Mr-MrRabbit.Third_Loop-1
+  - Mr-MrRabbit.Third_Loop-2
+  - Mr-MrRabbit.Third_Loop-3
+  - Mr-MrRabbit.Third_Loop-4
+  - Mr-MrRabbit.Third_Loop-5
+  - Mr-MrRabbit.Third_Loop-6
+  - Mr-MrRabbit.Third_Loop-7
+  - Mr-MrRabbit.Third_Loop-8
+  - Mr-MrRabbit.Third_Loop-9
+  - Mr-MrRabbit.Second_Loop-10
+  - Mr-MrRabbit.Second_Loop-11
+  - Mr-MrRabbit.Second_Loop-12
+  - Mr-MrRabbit.Second_Loop-13
+  - Mr-MrRabbit.Second_Loop-14
+  - Mr-MrRabbit.Second_Loop-15
+  - Mr-MrRabbit.Second_Loop-16
+  - Mr-MrRabbit.Second_Loop-17
+  - Mr-MrRabbit.Second_Loop-18
+  - Mr-MrRabbit.Second_Loop-19
+  - Mr-MrRabbit.Second_Loop-20
+  - Mr-MrRabbit.Second_Loop-21
+  - Mr-MrRabbit.Second_Loop-22
+  - Mr-MrRabbit.First_Loop-23
+  - Mr-MrRabbit.First_Loop-24
+  - Mr-MrRabbit.First_Loop-25
+  - Mr-MrRabbit.First_Loop-26
+  - Mr-MrRabbit.First_Loop-27
+  - Mr-MrRabbit.First_Loop-28
+  - Mr-MrRabbit.First_Loop-29
+  - Mr-MrRabbit.First_Loop-30
+  - Mr-MrRabbit.First_Loop-31
+  - Mr-MrRabbit.First_Loop-32
+  - Mr-MrRabbit.First_Loop-33
+  - Mr-MrRabbit.First_Loop-34
+  - Mr-MrRabbit.First_Loop-35
+  - Mr-MrRabbit.First_Loop-36
+  - Mr-MrRabbit.First_Loop-37
+  - Mr-MrRabbit.Neuro_Adjuster_Indtroduction-38
+  - Mr-MrRabbit.Neuro_Adjuster_Indtroduction-39
+  - Mr-MrRabbit.Neuro_Adjuster_Indtroduction-40
+  - Mr-MrRabbit.Neuro_Adjuster_Indtroduction-41
+  - Mr-MrRabbit.Neuro_Adjuster_Indtroduction-42
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []

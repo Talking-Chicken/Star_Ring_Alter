@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d96017e05fdcc914e81fd646c033b4e8
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Bob-Bob.Start-0
+  - Bob-Bob.Start-1
+  - Bob-Bob.Start-2
+  - Bob-Bob.Start-3
+  - Bob-Bob.Start-4
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: d96017e05fdcc914e81fd646c033b4e8,
+    type: 3}
+  localizations: []

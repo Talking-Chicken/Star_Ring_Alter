@@ -1,0 +1,74 @@
+title: Les.Start
+tags: 
+colorID: 0
+position: 1004,72
+---
+Les: 123123123123123
+Les: kjdhfgrjkl sdfji qwe qw rto u
+
+[[really good|Les.Tech]]
+[[isnt is dangerous~|Les.Danger]]
+===
+title: Les.Tech
+tags: 
+colorID: 0
+position: 775,341
+---
+Player: really
+Les: yo the fuck i;ll check how this is the fucking : serious long bored reasonable sentence that can deal with a dam fucking goood of rapidly wrapp-ed up identities.
+Les: MMM.rabbit
+[[Les.Cash_Register]]
+===
+title: Les.Danger
+tags: 
+colorID: 0
+position: 1316,323
+---
+Player: it's easy and asimple and fabulous, all the perfect things that i can describe with a genious description person as a fucking coolest doom!
+Les: BNope
+
+<<if visitCount() > 2>>
+    [[Les.@]]
+<<elseif visitCount() > 1>>
+    [[Les.FG]]
+<<else>>
+    [[Les.Cash_Register]]
+<<endif>>
+===
+title: Les.Cash_Register
+tags: 
+colorID: 0
+position: 1036,737
+---
+Les: alright i really want to play some tabletops that I can spare my time to fight  those useless monsters that chasint me chasing me all ways.
+Player: keep talking dude, really good ,!!
+Les: aefghgggshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh.
+Les: ok im, losing my mind, i dont know hwat im talkingh a bout;
+Les: right thous
+Les: nah.
+
+[[Les.Begin_Work]]
+===
+title: Les.Begin_Work
+tags: 
+colorID: 0
+position: 1041,990
+---
+Les: alright, visitors are here, go do your fucking jobs, and don't let me catch u sleeping
+Les：wow.
+===
+title: Les.@
+tags: 
+colorID: 0
+position: 1415,678
+---
+Les: i'm in danger
+Les: hahahahahahahaha
+===
+title: Les.FG
+tags: 
+colorID: 0
+position: 1661,697
+---
+Les: that's the third time u speak to me, i see how u love me so much
+===

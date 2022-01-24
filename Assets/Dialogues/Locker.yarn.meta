@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 2e6fcd6d20967314ba18a7d138a75cd2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Locker-Locker_Start-0
+  - Locker-Locker_Start-1
+  - Locker-Locker_Start-2
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {fileID: 7128917941130120860, guid: 2e6fcd6d20967314ba18a7d138a75cd2,
+    type: 3}
+  localizations: []

@@ -1,0 +1,68 @@
+fileFormatVersion: 2
+guid: 34322fd6caf086b42895ac25b437bc5a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - MrRabbit-MrRabbit.Fourth_Loop-0
+  - MrRabbit-MrRabbit.Third_Loop-1
+  - MrRabbit-MrRabbit.Third_Loop-2
+  - MrRabbit-MrRabbit.Third_Loop-3
+  - MrRabbit-MrRabbit.Third_Loop-4
+  - MrRabbit-MrRabbit.Third_Loop-5
+  - MrRabbit-MrRabbit.Third_Loop-6
+  - MrRabbit-MrRabbit.Third_Loop-7
+  - MrRabbit-MrRabbit.Third_Loop-8
+  - MrRabbit-MrRabbit.Third_Loop-9
+  - MrRabbit-MrRabbit.Second_Loop-10
+  - MrRabbit-MrRabbit.Second_Loop-11
+  - MrRabbit-MrRabbit.Second_Loop-12
+  - MrRabbit-MrRabbit.Second_Loop-13
+  - MrRabbit-MrRabbit.Second_Loop-14
+  - MrRabbit-MrRabbit.Second_Loop-15
+  - MrRabbit-MrRabbit.Second_Loop-16
+  - MrRabbit-MrRabbit.Second_Loop-17
+  - MrRabbit-MrRabbit.Second_Loop-18
+  - MrRabbit-MrRabbit.Second_Loop-19
+  - MrRabbit-MrRabbit.Second_Loop-20
+  - MrRabbit-MrRabbit.Second_Loop-21
+  - MrRabbit-MrRabbit.Second_Loop-22
+  - MrRabbit-MrRabbit.First_Loop-23
+  - MrRabbit-MrRabbit.First_Loop-24
+  - MrRabbit-MrRabbit.First_Loop-25
+  - MrRabbit-MrRabbit.First_Loop-26
+  - MrRabbit-MrRabbit.First_Loop-27
+  - MrRabbit-MrRabbit.First_Loop-28
+  - MrRabbit-MrRabbit.First_Loop-29
+  - MrRabbit-MrRabbit.First_Loop-30
+  - MrRabbit-MrRabbit.First_Loop-31
+  - MrRabbit-MrRabbit.First_Loop-32
+  - MrRabbit-MrRabbit.First_Loop-33
+  - MrRabbit-MrRabbit.First_Loop-34
+  - MrRabbit-MrRabbit.First_Loop-35
+  - MrRabbit-MrRabbit.First_Loop-36
+  - MrRabbit-MrRabbit.First_Loop-37
+  - MrRabbit-MrRabbit.Neuro_Adjuster_Indtroduction-38
+  - MrRabbit-MrRabbit.Neuro_Adjuster_Indtroduction-39
+  - MrRabbit-MrRabbit.Neuro_Adjuster_Indtroduction-40
+  - MrRabbit-MrRabbit.Neuro_Adjuster_Indtroduction-41
+  - MrRabbit-MrRabbit.Neuro_Adjuster_Indtroduction-42
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 'Error on line 85 at position 1:
+
+    mismatched input
+    ''==='' expecting COMMAND_START
+
+    ===
+
+    ^^^'
+  baseLanguage: {fileID: 7128917941130120860, guid: 34322fd6caf086b42895ac25b437bc5a,
+    type: 3}
+  localizations: []

@@ -1,0 +1,97 @@
+title: MrRabbit_Amo's_Room_Start
+tags: 
+colorID: 0
+position: 266,391
+---
+<<if visitCount() > 3>>
+    [[MrRabbit.Fourth_Loop]]
+<<elseif visitCount() > 2>>
+    [[MrRabbit.Third_Loop]]
+<<elseif visitCount() > 1>>
+    [[MrRabbit.Second_Loop]]
+<<else>>
+    [[MrRabbit.First_Loop]]
+<<endif>>
+===
+title: MrRabbit.Fourth_Loop
+tags: 
+colorID: 0
+position: -191,759
+---
+Mr. Rabbit: Another loop, another start.
+===
+title: MrRabbit.Third_Loop
+tags: 
+colorID: 0
+position: 107,752
+---
+Amo: Guess we are not quick enough. At least we made some progress in the last loop. We should check that elevator again.
+Mr. Rabbit: Amo, I am actually quite surprised that you get used to what happened **today** so soon.  I mean you indeed screamed a lot in the first few loops. But you somehow keep up with this crazy world. 
+Amo: Actually, I read lots of sci-fi novels when I was in Autumn-8. They still keep some physical copies of books for people who cannot access the digital domain, people like me. And I daydream about what I would do if I were in the situation of those protagonists from time to time.
+Mr. Rabbit: Is Autumn-8 the re-education camp you were at before you became an intern at this convenience store?
+Amo: yup, basically anyone in my district who cannot use Neural Implant, whether it is due to brain injury or implant rejection syndrome, will be assigned to that re-education camp.
+Mr. Rabbit: How long do they have to stay there?
+Amo: Until they can integrate into modern society. Every camper I knew was in a different situation. I had good luck and was offered a job in this store after three months there, while my roommate, who also had rejection syndrome, was there for 6 years. She was still volunteering at the camp until I left Autumn-8.
+Mr. Rabbit: Hey, Amo, it is good to have you here. I don’t know why our store selects you as the intern, but at least you can have a fresh start and you totally deserve it.
+Amo: Thanks rabbit, but to be honest, I don’t think being trapped in a time loop is a better situation than my re-education camp time.
+===
+title: MrRabbit.Second_Loop
+tags: 
+colorID: 0
+position: 393,753
+---
+Amo: Damn, another loop. We were so close last time.
+Mr. Rabbit: Hey Amo, I have some good news for you. Thanks to your action. I have been able to record most of the digital files you have found.
+Amo: What do you mean?
+Mr. Rabbit: I was designed to be the hub of Star Ring convenience store. Like how I connected to you through your Neural Implant, I could have been able to access every device inside the store. However, my installment process was not complete yet, therefore I cannot open every door in store for you.
+Mr. Rabbit: But as for every access card or files you found, I can record their security code for you. This way, you can keep some progress in your exploration between the loops.
+Amo: So we don’t have to start over every time loop? Rabbit, that is incredible work!
+Mr. Rabbit: Only the digital files, like the access card, logs, or password you found. Everything physical will still be reset when the time loop is triggered. 
+Amo: Speaking of which, I can retain my memory in the loop because you helped me back up, Bunny?
+Mr. Rabbit: Don’t call me Bunny. And no. I didn’t do anything. It appears you and I are the only two individuals who can keep their memory between loops. If we want to figure out what this time loop is, then how we preserve our memories between loops will be a question we cannot avoid.
+Amo: Could this have anything to do with my neural implant? You know I have implant rejection syndrome. I can only use this backpack-sized external implant. Could this new type of implant be the reason for my memory preservation?
+Mr. Rabbit: Nay, I don’t think so. Except it is external, the extracorporeal wearable neural implant is functionally and structurally identical to other neural implants made by Rabbit Heavy Industry. However, now you mentioned it. It is quite odd that they have just developed an external version of Neural Implant. 
+Mr. Rabbit: Usually implants have an external model first and then an internal one. How come it is the reversed order here in the case of neural implants.
+Amo: I don't know hey, but if Rabbit Heavy Industries hadn't sponsored me with this new implant, I'd probably still be in that re-education camp.
+===
+title: MrRabbit.First_Loop
+tags: 
+colorID: 0
+position: 673,745
+---
+Amo: No, not again, we are still here, how come we are still returned to this place even if we are out of the Core City.
+Mr. Rabbit: 17th.
+Amo: What?
+Mr. Rabbit: This is the 17th time we have experienced the so-called “Time Loop” phenomenon. Last time we tried to escape this city by train, but sadly, it seems that we simply cannot reach tomorrow.
+Mr. Rabbit: Whenever the hand on the clock crosses 12 o'clock, we return to this same place where we were at 7 pm. Return to this empty convenience store.
+Amo: I am getting tired of this. What should we do this time? Jumping from the roof of this convenience store and slamming us into a meat pile? Oh, I forgot, If I do that, only I will die, and you and your mainframe will remain intact.
+Mr. Rabbit: Hey, being an AI is not by choice, alright? And like you said, I am trapped in my mainframe. If you can link me with more devices within the store, I could be more beneficial to you.
+Mr. Rabbit: As for what we should do in this loop, I advise we check the rooftop. We are not killing ourselves, of course. No one can guarantee that the time loop will also be triggered this time. It would be pretty ironic if time starts to move forward again right after you end your life.
+Amo: So, what is on the rooftop?
+Mr. Rabbit: I am connected to a network of sensors throughout this convenience store. And I just realized that each time the time loop phenomenon triggered, the sensors from the rooftop were the first to lose their signal.
+Amo: So, whatever is causing the time loop, is on the rooftop?
+Mr. Rabbit: That is a reasonable assumption. The elevator to the rooftop is located in the corridor outside of your suite.
+Mr. Rabbit: Also, Amo, if you have time, check that Neural Implant Adjuster in your room before we go.
+Amo: I wouldn’t do that; you know I'm not used to the feeling of having something linked to my brain.
+Mr. Rabbit: I don’t want to force you, but you might find something useful there, after all, we need everything we can use to escape from this loop.
+===
+title: MrRabbit.Neuro_Adjuster_Start
+tags: 
+colorID: 0
+position: 1340,418
+---
+<<if visitCount() < 1>>
+    [[MrRabbit.Neuro_Adjuster_Indtroduction]]
+<<endif>>
+===
+title: MrRabbit.Neuro_Adjuster_Indtroduction
+tags: 
+colorID: 0
+position: 1352,713
+---
+Mr.Rabbit: All you have to do is select a skill module, and then it will download into your neural implant.
+Amo: And then I will master that skill like an expert without any training or practice?
+Mr.Rabbit: Like my expert.
+Amo: My life could have been much easier if this little thing and my brain got along in the first place.
+Amo: Alright, let me try it.
+===

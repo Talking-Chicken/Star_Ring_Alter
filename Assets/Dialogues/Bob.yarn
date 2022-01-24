@@ -1,0 +1,62 @@
+title: Bob.Start
+tags: 
+colorID: 0
+position: 425,485
+---
+Bob: Hi, how are you today?
+-> good good
+    Bob: Nice, I'm feeling pretty awesome, too.
+-> ok.. I guess?
+    Bob: Things will become better.
+    Bob: definitely.
+Bob: Ready for a walk?
+[[yup |Bob.TripStarted]]
+[[emm, not really |Bob.TripNotStarted]]
+===
+title: Bob.TripStarted
+tags: 
+colorID: 0
+position: 114,756
+---
+Bob: First decided where should we go
+-> The forest
+    Bob: That's exactly where I want to go!
+-> The river
+    <<unlock EntryStorage test4>>
+    <<saveEntry EntryStorage>>
+    Bob: What a genius choice!
+===
+title: Bob.TripNotStarted
+tags: 
+colorID: 0
+position: 788,773
+---
+Bob: Talk to me again, when you feel ready.😀
+===
+title: Bob.Start
+tags: 
+colorID: 0
+position: 425,485
+---
+Bob: Hi, how are you today?
+-> good good
+    Bob: Nice, I'm feeling pretty awesome, too.
+-> ok.. I guess?
+    Bob: Things will become better, definitely.
+Bob: wanna go for a walk?
+[[yup |Bob.TripStarted]]
+[[not really |Bob.TripNotStarted]]
+[[I wanna test how this dialogue system work |Bob.testing]]
+===
+title: Bob.testing
+tags: 
+colorID: 0
+position: 432,829
+---
+Bob: The first two lines are to see how Yarn Spinner handles text in different lines.
+Bob: for example: this is a new line.
+
+Bob: above, I skipped a line. And now, let's see how buttons can vary between different amount of texts.
+-> that's a test for a huge amount of nonsense text that is going to be inserted in a button. Let's see whether Yarn Spinner can overflow the button or make it wider? 
+-> also, we should see how buttons under them behave, will they maintain a fixed ratio of gap, or the texts stack together? do we need to code to make the speaking bubble wider? And how about it's super super super long.
+===

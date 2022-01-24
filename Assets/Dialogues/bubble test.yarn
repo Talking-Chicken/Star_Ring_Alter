@@ -1,0 +1,13 @@
+title: BubbleA.Start
+tags: 
+colorID: 0
+position: 375,434
+---
+BubbleA:hi there, you're here for the bubble test, too!
+BubbleB:yep, I really want coda that they promised give us after the test.
+BubbleA:wait they provides coda?
+BubbleB:i'm here only as a nothing-gain volunteer.
+BubbleB:check the manual, it talks about the 1*1*1 cubic meter coda.
+BubbleA:dude, i'm really getting into this.
+<<setVisited GameManager BubbleA.Start>>
+===

@@ -1,0 +1,566 @@
+title: SecurityOfficial.Start
+tags: 
+colorID: 0
+position: 267,187
+---
+安全员：嘿，小伙子，我又来了。今天还是不能让我检查你们便利店的后厨的卫生情况吗？你可是让我的工作越来越难做了。
+莱斯:  哦该死，这个死老头又来了。
+[[他是谁？ |SecurityOfficial.Who]]
+[[我觉得“死老头“这个称呼有点不太礼貌 |SecurityOfficial.Oldman]]
+[[是流浪汉！ |SecurityOfficial.Tramp]]
+===
+title: SecurityOfficial.Who
+tags: 
+colorID: 0
+position: -6,489
+---
+艾莫：前辈，这人是谁啊？
+莱斯：艾莫，这位是便利店监管委员会的特别安全员，我们店的老朋友了。
+莱斯：虽然嘴上称呼他为老朋友，但老实说我完全不知道他叫什么。他每次来除了出示证件外就是试图进入到我们的后台。
+[[SecurityOfficial.NewGuy]]
+===
+title: SecurityOfficial.Oldman
+tags: 
+colorID: 0
+position: 272,503
+---
+艾莫：说实话，前辈，我觉得我们不该称呼我们的顾客为死老头，这可能对我们的品牌形象有所损害。
+莱斯：艾莫，你还没开始工作多久就已经和店长说话方式一样了。
+莱斯:好吧，下次我会注意的，不过这位可不是什么顾客，而是便利店监管委员会的特别安全员，而他来这里就是负责给我们的服务和食品加工以及其他任何工作挑刺的。
+[[SecurityOfficial.NewGuy]]
+===
+title: SecurityOfficial.Tramp
+tags: 
+colorID: 0
+position: 542,488
+---
+艾莫：他是流浪汉吗？我好久没见到过流浪汉了，我们该怎么办，友好地请他出去吗？
+莱斯: 流浪汉不是在这个世纪初就因为 迁移法案 就彻底消失了吗？你上次是在哪里见到的？
+艾莫：社会学的课本上。
+莱斯：如果他是流浪汉那就好处理多了，我们可以按照迁移法案把他遣送会他的出生地，不管那是那里，肯定不会是核心城这种近十年新建立的城市。
+莱斯：这位先生可麻烦要得多了，他可是便利店监管委员会的特别安全员，按照邦联法律，他们有权监管我们从对我们，或者兔子重工旗下所有便利店从商品销售到食品加工的各个方面进行社会监督。
+[[SecurityOfficial.NewGuy]]
+===
+title: SecurityOfficial.NewGuy
+tags: 
+colorID: 0
+position: 258,847
+---
+安全员：这是谁？新人吗？太好了，看到有新鲜血液加入让我对我们星环便利店的未来又充满希望了。
+莱斯：抱歉，先生，就像我之前说过的，没有店长的允许我不能让您进入到员工工作区，就算您认为您“有权利”这么做。
+莱斯：而且什么时候你也是星环便利店的一份子了。
+安全员：别紧张，小伙子，你就是这么对待潜在客户的吗？一进来就把我往外推。
+莱斯：说的你在我们店里买过东西一样。
+安全员：这我可不能当作听不见，来，我要一瓶啤酒，今天在我喝完这瓶酒之前咱们都放松下，好好聊聊。
+莱斯：抱歉，我还有清洁工作要完成。啤酒请在一旁的自动售卖机自行购买，在您喝完之前你都可以使用就餐区的任意空位。在消费完成后请为我的工作做出评价。
+安全员：那这个新人呢？能让他来陪我聊吗？他看起来很闲嘛。
+莱斯：艾莫，你可千万别在这个酒鬼大叔身上浪费时间。别忘了你还有别的工作要完成，哦对了！千万不能让他进入后台，这是店长的命令。
+安全员：嘿！我还在这呢，你知道我听得见吧。
+莱斯：我知道。
+安全员：臭小鬼，等我拿到搜查令后你可别想拦着我。
+<<setVisited GameManager SecurityOfficial.Start>>
+<<changeDialogueStartingNode SecurityOfficial Veteran>>
+===
+title: SecurityOfficial.Veteran
+tags: 
+colorID: 0
+position: 1185,14
+---
+艾莫：我听说你在成为便利店监管委员会的特别安全员之前在军队服役过，想聊下你在职业军队里的经历吗？
+安全员：是嘛，我怎么不记得我有和任何人提过这种事情。
+艾莫：啊，这个……,其实是我从……，从店长那里听说的！
+安全员：算了，这不重要，我跟你们店跟得那么紧，如果你们对我进行过调查我也不会惊讶。知己知彼嘛，我不反对。
+安全员：聊其他的都可以，唯独我服役的那些事我没有任何兴致和别人分享，你不会对那种乱糟糟的邦联建立后的余波感兴趣的。
+[[“余波”？ |SecurityOfficial.Remaining]]
+[[哪来的战争 |SecurityOfficial.Where]]
+[[月球战役 |SecurityOfficial.MoonWar]]
+[[什么都不说 |SecurityOfficial.Silent]]
+<<if not visited("SecurityOfficial.AddDrink")>>
+    [[倒酒 |SecurityOfficial.AddDrink]]
+<<endif>>
+===
+title: SecurityOfficial.Remaining
+tags: 
+colorID: 0
+position: 926,474
+---
+艾莫：你说的“余波”是指邦联成立之后复杂的宪法融合法案导致的经济困境还是什么? 
+安全员：你就不听别人说话是吧？我说了我不想再回忆起那些无聊的故事。
+艾莫：但是，邦联的整体架构不就是反对军事扩张以及将资源投入到对人类有益的共用事业上吗，无论怎么样的“余波“，听起来都比把资源浪费在人类之间的无休止的军备竞赛，或者贸易战争上要好吧。
+安全员：和你说得恰恰相反，邦联是一次妥协。你看，巨型企业的存在某种意义上已经渗透到了政府的骨髓之中。他们在一步步的取代政府的职能，通过在部分领域做的比政府更好的方式。有时候你想取代台上的人并不需要全面超越那个人，只要在某个领域做到不比那个人差，观众就会无法容忍聚光灯下的人并把你推举上去。
+安全员：而邦联的成立则是一次传统政府组织针对这种现象的反扑，他们试图以一种全新的姿态吸引人们来支持自己， 你知道，就像这个时代大家称赞全球化，或者人类命运共同体，下个时代又会宣扬民族主义和孤立主义。 你总得试试新的花样才能继续在台上待下去。
+<<drink SecurityOfficial>>
+[[全球化很赞 |SecurityOfficial.Globalization]]
+[[孤立主义也没什么不好的 |SecurityOfficial.Isolationism]]
+[[哪种主义其实都一样 |SecurityOfficial.AllTheSame]]
+[[什么都不说 |SecurityOfficial.nothing]]
+[[倒酒 |SecurityOfficial.AddDrink]]
+===
+title: SecurityOfficial.Where
+tags: 
+colorID: 0
+position: 1588,727
+---
+艾莫：我以为邦联的成立是人类历史上难得没有战争的政治变革，世人还称其为人类最后的道德曙光，所以你服役经历中会有什么不能分享的呢。
+安全员：你是说在人类互相厮杀了几千年后，突然有一天开窍了，想到了一个完美的方式一次性“和平地”消灭国家这个概念？看起来这个时代的年轻人比我想的还要对政治“绝缘 ”。
+<<drink SecurityOfficial>>
+安全员：但是邦联唯一的部队部署就是在前邦联时期的热点地区派遣的维和部队，我猜如果你在邦联服过役，那你肯定也是他们中的一员。
+安全员：哼，可别我把我和那些只知道把装甲擦得锃亮的玩具士兵相比。他们会的只不过作秀罢了，在这个地方空降下，参与下当地游行，和当地民众拍个照。然后纳税人就会觉得有安全感，之后继续给邦联支付税金。
+安全员：但是有一场战争不一样，那是邦联在成立后唯一进行的货真价实的战争，那场战争奠定了邦联的合法统治地位。
+安全员：不过就像我说过的，现在的像你这样的小伙子不会关心这些的。
+===
+title: SecurityOfficial.MoonWar
+tags: 
+colorID: 0
+position: 1220,667
+---
+艾莫：我们都知道自邦联统一以来除了在国家制度时期存在的冲突地带，地缘政治复杂区域派驻维和部队之外并没有任何其他的军事动作。当然为了避免某个成员国不满邦联的内部政策决定独立甚至武装起义，他们还是一支试图打造一套集合侦察和打击可自我部署的轨道轰炸系统。
+安全员：没错就是这样，如你所知，也如书上所说的，邦联成立后就没打过什么像样的仗。他们把所有的精力都用来压制各个成员国，不是今天为了避免某个曾经的经济大国剥削其他几个资源国而修改交易法案，就是明天又要拆分几个成员国的工业体系避免他们太过强大，要我说邦联的主席干得都是一些内部消耗的破事。
+安全员：这倒也好，现在那个耗费了我们连续20年每年5%全球生产总值开发的轨道打击系统也彻底失败了。现在巨型企业无时无刻不在蚕食着整个政府的控制权，等主席团那帮贵人承认这一点时，整个体系也可以彻底解散了。
+安全员：总而言之，在邦联服役和那些全息电影以及电子游戏没有任何相似之处，既不刺激，也没有坚定的战友情，所以你估计得失望了，我这个糟老头子的故事没有什么值得分享的。
+艾莫：除了月球战役，对吧。
+安全员：……。
+<<drink SecurityOfficial>>
+安全员：你从哪知道这个的。
+艾莫：看来我不像某人想象地那么符合年轻人无知的特征。
+安全员：好吧，确实有那么一场邦联打过的硬仗。那场战役赋予了邦联合法的执政权力，确保了所有成员国无论加入邦联前在地球上的经济，文化，或者军事地位，都愿意服从主席团的一切法案，而我恰巧参与了那场战役。
+安全员：我当时所在的连队是邦联月球拉格朗日分队下属第一且唯一连。
+[[故事开始 |SecurityOfficial.StoryBegin]]
+[[等下，唯一连？ |SecurityOfficial.Company]]
+[[倒酒 |SecurityOfficial.AddDrink]]
+===
+title: SecurityOfficial.Silent
+tags: 
+colorID: 0
+position: 1933,519
+---
+安全员：有趣，我还是第一次见到一言不发的酒保，你别指望用你那双水汪汪的眼睛一直盯着我就能让我屈服然后告诉你一切。
+[[“余波”？ |SecurityOfficial.Remaining]]
+[[哪来的战争 |SecurityOfficial.Where]]
+[[月球战役 |SecurityOfficial.MoonWar]]
+[[倒酒 |SecurityOfficial.AddDrink]]
+===
+title: SecurityOfficial.AddDrink
+tags: 
+colorID: 0
+position: 3203,144
+---
+<<addDrink SecurityOfficial>>
+
+<<if $drunkLevel is 0>>
+    <<if randomNum(1,100) >= 50>>
+        小伙子，你看着点啊，我还没喝几口你就急着倒酒。
+    <<else>>
+        我小时候也像你这样倒过酒，然后我爸就把酒瓶子甩我脑袋上了。
+    <<endif>>
+<<endif>>
+
+<<if $drunkLevel is 1>>
+    <<if randomNum(1, 100) >= 50>>
+        你知道吗？液体的表面张力可以让这个啤酒杯容纳一定量超过自身容积的啤酒，我猜你和我一样好奇这个“一定量“究竟是多少。
+    <<else>>
+        我可不会为了溢出来的那部分付钱。
+    <<endif>>
+<<endif>>
+
+<<if $drunkLevel is 2>>
+    <<if randomNum(1, 100) >= 50>>
+        没事，你倒吧，我就是想看看这个杯子究竟能装多少酒。
+    <<else>>
+        如果啤酒花里每个气泡都是个小宇宙，那你刚刚那下至少制造了40万个宇宙。
+    <<endif>>
+<<endif>>
+
+<<if getLastNode("") == "SecurityOfficial.Veteran">>
+    It's full already!
+    [[“余波”？ |SecurityOfficial.Remaining]]
+    [[哪来的战争 |SecurityOfficial.Where]]
+    [[月球战役 |SecurityOfficial.MoonWar]]
+<<endif>>
+
+<<if getLastNode("") == "SecurityOfficial.Remaining">>
+    [[全球化很赞 |SecurityOfficial.Globalization]]
+    [[孤立主义也没什么不好的 |SecurityOfficial.Isolationism]]
+    [[哪种主义其实都一样 |SecurityOfficial.AllTheSame]]
+    [[什么都不说 |SecurityOfficial.nothing]]
+<<endif>>
+
+<<if getLastNode("") == "SecurityOfficial.Knowledge">>
+    安全员：现在可不是倒酒的时候，你得参与到故事里来。
+    [[利用太空探索的崇高性团结人类 |SecurityOfficial.Unity]]
+    [[因为有了月球就够了 |SecurityOfficial.MoonIsEnough]]
+    [[对抗月球上某个不为人知的威胁 |SecurityOfficial.UnknownThreat]]
+<<endif>>
+
+<<if getLastNode("") == "SecurityOfficial.SendingToMoon">>
+    [[这就是政治 |SecurityOfficial.ThisisPolitics]]
+    [[你们的敌人 |SecurityOfficial.YourEnemy]]
+    [[不说话 |SecurityOfficial.sayNothing]]
+<<endif>>
+
+<<if getLastNode("") == "SecurityOfficial.OldTimeUniverse">>
+    [[我猜事情没有那么简单 |SecurityOfficial.NotThatEasy]]
+    [[不说话 |SecurityOfficial.OldTimeSayNothing]]
+<<endif>>
+===
+title: SecurityOfficial.Globalization
+tags: 
+colorID: 0
+position: 408,1155
+---
+艾莫：一个统一的全球政府或多或少确保了
+安全员：不可否认科幻小说和社会评论里设想的人类统一政府确实挺美好的。但是你看，邦联已经成了了快多少年？快50年了吧，我们的生活好像也没什么大的变化。
+[[SecurityOfficial.EndOfIsm]]
+===
+title: SecurityOfficial.Isolationism
+tags: 
+colorID: 0
+position: 675,1150
+---
+艾莫：我的祖父就生活在一个国家里。他说国家和邦联相比只不过是小了点，国家管理国民，而邦联，鉴于邦联目前只有人类参加，负责管人类。
+安全员：你爷爷说得没错，在我看来会对一个人类统一政府感到兴奋的，多半是受到科幻电影毒害的书呆子。想象着一个人类权威替人类在银河谋求利益，对抗外星人，可惜现实是，换谁统治对我们这些平民而言没有任何区别。
+[[SecurityOfficial.EndOfIsm]]
+===
+title: SecurityOfficial.AllTheSame
+tags: 
+colorID: 0
+position: 929,1167
+---
+艾莫:	在我看来无论哪种主义或者政治主张其实都一样，台上的人无论是谁也不影响台下的人怎么活着。
+安全员：是这样的！干杯，让我们庆祝人类进化为全体政治绝缘体进程上又迈进了一步。
+<<drink SecurityOfficial>>
+[[SecurityOfficial.EndOfIsm]]
+===
+title: SecurityOfficial.nothing
+tags: 
+colorID: 0
+position: 1192,1207
+---
+<<wait 2>>
+[[SecurityOfficial.EndOfIsm]]
+===
+title: SecurityOfficial.StoryBegin
+tags: 
+colorID: 0
+position: 1457,1137
+---
+艾莫：我猜现在故事开始了。
+安全员：这可不是一个好故事。
+<<drink SecurityOfficial>>
+[[SecurityOfficial.Knowledge]]
+===
+title: SecurityOfficial.Company
+tags: 
+colorID: 0
+position: 1776,1094
+---
+艾莫：等下，什么是第一且唯一连？
+安全员：就是字面意义上当时因为当时的时间和资源原因，只能组建一个在月球上有战斗力的连队。
+安全员：为什么你会关注这点。
+[[SecurityOfficial.Knowledge]]
+===
+title: SecurityOfficial.Knowledge
+tags: 
+colorID: 0
+position: 1589,1414
+---
+安全员：在我开始之前，我很好奇你对月球战役的认知。你能告诉我你觉得为什么一个新生的政府会在成立初期，不去将宝贵的资源用于维稳，团结内部成员国，而是组织一次对月球的进攻？
+[[利用太空探索的崇高性团结人类 |SecurityOfficial.Unity]]
+[[因为有了月球就够了 |SecurityOfficial.MoonIsEnough]]
+[[对抗月球上某个不为人知的威胁 |SecurityOfficial.UnknownThreat]]
+[[我不知道，你告诉我 |SecurityOfficial.NoIdea]]
+[[倒酒 |SecurityOfficial.AddDrink]]
+===
+title: SecurityOfficial.Unity
+tags: 
+colorID: 0
+position: 1238,1736
+---
+艾莫：我记得前邦联时期有的国家就是靠太空探索来凝聚内部，同时发展科研。
+安全员：这确实是一个说得过去的理由，太空探索虽然投入巨大但是又和军事以及民生用途紧密联系，
+安全员：但是邦联做的不仅仅是探索太空，我们当时可是一整支军队被派遣上去，负责扫荡月球上一切可能的敌对势力。
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.MoonIsEnough
+tags: 
+colorID: 0
+position: 1543,1725
+---
+艾莫：因为只要控制了月球，地球就是囊中之物了。
+安全员：没错，只要有了月球和上面的资源，地球上的一切势力都掀不起大风大浪。
+<<drink SecurityOfficial>>
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.UnknownThreat
+tags: 
+colorID: 0
+position: 1856,1697
+---
+艾莫：你说会不会当时邦联发现了外星人蛰伏于月球上，为了阻止外星人进攻地球，邦联组织了一支人类远征军前去月球消灭了外星势力，也正是这件英勇壮举和果敢行动奠定了邦联的统治基础。
+安全员：哪有被一个步兵连队就能赶跑的外星文明，再说如果真的有外星人存在，邦联这么臃肿的机构是无法从上而下完全掩盖住消息的。
+安全员：不过你这么一说好像确实有一点很奇怪，我记得当时有一支小队被部署到月球背面去执行侦察任务，不过作战开始前他们就失踪了。日后我调查了邦联的内部文件但是完全没有他们行动的记录。
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.NoIdea
+tags: 
+colorID: 0
+position: 2108,1488
+---
+艾莫：我不知道，为什么月球会被邦联如此看重？
+安全员：试着猜一下，结合你对那个时代的了解。
+[[利用太空探索的崇高性团结人类 |SecurityOfficial.Unity]]
+[[因为有了月球就够了 |SecurityOfficial.MoonIsEnough]]
+[[对抗月球上某个不为人知的威胁 |SecurityOfficial.UnknownThreat]]
+===
+title: SecurityOfficial.ImportanceOfMoon
+tags: 
+colorID: 0
+position: 1648,1945
+---
+安全员：月球的重要性是当时邦联智库中一名天文学家提出的，之后受到邦联太空军一名上校的重视，随后作为内部参考文件直达邦联第一任主席团手上。
+安全员：我并不知道那篇文章的详情，但是当时的指挥官给过我们一个简单的梗概，大致从情报，资源，打击以及最后手段各个方面总结了月球的重要性。
+[[月球和情报的联系 |SecurityOfficial.RelationshipOfMoonandInformation]]
+[[月球上的资源 |SecurityOfficial.ResourceOnMoon]]
+[[月球作为打击手段 |SecurityOfficial.OneKindOfWay]]
+[[我很好奇最后手段 |SecurityOfficial.FinalWay]]
+[[所以你们要被派往月球 |SecurityOfficial.SendingToMoon]]
+===
+title: SecurityOfficial.RelationshipOfMoonandInformation
+tags: 
+colorID: 0
+position: 1333,2281
+---
+艾莫：把月球用于情报搜集是指在月球上设立观测系统？
+安全员：没错，人们常常忽略月球本身就是一个卫星，因此人造卫星能完成的工作通过在月球上设立各种仪器都能完成。而且因为月球本身的尺寸，可搭载的设备几乎没有体积限制，所以通过月球上的诸如气象检测，二氧化碳追踪，大气层内太阳光追踪，电磁感应，光学观测，高能辐射定位等等观测手段可以获得比一整个人造卫星网络多几个数量级的数据和精确度。
+安全员：也真是这样，月球在当时我们连队内部被称为“永恒卫星”，现代的反卫星手段拿月球观测基地没有任何办法。
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.ResourceOnMoon
+tags: 
+colorID: 0
+position: 1630,2341
+---
+艾莫:老实说，我无法想象月球上有什么资源可以被利用，看起来月球是一个贫瘠的地方。
+安全员：月球上有数量丰富的氦-3可作为核反应堆的燃料，但是因为分布太过分散以及浓度稀薄，几乎没有开采的价值。但是这只是对邦联现有技术而言，只要控制了月球的开采权，怎么开采之类的问题可以等到日后再议。
+安全员：说起来兔子重工不是要在核心城里建造一台可控核聚变反应堆？等建成后，月球上的资源一定也会成为邦联讨价还价的筹码吧。
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.OneKindOfWay
+tags: 
+colorID: 0
+position: 1912,2288
+---
+艾莫：月球作为打击手段，感觉和现在邦联推进的全球轨道打击系统很类似。
+安全员：嗯，确实大同小异，都是利用同步轨道上的类似动能武器和电子干扰实现全球打击。
+安全员：好像是邦联和巨型企业达成的协议要求不能在月球部署超过一定当量的武器，所以月球攻击基地的计划只能作罢，转为发展地球同步轨道上的天基动能武器。
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.FinalWay
+tags: 
+colorID: 0
+position: 2157,2289
+---
+艾莫：你说月球该作为最终手段，这是什么意思？难道是邦联遭遇不可控制的反叛后把月球整个砸向地球。
+安全员：真是不知道你这个家伙怎么总是会歪打正着。
+艾莫：谢谢夸奖！等等，你是认真的吗！可是，现在根本没有办法能推动月球这个级别的天体吧？
+安全员：我也不知道这么胡扯的方案怎么通过主席团审查的，除非邦联手上掌握着什么我们完全不知道的能产生改变行星运行轨道的秘密技术。
+[[SecurityOfficial.ImportanceOfMoon]]
+===
+title: SecurityOfficial.SendingToMoon
+tags: 
+colorID: 0
+position: 2444,2264
+---
+<<if $drunkLevel is 0>>
+    艾莫：为了确保邦联能够获得相对于任意成员国压倒性的优势，你们被派往了月球？
+    安全员：没错，说是占领月球，实际上我们只是进攻月球上的静海基地。
+<<else>>
+    安全员：但是哪怕就是只夺取了静海基地，那群愚蠢的主席团官僚蠢猪也没有资格将我们奋斗来的月球开发权拱手让给企业。
+    安全员：他们为了在金融领域获得谈判优势而选择在月球方面让利，可那是我们用命换来的啊！
+<<endif>>
+[[这就是政治 |SecurityOfficial.ThisisPolitics]]
+[[你们的敌人 |SecurityOfficial.YourEnemy]]
+[[不说话 |SecurityOfficial.sayNothing]]
+[[倒酒 |SecurityOfficial.AddDrink]]
+===
+title: SecurityOfficial.ThisisPolitics
+tags: 
+colorID: 0
+position: 2235,2550
+---
+艾莫：我无法理解你的苦楚，但是政治的本质就是交易与妥协，而拿人性中最宝贵的事物做交易也是时常发生的。
+安全员: 说的也是，我又有什么资格替我那些没有回到地面的战友抱怨呢。
+安全员：这杯敬月球第一且唯一连。
+<<drink SecurityOfficial>>
+[[SecurityOfficial.OldTimeUniverse]]
+===
+title: SecurityOfficial.YourEnemy
+tags: 
+colorID: 0
+position: 2509,2585
+---
+艾莫：那时候你们负责对付的是前邦联时期的残余势力？
+安全员：差不多，也有些还是邦联内部成员国鼓动的，总之他们占领了静海基地。
+[[SecurityOfficial.OldTimeUniverse]]
+===
+title: SecurityOfficial.sayNothing
+tags: 
+colorID: 0
+position: 2803,2550
+---
+安全员：无视来自我在这个被时代抛弃的老头子的牢骚吧，太不体面了。
+[[SecurityOfficial.OldTimeUniverse]]
+===
+title: SecurityOfficial.OldTimeUniverse
+tags: 
+colorID: 0
+position: 2503,2928
+---
+安全员：那时候还没有什么像样的专门为太空战研究的武器，但是前邦联时期，一些国家就已经在为太空作战布局，以避免月球上的采矿设施可能遭到小行星撞击为由，将大功率激光发射器运上月球表面。为了避免那些激光发射器撕裂我们的登月舱。我们小队和一半的连队从荣誉湾登陆，剩余连队从和谐湾提供支援。再靠近静海基地。
+安全员：我们的敌人，一群前邦联时期送上太空的宇航员，占领了静海基地并向邦联要求承认他们的独立。如果你了解历史就知道宇航员这个职业一直有很浓厚的军事色彩。作为冷战产物，早期宇航员几乎清一色都是军人。所以我们笃定这是一起反邦联的军事活动。
+安全员：当我们被太空站上的登月舱发射到了月面上，我才明白那句“在月球上没有人能听到你的尖叫”的意思。静海就如同其名一样，安静得你除了你头盔里自己的呼吸声和无线电的电流声什么都听不到。
+安全员：我和我的小队驾驶着月球车，逐渐靠近静海基地。我们认为只要有人数上的优势，只要我们靠近基地大门，零星的宇航员的抵抗会直接瓦解。
+[[我猜事情没有那么简单 |SecurityOfficial.NotThatEasy]]
+[[不说话 |SecurityOfficial.OldTimeSayNothing]]
+[[倒酒 |SecurityOfficial.AddDrink]]
+===
+title: SecurityOfficial.NotThatEasy
+tags: 
+colorID: 0
+position: 2304,3088
+---
+艾莫：我猜事情没有进展的没有那么简单。
+安全员：真希望那时候我也能意识到这点。
+[[SecurityOfficial.HonorBay]]
+===
+title: SecurityOfficial.OldTimeSayNothing
+tags: 
+colorID: 0
+position: 2725,3099
+---
+<<drink SecurityOfficial>>
+[[SecurityOfficial.HonorBay]]
+===
+title: SecurityOfficial.HonorBay
+tags: 
+colorID: 0
+position: 2547,3361
+---
+安全员：我们方式在荣誉湾边缘形式时候突然整个视野都暗了下来，驾驶员反应迅速，马上将月球车方向打死，但是车身还是被一个如同登陆舱大小的物体击中，我们直接被甩了出去。
+安全员：早期静海基地部署了数台电磁弹射的质量投送器，用于将货物从基地运往各个临时哨站，这些货物一般都是饮用水补给之类的小型货物。它们会在从静海基地被电磁力弹射到空中，在月球上空划出一个弧线，随后朝目的地飞去，在接近接受点时启动点火装置减速。因为月球本身的重力，这种运输方式其实并不危险。
+安全员：但是那些宇航员超载了质量投送器的电容，他们计算了简单的抛物轨道，随后将上百吨的货物砸到第一连头上。
+安全员：我不知道我昏迷了多久，等我醒来的时候，我挣扎着站起来，检查了我们小队成员的伤势。技术员在撞击时直接身亡，另个队友因为没有头盔破损早已窒息而亡，最后一名因为外伤而无法行动。
+安全员：但我意识到，幸存下来的我们绝非获得了喘息的机会，氧气供给远远不够支持他们回到临时基地——真空是他们现在最大的敌人。
+[[SecurityOfficial.HiddenInfo]]
+===
+title: SecurityOfficial.HiddenInfo
+tags: 
+colorID: 0
+position: 2547,3620
+---
+<<if $drunkLevel is 1>>
+    [[那静海基地呢 |SecurityOfficial.MareTranquillitatis]]
+    [[我感觉你有事情没告诉我 |SeucurotyOfficial.FeelingNotToldAllInfo]]
+    [[不是每个人都能成为英雄 |SecurityOfficial.NotEveryoneIsHero]]
+<<endif>>
+<<if $drinkLevel is 2>>
+    安全员：我明白从这里步行回临时基地至少需要一个半小时，如果遇到突发情况还需要更多氧气储备，而我自己的氧气罐最多只能支撑半个小时。
+    安全员：你懂吗，我们没有办法活下来的。
+    安全员：就在那个时候，我突然愣住了。我知道自己还有一个办法，那是一个我之前听过，但是我从来没当真的故事。
+    安全员：我走到之前窒息的队友面前，取下他宇航服胸前的氧气罐，把它挂在我的腰上。驾驶员的氧气罐因为撞击已经破裂，无法使用。
+    安全员：在我身旁那名受伤的队友明白了我的计划，他当时恐惧地挥舞着手。我本来想放弃下手的，但是我女儿的样子突然占据了我的整个视野，我的脑海里只有一个想法，我想再次见到她，我想看到她长大成人的样子。
+    安全员：我只好狠下心切断了通讯频道，然后走向他。
+
+    安全员：剩下的事我是听指挥官告诉我的，静海基地放弃抵抗数个小时后，临时基地的自动防卫哨岗发现一个友军单位从无人区以极低速度接近基地，基地执勤人员认为这是敌人的伪装部队，但等他们接触时发现是个已经六神无主的步兵。身上背着三个已经耗尽的氧气罐。
+
+    安全员：时至今日，我还是没法在夜晚抬头望向天空，我无法直视那颗卫星，哪怕有时只是余光扫过那颗苍白的，坑坑洼洼的卫星，我整个人都会被拉回那噩梦的那一天。 
+    <<drink SecurityOfficial>>
+    [[所以，你被称为狼人？ |SecurityOfficial.Werewolf]]
+    [[这不是你的错 |SecurityOfficial.NotYourFault]]
+    [[你不该牺牲你的队友 |SecurityOfficial.YourFault]]
+    [[倒酒 |SecurityOfficial.AddDrink]]
+<<endif>>
+<<if $drinkLevel is 3>>
+    安全员：哦对了，关于我女儿，她可真是个可爱的熊宝宝。我这有张她上初中的照片，就在我证件的夹层里。
+    安全员：下次记得提醒我给你看看。
+<<else>>
+    so that's the end of conversation
+<<endif>>
+===
+title: SecurityOfficial.MareTranquillitatis
+tags: 
+colorID: 0
+position: 1820,3914
+---
+艾莫：那静海基地之后如何了。
+安全员：那群宇航员在连续超载电容后把投送器都给烧坏了。之后如同我们一开始预计的一样，和谐湾小队到达了基地外围，面对绝对的人数优势，他们全部投降了。
+[[SecurityOfficial.EndOfMoonWar]]
+===
+title: SeucurotyOfficial.FeelingNotToldAllInfo
+tags: 
+colorID: 0
+position: 2166,3925
+---
+艾莫：我没有别的意思，但是我感觉你有事情没有告诉我。
+安全员：也许有，也许没有，你得等我下次更醉一些才能从我这里套出更多的话。
+[[SecurityOfficial.EndOfMoonWar]]
+===
+title: SecurityOfficial.NotEveryoneIsHero
+tags: 
+colorID: 0
+position: 2496,3941
+---
+艾莫：大概这就是现实，不可能每个人都成为力挽狂澜的英雄。
+安全员：大概如此吧。
+[[SecurityOfficial.EndOfMoonWar]]
+===
+title: SecurityOfficial.EndOfMoonWar
+tags: 
+colorID: 0
+position: 2469,4316
+---
+<<if $drunkLevel is 1>>
+    安全员：不管怎么样，和你聊天很愉快，我很久没和陌生人说过这么多话了。
+    安全员：我们有空可以再像这样来一杯。
+    艾莫：我可不想到时候还负责倒酒。
+<<else>>
+    安全员：今晚就到这里结束了吧。
+    安全员：我已经很久没和另个人提起这段往事了。你是一个很棒的酒保，能打开我这种人的话匣子你一定不简单。等我完成我的工作后，我们可以在一个小酒吧约上一杯酒，到时候你也不用像这样一直给我倒酒。
+<<endif>>
+===
+title: SecurityOfficial.Werewolf
+tags: 
+colorID: 0
+position: 2827,3890
+---
+艾莫：所以，委员会的人管你叫做狼人？
+安全员：所以，他们管我叫做狼人。
+<<drink SecurityOfficial>>
+安全员：我说得太多了，孩子，我说得太多了。
+[[SecurityOfficial.EndOfMoonWar]]
+===
+title: SecurityOfficial.NotYourFault
+tags: 
+colorID: 0
+position: 3150,3895
+---
+艾莫：你做了你必须做的，我不觉得有任何人能指责你。
+安全员：小伙子，你是不懂那种感受的。那种每晚被梦魇惊醒后面对空无一人的房子，随后被虚无和悔恨填满内心的感觉。我真心希望没有人会体会这种痛楚。
+[[SecurityOfficial.EndOfMoonWar]]
+===
+title: SecurityOfficial.YourFault
+tags: 
+colorID: 0
+position: 3458,3861
+---
+艾莫：你不该为了能见到你女儿牺牲你队友的性命。这是谋杀。
+安全员：相信我，我比这个世界上任何一个人都更唾弃我自己。
+[[SecurityOfficial.EndOfMoonWar]]
+===
+title: SecurityOfficial.EndOfIsm
+tags: 
+colorID: 0
+position: 733,1591
+---
+安全员：这个话题就到这里为止吧，现在让我自己享受这杯啤酒吧。
+===

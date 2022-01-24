@@ -1,0 +1,29 @@
+title: Evelyn.Start
+tags: 
+colorID: 0
+position: 337,689
+---
+Evelyn: **staring at the river, then noticed you come
+Evelyn: Hi! This is Evelyn, how's your morning?
+-> silent
+    Evelyn: *silent
+-> not bad
+    Evelyn: awesome!
+Evelyn: Did you talked to Bob?
+[[already|Evelyn.talkedToBob]]
+[[not yet|Evelyn.notTalkedToBob]]
+===
+title: Evelyn.talkedToBob
+tags: 
+colorID: 0
+position: -9,909
+---
+Evelyn: Glad you did. He was asking where you go all morning?
+===
+title: Evelyn.notTalkedToBob
+tags: 
+colorID: 0
+position: 703,900
+---
+Evelyn: Go find him then. He seems like really want to talk to you.
+===

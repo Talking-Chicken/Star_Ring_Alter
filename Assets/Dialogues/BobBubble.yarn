@@ -1,0 +1,14 @@
+title: Bob.bubbleStart
+tags: 
+colorID: 0
+position: 325,305
+---
+Bob: hi, this is Bob.
+Evelyn: right, You're Bob.
+Bob: this is a test.
+Evelyn: So everyone say their name.
+Les: here's Les.
+BubbleA: that's BubbleA.
+Owner: I'm the owner of the shop.
+<<setVisited GameManager Bob.bubbleStart>>
+===

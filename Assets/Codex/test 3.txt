@@ -1,0 +1,15 @@
+test 3
+	Manual
+	this is the 3rd codex definations
+
+	-test 3 sub 1
+	Manual
+	lollllllllllllllll
+
+	-test 3 sub 2
+	Manual
+	plplplplplplplplplplplpl
+
+	-test 3 sub 3
+	Manual
+	2333333333333333333

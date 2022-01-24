@@ -1,0 +1,51 @@
+fileFormatVersion: 2
+guid: 00621bcca03dcff4fa98535be71443c5
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: en-US
+  stringIDs:
+  - Les-Les.Start-0
+  - Les-Les.Start-1
+  - Les-Les.Start-2
+  - Les-Les.Start-3
+  - Les-Les.Start-4
+  - Les-Les.Start-5
+  - Les-Les.Start-6
+  - Les-Les.Start-7
+  - Les-Les.Start-8
+  - Les-Les.Start-9
+  - Les-Les.Start-10
+  - Les-Les.Start-11
+  - Les-Les.Start-12
+  - Les-Les.Start-13
+  - Les-Les.Tech-14
+  - Les-Les.Tech-15
+  - Les-Les.Tech-16
+  - Les-Les.Danger-17
+  - Les-Les.Danger-18
+  - Les-Les.Cash_Register-19
+  - Les-Les.Cash_Register-20
+  - Les-Les.Cash_Register-21
+  - Les-Les.Cash_Register-22
+  - Les-Les.Cash_Register-23
+  - Les-Les.Cash_Register-24
+  - Les-Les.Cash_Register-25
+  - Les-Les.Cash_Register-26
+  - Les-Les.Cash_Register-27
+  - Les-Les.Cash_Register-28
+  - Les-Les.Begin_Work-29
+  - Les-Les.Begin_Work-30
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: "Error on line 53 at position 21:\nextraneous input '
+    Lazy' expecting ']]'\r\n[[\u611F\u89C9\u4F60\u53EA\u662F\u5728\u523B\u610F\u5077\u61D2\u5462|Les.Be
+    Lazy]]\r\n                    ^^^^^"
+  baseLanguage: {fileID: 7128917941130120860, guid: 00621bcca03dcff4fa98535be71443c5,
+    type: 3}
+  localizations: []
