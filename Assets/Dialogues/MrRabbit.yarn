@@ -77,7 +77,7 @@ Mr. Rabbit: I don’t want to force you, but you might find something useful the
 ===
 title: MrRabbit.Neuro_Adjuster_Start
 tags: 
-colorID: 0
+colorID: 2
 position: 1340,418
 ---
 <<if visitCount() < 1>>
@@ -86,7 +86,7 @@ position: 1340,418
 ===
 title: MrRabbit.Neuro_Adjuster_Indtroduction
 tags: 
-colorID: 0
+colorID: 2
 position: 1352,713
 ---
 Mr.Rabbit: All you have to do is select a skill module, and then it will download into your neural implant.
@@ -94,4 +94,46 @@ Amo: And then I will master that skill like an expert without any training or pr
 Mr.Rabbit: Like my expert.
 Amo: My life could have been much easier if this little thing and my brain got along in the first place.
 Amo: Alright, let me try it.
+===
+title: MrRabbit.Maintenance_Robot_Start
+tags: Maintenance_Robot
+colorID: 1
+position: 1722,402
+---
+
+===
+title: MrRabbit.Maintenance_Robot_Brokken_Intro
+tags: Maintenance_Robot
+colorID: 1
+position: 2017,400
+---
+Amo: Weird, I can’t find the Operating System chip of the robot.
+Mr. Rabbit: Damn it, it must be Lacey. He was working on re-write the algorithm of the robot’s OS yesterday. 
+Amo: I thought Lacey was just a cashier. Why is fixing robots his job?
+Mr. Rabbit: There are only two full-time employees in this store even if you count the manager, so everyone needs to be talented in multi-tasking. Other than that, we really can't afford the maintenance services of the main store anymore.
+Mr. Rabbit: I remember he was working on rewriting in his suite yesterday. It is very likely the OS chip is still in his room. His suite is right next to your suite. But you need to find his access card in the first place to get in, for privacy sake, all employees get their own unique access card. 
+Amo: Isn’t Lacey spent most of his time around the counter in the checkout counter at the first floor? I will check there first for his access card.
+===
+title: MrRabbit.Maintenance_Robot_Brokken_Fixed
+tags: Maintenance_Robot
+colorID: 1
+position: 2292,393
+---
+Amo: Alright, I am done here, what should I do next, bring this robot to the broken elevator door?
+Mr. Rabbit: See the coffee bean delivery tunnel in this room? Just pick the robot up and put it there. The cargo tunnels are connected to the maintenance tunnels. All you need to do is return to the corridor and submit a maintenance request there. 
+Amo: Then we can leave everything to the maintenance robot. Sounds great.[color=#000000][/color]
+===
+title: MrRabbit.Maintenance_Robot_Tunnel
+tags: Maintenance_Robot
+colorID: 1
+position: 2565,395
+---
+Amo: Alright, time to return to the corridor.
+===
+title: MrRabbit.Maintenance_Robot_Summon_Ready
+tags: Maintenance_Robot
+colorID: 1
+position: 2809,398
+---
+Mr. Rabbit: The maintenance robot is already registered to the sensor network. Try use the panel at the end of corridor to submitted your maintenance	request.
 ===
