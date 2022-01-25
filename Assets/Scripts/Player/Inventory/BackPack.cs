@@ -124,4 +124,20 @@ public class BackPack : MonoBehaviour
 
         return false;
     }
+
+    /**
+     * check whether backpack has certain item that has certain name
+     * then, return the item
+     * @param itemName name of the item
+     * @return the item that players are finding. return null if there's no such item
+     */
+    public Item getItem(string itemName)
+    {
+        foreach (GameObject item in backpack)
+        {
+            if (item.GetComponent<Item>().getName().ToLower().Trim().Equals(itemName))
+                return item.GetComponent<Item>();
+        }
+        return null;
+    }
 }

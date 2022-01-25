@@ -117,11 +117,11 @@ Amo: Isn’t Lacey spent most of his time around the counter in the checkout cou
 title: MrRabbit.Maintenance_Robot_Brokken_Fixed
 tags: Maintenance_Robot
 colorID: 1
-position: 2292,393
+position: 2290,393
 ---
 Amo: Alright, I am done here, what should I do next, bring this robot to the broken elevator door?
 Mr. Rabbit: See the coffee bean delivery tunnel in this room? Just pick the robot up and put it there. The cargo tunnels are connected to the maintenance tunnels. All you need to do is return to the corridor and submit a maintenance request there. 
-Amo: Then we can leave everything to the maintenance robot. Sounds great.[color=#000000][/color]
+Amo: Then we can leave everything to the maintenance robot. Sounds great.
 ===
 title: MrRabbit.Maintenance_Robot_Tunnel
 tags: Maintenance_Robot

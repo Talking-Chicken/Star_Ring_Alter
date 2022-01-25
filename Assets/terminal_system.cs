@@ -7,9 +7,14 @@ public class terminal_system : MonoBehaviour
     // Start is called before the first frame update
     Animator m_Animator;
     public GameObject door;
+
+    public bool needAccessCard;
+
+    private PlayerBackpack playerBackpack;
     void Start()
     {
         m_Animator = gameObject.GetComponent<Animator>();
+        playerBackpack = FindObjectOfType<PlayerBackpack>();
     }
 
     // Update is called once per frame
@@ -17,9 +22,25 @@ public class terminal_system : MonoBehaviour
     {
         if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("scan_complete")) //&& m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f)
         {
-            //unlock door at end of animation clip scan
-            m_Animator.SetTrigger("complete");
-            door.GetComponent<door_control>().open = true;
+            if (needAccessCard)
+            {
+                //unlock door if player has level 2 access
+                if (checkAccess(2))
+                {
+                    //unlock door at end of animation clip scan
+                    m_Animator.SetTrigger("complete");
+                    door.GetComponent<door_control>().open = true;
+                } else
+                {
+                    m_Animator.Play("no_pass");
+                }
+            }
+            else
+            {
+                //unlock door at end of animation clip scan
+                m_Animator.SetTrigger("complete");
+                door.GetComponent<door_control>().open = true;
+            }
         }
     }
  
@@ -36,5 +57,19 @@ public class terminal_system : MonoBehaviour
         {
             m_Animator.Play("no_pass");
         }
+    }
+
+    /**
+     * check if players have Item access card that has enough level
+     * @param level level of access that player need
+     * @return true if player has the access card of that level, false otherwise
+     */
+    public bool checkAccess(int level)
+    {
+        Item accessCard = playerBackpack.getItem("access card");
+        if (accessCard != null)
+            if (accessCard.GetComponent<AccessCard>().level >= level)
+                return true;
+        return false;
     }
 }

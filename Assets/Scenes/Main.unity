@@ -3079,6 +3079,7 @@ MonoBehaviour:
   isTimeToTalk: 0
   indicator: {fileID: 1032237509}
   indicatorYPos: 1.71
+  laptopPOV: {fileID: 1279425558}
 --- !u!58 &267319214
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5834,6 +5835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 1089638820}
+  needAccessCard: 0
 --- !u!58 &693465475
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6848,6 +6850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   door: {fileID: 2002218610}
+  needAccessCard: 1
 --- !u!114 &907362142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14532,7 +14535,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649016004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -80.4, y: 66.2, z: 0}
+  m_LocalPosition: {x: 54, y: 51.8, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 1005725918}
@@ -14686,7 +14689,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: 0.010124207, y: 0.4202652, z: 0.0078125}
+  SorterPositionOffset: {x: 0.010124207, y: 0.42025757, z: 0.0078125}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 1649016011}
