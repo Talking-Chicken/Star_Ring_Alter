@@ -11,11 +11,15 @@ public class IsometricCharacterRenderer : MonoBehaviour
    
     Animator animator;
     int lastDirection;
-
+    public AudioSource audio_source;
+    public List<AudioClip> clips;
+    public static string foot_step_clip;
+    
     private void Awake()
     {
         //cache the animator component
         animator = GetComponent<Animator>();
+        foot_step_clip = "hard_floor";
     }
 
 
@@ -30,12 +34,14 @@ public class IsometricCharacterRenderer : MonoBehaviour
             //if we are basically standing still, we'll use the Static states
             //we won't be able to calculate a direction if the user isn't pressing one, anyway!
             directionArray = staticDirections;
+            audio_source.Stop();
         }
         else
         {
             //we can calculate which direction we are going in
             //use DirectionToIndex to get the index of the slice from the direction vector
             //save the answer to lastDirection
+            PlayAudioClip(foot_step_clip);
             directionArray = runDirections;
             lastDirection = DirectionToIndex(direction, 8);
         }
@@ -74,7 +80,17 @@ public class IsometricCharacterRenderer : MonoBehaviour
 
 
 
-
+    public void PlayAudioClip(string clipToPlay)
+    {
+        foreach (AudioClip clip in clips)
+        {
+            if (clip.name == clipToPlay && !audio_source.isPlaying)
+            {
+                audio_source.clip = clip;
+                audio_source.Play();
+            }
+        }
+    }
 
 
 

@@ -23,7 +23,8 @@ public class using_door : MonoBehaviour
             door thisDoor = other.gameObject.GetComponent<door>(); //get the "ChangeRoom" script of this door
 
             gameObject.transform.position = thisDoor.dest; //teleport player to new destination
-
+            if (thisDoor.change_floor) { 
+                IsometricCharacterRenderer.foot_step_clip = thisDoor.floor_name; }
 
         }
     }
