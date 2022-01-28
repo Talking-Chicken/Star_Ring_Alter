@@ -104,7 +104,7 @@ public class NeuroImplantDevice : MonoBehaviour
     }
 
     /**
-     * search whether cloud or download apps contains thia app
+     * search whether cloud or download apps contains this app
      * @param appList the list that player want to search, can be either downloadApps or cloudApps
      * @param app that players want to search for
      * @return true if app is in the list, false otherwise
@@ -114,6 +114,22 @@ public class NeuroImplantDevice : MonoBehaviour
         for (int i = 0; i < appList.Count; i++)
         {
             if (appList[i].compareTo(app) == 0)
+                return true;
+        }
+        return false;
+    }
+
+    /**
+     * search whether cloud or download apps contains app with this name
+     * @param appList the list that player want to search, can be either downloadedApps or cloudApps
+     * @param appName name of the app that players want to search for
+     * @return true if app is in the list, false otherwise
+     */
+    public bool search(List<NeuroImplantApp> appList, string appName)
+    {
+        for (int i = 0; i < appList.Count; i++)
+        {
+            if (appList[i].appName.ToLower().Trim().Equals(appName.ToLower().Trim()))
                 return true;
         }
         return false;

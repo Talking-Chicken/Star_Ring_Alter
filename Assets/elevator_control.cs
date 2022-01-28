@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class elevator_control : InteractiveObj
 {
@@ -12,10 +13,16 @@ public class elevator_control : InteractiveObj
     public GameObject blocker;
     Animator m_Animator;
     private int state;//0=moving up 1=first floor 2=second floor 3=moving down
+
+    [SerializeField, BoxGroup("control access")]
+    private ManagerConsole console;
     void Start()
     {
         state = 1;
         m_Animator = this.GetComponent<Animator>();
+
+        if (console == null)
+            Debug.LogWarning("haven't set consle yet");
     }
 
     // Update is called once per frame
@@ -25,29 +32,31 @@ public class elevator_control : InteractiveObj
     }
     public override void interact()
     {
-        if (state==1) {
-            state = 0;
-            m_Animator.Play("up");
-            StartCoroutine(moving_up());
-            tile_corridor.SetActive(false);
-            tile_roof_top.SetActive(false);
-            blocker.SetActive(true);
-            to_corridor.SetActive(false);
-            to_roof_top.SetActive(false);
-        }
-        if (state == 2)
+        if (console.isElevatorActivated)
         {
-            state = 3;
-            m_Animator.Play("down");
-            StartCoroutine(moving_down());
-            tile_corridor.SetActive(false);
-            tile_roof_top.SetActive(false);
-            blocker.SetActive(true);
-            to_corridor.SetActive(false);
-            to_roof_top.SetActive(false);
+            if (state == 1)
+            {
+                state = 0;
+                m_Animator.Play("up");
+                StartCoroutine(moving_up());
+                tile_corridor.SetActive(false);
+                tile_roof_top.SetActive(false);
+                blocker.SetActive(true);
+                to_corridor.SetActive(false);
+                to_roof_top.SetActive(false);
+            }
+            if (state == 2)
+            {
+                state = 3;
+                m_Animator.Play("down");
+                StartCoroutine(moving_down());
+                tile_corridor.SetActive(false);
+                tile_roof_top.SetActive(false);
+                blocker.SetActive(true);
+                to_corridor.SetActive(false);
+                to_roof_top.SetActive(false);
+            }
         }
-
-
     }
     IEnumerator moving_up()
     {

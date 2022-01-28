@@ -13,10 +13,15 @@ public class DeliveryTunnel : InteractiveObj
 
     private PlayerBackpack playerBackpack;
     private StateManager state;
+
+    [SerializeField] private GameObject coffeeBeanConsole;
     void Start()
     {
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         state = FindObjectOfType<StateManager>();
+
+        if (coffeeBeanConsole == null)
+            Debug.LogWarning("haven't set coffee bean console yet");
     }
 
     
@@ -29,7 +34,7 @@ public class DeliveryTunnel : InteractiveObj
     {
         state.transitionState(State.UI);
         UIContainer.SetActive(true);
-        if (playerBackpack.contains("maintenance robot"))
+        if (playerBackpack.contains("maintenance robot") && coffeeBeanConsole.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up"))
             description.text = "send maintenance robot through this tunnel";
         else
             description.text = "this is the tunnel for coffee beans";
@@ -43,7 +48,7 @@ public class DeliveryTunnel : InteractiveObj
 
     public void confirm()
     {
-        if (playerBackpack.contains("maintenance robot"))
+        if (playerBackpack.contains("maintenance robot") && coffeeBeanConsole.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up"))
         {
             GameObject robot = playerBackpack.remove("maintenance robot");
             if (robot != null)
