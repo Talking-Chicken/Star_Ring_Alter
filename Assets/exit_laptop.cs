@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class exit_laptop : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject main_camera;
     public GameObject laptop_camera;
     Collider2D collider;
+
+    private StateManager state;
     void Start()
     {
+        state = FindObjectOfType<StateManager>();
         collider = GetComponent<Collider2D>();
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Vector3 mousePos = laptop_camera.GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
@@ -26,6 +28,9 @@ public class exit_laptop : MonoBehaviour
             main_camera.SetActive(true);
             laptop_camera.SetActive(false);
 
+
+            //transit back to explore state
+            state.transitionState(State.Explore);
         }
     }
 }

@@ -1675,6 +1675,7 @@ MonoBehaviour:
   loading_back: {fileID: 218913590}
   drag_object: {fileID: 0}
   folder_icon: {fileID: 21300000, guid: f8654f11529b4d54dbd7e3db13844dc2, type: 3}
+  accessFile: {fileID: 1889367851}
 --- !u!1 &175448384
 GameObject:
   m_ObjectHideFlags: 0
@@ -3212,6 +3213,7 @@ MonoBehaviour:
   isTimeToTalk: 0
   indicator: {fileID: 1032237509}
   indicatorYPos: 1.71
+  laptop: {fileID: 1716205473}
   laptopPOV: {fileID: 1279425558}
 --- !u!58 &267319214
 CircleCollider2D:
@@ -9182,7 +9184,7 @@ GameObject:
   - component: {fileID: 1141274934}
   - component: {fileID: 1141274933}
   m_Layer: 0
-  m_Name: File_icon (1)
+  m_Name: Shopping List File
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16005,7 +16007,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1716205474
 Transform:
   m_ObjectHideFlags: 0
@@ -17738,7 +17740,7 @@ GameObject:
   - component: {fileID: 1889367855}
   - component: {fileID: 1889367854}
   m_Layer: 0
-  m_Name: File_icon
+  m_Name: LV2 Access File
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

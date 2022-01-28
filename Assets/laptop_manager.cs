@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class laptop_manager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     public GameObject folder;
     public GameObject id_card;
      bool A;
@@ -16,12 +17,16 @@ public class laptop_manager : MonoBehaviour
     public GameObject loading_back;
     public GameObject drag_object;
     public Sprite folder_icon;
+
+    [SerializeField, BoxGroup("access")]
+    private GameObject accessFile;
+    private AccessCard accessCard;
     void Start()
     {
         A = true;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         Vector3 mousePos = computer_camera.ScreenToWorldPoint(Input.mousePosition);
@@ -50,8 +55,15 @@ public class laptop_manager : MonoBehaviour
         {
             folder.GetComponent<SpriteRenderer>().sprite = folder_icon;
             loading_bar.GetComponent<Animator>().Play("loading");
-            Destroy(drag_object);
 
+            //if player dragged the correct file, player will get a level up for their access card (if they have any)
+            if (drag_object == accessFile)
+            {
+                accessCard = FindObjectOfType<PlayerBackpack>().getItem("access card").GetComponent<AccessCard>();
+                accessCard.level = 2;
+            }
+
+            Destroy(drag_object);
         }
 
         //Debug.Log(Physics2D.OverlapPoint(mousePos2D));
