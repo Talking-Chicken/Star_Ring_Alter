@@ -25,6 +25,7 @@ public class StateManager : MonoBehaviour
     {
         transitionCoolDown = 0f;
         rabbit = FindObjectOfType<RabbitSystemControl>();
+        transitionState(State.Explore);
     }
 
     void Update()
@@ -50,6 +51,10 @@ public class StateManager : MonoBehaviour
                     Debug.Log("transitioning to explore");
                     previousState = currentState;
                     currentState = newState;
+
+                    //exit UI 
+                    FindObjectOfType<RabbitSystemControl>().exitUI();
+
                     break;
                 }
                 else

@@ -1,13 +1,13 @@
 title: MrRabbit_Amo's_Room_Start
 tags: 
 colorID: 0
-position: 266,391
+position: 266,390
 ---
-<<if visitCount() >= 3>>
+<<if visitCount() > 3>>
     [[MrRabbit.Fourth_Loop]]
-<<elseif visitCount() >= 2>>
+<<elseif visitCount() > 2>>
     [[MrRabbit.Third_Loop]]
-<<elseif visitCount() >= 1>>
+<<elseif visitCount() > 1>>
     [[MrRabbit.Second_Loop]]
 <<else>>
     [[MrRabbit.First_Loop]]
@@ -38,7 +38,7 @@ Amo: Thanks rabbit, but to be honest, I don’t think being trapped in a time lo
 title: MrRabbit.Second_Loop
 tags: 
 colorID: 0
-position: 393,753
+position: 392,752
 ---
 Amo: Damn, another loop. We were so close last time.
 Mr. Rabbit: Hey Amo, I have some good news for you. Thanks to your action. I have been able to record most of the digital files you have found.

@@ -29,7 +29,7 @@ public class KeyManager : MonoBehaviour
 
     private void Start()
     {
-        FindObjectOfType<Codex>().loadDialogueNodesCount();
+        
     }
 
     private void Update()

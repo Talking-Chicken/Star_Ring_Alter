@@ -38,6 +38,9 @@ public class IsometricPlayerMovementController : MonoBehaviour
             Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
             isoRenderer.SetDirection(movement);
             rbody.MovePosition(newPos);
+        } else
+        {
+            rbody.velocity = Vector2.zero;
         }
         
     }

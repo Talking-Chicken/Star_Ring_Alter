@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 /**
  * time loop system is a class controlling time loop.
@@ -18,11 +18,14 @@ public class TimeLoopSystem : MonoBehaviour
         currentTime = startTime;
         isPaused = false;
         rate = 10;
+
+        loopTime = 1300;
     }
 
     void Start()
     {
-        
+        //load information from last loop
+        FindObjectOfType<Codex>().loadDialogueNodesCount();
     }
 
     void Update()
@@ -33,6 +36,9 @@ public class TimeLoopSystem : MonoBehaviour
         } else
         {
             loopCountdown(rate);
+
+            if (currentTime >= loopTime)
+                reset();
         }
     }
 
@@ -84,5 +90,18 @@ public class TimeLoopSystem : MonoBehaviour
     public static bool getPaused()
     {
         return isPaused;
+    }
+
+    /**
+     * reset the game but save and load from last time loop
+     */
+    public static void reset()
+    {
+        FindObjectOfType<Codex>().saveDialgoueNodesCount();
+
+        FindObjectOfType<StateManager>().transitionState(State.Explore);
+
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }
