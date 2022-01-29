@@ -1138,6 +1138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2904160361764417206}
   - component: {fileID: 2904160361764417207}
+  - component: {fileID: 803834661}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -1177,6 +1178,19 @@ MonoBehaviour:
   nameText: {fileID: 2904160362190626953}
   dialogueText: {fileID: 2904160361801640344}
   portraits: []
+--- !u!114 &803834661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904160361764417201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb1a7189c7374fc4d9a734915672f955, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  runner: {fileID: 2904160361790625062}
 --- !u!1 &2904160361790625059
 GameObject:
   m_ObjectHideFlags: 0

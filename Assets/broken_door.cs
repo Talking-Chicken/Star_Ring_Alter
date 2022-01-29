@@ -7,6 +7,8 @@ public class broken_door : MonoBehaviour
     Animator m_Animator;
     public GameObject door;
     public GameObject robot;
+
+    [SerializeField] private GameObject talkingArea;
     void Start()
     {
         m_Animator = robot.GetComponent<Animator>();
@@ -19,6 +21,9 @@ public class broken_door : MonoBehaviour
         {
             door.SetActive(true);
             gameObject.SetActive(false);
+            
+            if (talkingArea != null)
+                talkingArea.SetActive(true);
         }
     }
 }

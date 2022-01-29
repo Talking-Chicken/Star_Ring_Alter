@@ -3,11 +3,11 @@ tags:
 colorID: 0
 position: 266,391
 ---
-<<if visitCount() > 3>>
+<<if visitCount() >= 3>>
     [[MrRabbit.Fourth_Loop]]
-<<elseif visitCount() > 2>>
+<<elseif visitCount() >= 2>>
     [[MrRabbit.Third_Loop]]
-<<elseif visitCount() > 1>>
+<<elseif visitCount() >= 1>>
     [[MrRabbit.Second_Loop]]
 <<else>>
     [[MrRabbit.First_Loop]]
@@ -57,7 +57,7 @@ Amo: I don't know hey, but if Rabbit Heavy Industries hadn't sponsored me with t
 title: MrRabbit.First_Loop
 tags: 
 colorID: 0
-position: 673,745
+position: 672,744
 ---
 Amo: No, not again, we are still here, how come we are still returned to this place even if we are out of the Core City.
 Mr. Rabbit: 17th.
@@ -80,14 +80,14 @@ tags:
 colorID: 2
 position: 1340,418
 ---
-<<if visitCount() < 1>>
+<<if visitCount() <= 1>>
     [[MrRabbit.Neuro_Adjuster_Indtroduction]]
 <<endif>>
 ===
 title: MrRabbit.Neuro_Adjuster_Indtroduction
 tags: 
 colorID: 2
-position: 1352,713
+position: 1334,702
 ---
 Mr.Rabbit: All you have to do is select a skill module, and then it will download into your neural implant.
 Amo: And then I will master that skill like an expert without any training or practice?
@@ -98,14 +98,16 @@ Amo: Alright, let me try it.
 title: MrRabbit.Maintenance_Robot_Start
 tags: Maintenance_Robot
 colorID: 1
-position: 1722,402
+position: 1722,401
 ---
-
+<<if visitCount() <= 1>>
+    [[MrRabbit.Maintenance_Robot_Brokken_Intro]]
+<<endif>>
 ===
 title: MrRabbit.Maintenance_Robot_Brokken_Intro
 tags: Maintenance_Robot
 colorID: 1
-position: 2017,400
+position: 1717,701
 ---
 Amo: Weird, I can’t find the Operating System chip of the robot.
 Mr. Rabbit: Damn it, it must be Lacey. He was working on re-write the algorithm of the robot’s OS yesterday. 
@@ -114,10 +116,10 @@ Mr. Rabbit: There are only two full-time employees in this store even if you cou
 Mr. Rabbit: I remember he was working on rewriting in his suite yesterday. It is very likely the OS chip is still in his room. His suite is right next to your suite. But you need to find his access card in the first place to get in, for privacy sake, all employees get their own unique access card. 
 Amo: Isn’t Lacey spent most of his time around the counter in the checkout counter at the first floor? I will check there first for his access card.
 ===
-title: MrRabbit.Maintenance_Robot_Brokken_Fixed
+title: MrRabbit.Maintenance_Robot_Fixed
 tags: Maintenance_Robot
 colorID: 1
-position: 2290,393
+position: 2027,396
 ---
 Amo: Alright, I am done here, what should I do next, bring this robot to the broken elevator door?
 Mr. Rabbit: See the coffee bean delivery tunnel in this room? Just pick the robot up and put it there. The cargo tunnels are connected to the maintenance tunnels. All you need to do is return to the corridor and submit a maintenance request there. 
@@ -126,14 +128,158 @@ Amo: Then we can leave everything to the maintenance robot. Sounds great.
 title: MrRabbit.Maintenance_Robot_Tunnel
 tags: Maintenance_Robot
 colorID: 1
-position: 2565,395
+position: 2303,399
 ---
 Amo: Alright, time to return to the corridor.
 ===
 title: MrRabbit.Maintenance_Robot_Summon_Ready
 tags: Maintenance_Robot
 colorID: 1
-position: 2809,398
+position: 2547,402
 ---
 Mr. Rabbit: The maintenance robot is already registered to the sensor network. Try use the panel at the end of corridor to submitted your maintenance	request.
+===
+title: MrRabbit.Elevator_Start
+tags: Elevator
+colorID: 3
+position: 3195,422
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Elevator_Intro]]
+<<endif>>
+===
+title: MrRabbit.Elevator_Intro
+tags: Elevator
+colorID: 3
+position: 3032,723
+---
+Amo: Now I remember why the elevator never crossed our minds in the previous time loops. 
+Mr. Rabbit: 32 hours ago, Lacey, a Star-Ring convenience store employee, was trying to transport 20 crates of coffee beans to the rooftop, however, the Maintenance Robot misidentifies him as an industrial spy and assumes he is trying to steal our secret coffee recipe. 
+Amo: And that robot broke the door to stop Lacey?
+Mr. Rabbit: Actually, no, He smashed box after box of coffee beans at the robot, scraping it along with the elevator door. And the elevator remains locked down after that.
+Amo: Great, what do we know? Is the elevator the only way up?
+Mr. Rabbit: There is ductwork consisting of cargo and maintenance tunnels, but I would advise you not to use that. After all, you are larger than a coffee bean crater.
+Mr. Rabbit: You can unlock the elevator once it was fixed by the manager officer, which is the black door down this corridor. To fix that door, you better get the maintenance robot Lacey broke that day to work. That is the only spare maintenance robot this store has. 
+Amo: Let me check my neural implant, that device is left on the second floor, the coffee house part of this store. I need to go to the storefront to get to the second floor.
+
+<<if searchAppInDownload("hacking module")>>
+    Mr. Rabbit: But you can override that lockdown with your neural implant. Just like what I am doing when I have no one to talk to, which is near all the time before you came. 
+    Amo: Awww, rabbit, I didn't know I was that important to you.
+    Mr. Rabbit: My victims are mostly from Rabbit Heavy Industry, their defensive matrices are more challenging. The Confederation and Cat Technology are using passive firewalls, which require little memory but are vulnerable if you know where to hit.
+<<elseif searchAppInDownload("engineering module")>>
+    Mr. Rabbit: But you can fix that door on your own now if you can find some spare Mechanical Parts. You are basically an engineer with that neural implant. 
+    Amo: Basically? I thought Neural Implant with an engineering module can make me a real engineer, at least that is what I heard from advertisements in the re-education camp. 
+    Mr. Rabbit: Yes and no. Take soldering, for example, Neural Implant can grant you better control over your body, so you won’t burn yourself while soldering, and it will tell you where to put your solder. Still, you have to do the soldering yourself. The Neural Implant is more like an advisor and assistant.  
+<<endif>>
+===
+title: MrRabbit.Rita_Laptop_Intro
+tags: Laptop Rita
+colorID: 4
+position: 3577,741
+---
+Mr. Rabbit: Just as I suspected, our store’s security system shares the same underlying protocols as the one Rabbit Heavy Industry has.
+Mr. Rabbit: Now, drag the Lv.2 Access file to that folder.
+Mr. Rabbit: Not the shopping list! You silly.
+Mr. Rabbit: Alright, now the access card is updated. Let’s try to use it at the manager's office.
+===
+title: MrRabbit.Manager_Office_Start
+tags: Manager_Office
+colorID: 5
+position: 3903,408
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Manager_Office_Intro]]
+<<endif>>
+===
+title: MrRabbit.Rita_Laptop_Start
+tags: Laptop Rita
+colorID: 4
+position: 3572,415
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Rita_Laptop_Intro]]
+<<endif>>
+===
+title: MrRabbit.Manager_Office_Intro
+tags: Manager_Office
+colorID: 5
+position: 3867,758
+---
+Amo: Is that surveillance camera staring at me? Kinda creepy.
+Mr. Rabbit: It won’t be a very competent surveillance camera if it doesn’t keep an eye on you. Now, don’t scare yourself. Let’s check the console over there first.
+===
+title: MrRabbit.Elevator_Fixed
+tags: Elevator
+colorID: 3
+position: 3278,729
+---
+Amo: Rabbit, what do you think we can find up there?
+Mr. Rabbit: A magic device that creates a whirl of time and causes all the trouble we have experienced **today**.
+Amo: Wait, really? Did you know that all this time? There is a crazy sci-fi device on our rooftop that resets the time once it is after 12 pm.
+Mr. Rabbit: Of course not, you silly. Star Ring is just a convenience store, there is no way we can find equipment that is powerful enough to disturb the flow of time here.
+Amo: Unless this time loop is caused by magic.
+Mr. Rabbit: There is no magic in this world.
+===
+title: MrRabbit.Rooftop_Start
+tags: Rooftop
+colorID: 6
+position: 4578,400
+---
+Empty Text
+===
+title: MrRabbit.Rooftop_Intro
+tags: Rooftop
+colorID: 6
+position: 4564,717
+---
+Amo: Hey Rabbit, we are on the rooftop now. Can you hear me? Is the connection still good?
+Mr. Rabbit: Yeah, I am still here. I am linking with the sensor outside.
+Amo: Oki, have you found anything yet?
+Mr. Rabbit: Hold on, there is indeed something way off the chart.
+Mr. Rabbit: No way, that is not possible.
+Amo: What do you mean, Rabbit? What is causing the time loop?
+Mr. Rabbit: There's a derailed moon lander coming down right on us from geosynchronous orbit.
+===
+title: MrRabbit.Manager_Office_Access_Machine_Start
+tags: Manager_Office
+colorID: 5
+position: 4196,403
+---
+<<if backpackContains("access card") && getAccessCardLevel() < 2>>
+    [[MrRabbit.Manager_Office_Access_Machine_Low_Access_Level]]
+<<elseif !backpackContains("access card")>>
+    [[MrRabbit.Manager_Office_Access_Machine_No_Card]]
+<<endif>>
+===
+title: MrRabbit.Manager_Office_Access_Machine_Low_Access_Level
+tags: Manager_Office
+colorID: 5
+position: 4103,769
+---
+<<if visitCount() < 2>> 
+   Mr. Rabbit: It seems that even the access level of official employees cannot enter the store manager's office. We need a level-two permission to access the management's active area.
+	Amo: Huh. So, what is my access level? Can we try my access card?
+    Mr. Rabbit: Your level access is zero, you intern.
+    Mr. Rabbit: Weird.
+    Amo: What did you find?
+    Mr. Rabbit: I just realized the security system of our store is quite similar to Rabbit Heavy Industry. Especially the fact that both of these structures are based on access level.
+    Amo: You mean the sponsor of my neural implant?
+    Mr. Rabbit: The sponsor of nearly everything in this city. It's not that Rabbit Heavy Industry, what else could it be.
+    Amo: What should we do now? The manager is out of town, there is no way we can reach her or whoever has access to her officer.
+    Mr. Rabbit：Hmmm, give me a sec.
+    Mr. Rabbit: ……
+    Mr. Rabbit: You remember that high school girl who always stayed late in the dining area on the first floor? The one with a clunky laptop?
+    Amo: Uhuhu, you mean Rita! She is pretty cute. But, what is wrong with her laptop?
+    Mr. Rabbit: I don’t know where she got that laptop. Somehow it has the security protocol of Rabbit Heavy Industry on it. Normally I wouldn't tolerate such a dangerous device in the store, but I guess today we can be less strict.
+    Mr. Rabbit: Bring Lacey’s access card to her laptop. I will tell you what to do next when we get there. If my guesses about the security system are correct, we might be able to rely on Rabbit Heavy Industry's vulnerabilities to modify our permission.
+<<endif>>
+===
+title: MrRabbit.Manager_Office_Access_Machine_No_Card
+tags: 
+colorID: 5
+position: 4334,772
+---
+<<if visitCount() < 2>>
+    Mr. Rabbit: Amo, your access level is just intern. We need at least one official employee's access card to enter the manager office.
+<<endif>>
 ===

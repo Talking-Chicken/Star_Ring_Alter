@@ -50,7 +50,11 @@ public class laptop_manager : MonoBehaviour
             folder.SetActive(true);
             loading = true;
         }
-        float dist = Vector2.Distance(drag_object.transform.position, folder.transform.position);
+
+        float dist = 100;
+        if (drag_object != null)
+            dist = Vector2.Distance(drag_object.transform.position, folder.transform.position);
+
         if (dist <= 1&&drag_object !=folder)
         {
             folder.GetComponent<SpriteRenderer>().sprite = folder_icon;

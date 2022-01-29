@@ -7,23 +7,11 @@ public class InteractiveObj : MonoBehaviour
 {
     private StateManager stateManager;
 
-
-    //CHARACTER     CHARACTER     CHARACTER     CHARACTER     CHARACTER     CHARACTER     CHARACTER
-    private CharacterTraits character;
-    private string characterName;
-
-
-    //ITEM     ITEM     ITEM     ITEM     ITEM     ITEM     ITEM     ITEM     ITEM     ITEM     ITEM     ITEM
-    private Item item;
-    private string itemName;
-
     //COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON
     private Vector2 position;
     private Color themeColor;
 
-    [Header("Dialogue")] private YarnProgram dialogueFile;
-    private string talkingNode = "";
-    [SerializeField] DialogueRunner runner;
+    public DialogueRunner runner;
     [SerializeField] PlayerControl player;
 
     [SerializeField] private bool isTimeToTalk; //player can only talk to NPC when they have time to talk    [NPC is able to talk to player]
@@ -32,14 +20,6 @@ public class InteractiveObj : MonoBehaviour
     [SerializeField, Range(0,5.0f)] float indicatorYPos; //higher number means more 
     private Vector2 indicatorPos; //indicator position
     private GameObject currentIndicator; //record the newly created indicator
-
-    private void Awake()
-    {
-        if (gameObject.GetComponentInParent<CharacterTraits>() != null)
-            character = GetComponentInParent<CharacterTraits>();
-        if (gameObject.GetComponentInParent<Item>() != null)
-            item = GetComponentInParent<Item>();
-    }
 
     void Start()
     {

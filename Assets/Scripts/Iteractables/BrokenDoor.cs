@@ -8,6 +8,9 @@ public class BrokenDoor : InteractiveObj
 {
     [SerializeField] private broken_door door;
 
+    //the area that trigger a dialogue between player and Mr.Rabbit, when fixed the broken door
+    [SerializeField] private GameObject talkingArea;
+
     [SerializeField] GameObject UIContainer;
     [SerializeField] TextMeshProUGUI description;
 
@@ -25,6 +28,7 @@ public class BrokenDoor : InteractiveObj
     public override void interact()
     {
         state.transitionState(State.UI);
+        UIContainer.SetActive(true);
         if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "engineering module"))
         {
             if (playerBackpack.contains("gear 5") && playerBackpack.contains("gear 4") && playerBackpack.contains("gear 3"))
@@ -37,6 +41,8 @@ public class BrokenDoor : InteractiveObj
         {
             description.text = "it's a broken door, I have no idea how to fix it";
         }
+
+        
     }
 
     public void confirm()
@@ -47,8 +53,17 @@ public class BrokenDoor : InteractiveObj
             {
                 door.door.SetActive(true);
                 door.gameObject.SetActive(false);
+
+                if (talkingArea != null)
+                    talkingArea.SetActive(true);
             }
         }
+        UIContainer.SetActive(false);
+        state.transitionState(State.Explore);
+    }
+
+    public void exit()
+    {
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);
     }
