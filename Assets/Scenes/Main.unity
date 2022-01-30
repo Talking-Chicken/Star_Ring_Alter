@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 42, y: 32}
-  m_SizeDelta: {x: 663.0471, y: 379.30505}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 588.3585, y: 444.9649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2603990
 MonoBehaviour:
@@ -1108,8 +1108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 138.00003, y: -119.000015}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 138.84, y: -78.47}
+  m_SizeDelta: {x: 158.32968, y: 111.05032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &53343539
 MonoBehaviour:
@@ -1613,8 +1613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1619845777}
   dest: {x: 0, y: 0}
-  floor_name: 
-  change_floor: 0
+  floor_name: Move1
+  change_floor: 1
 --- !u!4 &114828872
 Transform:
   m_ObjectHideFlags: 0
@@ -7519,10 +7519,11 @@ MonoBehaviour:
   door: {fileID: 1089638820}
   needAccessCard: 0
   audio: {fileID: 1027390678}
-  scan: {fileID: 8300000, guid: ba4b6f29682b88546b0fb4c33d3e73f2, type: 3}
-  scan_SE: {fileID: 8300000, guid: cdcade6cc935ece4b91c7e3ffb7af81c, type: 3}
+  scan: {fileID: 8300000, guid: cdcade6cc935ece4b91c7e3ffb7af81c, type: 3}
+  scan_SE: {fileID: 8300000, guid: d2c0f7aa24034704c846194e32c8650a, type: 3}
   granted: {fileID: 8300000, guid: d9799951ceb17bd49b8fbaebd799d912, type: 3}
   denied: {fileID: 8300000, guid: c7d852c7ea7012049bf49feabbb05f13, type: 3}
+  siren: {fileID: 8300000, guid: cfd1c8ab4b22be242892895ed45727c0, type: 3}
 --- !u!58 &693465475
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8892,11 +8893,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 2002218610}
   needAccessCard: 1
-  audio: {fileID: 0}
-  scan: {fileID: 0}
-  scan_SE: {fileID: 0}
-  granted: {fileID: 0}
-  denied: {fileID: 0}
+  audio: {fileID: 1027390678}
+  scan: {fileID: 8300000, guid: cdcade6cc935ece4b91c7e3ffb7af81c, type: 3}
+  scan_SE: {fileID: 8300000, guid: d2c0f7aa24034704c846194e32c8650a, type: 3}
+  granted: {fileID: 8300000, guid: d9799951ceb17bd49b8fbaebd799d912, type: 3}
+  denied: {fileID: 8300000, guid: c7d852c7ea7012049bf49feabbb05f13, type: 3}
+  siren: {fileID: 8300000, guid: cfd1c8ab4b22be242892895ed45727c0, type: 3}
 --- !u!114 &907362142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10091,7 +10093,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.829
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11163,6 +11165,8 @@ MonoBehaviour:
   open: 0
   close: 0
   Auto: 0
+  door: {fileID: 8300000, guid: e3477eae1aa649241b32082595e164d4, type: 3}
+  sound_effect: {fileID: 1027390678}
   distance: 10
   interpolationFramesCount: 45
 --- !u!1 &1096303298
@@ -11462,6 +11466,8 @@ MonoBehaviour:
   open: 0
   close: 0
   Auto: 1
+  door: {fileID: 8300000, guid: e3477eae1aa649241b32082595e164d4, type: 3}
+  sound_effect: {fileID: 1027390678}
   distance: 6
   interpolationFramesCount: 45
 --- !u!1 &1102205880
@@ -13053,13 +13059,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 5.0587416, y: -0.345253}
-  - {x: -2.4827957, y: -3.3799744}
-  - {x: -5.6526947, y: -2.0359}
+  - {x: 4.372119, y: -0.29003143}
+  - {x: -2.4459991, y: -3.0180855}
+  - {x: -5.169243, y: -1.8410683}
   - {x: -7.732277, y: -2.814064}
   - {x: -2.3559494, y: -5.228142}
   - {x: 6.891083, y: -1.5670013}
-  - {x: 5.0029573, y: -0.29593658}
+  - {x: 4.4151964, y: -0.34117126}
 --- !u!114 &1285013756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13077,7 +13083,7 @@ MonoBehaviour:
   movingDependencies: []
   sortType: 1
   SorterPositionOffset: {x: -7.6449203, y: -2.7127113, z: 0}
-  SorterPositionOffset2: {x: 6.9260025, y: -1.6007881, z: 0}
+  SorterPositionOffset2: {x: 6.801674, y: -1.725174, z: 0}
   renderersToSort:
   - {fileID: 1285013757}
 --- !u!212 &1285013757
@@ -13118,7 +13124,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 19
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 12458bdc8889183439bf4fd66833bdec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -13809,6 +13815,8 @@ MonoBehaviour:
   tile_roof_top: {fileID: 1003939708}
   blocker: {fileID: 221852234}
   console: {fileID: 245065827}
+  machine: {fileID: 8300000, guid: 0fabb393b2ce362488aba14c423f2655, type: 3}
+  sound_effect: {fileID: 1027390678}
   UIContainer: {fileID: 1884011987}
   description: {fileID: 1525853143}
 --- !u!95 &1338703204
@@ -15621,7 +15629,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1473615254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16067,6 +16075,7 @@ GameObject:
   - component: {fileID: 1495903554}
   - component: {fileID: 1495903556}
   - component: {fileID: 1495903557}
+  - component: {fileID: 1495903558}
   m_Layer: 2
   m_Name: robot
   m_TagString: Untagged
@@ -16164,10 +16173,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.9753833, y: -1.0612977}
-      - {x: -0.5198883, y: -1.5254763}
-      - {x: 0.90172243, y: -1.115484}
-      - {x: 0.20943385, y: -0.57948303}
+    - - {x: -1.6398501, y: -1.2712357}
+      - {x: -0.6019577, y: -2.2898045}
+      - {x: 1.231236, y: -1.3132913}
+      - {x: 0.20943385, y: -0.26457214}
 --- !u!114 &1495903557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16191,6 +16200,26 @@ MonoBehaviour:
   idle: {fileID: 0}
   smile: {fileID: 0}
   testString: 
+--- !u!114 &1495903558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495903553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9022bc684ac14674ea6386ed828df2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: 0, y: 0, z: 0}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort:
+  - {fileID: 1495903554}
 --- !u!1 &1507273808
 GameObject:
   m_ObjectHideFlags: 0
@@ -17363,6 +17392,8 @@ MonoBehaviour:
   open: 0
   close: 0
   Auto: 1
+  door: {fileID: 8300000, guid: e3477eae1aa649241b32082595e164d4, type: 3}
+  sound_effect: {fileID: 1027390678}
   distance: 6
   interpolationFramesCount: 45
 --- !u!1 &1625425666
@@ -18121,7 +18152,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649016004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.4, y: 12.7, z: 0}
+  m_LocalPosition: {x: -28.62, y: 25.09, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 1005725918}
@@ -18165,8 +18196,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio_source: {fileID: 198687947}
   clips:
-  - {fileID: 8300000, guid: 2ad0c03ba7807ef48acaf0bab7305b6c, type: 3}
+  - {fileID: 8300000, guid: 9ec4a36537e472f4b8a2da3b274584d3, type: 3}
   - {fileID: 8300000, guid: 3cbb484c6a3c2164fbf3403da4b06fd1, type: 3}
+  - {fileID: 8300000, guid: d1c487511034f88448161d24cf534b93, type: 3}
 --- !u!95 &1649016010
 Animator:
   serializedVersion: 3
@@ -19497,8 +19529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -215, y: -119.000015}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -187, y: -84.796}
+  m_SizeDelta: {x: 134.23657, y: 98.40709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1722798212
 MonoBehaviour:
@@ -20263,7 +20295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 25
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 929b3be9bcce97d458cf52bcbd97d4c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20544,7 +20576,7 @@ MonoBehaviour:
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
+  m_TextStyleHashCode: 97690656
   m_overrideHtmlColors: 0
   m_faceColor:
     serializedVersion: 2
@@ -23288,6 +23320,8 @@ MonoBehaviour:
   open: 0
   close: 0
   Auto: 0
+  door: {fileID: 8300000, guid: e3477eae1aa649241b32082595e164d4, type: 3}
+  sound_effect: {fileID: 1027390678}
   distance: 10
   interpolationFramesCount: 45
 --- !u!1 &2004289621
@@ -24763,6 +24797,8 @@ MonoBehaviour:
   open: 0
   close: 0
   Auto: 1
+  door: {fileID: 8300000, guid: e3477eae1aa649241b32082595e164d4, type: 3}
+  sound_effect: {fileID: 1027390678}
   distance: 6
   interpolationFramesCount: 45
 --- !u!1 &2122153024

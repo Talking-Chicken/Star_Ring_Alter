@@ -12,6 +12,8 @@ public class door_control : MonoBehaviour
     private bool enter;
     float lerpDuration = 3;
     private float height;
+    public AudioClip door;
+    public AudioSource sound_effect;
     float intial_y;
     public float distance;
     string state="closed";
@@ -39,19 +41,21 @@ public class door_control : MonoBehaviour
         if (Auto==false&& open && complete && state=="closed")
         {
             StartCoroutine(Lerp());
+            sound_effect.PlayOneShot(door);
             state = "opening";
             complete = false;
         }
         if (Auto && dist<=distance && state == "closed")
         {
             StartCoroutine(Lerp());
+            sound_effect.PlayOneShot(door);
             state = "opening";
             complete = false;
         }
         if ( dist>distance && complete && state == "open")
         {
             StartCoroutine(Lerp_close());
-
+            sound_effect.PlayOneShot(door);
             state = "closing";
 
             complete = false;

@@ -19,7 +19,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
     {
         //cache the animator component
         animator = GetComponent<Animator>();
-        foot_step_clip = "hard_floor";
+        foot_step_clip = "Move1";
     }
 
 

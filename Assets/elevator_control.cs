@@ -21,6 +21,9 @@ public class elevator_control : InteractiveObj
     private PlayerBackpack playerBackpack;
     private NeuroImplantDevice playerNeuroDevice;
     private StateManager stateManager;
+    public AudioClip machine;
+    public AudioSource sound_effect;
+        
 
     [SerializeField, BoxGroup("UI")] GameObject UIContainer;
     [SerializeField, BoxGroup("UI")] TextMeshProUGUI description;
@@ -108,6 +111,7 @@ public class elevator_control : InteractiveObj
                 state = 0;
                 m_Animator.Play("up");
                 StartCoroutine(moving_up());
+                sound_effect.PlayOneShot(machine);
                 tile_corridor.SetActive(false);
                 tile_roof_top.SetActive(false);
                 blocker.SetActive(true);
@@ -118,6 +122,7 @@ public class elevator_control : InteractiveObj
             {
                 state = 3;
                 m_Animator.Play("down");
+                sound_effect.PlayOneShot(machine);
                 StartCoroutine(moving_down());
                 tile_corridor.SetActive(false);
                 tile_roof_top.SetActive(false);

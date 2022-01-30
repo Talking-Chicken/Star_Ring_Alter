@@ -10,10 +10,12 @@ public class terminal_system : MonoBehaviour
 
     public bool needAccessCard;
     public AudioSource audio;
+    bool once;
     public AudioClip scan;
     public AudioClip scan_SE;
     public AudioClip granted;
     public AudioClip denied;
+    public AudioClip siren;
     private PlayerBackpack playerBackpack;
     void Start()
     {
@@ -24,28 +26,37 @@ public class terminal_system : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("scan_complete")) //&& m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f)
+        if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("standby"))
+        {
+            once = true;
+        }
+            if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("scan_complete")) //&& m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f)
         {
             if (needAccessCard)
             {
                 //unlock door if player has level 2 access
                 if (checkAccess(2))
                 {
+                    
                     //unlock door at end of animation clip scan
                     m_Animator.SetTrigger("complete");
-                    audio.PlayOneShot(granted);
+                    if (once) { audio.PlayOneShot(granted); }
+                    once = false;
                     door.GetComponent<door_control>().open = true;
                 } else
                 {
                     m_Animator.Play("no_pass");
                     audio.PlayOneShot(denied);
+                    audio.PlayOneShot(siren);
                 }
             }
             else
             {
                 //unlock door at end of animation clip scan
                 m_Animator.SetTrigger("complete");
-                audio.PlayOneShot(granted);
+
+                if (once) { audio.PlayOneShot(granted); }
+                once = false;
                 door.GetComponent<door_control>().open = true;
             }
         }
@@ -57,6 +68,7 @@ public class terminal_system : MonoBehaviour
         {
             m_Animator.SetTrigger("scan");
             audio.PlayOneShot(scan);
+            audio.PlayOneShot(scan_SE);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -66,6 +78,7 @@ public class terminal_system : MonoBehaviour
             m_Animator.Play("no_pass");
             audio.Stop();
             audio.PlayOneShot(denied);
+            audio.PlayOneShot(siren);
         }
     }
 
