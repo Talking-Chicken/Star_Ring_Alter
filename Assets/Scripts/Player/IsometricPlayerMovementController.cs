@@ -40,7 +40,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
             rbody.MovePosition(newPos);
         } else
         {
-            rbody.velocity = Vector2.zero;
+            isoRenderer.SetDirection(new Vector2(0,0));
         }
         
     }

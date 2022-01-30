@@ -19,7 +19,7 @@ public class TimeLoopSystem : MonoBehaviour
         isPaused = false;
         rate = 10;
 
-        loopTime = 1300;
+        loopTime = 3000;
     }
 
     void Start()
