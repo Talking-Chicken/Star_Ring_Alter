@@ -9,7 +9,11 @@ public class terminal_system : MonoBehaviour
     public GameObject door;
 
     public bool needAccessCard;
-
+    public AudioSource audio;
+    public AudioClip scan;
+    public AudioClip scan_SE;
+    public AudioClip granted;
+    public AudioClip denied;
     private PlayerBackpack playerBackpack;
     void Start()
     {
@@ -29,16 +33,19 @@ public class terminal_system : MonoBehaviour
                 {
                     //unlock door at end of animation clip scan
                     m_Animator.SetTrigger("complete");
+                    audio.PlayOneShot(granted);
                     door.GetComponent<door_control>().open = true;
                 } else
                 {
                     m_Animator.Play("no_pass");
+                    audio.PlayOneShot(denied);
                 }
             }
             else
             {
                 //unlock door at end of animation clip scan
                 m_Animator.SetTrigger("complete");
+                audio.PlayOneShot(granted);
                 door.GetComponent<door_control>().open = true;
             }
         }
@@ -49,6 +56,7 @@ public class terminal_system : MonoBehaviour
         if (collision.tag=="Player")
         {
             m_Animator.SetTrigger("scan");
+            audio.PlayOneShot(scan);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -56,6 +64,8 @@ public class terminal_system : MonoBehaviour
         if (collision.tag == "Player"&& m_Animator.GetCurrentAnimatorStateInfo(0).IsName("scan"))
         {
             m_Animator.Play("no_pass");
+            audio.Stop();
+            audio.PlayOneShot(denied);
         }
     }
 
