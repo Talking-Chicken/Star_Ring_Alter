@@ -39,8 +39,8 @@ public class NeuroComputerGUI : MonoBehaviour, IPointerEnterHandler
                 var appType = appComp.GetType();
                 newApp.AddComponent(appType);
 
-                if (newApp.GetComponent<NeuroImplantApp>() != null)
-                    cloudAppButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = newApp.GetComponent<NeuroImplantApp>().appName;
+                //if (newApp.GetComponent<NeuroImplantApp>() != null)
+                    //cloudAppButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = newApp.GetComponent<NeuroImplantApp>().appName;
             }
             currentSelectedApp = computerDevice.cloudApps[0];
         }
