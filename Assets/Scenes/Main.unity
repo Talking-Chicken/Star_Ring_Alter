@@ -8235,7 +8235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 509220af6cb89ef49895a4a93cc126f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: Mr.Rabbit
+  characterName: Amo
   themeColor: {r: 0, g: 0, b: 0, a: 0}
   position: {x: 0, y: 0}
   dialogueFile: {fileID: 2480198943629176163, guid: 34322fd6caf086b42895ac25b437bc5a,

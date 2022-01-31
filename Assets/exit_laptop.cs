@@ -28,6 +28,7 @@ public class exit_laptop : MonoBehaviour
             main_camera.SetActive(true);
             laptop_camera.SetActive(false);
 
+            Cursor.visible = true;
 
             //transit back to explore state
             state.transitionState(State.Explore);
