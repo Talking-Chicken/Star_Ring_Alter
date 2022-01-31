@@ -139,4 +139,29 @@ public class PlayerControl : MonoBehaviour
             dialogueRunner.StartDialogue();
         }
     }
+
+    /**
+     * talk to NPC that is currently selecting and has a talkable component, with this specity start node
+     * @param startNode string that dialogue runner is starting
+     */
+    public void talkToNPC(string startNode)
+    {
+        Talkable NPC = null;
+        if (NPCToTalk.GetComponentInChildren<Talkable>() != null)
+            NPC = NPCToTalk.GetComponentInChildren<Talkable>();
+        else if (NPCToTalk.GetComponent<Talkable>() != null)
+            NPC = NPCToTalk.GetComponent<Talkable>();
+        else
+            Debug.LogWarning("cannot find talkable script for " + NPCToTalk.name);
+
+        //add Yarn Program of NPC to dialogue runner, then start the dialogue
+        if (NPC != null)
+        {
+            dialogueRunner.startNode = startNode;
+            if (!dialogueRunner.NodeExists(dialogueRunner.startNode))
+                dialogueRunner.Add(NPC.getDialogueFile());
+
+            dialogueRunner.StartDialogue();
+        }
+    }
 }

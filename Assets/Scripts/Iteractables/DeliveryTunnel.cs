@@ -18,6 +18,8 @@ public class DeliveryTunnel : InteractiveObj
 
     //the area that will turn on at corridor after player put robot into the tunnel, to remind player what's the next move
     [SerializeField] private GameObject talkingArea;
+
+    public bool sentRobot;
     void Start()
     {
         playerBackpack = FindObjectOfType<PlayerBackpack>();
@@ -58,6 +60,8 @@ public class DeliveryTunnel : InteractiveObj
 
             if (talkingArea != null)
                 talkingArea.SetActive(true);
+
+            sentRobot = true;
         }
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);

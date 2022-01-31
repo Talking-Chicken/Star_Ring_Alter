@@ -179,13 +179,11 @@ position: 3577,741
 ---
 Mr. Rabbit: Just as I suspected, our store’s security system shares the same underlying protocols as the one Rabbit Heavy Industry has.
 Mr. Rabbit: Now, drag the Lv.2 Access file to that folder.
-Mr. Rabbit: Not the shopping list! You silly.
-Mr. Rabbit: Alright, now the access card is updated. Let’s try to use it at the manager's office.
 ===
 title: MrRabbit.Manager_Office_Start
 tags: Manager_Office
 colorID: 5
-position: 3903,408
+position: 3902,407
 ---
 <<if visitCount() <= 1>>
     [[MrRabbit.Manager_Office_Intro]]
@@ -230,7 +228,7 @@ Empty Text
 title: MrRabbit.Rooftop_Intro
 tags: Rooftop
 colorID: 6
-position: 4564,717
+position: 4564,716
 ---
 Amo: Hey Rabbit, we are on the rooftop now. Can you hear me? Is the connection still good?
 Mr. Rabbit: Yeah, I am still here. I am linking with the sensor outside.
@@ -254,7 +252,7 @@ position: 4196,403
 title: MrRabbit.Manager_Office_Access_Machine_Low_Access_Level
 tags: Manager_Office
 colorID: 5
-position: 4103,769
+position: 4103,768
 ---
 <<if visitCount() < 2>> 
    Mr. Rabbit: It seems that even the access level of official employees cannot enter the store manager's office. We need a level-two permission to access the management's active area.
@@ -282,4 +280,18 @@ position: 4334,772
 <<if visitCount() < 2>>
     Mr. Rabbit: Amo, your access level is just intern. We need at least one official employee's access card to enter the manager office.
 <<endif>>
+===
+title: MrRabbit.Manager_Office_Elevator_Access_Fixed
+tags: Manager_Office Elevator
+colorID: 5
+position: 3867,1023
+---
+Mr.Rabbit: Alright, I think the elevator is working now. Let's go to the rooftop.
+===
+title: MrRabbit.Manager_Office_Elevator_Access_UnFixed
+tags: Manager_Office Elevator
+colorID: 5
+position: 4120,1020
+---
+System Warning: The elevator will remaining lockdown until the maintenance procedure is over.
 ===

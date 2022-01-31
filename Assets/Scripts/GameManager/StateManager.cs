@@ -98,19 +98,22 @@ public class StateManager : MonoBehaviour
         switch (currentState)
         {
             case State.Explore:
-                player.canMove = true;
+                if (player != null)
+                    player.canMove = true;
                 InvenSystem.canInven = true;
                 PlayerControl.canTalk = true;
                 break;
 
             case State.Dialogue:
-                player.canMove = false;
+                if (player != null)
+                    player.canMove = false;
                 InvenSystem.canInven = false;
                 PlayerControl.canTalk = false;
                 break;
 
             case State.UI:
-                player.canMove = false;
+                if (player != null)
+                    player.canMove = false;
                 InvenSystem.canInven = false;
                 PlayerControl.canTalk = false;
                 break;

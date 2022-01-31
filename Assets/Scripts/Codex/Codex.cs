@@ -96,5 +96,6 @@ public class Codex : MonoBehaviour
     public void resetDialogueNodesCount()
     {
         DialogueNodes.Clear();
+        saveDialgoueNodesCount();
     }
 }
