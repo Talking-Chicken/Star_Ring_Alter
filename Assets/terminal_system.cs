@@ -10,6 +10,7 @@ public class terminal_system : MonoBehaviour
 
     public bool needAccessCard;
     public AudioSource audio;
+    public AudioSource system;
     bool once;
     public AudioClip scan;
     public AudioClip scan_SE;
@@ -40,13 +41,13 @@ public class terminal_system : MonoBehaviour
                     
                     //unlock door at end of animation clip scan
                     m_Animator.SetTrigger("complete");
-                    if (once) { audio.PlayOneShot(granted); }
+                    if (once) { system.PlayOneShot(granted); }
                     once = false;
                     door.GetComponent<door_control>().open = true;
                 } else
                 {
                     m_Animator.Play("no_pass");
-                    audio.PlayOneShot(denied);
+                    system.PlayOneShot(denied);
                     audio.PlayOneShot(siren);
                 }
             }
@@ -55,7 +56,7 @@ public class terminal_system : MonoBehaviour
                 //unlock door at end of animation clip scan
                 m_Animator.SetTrigger("complete");
 
-                if (once) { audio.PlayOneShot(granted); }
+                if (once) { system.PlayOneShot(granted); }
                 once = false;
                 door.GetComponent<door_control>().open = true;
             }
@@ -67,7 +68,7 @@ public class terminal_system : MonoBehaviour
         if (collision.tag=="Player")
         {
             m_Animator.SetTrigger("scan");
-            audio.PlayOneShot(scan);
+            system.PlayOneShot(scan);
             audio.PlayOneShot(scan_SE);
         }
     }
@@ -77,7 +78,7 @@ public class terminal_system : MonoBehaviour
         {
             m_Animator.Play("no_pass");
             audio.Stop();
-            audio.PlayOneShot(denied);
+            system.PlayOneShot(denied);
             audio.PlayOneShot(siren);
         }
     }
