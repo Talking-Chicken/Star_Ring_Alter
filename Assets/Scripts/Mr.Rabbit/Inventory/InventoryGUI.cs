@@ -9,6 +9,8 @@ public class InventoryGUI : MonoBehaviour
     public static int currentItemIndex = 0;
 
     [Header("Unit"), SerializeField] GameObject Unit;
+    public GameObject Inventory_background;
+    public GameObject Item_background;
     [Header("Player Backpack"), SerializeField] BackPack playerBackpack;
 
     [Header("Allignment")]
@@ -39,7 +41,11 @@ public class InventoryGUI : MonoBehaviour
     void Start()
     {
         units = new BackpackUnit[collumn * row];
-
+        xGap = Screen.width / 8.5f;
+        yGap = xGap;
+        xStart = xGap + xGap / 4;
+        yStart = Screen.height - 0.75f*yGap;
+        Unit.transform.localScale = new Vector3(Screen.width/800, Screen.width /800, Screen.width / 800);
         //set up player backpack
         playerBackpack = FindObjectOfType<PlayerBackpack>();
 
