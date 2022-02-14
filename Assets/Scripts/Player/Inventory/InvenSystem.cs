@@ -57,7 +57,7 @@ public class InvenSystem : MonoBehaviour
         if (player.GetComponent<IsometricPlayerMovementController>() != null)
             hit = Physics2D.Raycast(player.gameObject.transform.position, player.GetComponent<IsometricPlayerMovementController>().dir, sight);
         else
-            hit = Physics2D.Raycast(player.gameObject.transform.position, player.GetComponent<PlayerControl>().dir, sight);             
+            hit = Physics2D.Raycast(player.gameObject.transform.position, player.GetComponent<PlayerControl>().Dir, sight);             
 
         if (hit.collider != null)
         {

@@ -147,5 +147,10 @@ public class StateManager : MonoBehaviour
     {
         transitionState(State.UI);
     }
+
+    //transit to previous state, used for Unity Event System
+    public void transitToPreviousState() {
+        transitionState(previousState);
+    }
 }
 
