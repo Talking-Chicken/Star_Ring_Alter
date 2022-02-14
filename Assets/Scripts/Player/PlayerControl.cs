@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField, Header("Movement"), Range(0f, 1000f), ShowIf("isUsingThisToMove")] float speed;
     [ShowIf("isUsingThisToMove")]public bool canMove;
 
-    public Vector2 dir { get; private set; } //direction that player is facing [cannot be (0,0)]
+    public Vector2 Dir { get; private set; } //direction that player is facing [cannot be (0,0)]
     private Vector2 movement = new Vector2(0,0); //direction that player is going [can be (0,0)]
 
     [Header("Dialogue")] public GameObject NPCToTalk;
@@ -21,13 +21,21 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] public DialogueRunner dialogueRunner;
     [SerializeField] private DialogueUI dialogueUI;
 
-    Rigidbody2D myBody;
+    //detect and interact
+    [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
+    public GameObject detectingObj = null;
 
+    //getters & setters
+    public float Sight{get {return _sight;} private set {_sight = value;}}
+
+    Rigidbody2D myBody;
+    private PlayerBackpack playerBackpack;
     private KeyManager key;
     void Start()
     {
         myBody = GetComponent<Rigidbody2D>();
         key = FindObjectOfType<KeyManager>();
+        playerBackpack = GetComponent<PlayerBackpack>();
     }
 
     void Update()
@@ -38,6 +46,11 @@ public class PlayerControl : MonoBehaviour
             if (Input.GetKeyDown(key.talk) && !dialogueRunner.IsDialogueRunning)
                 talkToNPC();
         }
+
+        if (detectInteractiveObj() && Input.GetKeyDown(key.interact)) {
+            interact(detectingObj);
+        }
+        
     }
 
     private void FixedUpdate()
@@ -61,45 +74,45 @@ public class PlayerControl : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.A))
             {
-                dir = new Vector2(-0.75f, 0.75f);
-                movement = dir;
+                Dir = new Vector2(-0.75f, 0.75f);
+                movement = Dir;
             } else if (Input.GetKey(KeyCode.D))
             {
-                dir = new Vector2(0.75f, 0.75f);
-                movement = dir;
+                Dir = new Vector2(0.75f, 0.75f);
+                movement = Dir;
             }  else
             {
-                dir = new Vector2(0, 1);
-                movement = dir;
+                Dir = new Vector2(0, 1);
+                movement = Dir;
             }
         } else if (Input.GetKey(KeyCode.S))
         {
             if (Input.GetKey(KeyCode.A))
             {
-                dir = new Vector2(-0.75f, -0.75f);
-                movement = dir;
+                Dir = new Vector2(-0.75f, -0.75f);
+                movement = Dir;
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                dir = new Vector2(0.75f, -0.75f);
-                movement = dir;
+                Dir = new Vector2(0.75f, -0.75f);
+                movement = Dir;
             }
             else
             {
-                dir = new Vector2(0, -1);
-                movement = dir;
+                Dir = new Vector2(0, -1);
+                movement = Dir;
             }
         } else
         {
             if (Input.GetKey(KeyCode.A))
             {
-                dir = new Vector2(-1, 0);
-                movement = dir;
+                Dir = new Vector2(-1, 0);
+                movement = Dir;
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                dir = new Vector2(1, 0);
-                movement = dir;
+                Dir = new Vector2(1, 0);
+                movement = Dir;
             } else
             {
                 movement = new Vector2(0, 0);
@@ -163,5 +176,67 @@ public class PlayerControl : MonoBehaviour
 
             dialogueRunner.StartDialogue();
         }
+    }
+
+    /**
+     * raycast to detect a gameobject that contains interactable component
+     * @return true if detected one, false other wise
+     */
+    public bool detectInteractiveObj() {
+        RaycastHit2D hit;
+        if (GetComponent<IsometricPlayerMovementController>() != null)
+            hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<IsometricPlayerMovementController>().dir, Sight);
+        else
+            hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<PlayerControl>().Dir, Sight);             
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.gameObject.GetComponentInParent<Item>() != null)
+            {
+                detectingObj = hit.collider.gameObject.GetComponentInParent<Item>().gameObject;
+                return true;
+            }
+            else if (hit.collider.gameObject.GetComponent<InteractiveObj>() != null)
+            {
+                detectingObj = hit.collider.gameObject.GetComponent<InteractiveObj>().gameObject;
+                return true;
+            }
+            else
+            {
+                detectingObj = gameObject;
+                return false;
+            }
+        }
+        else
+        {
+            detectingObj = gameObject;
+            return false;
+        }
+    }
+
+     /**
+     * interact with the interactive object
+     * else pickup this object
+     */
+    public void interact(GameObject interactingObject) {
+        if (interactingObject.GetComponent<InteractiveObj>() != null)
+        {
+            interactingObject.GetComponent<InteractiveObj>().interact();
+        } else
+        {
+            pickUp();
+        }
+    }
+
+    /**
+     * add detectingObj to player's backpack
+     * then set detectingObj to null
+     */
+    public void pickUp()
+    {
+        playerBackpack.add(detectingObj);
+       
+        detectingObj.SetActive(false);
+        detectingObj = null;
     }
 }

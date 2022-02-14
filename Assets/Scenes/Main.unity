@@ -17588,6 +17588,8 @@ MonoBehaviour:
   NPCToTalk: {fileID: 1649016004}
   dialogueRunner: {fileID: 1946369523}
   dialogueUI: {fileID: 1115191637}
+  _sight: 10
+  detectingObj: {fileID: 0}
 --- !u!114 &1649016018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17595,7 +17597,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649016004}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 94bbf9a1eda85d04a93ca37357491213, type: 3}
   m_Name: 
@@ -21708,6 +21710,16 @@ PrefabInstance:
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 516394874}
+    - target: {fileID: 2904160361090383376, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
+      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: transitToPreviousState
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904160361090383376, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
+      propertyPath: onOptionsEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2904160361090383380, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
       propertyPath: m_LocalPosition.z
