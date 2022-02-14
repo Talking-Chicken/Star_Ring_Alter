@@ -2687,7 +2687,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: b879201538b80cc47a184e7e55713fb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6929,6 +6929,8 @@ GameObject:
   m_Component:
   - component: {fileID: 655537780}
   - component: {fileID: 655537781}
+  - component: {fileID: 655537783}
+  - component: {fileID: 655537782}
   m_Layer: 0
   m_Name: comm_console
   m_TagString: Untagged
@@ -6988,7 +6990,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6e5e4efdac40d6d48bae5dbaeb1b2192, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7000,6 +7002,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &655537782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655537779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9022bc684ac14674ea6386ed828df2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 1
+  SorterPositionOffset: {x: 1.4775505, y: -1.5532379, z: 0}
+  SorterPositionOffset2: {x: -2.4201279, y: -1.9606476, z: 0}
+  renderersToSort:
+  - {fileID: 655537781}
+--- !u!68 &655537783
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655537779}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.1072505, y: -2.7481232}
+  - {x: 1.572401, y: -1.5191498}
+  - {x: 0.33024216, y: -0.8961334}
+  - {x: -2.4789371, y: -2.0312042}
+  - {x: -1.044462, y: -2.7182465}
 --- !u!1 &671322097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8269,6 +8312,8 @@ GameObject:
   m_Component:
   - component: {fileID: 822654562}
   - component: {fileID: 822654561}
+  - component: {fileID: 822654563}
+  - component: {fileID: 822654564}
   m_Layer: 0
   m_Name: sci-fi_book
   m_TagString: Untagged
@@ -8314,7 +8359,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bf9e3e8e6ea35e849a3c09ea9edb9962, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8334,12 +8379,57 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822654560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.359846, y: 19.40474, z: 27.390625}
+  m_LocalPosition: {x: -5.9, y: 20.09, z: 27.390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 761196341}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &822654563
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822654560}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.7221277, y: -0.21092224}
+  - {x: -1.2412987, y: -0.12309265}
+  - {x: -1.416378, y: -1.058548}
+  - {x: 0.53097534, y: -1.1373901}
+  - {x: 0.74032784, y: -0.8050537}
+  - {x: 0.64180946, y: -1.3220215}
+  - {x: 1.4058075, y: -1.0735321}
+  - {x: 1.3242111, y: -0.25953674}
+  - {x: 0.70021844, y: -0.22167969}
+--- !u!114 &822654564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822654560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9022bc684ac14674ea6386ed828df2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 1
+  SorterPositionOffset: {x: -1.3520546, y: -1.0135651, z: 0}
+  SorterPositionOffset2: {x: 1.2168484, y: -0.36038208, z: 0}
+  renderersToSort:
+  - {fileID: 822654561}
 --- !u!1 &825997203
 GameObject:
   m_ObjectHideFlags: 0
@@ -8468,6 +8558,8 @@ GameObject:
   m_Component:
   - component: {fileID: 834260470}
   - component: {fileID: 834260469}
+  - component: {fileID: 834260472}
+  - component: {fileID: 834260471}
   m_Layer: 0
   m_Name: amo_toy
   m_TagString: Untagged
@@ -8513,7 +8605,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7639b2f1c7011f84e8e3b8826aef1a9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8539,6 +8631,50 @@ Transform:
   m_Father: {fileID: 761196341}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &834260471
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834260468}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 1.1030309, y: -0.22261047}
+  - {x: 1.0413151, y: -0.24024963}
+  - {x: 0.8737974, y: -0.25785828}
+  - {x: -0.97976303, y: -0.62553406}
+  - {x: -0.47624207, y: -1.2946625}
+  - {x: 1.4009676, y: -0.8752136}
+  - {x: 1.1563969, y: -0.42260742}
+  - {x: 1.1055338, y: -0.24559021}
+--- !u!114 &834260472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834260468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9022bc684ac14674ea6386ed828df2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 1
+  SorterPositionOffset: {x: 1.3654423, y: -0.8340454, z: 0}
+  SorterPositionOffset2: {x: -1.0240841, y: -0.60658264, z: 0}
+  renderersToSort:
+  - {fileID: 834260469}
 --- !u!1 &846399661
 GameObject:
   m_ObjectHideFlags: 0
@@ -14093,6 +14229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1354779501}
   - component: {fileID: 1354779500}
+  - component: {fileID: 1354779502}
   m_Layer: 0
   m_Name: power_cell
   m_TagString: Untagged
@@ -14138,7 +14275,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: ccab8485486ef8a4caee1c61f0168ef2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14158,13 +14295,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354779499}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.86984634, y: 20.734741, z: 27.390625}
+  m_LocalPosition: {x: -0.88, y: 20.81, z: 27.390625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1471264223}
   m_Father: {fileID: 761196341}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1354779502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354779499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9022bc684ac14674ea6386ed828df2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 0
+  SorterPositionOffset: {x: -0.07597542, y: -1.3972626, z: 0}
+  SorterPositionOffset2: {x: 0, y: 0, z: 0}
+  renderersToSort:
+  - {fileID: 1354779500}
 --- !u!1 &1364617056
 GameObject:
   m_ObjectHideFlags: 0
@@ -15402,6 +15559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1471264223}
   - component: {fileID: 1471264224}
+  - component: {fileID: 1471264225}
   m_Layer: 0
   m_Name: Point Light 2D
   m_TagString: Untagged
@@ -15464,6 +15622,33 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!68 &1471264225
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471264222}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.8323307, y: -1.2924347}
+  - {x: -0.6790714, y: -1.4270782}
+  - {x: -0.30498123, y: -1.5198822}
+  - {x: 0.132761, y: -1.5268707}
+  - {x: 0.5036316, y: -1.4473267}
+  - {x: 0.70859146, y: -1.2857361}
+  - {x: 0.7119446, y: -0.8906708}
+  - {x: 0.6626892, y: -0.80818176}
+  - {x: 0.60814285, y: -0.8011017}
+  - {x: -0.8479023, y: -0.8264618}
+  - {x: -0.84744835, y: -1.29245}
 --- !u!1 &1472409324
 GameObject:
   m_ObjectHideFlags: 0
@@ -18232,7 +18417,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_Sprite: {fileID: -5413810746237078299, guid: 727b826fdb9c04f4e8c9077074cb9ea2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -18285,7 +18470,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isMovable: 1
   renderBelowAll: 0
-  movingDependencies: []
+  movingDependencies:
+  - {fileID: 822654564}
+  - {fileID: 1354779502}
   sortType: 0
   SorterPositionOffset: {x: 0.010131836, y: 0.42027283, z: 0.0078125}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
@@ -21146,7 +21333,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 54f75fa2ad954c241ab05d4868c9cedd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22259,6 +22446,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1930265800}
   - component: {fileID: 1930265799}
+  - component: {fileID: 1930265802}
+  - component: {fileID: 1930265801}
   m_Layer: 0
   m_Name: whiteboard
   m_TagString: Untagged
@@ -22330,6 +22519,47 @@ Transform:
   m_Father: {fileID: 761196341}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &1930265801
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930265798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.414202, y: -1.8766937}
+  - {x: 2.7703705, y: -2.578598}
+  - {x: 2.5892868, y: -2.8112183}
+  - {x: -2.6826878, y: -2.100357}
+  - {x: -2.4174974, y: -1.8641663}
+--- !u!114 &1930265802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930265798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9022bc684ac14674ea6386ed828df2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isMovable: 0
+  renderBelowAll: 0
+  movingDependencies: []
+  sortType: 1
+  SorterPositionOffset: {x: -2.5102406, y: -2.0036926, z: 0}
+  SorterPositionOffset2: {x: 2.6045704, y: -2.7228088, z: 0}
+  renderersToSort:
+  - {fileID: 1930265799}
 --- !u!1 &1934768155
 GameObject:
   m_ObjectHideFlags: 0
