@@ -18042,7 +18042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649016004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 115.5, y: 77.14, z: 0}
+  m_LocalPosition: {x: -21.7, y: 152.7, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_Children:
   - {fileID: 1005725918}
@@ -18201,7 +18201,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: 0.010131836, y: 0.42025757, z: 0.0078125}
+  SorterPositionOffset: {x: 0.010131836, y: 0.42027283, z: 0.0078125}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 1649016011}
@@ -21706,7 +21706,7 @@ PrefabInstance:
     - target: {fileID: 6292406906345179406, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6292406906345179407, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
         type: 3}
@@ -21948,16 +21948,18 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -8.447741, y: -4.5872574}
+    - - {x: -8.67219, y: -4.51134}
+      - {x: -9.093828, y: -5.208814}
+      - {x: -9.08178, y: -5.2329106}
       - {x: -8.948926, y: -5.3088284}
       - {x: -8.295398, y: -5.614376}
       - {x: -5.637768, y: -6.9816623}
       - {x: -5.2445297, y: -7.186229}
-      - {x: -4.967227, y: -7.229634}
-      - {x: -4.946002, y: -7.2221937}
-      - {x: -4.8301506, y: -7.057228}
-      - {x: -4.50955, y: -6.604036}
-      - {x: -7.3801713, y: -5.1927752}
+      - {x: -4.5213776, y: -7.6134496}
+      - {x: -4.6001453, y: -7.464294}
+      - {x: -4.380537, y: -7.2301564}
+      - {x: -3.9907637, y: -6.9498935}
+      - {x: -7.356076, y: -5.204823}
       - {x: -8.311067, y: -4.68148}
 --- !u!68 &1916648850
 EdgeCollider2D:
