@@ -1164,7 +1164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c0a0d250c691894f99af5067588a712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: {fileID: 0}
   background: {fileID: 6292406906666061097}
   status: {fileID: 6292406907139144239}
   inventory: {fileID: 6292406906345179406}
@@ -1224,6 +1223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Unit: {fileID: 7686537426917253760, guid: 05250221e33ce1748ac95cc633293394, type: 3}
+  Inventory_background: {fileID: 0}
+  Item_background: {fileID: 0}
   playerBackpack: {fileID: 0}
   row: 4
   collumn: 4
