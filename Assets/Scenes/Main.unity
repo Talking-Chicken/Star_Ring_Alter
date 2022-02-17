@@ -1901,9 +1901,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf678490122e1f42aa56c26821b65c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOffset: {x: 0.005, y: 0}
-  greenOffset: {x: 0, y: 0}
-  blueOffset: {x: 0, y: 0}
+  redOffset: {x: 0.001, y: 0.001}
+  greenOffset: {x: 0.001, y: 0.001}
+  blueOffset: {x: 0.001, y: 0.001}
 --- !u!114 &154820793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1923,9 +1923,9 @@ MonoBehaviour:
   scanlineSize2: 20
   scanlineSpeed2: -3
   scanlineAmount: 0.05
-  vignetteSize: 1.9
-  vignetteSmoothness: 0.6
-  vignetteEdgeRound: 8
+  vignetteSize: 2.2
+  vignetteSmoothness: 0.64
+  vignetteEdgeRound: 11.7
   noiseSize: 75
   noiseAmount: 0.05
   redOffset: {x: 0, y: -0.01}
