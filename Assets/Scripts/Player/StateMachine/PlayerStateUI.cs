@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStateInteract : PlayerStateBase
+public class PlayerStateUI : PlayerStateBase
 {
     public override void EnterState(PlayerControl player) {
 
     }
     public override void UpdateState(PlayerControl player) {
-
+        
     }
     public override void FixedupdateState(PlayerControl player) {
 
     }
     public override void LeaveState(PlayerControl player) {
-
+        PrivoudState = this;
     }
 }

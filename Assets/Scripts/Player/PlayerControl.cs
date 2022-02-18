@@ -31,8 +31,34 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D myBody;
     private PlayerBackpack playerBackpack;
     private KeyManager key;
+
+    //setters & getters
+    public KeyManager KeyManager {get {return key;}}
+
+    //state machine
+    private PlayerStateBase currentState;
+    public PlayerStateExplore stateExplore = new PlayerStateExplore();
+    public PlayerStateDialogue stateDialogue = new PlayerStateDialogue();
+    public PlayerStateUI stateUI = new PlayerStateUI();
+
+    public void ChangeState(PlayerStateBase newState)
+    {
+        if (currentState != null)
+        {
+            currentState.LeaveState(this);
+        }
+
+        currentState = newState;
+
+        if (currentState != null)
+        {  
+            currentState.EnterState(this);
+        }
+    }
+
     void Start()
     {
+        currentState = stateExplore;
         myBody = GetComponent<Rigidbody2D>();
         key = FindObjectOfType<KeyManager>();
         playerBackpack = GetComponent<PlayerBackpack>();
@@ -41,7 +67,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         setDir();
-        if (canTalk)
+        /*if (canTalk)
         {
             if (Input.GetKeyDown(key.talk) && !dialogueRunner.IsDialogueRunning)
                 talkToNPC();
@@ -49,7 +75,8 @@ public class PlayerControl : MonoBehaviour
 
         if (detectInteractiveObj() && Input.GetKeyDown(key.interact)) {
             interact(detectingObj);
-        }
+        }*/
+        currentState.UpdateState(this);
         
     }
 
