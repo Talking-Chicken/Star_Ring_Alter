@@ -52,7 +52,7 @@ public class StateManager : MonoBehaviour
                     currentState = newState;
 
                     //exit UI 
-                    FindObjectOfType<RabbitSystemControl>().exitUI();
+                    //FindObjectOfType<RabbitSystemControl>().exitUI();
 
                     break;
                 }
@@ -97,21 +97,18 @@ public class StateManager : MonoBehaviour
         {
             case State.Explore:
                 if (player != null)
-                    player.canMove = true;
                 InvenSystem.canInven = true;
                 PlayerControl.canTalk = true;
                 break;
 
             case State.Dialogue:
                 if (player != null)
-                    player.canMove = false;
                 InvenSystem.canInven = false;
                 PlayerControl.canTalk = false;
                 break;
 
-            case State.UI:
+            case State.UI:  
                 if (player != null)
-                    player.canMove = false;
                 InvenSystem.canInven = false;
                 PlayerControl.canTalk = false;
                 break;

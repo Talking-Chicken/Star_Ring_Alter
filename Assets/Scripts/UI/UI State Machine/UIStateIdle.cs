@@ -9,10 +9,11 @@ public class UIStateIdle : UIStateBase
         UI.closeSelectionMenu();
     }
     public override void UpdateState(UIControl UI) {
-        if (Input.GetKeyUp(UI.Key.interact))
-            UI.openSelectionMenu();
+        if (Input.GetKeyUp(UI.Key.openBackpack))
+            UI.openInventory();
     }
     public override void LeaveState(UIControl UI) {
-
+        //change player state when change UI state into state that have real funtionality
+        UI.Player.ChangeState(UI.Player.stateUI);
     }
 }

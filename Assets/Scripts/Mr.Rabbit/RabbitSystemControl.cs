@@ -31,6 +31,7 @@ public class RabbitSystemControl : MonoBehaviour
     
     void Update()
     {
+        /*
         //switchUISection();
        // Debug.Log(camera_pos_setter.rabbit_on);
        if (stateManager.getCurrentState() == State.Explore)
@@ -43,7 +44,7 @@ public class RabbitSystemControl : MonoBehaviour
         } else if (stateManager.getCurrentState() == State.UI)
         {
             if (Input.GetKeyDown(key.openRabbit))
-                exitUI();
+                //exitUI();
             if (Input.GetKeyDown(key.openNeuro))
                 transitionUIState(UIState.Neuro);
         }
@@ -52,8 +53,8 @@ public class RabbitSystemControl : MonoBehaviour
         if (testText != null)
             testText.text = getCurrentUIState().ToString();
 
-        if (Input.GetKeyDown(KeyCode.P))
-            exitUI();
+        if (Input.GetKeyDown(KeyCode.P)){}
+            //exitUI();*/
     }
 
     /**
@@ -102,7 +103,7 @@ public class RabbitSystemControl : MonoBehaviour
             case UIState.Inventory:
                 if (currentUIState == newState)
                 {
-                    exitUI();
+                    //exitUI();
                     break;
                 }
                 else
@@ -156,7 +157,7 @@ public class RabbitSystemControl : MonoBehaviour
             case UIState.Neuro:
                 if (currentUIState == newState)
                 {
-                    exitUI();
+                    //exitUI();
                     break;
                 } else
                 {
@@ -173,7 +174,7 @@ public class RabbitSystemControl : MonoBehaviour
             case UIState.Test:
                 if (currentUIState == newState)
                 {
-                    exitUI();
+                    //exitUI();
                     Debug.Log("closing test UIstate");
                     break;
                 } else
@@ -296,7 +297,6 @@ public class RabbitSystemControl : MonoBehaviour
     {
         transitionUIState(UIState.Empty);
         stateManager.transitionState(State.Explore);
-        Debug.Log("exiting UI");
     }
 
 }

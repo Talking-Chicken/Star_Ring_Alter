@@ -41,5 +41,10 @@ public class KeyManager : MonoBehaviour
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
         }
+
+        if (Input.GetKeyUp(KeyCode.CapsLock)) {
+            Debug.Log("cap");
+            Screen.fullScreen = !Screen.fullScreen;
+        }
     }
 }

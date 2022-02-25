@@ -844,8 +844,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 20.1, y: 0}
-  m_SizeDelta: {x: -40.191048, y: 0}
+  m_AnchoredPosition: {x: 17.61, y: 0}
+  m_SizeDelta: {x: -45.176125, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &40523712
 MonoBehaviour:
@@ -894,8 +894,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22.8
+  m_fontSizeBase: 22.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -19858,12 +19858,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3259839450efd42bbf766e8c4c8164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isUsingThisToMove: 0
-  speed: 0
-  canMove: 0
   NPCToTalk: {fileID: 1649016004}
   dialogueRunner: {fileID: 1946369523}
   dialogueUI: {fileID: 1115191637}
+  uiControl: {fileID: 1914786735}
   _sight: 10
 --- !u!114 &1649016018
 MonoBehaviour:
@@ -23742,7 +23740,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6292406906279106807, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
 --- !u!114 &1914786732 stripped
 MonoBehaviour:

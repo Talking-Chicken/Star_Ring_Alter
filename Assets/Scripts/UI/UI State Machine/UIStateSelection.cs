@@ -16,11 +16,9 @@ public class UIStateSelection : UIStateBase
         if (Input.GetKeyUp(UI.Key.next)) {
             
             currentSelectionIndex = Mathf.Min(currentSelectionIndex + 1, UI.SelectionButtons.Count - 1);
-            Debug.Log("next " + currentSelectionIndex);
         } else if (Input.GetKeyUp(UI.Key.previous)) {
             
             currentSelectionIndex = Mathf.Max(currentSelectionIndex - 1, 0);
-            Debug.Log("previous " + currentSelectionIndex);
         }
         
 

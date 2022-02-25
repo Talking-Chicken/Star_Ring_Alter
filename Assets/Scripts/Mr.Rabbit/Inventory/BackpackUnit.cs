@@ -22,11 +22,11 @@ public class BackpackUnit : MonoBehaviour
         else
             Debug.LogWarning(name + " don't have a animator");
         //set up image for item icon in children
-        /*if (GetComponentInChildren<Image>() != null)
+        if (GetComponentInChildren<Image>() != null)
             itemImage = GetComponentInChildren<Image>();
         else
             Debug.LogWarning("cannot detect item icon slot");
-        */
+        
     }
 
     

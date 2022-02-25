@@ -63,7 +63,7 @@ public class UIControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        
+        Debug.Log(currentState);
     }
 
     /**
@@ -91,16 +91,15 @@ public class UIControl : MonoBehaviour
     * open inventory
     */
     public void openInventory() {
-        Debug.Log("opening inventory");
         inventoryContainer.SetActive(true);
         inventoryGUI.showInventory();
+        ChangeState(stateInventory);
     }
 
     /**
     * close inventory
     */
     public void closeInventory() {
-        Debug.Log("closing inventory");
         inventoryContainer.SetActive(false);
     }
 }

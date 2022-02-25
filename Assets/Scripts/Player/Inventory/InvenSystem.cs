@@ -56,8 +56,10 @@ public class InvenSystem : MonoBehaviour
         RaycastHit2D hit;
         if (player.GetComponent<IsometricPlayerMovementController>() != null)
             hit = Physics2D.Raycast(player.gameObject.transform.position, player.GetComponent<IsometricPlayerMovementController>().dir, sight);
-        else
-            hit = Physics2D.Raycast(player.gameObject.transform.position, player.GetComponent<PlayerControl>().Dir, sight);             
+        else {
+            hit = Physics2D.Raycast(gameObject.transform.position, Vector2.down, sight);
+            Debug.LogWarning("doesn't detect isometric player movement controller");
+        }            
 
         if (hit.collider != null)
         {

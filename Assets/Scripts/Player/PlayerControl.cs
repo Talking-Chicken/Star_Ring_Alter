@@ -8,18 +8,19 @@ using NaughtyAttributes;
  * control player direction as well as NPC to talk with
  */
 public class PlayerControl : MonoBehaviour
-{
-    [SerializeField] private bool isUsingThisToMove;
-    [SerializeField, Header("Movement"), Range(0f, 1000f), ShowIf("isUsingThisToMove")] float speed;
-    [ShowIf("isUsingThisToMove")]public bool canMove;
+{   
+    public bool CanMove {get; set;}
 
-    public Vector2 Dir { get; private set; } //direction that player is facing [cannot be (0,0)]
-    private Vector2 movement = new Vector2(0,0); //direction that player is going [can be (0,0)]
-
-    [Header("Dialogue")] public GameObject NPCToTalk;
+    [BoxGroup("Dialogue")] public GameObject NPCToTalk;
     public static bool canTalk = false;
-    [SerializeField] public DialogueRunner dialogueRunner;
-    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField, BoxGroup("Dialogue")] public DialogueRunner dialogueRunner;
+    [SerializeField, BoxGroup("Dialogue")] private DialogueUI dialogueUI;
+
+    //components
+    Rigidbody2D myBody;
+    private PlayerBackpack playerBackpack;
+    private KeyManager key;
+    [SerializeField, BoxGroup("UI")] private UIControl uiControl;
 
     //detect and interact
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
@@ -28,13 +29,9 @@ public class PlayerControl : MonoBehaviour
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}
     public GameObject DetectingObj {get {return detectingObj;} set {detectingObj = value;}}
-
-    Rigidbody2D myBody;
-    private PlayerBackpack playerBackpack;
-    private KeyManager key;
-
-    //setters & getters
     public KeyManager KeyManager {get {return key;} private set {key = value;}}
+    public UIControl UIControl {get {return uiControl;} private set {uiControl = value;}}
+    
 
     //state machine
     private PlayerStateBase currentState;
@@ -59,7 +56,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-        currentState = stateExplore;
+        ChangeState(stateExplore);
         myBody = GetComponent<Rigidbody2D>();
         key = FindObjectOfType<KeyManager>();
         playerBackpack = GetComponent<PlayerBackpack>();
@@ -67,95 +64,14 @@ public class PlayerControl : MonoBehaviour
 
     void Update()
     {
-        setDir();
-        /*if (canTalk)
-        {
-            if (Input.GetKeyDown(key.talk) && !dialogueRunner.IsDialogueRunning)
-                talkToNPC();
-        }
-
-        if (detectInteractiveObj() && Input.GetKeyDown(key.interact)) {
-            interact(detectingObj);
-        }*/
         currentState.UpdateState(this);
+        Debug.Log(CanMove);
         
     }
 
     private void FixedUpdate()
     {
-        if (isUsingThisToMove)
-        {
-            if (canMove)
-            {
-                handleMovement();
-            }
-            else
-            {
-                stopMovement();
-            }
-        }
-    }
-
-    void setDir() //give dir a Vector2 value, according to WASD that player is pressing
-    {
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (Input.GetKey(KeyCode.A))
-            {
-                Dir = new Vector2(-0.75f, 0.75f);
-                movement = Dir;
-            } else if (Input.GetKey(KeyCode.D))
-            {
-                Dir = new Vector2(0.75f, 0.75f);
-                movement = Dir;
-            }  else
-            {
-                Dir = new Vector2(0, 1);
-                movement = Dir;
-            }
-        } else if (Input.GetKey(KeyCode.S))
-        {
-            if (Input.GetKey(KeyCode.A))
-            {
-                Dir = new Vector2(-0.75f, -0.75f);
-                movement = Dir;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                Dir = new Vector2(0.75f, -0.75f);
-                movement = Dir;
-            }
-            else
-            {
-                Dir = new Vector2(0, -1);
-                movement = Dir;
-            }
-        } else
-        {
-            if (Input.GetKey(KeyCode.A))
-            {
-                Dir = new Vector2(-1, 0);
-                movement = Dir;
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                Dir = new Vector2(1, 0);
-                movement = Dir;
-            } else
-            {
-                movement = new Vector2(0, 0);
-            }
-        }
-    }
-
-    void handleMovement()
-    {
-        myBody.velocity = movement * speed * Time.fixedDeltaTime;
-    }
-
-    void stopMovement()
-    {
-        myBody.velocity = new Vector2(0,0);
+        currentState.FixedupdateState(this);
     }
 
     /**
@@ -214,9 +130,11 @@ public class PlayerControl : MonoBehaviour
         RaycastHit2D hit;
         if (GetComponent<IsometricPlayerMovementController>() != null)
             hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<IsometricPlayerMovementController>().dir, Sight);
-        else
-            hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<PlayerControl>().Dir, Sight);             
-
+        else {
+            hit = Physics2D.Raycast(gameObject.transform.position, Vector2.down, Sight);
+            Debug.LogWarning("doesn't detect isometric player movement controller");
+        }
+    
         if (hit.collider != null)
         {
             if (hit.collider.gameObject.GetComponentInParent<Item>() != null)
@@ -243,13 +161,15 @@ public class PlayerControl : MonoBehaviour
     }
 
      /**
-     * interact with the interactive object
+     * interact with the interactive object, and change to ui state
      * else pickup this object
      */
     public void interact(GameObject interactingObject) {
         if (interactingObject.GetComponent<InteractiveObj>() != null)
         {
-            interactingObject.GetComponent<InteractiveObj>().interact();
+            //interactingObject.GetComponent<InteractiveObj>().interact();
+            UIControl.openSelectionMenu();
+            ChangeState(stateUI);
         } else
         {
             pickUp();
