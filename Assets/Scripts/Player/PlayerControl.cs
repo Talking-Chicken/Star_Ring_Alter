@@ -23,17 +23,18 @@ public class PlayerControl : MonoBehaviour
 
     //detect and interact
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
-    public GameObject detectingObj = null;
+    private GameObject detectingObj = null;
 
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}
+    public GameObject DetectingObj {get {return detectingObj;} set {detectingObj = value;}}
 
     Rigidbody2D myBody;
     private PlayerBackpack playerBackpack;
     private KeyManager key;
 
     //setters & getters
-    public KeyManager KeyManager {get {return key;}}
+    public KeyManager KeyManager {get {return key;} private set {key = value;}}
 
     //state machine
     private PlayerStateBase currentState;

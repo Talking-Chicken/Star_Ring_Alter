@@ -46,8 +46,6 @@ public class InventoryGUI : MonoBehaviour
         xStart = xGap + xGap / 4;
         yStart = Screen.height - 0.75f*yGap;
         Unit.transform.localScale = new Vector3(Screen.width/800, Screen.width /800, Screen.width / 800);
-        //set up player backpack
-        playerBackpack = FindObjectOfType<PlayerBackpack>();
 
         //set up units according to row and collumn
         currentSize = 0;
@@ -133,6 +131,8 @@ public class InventoryGUI : MonoBehaviour
         {
             units[i].resetStoredItem();
         }
+        
+        Debug.Log(units.Length);
 
         //second part
 

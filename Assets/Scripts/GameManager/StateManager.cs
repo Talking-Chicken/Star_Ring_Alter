@@ -48,7 +48,6 @@ public class StateManager : MonoBehaviour
             case State.Explore:
                 if (getCurrentState() != newState)
                 {
-                    Debug.Log("transitioning to explore");
                     previousState = currentState;
                     currentState = newState;
 
@@ -59,7 +58,6 @@ public class StateManager : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("still in exploreing state");
                     break;
                 }
 

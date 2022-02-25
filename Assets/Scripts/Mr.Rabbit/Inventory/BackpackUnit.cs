@@ -8,7 +8,7 @@ public class BackpackUnit : MonoBehaviour
 {
     Animator myAnimator;
 
-    public Queue<GameObject> storedItem;
+    public Queue<GameObject> storedItem = new Queue<GameObject>();
     private int index;
     [SerializeField] private Sprite icon;
     private string itemName, itemDescription, itemDescriptionAfterUse;
@@ -21,8 +21,6 @@ public class BackpackUnit : MonoBehaviour
             myAnimator = GetComponent<Animator>();
         else
             Debug.LogWarning(name + " don't have a animator");
-
-        storedItem = new Queue<GameObject>();
         //set up image for item icon in children
         /*if (GetComponentInChildren<Image>() != null)
             itemImage = GetComponentInChildren<Image>();

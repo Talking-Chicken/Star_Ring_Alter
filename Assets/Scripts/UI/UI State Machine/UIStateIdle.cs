@@ -1,0 +1,18 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class UIStateIdle : UIStateBase
+{
+    public override void EnterState(UIControl UI) {
+        //close selection menu first, to make sure it resets
+        UI.closeSelectionMenu();
+    }
+    public override void UpdateState(UIControl UI) {
+        if (Input.GetKeyUp(UI.Key.interact))
+            UI.openSelectionMenu();
+    }
+    public override void LeaveState(UIControl UI) {
+
+    }
+}

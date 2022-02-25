@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStateExplore : PlayerStateBase
 {
     public override void EnterState(PlayerControl player) {
-
+        player.canMove = true;
     }
     public override void UpdateState(PlayerControl player) {
         if (PlayerControl.canTalk)
@@ -15,7 +15,7 @@ public class PlayerStateExplore : PlayerStateBase
         }
 
         if (player.detectInteractiveObj() && Input.GetKeyDown(player.KeyManager.interact)) {
-            player.interact(player.detectingObj);
+            player.interact(player.DetectingObj);
         }
     }
     public override void FixedupdateState(PlayerControl player) {
@@ -23,5 +23,6 @@ public class PlayerStateExplore : PlayerStateBase
     }
     public override void LeaveState(PlayerControl player) {
         PrivoudState = this;
+        player.canMove = false;
     }
 }

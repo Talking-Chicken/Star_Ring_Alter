@@ -26,7 +26,6 @@ public class KeyManager : MonoBehaviour
                           Default_Previous = KeyCode.Q,
                           Default_NeuroImplant = KeyCode.N;
                         
-
     private void Start()
     {
         
