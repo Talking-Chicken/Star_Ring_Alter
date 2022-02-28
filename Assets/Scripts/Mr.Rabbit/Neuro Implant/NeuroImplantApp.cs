@@ -12,35 +12,10 @@ public class NeuroImplantApp : MonoBehaviour
 
     [SerializeField] private int memoryStorage;
     [SerializeField] private string description;
-    void Start()
-    {
-        
-    }
 
-    void Update()
-    {
-        
-    }
-
-    public void setMemoryStorage(int memory)
-    {
-        memoryStorage = memory;
-    }
-
-    public int getMemoryStorage()
-    {
-        return memoryStorage;
-    }
-
-    public void setDescription(string des)
-    {
-        description = des;
-    }
-
-    public string getDescription()
-    {
-        return description;
-    }
+    //getters & setters
+    public int MemoryStorage {get {return memoryStorage;} set {memoryStorage = value;}}
+    public string Description {get {return description;} set {description = value;}}
 
     /**
      * to use this neuro implant app, each app has different functions

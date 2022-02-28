@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
@@ -21,7 +21,7 @@ public class NeuroImplantDevice : MonoBehaviour
     [SerializeField, EnableIf("downloadAllowed")] private int totalMemory, currentMemory;
     // cloud apps are apps that player needs to download, in order to use
     [Tooltip("cloud apps are apps that player needs to download, in order to use")]
-    [EnableIf("downloadAllowed")] public List<NeuroImplantApp> downloadedApps;
+    [EnableIf("downloadAllowed"), ReorderableList] public List<NeuroImplantApp> downloadedApps;
     void Start()
     {
 
@@ -47,12 +47,12 @@ public class NeuroImplantDevice : MonoBehaviour
             Debug.LogError("app that you are trying to download cannot be null");
         else
         {
-            if (currentMemory + app.getMemoryStorage() > totalMemory)
+            if (currentMemory + app.MemoryStorage > totalMemory)
                 return false;
             else
             {
                 downloadedApps.Add(app);
-                currentMemory += app.getMemoryStorage();
+                currentMemory += app.MemoryStorage;
                 return true;
             }
         }
@@ -74,7 +74,7 @@ public class NeuroImplantDevice : MonoBehaviour
             if (downloadedApps.Contains(app))
             {
                 downloadedApps.Remove(app);
-                currentMemory -= app.getMemoryStorage();
+                currentMemory -= app.MemoryStorage;
                 return true;
             }
             else

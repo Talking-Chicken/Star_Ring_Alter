@@ -7,8 +7,8 @@ public class HackingModule : NeuroImplantApp
     public HackingModule()
     {
         base.appName = "hacking module";
-        base.setDescription("hacking things, found in black market");
-        base.setMemoryStorage(6);
+        base.Description = "hacking things, found in black market";
+        base.MemoryStorage = 4;
     }
 
     public override void interact()

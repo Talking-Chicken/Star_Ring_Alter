@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -53,7 +53,7 @@ public class NeuroComputerGUI : MonoBehaviour, IPointerEnterHandler
             if (currentSelectedApp != null)
             {
                 appName.text = currentSelectedApp.appName;
-                appDescription.text = currentSelectedApp.getDescription();
+                appDescription.text = currentSelectedApp.Description;
             }
             capacityText.text = playerDevice.getCurrentMemory() + "/" + playerDevice.getTotalMemory().ToString();
         }
