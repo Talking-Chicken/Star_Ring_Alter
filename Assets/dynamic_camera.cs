@@ -23,14 +23,14 @@ public class dynamic_camera : MonoBehaviour
 
             i = 0;
             main_camera.orthographicSize = Mathf.Lerp(moving_fov, static_fov, t);
-            t += 2f * Time.deltaTime;
+            t += 1f * Time.deltaTime;
 
         }
         else
         {
             t = 0;
             main_camera.orthographicSize = Mathf.Lerp(static_fov, moving_fov, i);
-           i += 2f * Time.deltaTime;
+           i += 1f * Time.deltaTime;
         }
      
 
