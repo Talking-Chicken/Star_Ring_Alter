@@ -10,7 +10,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     Rigidbody2D rbody;
     public Vector2 dir { get; private set; } //direction that player is facing [cannot be (0,0)]
-    private Vector2 movement = new Vector2(0, 0); //direction that player is going [can be (0,0)]
+    public static Vector2 movement = new Vector2(0, 0); //direction that player is going [can be (0,0)]
 
     private PlayerControl player; //custom script
 
