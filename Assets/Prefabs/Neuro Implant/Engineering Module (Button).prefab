@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3426906414879480858}
   - component: {fileID: 3426906414879480861}
   - component: {fileID: 3426906414879480860}
-  - component: {fileID: 4395698035794175279}
+  - component: {fileID: 2145201850976200765}
   m_Layer: 5
-  m_Name: Hacker Module
+  m_Name: Engineering Module (Button)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4395698035794175279
+--- !u!114 &2145201850976200765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,12 +140,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3426906414879480862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d6467fb51a23240b758ed98a688ddb, type: 3}
+  m_Script: {fileID: 11500000, guid: de967afed5c4da84b87928f7c1cf16f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  appName: hacking module
-  memoryStorage: 8
-  description: it's hacker's module. \nfrom black market
+  appName: engineering module
+  memoryStorage: 7
+  description: to build, fix, and disassemble
 --- !u!1 &3426906415537813335
 GameObject:
   m_ObjectHideFlags: 0

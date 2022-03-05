@@ -21,10 +21,9 @@ public class NeuroImplantDevice : MonoBehaviour
     [SerializeField, EnableIf("downloadAllowed")] private int totalMemory, currentMemory;
     // cloud apps are apps that player needs to download, in order to use
     [Tooltip("cloud apps are apps that player needs to download, in order to use")]
-    [EnableIf("downloadAllowed"), ReorderableList] public List<NeuroImplantApp> downloadedApps;
+    [EnableIf("downloadAllowed"), SerializeField] public List<NeuroImplantApp> downloadedApps;
     void Start()
     {
-
     }
 
     
