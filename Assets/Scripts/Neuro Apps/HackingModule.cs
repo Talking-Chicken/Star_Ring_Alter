@@ -6,9 +6,11 @@ public class HackingModule : NeuroImplantApp
 {
     public HackingModule()
     {
-        base.appName = "hacking module";
-        base.Description = "hacking things, found in black market";
-        base.MemoryStorage = 4;
+        if (!base.isOverride) {
+            base.appName = "hacking module";
+            base.Description = "hacking things, found in black market";
+            base.MemoryStorage = 3;
+        }
     }
 
     public override void interact()

@@ -23,7 +23,7 @@ public class UIStateSelection : UIStateBase
         
 
         //select button
-        if (Input.GetKeyUp(UI.Key.interact)) {
+        if (Input.GetKeyDown(UI.Key.interact)) {
             UI.SelectionButtons[currentSelectionIndex].onClick.Invoke();
         }
     }

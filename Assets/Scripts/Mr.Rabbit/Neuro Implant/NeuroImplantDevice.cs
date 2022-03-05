@@ -21,9 +21,12 @@ public class NeuroImplantDevice : MonoBehaviour
     [SerializeField, EnableIf("downloadAllowed")] private int totalMemory, currentMemory;
     // cloud apps are apps that player needs to download, in order to use
     [Tooltip("cloud apps are apps that player needs to download, in order to use")]
-    [EnableIf("downloadAllowed"), SerializeField] public List<NeuroImplantApp> downloadedApps;
+    [EnableIf("downloadAllowed"), SerializeField,ReorderableList] public List<NeuroImplantApp> downloadedApps;
     void Start()
     {
+        for (int i = 0; i < downloadedApps.Count; i++) {
+            currentMemory += downloadedApps[i].MemoryStorage;
+        }
     }
 
     

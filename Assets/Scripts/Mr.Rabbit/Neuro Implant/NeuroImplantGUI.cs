@@ -17,7 +17,7 @@ public class NeuroImplantGUI : MonoBehaviour
     NeuroImplantDevice playerDevice;
 
     //GUI
-    [SerializeField, BoxGroup("GUI")] GameObject emptyCell, app;
+    [SerializeField, BoxGroup("GUI")] GameObject emptyCell, app, container;
     private List<GameObject> emptyCells = new List<GameObject>(); //object pool that holds empty cells that created at the start of the game 
     private List<GameObject> downloadedApps = new List<GameObject>(); //a place to have a reference of object, in order to destroy them
     [SerializeField, BoxGroup("GUI")] GameObject appAreaBackground; //background image for apps
@@ -32,8 +32,6 @@ public class NeuroImplantGUI : MonoBehaviour
     void Start()
     {
         playerDevice = FindObjectOfType<PlayerControl>().GetComponent<NeuroImplantDevice>();
-        initializeAppArea();
-        showAppDetail();
     }
 
     void Update()
@@ -47,13 +45,13 @@ public class NeuroImplantGUI : MonoBehaviour
     public void initializeAppArea() {
         currentNeuroAppIndex = 0;
         //create empty cells if there's no empty cell created, for object pool
-        if (emptyCells.Count == 0) {
+        if (emptyCells.Count < 10) {
             for (int i = 0; i < 10; i++) { //10 for now
 
                 //TODO:
                 //the position doesn't remain consistance when play it full screen vs. on a small window
                 emptyCells.Add(Instantiate(emptyCell, transform.position, Quaternion.identity));
-                emptyCells[i].transform.SetParent(gameObject.transform);
+                emptyCells[i].transform.SetParent(container.gameObject.transform);
                 emptyCells[i].transform.localScale = Vector3.one;
                 RectTransform rTransform = appAreaBackground.GetComponent<RectTransform>();
                 Debug.Log(rTransform.rect.position.x);
@@ -64,10 +62,6 @@ public class NeuroImplantGUI : MonoBehaviour
 
                 //set its index
                 emptyCells[i].GetComponent<NeuroImplantUnit>().Index = i;
-            }
-        } else {
-            for (int i = 0; i < emptyCells.Count; i++) {
-                emptyCells[i].SetActive(true);
             }
         }
 
@@ -90,7 +84,7 @@ public class NeuroImplantGUI : MonoBehaviour
             //put downloaded apps to the correct position
             GameObject newApp = Instantiate(app,emptyCells[nextEmptyIndex + (int)size/2].GetComponent<RectTransform>().position, Quaternion.identity);
             downloadedApps.Add(newApp);
-            newApp.transform.SetParent(gameObject.transform);
+            newApp.transform.SetParent(container.gameObject.transform);
 
             //set index
             newApp.GetComponent<NeuroImplantUnit>().Index = i;
@@ -102,7 +96,7 @@ public class NeuroImplantGUI : MonoBehaviour
 
             newApp.GetComponent<NeuroImplantApp>().drawCell();
 
-            nextEmptyIndex = size;
+            nextEmptyIndex += size;
         }
     }
 

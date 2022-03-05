@@ -131,8 +131,6 @@ public class InventoryGUI : MonoBehaviour
         {
             units[i].resetStoredItem();
         }
-        
-        Debug.Log(units.Length);
 
         //second part
 

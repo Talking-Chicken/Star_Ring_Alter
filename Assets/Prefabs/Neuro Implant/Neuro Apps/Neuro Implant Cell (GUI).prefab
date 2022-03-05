@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60859fa8eb202274197af65eeed3453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverride: 1
   appName: GUI module
-  memoryStorage: 4
+  memoryStorage: 3
   description: See the World
   icon: {fileID: 1931027794438572486, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
 --- !u!1 &3080542911306876465

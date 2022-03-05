@@ -88,8 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391add35aa2868f4bb1687abf4262f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverride: 1
   appName: OS
-  memoryStorage: 5
+  memoryStorage: 3
   description: the essential module that keeps Mr.Rabbit functional
   icon: {fileID: 8860993200015972265, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
 --- !u!1 &1304810432983625908

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using NaughtyAttributes;
 
 /**
  * this is the parent class of neuro implant downloadedApps
@@ -9,6 +10,8 @@ using UnityEngine.UI;
  */
 public class NeuroImplantApp : MonoBehaviour
 {
+    [SerializeField, Label("data in inspector override the constructor")] public bool isOverride; 
+
     public string appName;
 
     [SerializeField] private int memoryStorage;
@@ -53,7 +56,5 @@ public class NeuroImplantApp : MonoBehaviour
         rTransform.localScale = Vector3.one;
         
         rTransform.sizeDelta = new Vector2(rTransform.sizeDelta.x * MemoryStorage, rTransform.sizeDelta.y);
-
-        Debug.Log("drawed");
     }
 }

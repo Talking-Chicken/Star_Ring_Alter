@@ -143,9 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d6467fb51a23240b758ed98a688ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isOverride: 1
   appName: hacking module
-  memoryStorage: 8
+  memoryStorage: 3
   description: it's hacker's module. \nfrom black market
+  icon: {fileID: 3949469904818043356, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
 --- !u!1 &3426906415537813335
 GameObject:
   m_ObjectHideFlags: 0

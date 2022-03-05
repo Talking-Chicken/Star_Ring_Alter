@@ -5,11 +5,11 @@ using UnityEngine;
 public class NeuroImplantAdjuster : InteractiveObj
 {
     private NeuroComputerGUI UI;
-    private StateManager state;
+    private UIControl uiControl;
     private void Start()
     {
         UI = GetComponentInParent<NeuroComputerGUI>();
-        state = FindObjectOfType<StateManager>();
+        uiControl = FindObjectOfType<UIControl>();
     }
 
     public override void interact()
@@ -17,11 +17,11 @@ public class NeuroImplantAdjuster : InteractiveObj
         if (UI.isShowingUI)
         {
             UI.hideUI();
-            state.transitionState(State.Explore);
+            uiControl.ChangeState(uiControl.stateIdle);
+            uiControl.Player.ChangeState(uiControl.Player.stateExplore);
         } else
         {
             UI.showUI();
-            state.transitionState(State.UI);
         }
     }
 }

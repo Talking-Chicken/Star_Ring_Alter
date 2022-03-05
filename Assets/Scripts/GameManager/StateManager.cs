@@ -14,16 +14,11 @@ public class StateManager : MonoBehaviour
 
     public PlayerControl player;
 
-    private bool dialogueFinished = true;
-
-    static float transitionCoolDown; //after player change state, they need to wait this amout of time to change to another state
-
     private RabbitSystemControl rabbit;
 
     [Header("opruional test"), SerializeField] Text textToTest;
     void Start()
     {
-        transitionCoolDown = 0f;
         rabbit = FindObjectOfType<RabbitSystemControl>();
         transitionState(State.Explore);
     }

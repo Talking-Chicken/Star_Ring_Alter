@@ -6,9 +6,11 @@ public class EngineeringModule : NeuroImplantApp
 {
     public EngineeringModule()
     {
-        base.appName = "engineering module";
-        base.Description = "to build, fix, and disassemble";
-        base.MemoryStorage = 4;
+        if (!base.isOverride) {
+            base.appName = "engineering module";
+            base.Description = "to build, fix, and disassemble";
+            base.MemoryStorage = 3;
+        }
     }
 
     public override void interact()

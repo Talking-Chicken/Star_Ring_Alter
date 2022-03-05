@@ -65,8 +65,6 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(CanMove);
-        
     }
 
     private void FixedUpdate()

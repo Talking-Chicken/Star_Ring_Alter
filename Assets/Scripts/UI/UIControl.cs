@@ -8,11 +8,12 @@ public class UIControl : MonoBehaviour
 {
     [SerializeField, BoxGroup("Mr.Rabbit System GUI Container")] private GameObject inventoryContainer, neuroContainer;
     [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator;
-    [SerializeField, BoxGroup("Selection Menu")] private List<Button> selectionButtons;
+    [SerializeField, BoxGroup("Selection Menu"),ReorderableList] private List<Button> selectionButtons;
 
     private PlayerControl player;
     private KeyManager _key;
     [SerializeField, BoxGroup("Invetory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
+    [SerializeField, BoxGroup("Neuro Impalnt GUI")] private NeuroImplantGUI neuroGUI;
 
     //getters & setters
     public PlayerControl Player {get {return player;} private set {player = value;}}
@@ -25,6 +26,7 @@ public class UIControl : MonoBehaviour
     public UIStateSelection stateSelection = new UIStateSelection();
     public UIStateInventory stateInventory = new UIStateInventory();
     public UIStateNeuro stateNeuro = new UIStateNeuro();
+    public UIStateInvestigate stateInvestigate = new UIStateInvestigate();
     private UIStateBase currentState;
 
     public void ChangeState(UIStateBase newState)
@@ -48,6 +50,7 @@ public class UIControl : MonoBehaviour
     public void ChangeToInventoryState() {ChangeState(stateInventory);}
     public void ChangeToNeuroState() {ChangeState(stateNeuro);}
     public void ChangeToIdleState() {ChangeState(stateIdle);}
+    public void ChangeToInvestigateState() {ChangeState(stateInvestigate);}
 
     //change player state
     public void ChangePlayerState(PlayerStateBase newState) {player.ChangeState(newState);}
@@ -66,6 +69,8 @@ public class UIControl : MonoBehaviour
         Debug.Log(currentState);
     }
 
+    //open and close tabs
+
     /**
     * create (set active) selection menu object (inventory & neruo implant selection) as default 
     * create other menu if applicable
@@ -80,26 +85,27 @@ public class UIControl : MonoBehaviour
         }
     }
 
-    /**
-    * set collection menu object inactive 
-    */
     public void closeSelectionMenu() {
         selectionMenu.SetActive(false);
     }
 
-    /**
-    * open inventory
-    */
+    
     public void openInventory() {
         inventoryContainer.SetActive(true);
         inventoryGUI.showInventory();
         ChangeState(stateInventory);
     }
-
-    /**
-    * close inventory
-    */
     public void closeInventory() {
         inventoryContainer.SetActive(false);
+    }
+
+    public void openNeuro() {
+        neuroContainer.SetActive(true);
+        neuroGUI.initializeAppArea();
+        ChangeState(stateNeuro);
+    }
+
+    public void closeNeuro() {
+        neuroContainer.SetActive(false);
     }
 }
