@@ -7,6 +7,7 @@ TagManager:
   - Door
   - NPC
   - Interactive
+  - glow_stick
   layers:
   - Default
   - TransparentFX
