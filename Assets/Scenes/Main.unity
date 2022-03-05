@@ -24077,6 +24077,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921139694}
     m_Modifications:
+    - target: {fileID: 40523712, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_text
+      value: INVENTORY
+      objectReference: {fileID: 0}
+    - target: {fileID: 40523712, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 40523712, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 40523712, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 906366975, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
       propertyPath: app
       value: 
@@ -24130,6 +24146,22 @@ PrefabInstance:
       propertyPath: selectionButtons.Array.data[2]
       value: 
       objectReference: {fileID: 1929307823}
+    - target: {fileID: 1919424017, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_text
+      value: NEURO IMPLANT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919424017, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919424017, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919424017, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1965285811, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
       propertyPath: m_text
       value: Capacity
@@ -24156,6 +24188,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341391676139567303, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_text
+      value: USE
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341391676139567303, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341391676139567303, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341391676139567303, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4350916432200942135, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
         type: 3}
@@ -24988,7 +25040,7 @@ PrefabInstance:
     - target: {fileID: 2904160361764417201, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2904160361764417206, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
