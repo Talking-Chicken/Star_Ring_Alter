@@ -144,16 +144,23 @@ public class PlayerControl : MonoBehaviour
             {
                 detectingObj = hit.collider.gameObject.GetComponent<InteractiveObj>().gameObject;
                 return true;
-            }
-            else
+            } 
+            else if (hit.collider.gameObject.GetComponent<Talkable>() != null) 
+            {
+                NPCToTalk = hit.collider.gameObject;
+                return true;
+            } 
+            else 
             {
                 detectingObj = gameObject;
+                NPCToTalk = gameObject;
                 return false;
             }
         }
         else
         {
             detectingObj = gameObject;
+            NPCToTalk = gameObject;
             return false;
         }
     }
