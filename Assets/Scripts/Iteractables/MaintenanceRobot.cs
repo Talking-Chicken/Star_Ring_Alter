@@ -43,6 +43,7 @@ public class MaintenanceRobot : InteractiveObj
     {
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 
     public void confirm()
@@ -54,6 +55,7 @@ public class MaintenanceRobot : InteractiveObj
             playerbackpack.remove("operating software");
             UIContainer.SetActive(false);
             state.transitionState(State.Explore);
+            FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
             talkingArea.SetActive(true);
 
@@ -63,6 +65,7 @@ public class MaintenanceRobot : InteractiveObj
             UIContainer.SetActive(false);
         }
         state.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
     }
 }

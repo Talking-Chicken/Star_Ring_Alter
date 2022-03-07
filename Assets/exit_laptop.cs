@@ -32,6 +32,8 @@ public class exit_laptop : MonoBehaviour
 
             //transit back to explore state
             state.transitionState(State.Explore);
+
+            FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
         }
     }
 }

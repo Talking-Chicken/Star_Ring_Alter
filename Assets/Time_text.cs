@@ -10,6 +10,8 @@ public class Time_text : MonoBehaviour
     DateTime time;
     private TMP_Text textClock;
     public int change_rate;
+
+    public static bool isTimePaused = false;
     void Awake()
     {
         textClock = GetComponent<TMP_Text>();
@@ -31,7 +33,8 @@ public class Time_text : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        time = time + new TimeSpan(0, 0, 0, 0, change_rate);
+        if (!isTimePaused)
+            time = time + new TimeSpan(0, 0, 0, 0, change_rate);
     }
     string LeadingZero(int n)
     {

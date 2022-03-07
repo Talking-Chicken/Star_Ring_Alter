@@ -20,7 +20,6 @@ public class laptop_camera : InteractiveObj
 
     public override void interact()
     {
-
         if (playerBackpack.contains("access card") && !laptop.activeSelf)
         {
             state.transitionState(State.UI);
@@ -33,6 +32,13 @@ public class laptop_camera : InteractiveObj
             talk.getPlayer().talkToNPC();
 
             //Display.displays[1].Activate();
+        } else {
+            StartCoroutine(waitToChangeState(FindObjectOfType<PlayerControl>().stateExplore));
         }
+    }
+
+    IEnumerator waitToChangeState(PlayerStateBase newState) {
+        yield return new WaitForSeconds(0.5f);
+        FindObjectOfType<PlayerControl>().ChangeState(newState);
     }
 }

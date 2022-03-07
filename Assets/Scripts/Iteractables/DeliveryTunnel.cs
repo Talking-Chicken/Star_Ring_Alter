@@ -49,6 +49,7 @@ public class DeliveryTunnel : InteractiveObj
     {
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 
     public void confirm()
@@ -65,5 +66,6 @@ public class DeliveryTunnel : InteractiveObj
         }
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 }

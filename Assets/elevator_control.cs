@@ -40,11 +40,6 @@ public class elevator_control : InteractiveObj
         stateManager = FindObjectOfType<StateManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public override void interact()
     {
         stateManager.transitionState(State.UI);
@@ -132,6 +127,7 @@ public class elevator_control : InteractiveObj
             }
             UIContainer.SetActive(false);
             stateManager.transitionState(State.Explore);
+            FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
         }
     }
 
@@ -139,5 +135,6 @@ public class elevator_control : InteractiveObj
     {
         UIContainer.SetActive(false);
         stateManager.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 }

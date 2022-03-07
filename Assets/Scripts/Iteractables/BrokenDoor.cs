@@ -60,11 +60,13 @@ public class BrokenDoor : InteractiveObj
         }
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 
     public void exit()
     {
         UIContainer.SetActive(false);
         state.transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 }

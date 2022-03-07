@@ -14,6 +14,7 @@ public class UIControl : MonoBehaviour
     private KeyManager _key;
     [SerializeField, BoxGroup("Invetory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
     [SerializeField, BoxGroup("Neuro Impalnt GUI")] private NeuroImplantGUI neuroGUI;
+    [SerializeField, BoxGroup("Time GUI")] private GameObject timeGUI;
 
     //getters & setters
     public PlayerControl Player {get {return player;} private set {player = value;}}
@@ -112,5 +113,15 @@ public class UIControl : MonoBehaviour
 
     public void closeNeuro() {
         neuroContainer.SetActive(false);
+    }
+
+    public void openTime() {
+        timeGUI.gameObject.SetActive(true);
+        Time_text.isTimePaused = false;
+    }
+
+    public void closeTime() {
+        timeGUI.gameObject.SetActive(false);
+        Time_text.isTimePaused = true;
     }
 }

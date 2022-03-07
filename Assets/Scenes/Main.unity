@@ -5128,7 +5128,7 @@ GameObject:
   m_Component:
   - component: {fileID: 327216912}
   m_Layer: 0
-  m_Name: --------------------------Storage Room--------------------------
+  m_Name: ----------Storage Room--------------------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25129,6 +25129,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: timeGUI
+      value: 
+      objectReference: {fileID: 406263669}
+    - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
       propertyPath: neuroGUI
       value: 
       objectReference: {fileID: 1631632516}
@@ -25357,6 +25361,11 @@ PrefabInstance:
       propertyPath: playerBackpack
       value: 
       objectReference: {fileID: 1649016019}
+    - target: {fileID: 6292406907391437183, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6292406907636076819, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
         type: 3}
       propertyPath: m_IsActive
@@ -29310,12 +29319,12 @@ PrefabInstance:
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.8
+      value: -87.4
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 150.2
+      value: 62.8
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
