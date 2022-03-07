@@ -20,6 +20,8 @@ public class Codex : MonoBehaviour
 
     void Start()
     {
+        //don't know why initiating hashtable in awake doesn't work
+        DialogueNodes = new Hashtable();
         runner.AddFunction("visitCount", 0, delegate (Yarn.Value[] parameters)
         {
             return getNodeVisited();
