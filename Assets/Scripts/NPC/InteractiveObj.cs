@@ -11,6 +11,8 @@ public class InteractiveObj : MonoBehaviour
     private Vector2 position;
     private Color themeColor;
 
+    [SerializeField] private bool canUse = true, canInven = true, canNeuro = true;
+
     public DialogueRunner runner;
     [SerializeField] PlayerControl player;
 
@@ -20,6 +22,11 @@ public class InteractiveObj : MonoBehaviour
     [SerializeField, Range(0,5.0f)] float indicatorYPos; //higher number means more 
     private Vector2 indicatorPos; //indicator position
     private GameObject currentIndicator; //record the newly created indicator
+
+    //getters & setters
+    public bool CanUse {get {return canUse;}}
+    public bool CanInven {get {return canInven;}}
+    public bool CanNeuro {get {return canNeuro;}}
 
     void Start()
     {

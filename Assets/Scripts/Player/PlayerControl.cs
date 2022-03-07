@@ -77,6 +77,7 @@ public class PlayerControl : MonoBehaviour
      */
     public void talkToNPC()
     {
+        ChangeState(stateDialogue);
         Talkable NPC = null;
         if (NPCToTalk.GetComponentInChildren<Talkable>() != null)
             NPC = NPCToTalk.GetComponentInChildren<Talkable>();
@@ -101,6 +102,7 @@ public class PlayerControl : MonoBehaviour
      */
     public void talkToNPC(string startNode)
     {
+        ChangeState(stateDialogue);
         Talkable NPC = null;
         if (NPCToTalk.GetComponentInChildren<Talkable>() != null)
             NPC = NPCToTalk.GetComponentInChildren<Talkable>();

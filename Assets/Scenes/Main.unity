@@ -848,6 +848,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4563de4f93d6e234183cf15d5785aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -3811,6 +3814,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcad4e05da438947b518c83c3c00708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -4030,6 +4036,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb8ca5888a9baf4aa525dafbeb49a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 1649016017}
   isTimeToTalk: 0
@@ -7420,7 +7429,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1914786731}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1628308740}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -8565,6 +8574,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff7f384eb5e6e2408a0c2a075776fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 1649016017}
   isTimeToTalk: 0
@@ -10748,6 +10760,12 @@ EdgeCollider2D:
   - {x: -2.0626984, y: -8.044777}
   - {x: -4.896652, y: -6.673504}
   - {x: -8.096283, y: -8.227608}
+--- !u!1 &914308335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 872937409, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914786731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915494749
 GameObject:
   m_ObjectHideFlags: 0
@@ -11216,7 +11234,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1914786731}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 914308335}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -13654,6 +13672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff03401d3743744ab0d87fdd69cdfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -14089,6 +14110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf89d89178ec474fbedae9e3564b204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -15660,6 +15684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5fe9c06e55cbc45b8d1adaa6f2e2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -16622,6 +16649,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea1b4fc7cfff1746b59fce367874a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 1649016017}
   isTimeToTalk: 0
@@ -17804,6 +17834,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed7e095a4a3c2b4092f4a91568ab32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -21065,6 +21098,12 @@ MonoBehaviour:
   SorterPositionOffset2: {x: 3.435111, y: -2.056053, z: 0}
   renderersToSort:
   - {fileID: 1625425667}
+--- !u!1 &1628308740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7112853350568162658, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914786731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1629299358
 GameObject:
   m_ObjectHideFlags: 0
@@ -25094,6 +25133,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1631632516}
     - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: useButton
+      value: 
+      objectReference: {fileID: 1628308740}
+    - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: invenButton
+      value: 
+      objectReference: {fileID: 914308335}
+    - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: neuroButton
+      value: 
+      objectReference: {fileID: 2013188246}
+    - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
       propertyPath: neuroContainer
       value: 
       objectReference: {fileID: 1914786734}
@@ -25320,6 +25371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112853350568162658, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_Name
+      value: Use button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
@@ -25630,7 +25686,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1914786731}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2013188246}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -26616,6 +26672,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3386a87d37d57c4984b1b7bb7502518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
   runner: {fileID: 0}
   player: {fileID: 0}
   isTimeToTalk: 0
@@ -27350,6 +27409,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2013188246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 894495953, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914786731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2018731249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 79777928221558379, guid: 7581abc6e21691047947a45c5da786ea,

@@ -7,7 +7,7 @@ using NaughtyAttributes;
 public class UIControl : MonoBehaviour
 {
     [SerializeField, BoxGroup("Mr.Rabbit System GUI Container")] private GameObject inventoryContainer, neuroContainer;
-    [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator;
+    [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator, useButton, invenButton, neuroButton;
     [SerializeField, BoxGroup("Selection Menu"),ReorderableList] private List<Button> selectionButtons;
 
     private PlayerControl player;
@@ -81,6 +81,11 @@ public class UIControl : MonoBehaviour
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateUI);
             ChangeState(stateSelection);
             selectionMenu.SetActive(true);
+            InteractiveObj interactObj = player.DetectingObj.GetComponent<InteractiveObj>();
+            if (interactObj.CanUse) useButton.SetActive(true); else useButton.SetActive(false);
+            if (interactObj.CanInven) invenButton.SetActive(true); else invenButton.SetActive(false);
+            if (interactObj.CanNeuro) neuroButton.SetActive(true); else neuroButton.SetActive(false);
+
             selectionMenu.transform.position = Camera.main.WorldToScreenPoint(player.DetectingObj.transform.position);
         }
     }
