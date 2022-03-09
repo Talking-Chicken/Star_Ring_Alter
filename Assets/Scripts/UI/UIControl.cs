@@ -67,7 +67,6 @@ public class UIControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(currentState);
     }
 
     //open and close tabs

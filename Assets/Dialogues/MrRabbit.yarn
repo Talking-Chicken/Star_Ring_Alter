@@ -295,3 +295,123 @@ position: 4120,1020
 ---
 System Warning: The elevator will remaining lockdown until the maintenance procedure is over.
 ===
+title: MrRabbit.Amo_Toy_Start
+tags: 
+colorID: 0
+position: 5098,388
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Amo_Toy_Intro]]
+<<endif>>
+===
+title: MrRabbit.Amo_Toy_Intro
+tags: 
+colorID: 0
+position: 5091,690
+---
+Mr. Rabbit: Okay, can you remind me again why we need your personal toy collection?
+Amo: Don't call my miniature a toy! They are accurate reproductions of actual objects at the appropriate scale. They can help us to simulate events in outer space well and thus solve the time loop we are stuck in. 
+Mr. Rabbit: You even have the Cat Tech’s 2050 limited-edition Moon Lander, isn’t that exclusive in-store selling? 
+Amo: Yeah, I kinda sneaked out of Autumn-8 and paid a kid who has a neural implant to buy that model for me. And I got suspended for two weeks after I returned to the re-education camp, but it was worth it.
+Mr. Rabbit: Dang it, I know people probably told, but I do share 
+Amo: You are actually the first
+===
+title: MrRabbit.Powercell_Start
+tags: 
+colorID: 0
+position: 5448,364
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Powercell_Intro]]
+<<endif>>
+===
+title: MrRabbit.Powercell_Intro
+tags: 
+colorID: 0
+position: 5454,693
+---
+Mr. Rabbit: Don’t touch it, it is at its perfect temperature and brightness.
+Amo: But, it is still so cold up here.
+Mr. Rabbit: Well, I can’t feel the difference anyway.
+===
+title: MrRabbit.Book_Start
+tags: 
+colorID: 0
+position: 5690,373
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Book_Intro]]
+<<endif>>
+===
+title: MrRabbit.Book_Intro
+tags: 
+colorID: 0
+position: 5723,707
+---
+Amo: Ah, I've been reading science fiction for so many years, and now I can't find a plot that helps our current situation.
+Mr. Rabbit: Are those books from the re-education camp’s library?
+Amo: Yeah, you know people in Autumn-8 cannot access the internet without a device, so physical books are quite common in the camp.
+Mr. Rabbit: Amo, you are dodging my question! Aren't those books the public property of the re-education camp, how come you have them now?
+Amo: You know what, I think this chapter could explain the time loop phenomenon that happened to us. I need to spend some time, you know, in order to study it properly
+===
+title: MrRabbit.Oven_Start
+tags: 
+colorID: 0
+position: 5995,384
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.Oven_Intro]]
+<<endif>>
+===
+title: MrRabbit.Oven_Intro
+tags: 
+colorID: 0
+position: 6018,683
+---
+Amo: So warm.
+Mr. Rabbit: It is so warm. 
+Mr. Rabbit: I mean it is warm according to the temperature reading from your neural implant.
+===
+title: MrRabbit.White_Board_Start
+tags: 
+colorID: 0
+position: 6289,398
+---
+<<if visitCount() <= 1>>
+    [[MrRabbit.White_Board_Intro]]
+<<endif>>
+===
+title: MrRabbit.White_Board_Intro
+tags: 
+colorID: 0
+position: 6296,685
+---
+Mr. Rabbit: First we are trapped in a time loop, now a crashing moon lander is coming to blow up our entire block. This never ending day is just getting even better. 
+Amo: Should we warn the Rabbit Heavy Industry about the falling moon lander? After all, they own almost half of the city, therefore they must do something about accidents that could pose a threat to the city, right?
+Mr. Rabbit: Only if they could believe what is happening to us.
+===
+title: MrRabbit.Communication_Device_Start
+tags: 
+colorID: 0
+position: 6681,419
+---
+<<if visitCount() < 1>>
+    [[MrRabbit.Communication_Device_Intro]]
+<<elseif visitCount() >= 1>>
+    [[MrRabbit.Communication_Device_2nd_Check]]
+<<endif>>
+===
+title: MrRabbit.Communication_Device_Intro
+tags: 
+colorID: 0
+position: 6574,749
+---
+Mr. Rabbit: We can use this field communication device to amplify the distress signal that astronauts are sending. Just let me know whenever you are ready so I can build a connection between you and that moonlander.
+===
+title: MrRabbit.Communication_Device_2nd_Check
+tags: 
+colorID: 0
+position: 6841,762
+---
+Mr. Rabbit: You ready?
+===

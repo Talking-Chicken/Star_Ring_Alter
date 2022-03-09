@@ -14,6 +14,5 @@ public class PlayerStateUI : PlayerStateBase
 
     }
     public override void LeaveState(PlayerControl player) {
-        PrivoudState = this;
     }
 }

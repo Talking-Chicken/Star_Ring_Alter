@@ -7278,6 +7278,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -30.52}
+--- !u!1 &467057090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 467057091}
+  - component: {fileID: 467057093}
+  - component: {fileID: 467057092}
+  - component: {fileID: 467057094}
+  m_Layer: 0
+  m_Name: Interactive Area (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &467057091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467057090}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.26, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1555836350}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &467057092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467057090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16a6506c0416ebf48b4167d9e09c4206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &467057093
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467057090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1105423, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.65
+--- !u!114 &467057094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467057090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canUse: 1
+  canInven: 0
+  canNeuro: 0
+  runner: {fileID: 0}
+  player: {fileID: 0}
+  isTimeToTalk: 0
+  indicator: {fileID: 0}
+  indicatorYPos: 0
 --- !u!1 &477247015
 GameObject:
   m_ObjectHideFlags: 0
@@ -7721,6 +7802,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921139694}
     m_Modifications:
+    - target: {fileID: 533883690, guid: c777397ffe189ec4ba9483030da68185, type: 3}
+      propertyPath: endingHour
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 4173057973853718342, guid: c777397ffe189ec4ba9483030da68185,
         type: 3}
       propertyPath: player
@@ -10412,7 +10497,7 @@ GameObject:
   - component: {fileID: 752666362}
   - component: {fileID: 752666363}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22447,6 +22532,7 @@ GameObject:
   - component: {fileID: 1555836353}
   - component: {fileID: 1555836352}
   - component: {fileID: 1555836351}
+  - component: {fileID: 1555836354}
   m_Layer: 0
   m_Name: oven 1
   m_TagString: Untagged
@@ -22466,6 +22552,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 752666362}
+  - {fileID: 467057091}
   m_Father: {fileID: 761196341}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22560,6 +22647,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1555836354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555836349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509220af6cb89ef49895a4a93cc126f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterName: MrRabbit
+  themeColor: {r: 0, g: 0, b: 0, a: 0}
+  position: {x: 0, y: 0}
+  dialogueFile: {fileID: 2480198943629176163, guid: 34322fd6caf086b42895ac25b437bc5a,
+    type: 3}
+  startNode: MrRabbit.Oven_Start
+  dialogueBubbleFile: {fileID: 0}
+  bubbleTalkingNode: 
+  idle: {fileID: 0}
+  smile: {fileID: 0}
+  testString: 
 --- !u!1 &1570350144
 GameObject:
   m_ObjectHideFlags: 0
@@ -28365,7 +28475,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Use button
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6292406907391437153, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
 --- !u!114 &1914786732 stripped
 MonoBehaviour:
@@ -29029,7 +29140,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 516394874}
+      objectReference: {fileID: 1649016017}
     - target: {fileID: 2904160361090383376, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
       propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -29038,7 +29149,7 @@ PrefabInstance:
     - target: {fileID: 2904160361090383376, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: transitToPreviousState
+      value: ChangeToPreviousState
       objectReference: {fileID: 0}
     - target: {fileID: 2904160361090383376, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
@@ -30592,12 +30703,6 @@ Transform:
   m_Father: {fileID: 787377418}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2013188246 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 894495953, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1914786731}
-  m_PrefabAsset: {fileID: 0}
 --- !u!212 &2005917631
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30648,6 +30753,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2013188246 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 894495953, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1914786731}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2018731249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 79777928221558379, guid: 7581abc6e21691047947a45c5da786ea,
@@ -32788,12 +32899,12 @@ PrefabInstance:
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -87.4
+      value: -22.6
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.8
+      value: 152.1
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}

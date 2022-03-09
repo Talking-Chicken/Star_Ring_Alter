@@ -14,7 +14,6 @@ public class PlayerStateDialogue : PlayerStateBase
 
     }
     public override void LeaveState(PlayerControl player) {
-        PrivoudState = this;
         player.UIControl.openTime();
     }
 }

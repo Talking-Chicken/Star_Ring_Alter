@@ -22,7 +22,6 @@ public class PlayerStateExplore : PlayerStateBase
         
     }
     public override void LeaveState(PlayerControl player) {
-        PrivoudState = this;
         player.CanMove = false;
     }
 }

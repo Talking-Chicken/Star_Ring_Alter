@@ -34,10 +34,12 @@ public class PlayerControl : MonoBehaviour
     
 
     //state machine
-    private PlayerStateBase currentState;
+    private PlayerStateBase currentState, previousState;
     public PlayerStateExplore stateExplore = new PlayerStateExplore();
     public PlayerStateDialogue stateDialogue = new PlayerStateDialogue();
     public PlayerStateUI stateUI = new PlayerStateUI();
+
+    public void ChangeToPreviousState() {ChangeState(previousState);}
 
     public void ChangeState(PlayerStateBase newState)
     {
@@ -46,6 +48,7 @@ public class PlayerControl : MonoBehaviour
             currentState.LeaveState(this);
         }
 
+        previousState = currentState;
         currentState = newState;
 
         if (currentState != null)
