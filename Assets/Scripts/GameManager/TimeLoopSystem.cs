@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 /**
  * time loop system is a class controlling time loop.
@@ -10,86 +11,24 @@ using UnityEngine.SceneManagement;
  */
 public class TimeLoopSystem : MonoBehaviour
 {
-    [SerializeField] private int startTime;
-    public static float currentTime, loopTime, rate;
-    public static bool isPaused;
-    private void Awake()
-    {
-        currentTime = startTime;
-        isPaused = false;
-        rate = 10;
-
-        loopTime = 3000;
-    }
-
+    private Time_text time;
+    [SerializeField] private int endingHour;
+    private DateTime endingTime;
     void Start()
     {
         //load information from last loop
         FindObjectOfType<Codex>().loadDialogueNodesCount();
+
+        time = FindObjectOfType<Time_text>();
+
+        endingTime = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, DateTime.Today.Hour, endingHour, 0);
     }
 
     void Update()
     {
-        if (isPaused)
-        {
-            
-        } else
-        {
-            loopCountdown(rate);
-
-            if (currentTime >= loopTime)
-                reset();
+        if (time.time >= endingTime) {
+            reset();
         }
-    }
-
-    /**
-     * make the time flow
-     * @param rate of the time that flow, bigger number means faster
-     */
-    public static void loopCountdown(float rate)
-    {
-        currentTime += rate * Time.deltaTime;
-    }
-
-    /**
-     * make the time flow
-     * it will have the default time flow rate, 1
-     */
-    public static void loopCountDown()
-    {
-        currentTime += 1.0f * Time.deltaTime;
-    }
-
-    /**
-     * set the rate of time flow
-     */
-    public static void setRate(float rate)
-    {
-        TimeLoopSystem.rate = rate;
-    }
-
-    /**
-     * set isPaued to true
-     */
-    public static void pause()
-    {
-        isPaused = true;
-    }
-
-    /**
-     * set isPaued to false
-     */
-    public static void countDown()
-    {
-        isPaused = false;
-    }
-    
-    /**
-     * get whether time flow is paused
-     */
-    public static bool getPaused()
-    {
-        return isPaused;
     }
 
     /**
@@ -100,6 +39,7 @@ public class TimeLoopSystem : MonoBehaviour
         FindObjectOfType<Codex>().saveDialgoueNodesCount();
 
         FindObjectOfType<StateManager>().transitionState(State.Explore);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

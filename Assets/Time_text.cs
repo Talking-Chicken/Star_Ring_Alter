@@ -7,7 +7,7 @@ using TMPro;
 
 public class Time_text : MonoBehaviour
 {
-    DateTime time;
+    public DateTime time;
     private TMP_Text textClock;
     public int change_rate;
 
@@ -22,8 +22,6 @@ public class Time_text : MonoBehaviour
    
     void Update()
     {
-       
-        
         string minute = LeadingZero(time.Minute);
         string second = LeadingZero(time.Second);
         textClock.text = minute + ":" + second;
