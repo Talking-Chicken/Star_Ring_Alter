@@ -422,6 +422,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1679830001, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292406905968976201, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6292406906279106806, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
         type: 3}
       propertyPath: m_Name
@@ -676,6 +685,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700892562}
   - component: {fileID: 700892561}
+  - component: {fileID: 700892563}
   m_Layer: 0
   m_Name: falling_moon_lander
   m_TagString: Untagged
@@ -729,6 +739,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &700892563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700892560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42caff6817f1a7545a48118c6dddba55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &920213455
 GameObject:
   m_ObjectHideFlags: 0
