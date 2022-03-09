@@ -10,6 +10,8 @@ public class DialogueFunctions : MonoBehaviour
 
     NeuroImplantDevice playerNeuroDevice;
     PlayerBackpack playerBackpack;
+
+    [SerializeField, Foldout("view")] private GameObject moonLanderCamera;
     void Start()
     {
         playerNeuroDevice = FindObjectOfType<PlayerControl>().GetComponent<NeuroImplantDevice>();
@@ -48,4 +50,20 @@ public class DialogueFunctions : MonoBehaviour
 
         return 0;
     }
+
+    [YarnCommand("set_moon_lander_camer_active")]
+    public void setMoonLanderCameraActive() {
+        moonLanderCamera.SetActive(true);
+    }
+
+    [YarnCommand("set_moon_lander_camer_inactive")]
+    public void setMoonLanderCameraInactive() {
+        moonLanderCamera.SetActive(false);
+    }
+
+    [YarnCommand("reset_loop")]
+    public void resetLoop() {
+        TimeLoopSystem.reset();
+    }
+
 }

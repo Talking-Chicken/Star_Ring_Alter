@@ -241,7 +241,7 @@ Mr. Rabbit: There's a derailed moon lander coming down right on us from geosynch
 title: MrRabbit.Manager_Office_Access_Machine_Start
 tags: Manager_Office
 colorID: 5
-position: 4196,403
+position: 4194,402
 ---
 <<if backpackContains("access card") && getAccessCardLevel() < 2>>
     [[MrRabbit.Manager_Office_Access_Machine_Low_Access_Level]]
@@ -337,7 +337,7 @@ Mr. Rabbit: Well, I can’t feel the difference anyway.
 title: MrRabbit.Book_Start
 tags: 
 colorID: 0
-position: 5690,373
+position: 5689,372
 ---
 <<if visitCount() <= 1>>
     [[MrRabbit.Book_Intro]]
@@ -393,11 +393,11 @@ Mr. Rabbit: Only if they could believe what is happening to us.
 title: MrRabbit.Communication_Device_Start
 tags: 
 colorID: 0
-position: 6681,419
+position: 6680,418
 ---
-<<if visitCount() < 1>>
+<<if visitCount() <= 1>>
     [[MrRabbit.Communication_Device_Intro]]
-<<elseif visitCount() >= 1>>
+<<elseif visitCount() > 1>>
     [[MrRabbit.Communication_Device_2nd_Check]]
 <<endif>>
 ===
@@ -414,4 +414,76 @@ colorID: 0
 position: 6841,762
 ---
 Mr. Rabbit: You ready?
+-> yes
+    Mr. Rabbit: I have captured the signal we heard in the last cycle. Put it through now.
+    [[MoonLander.Start]]
+-> no
+    Mr. Rabbit: Just let me know when you are ready.
+===
+title: MoonLander.Start
+tags: 
+colorID: 0
+position: 6682,1028
+---
+<<set_moon_lander_camer_active Dialogue>>
+Moonlander Pilot: Mayday, mayday! This is Lunar Module Suisei. Request immediate help! This module is under stall warning and will crash into downtown at any moment.
+
+Amo: Lunar Module Suisei, this is, this is Amo, do you copy?
+
+Moonlander Pilot: Amo? Are you Space Administration? Thank god someone answered my call. I have been drifting on a geosynchronous orbit for hours. But something is not right, my moon lander is pulling to the surface. I am captured by gravity.
+
+Amo: Gosh, what am I supposed to do? Is the moonlander still operational? 
+
+Moonlander Pilot: I don’t know. Readings on the dashboard are all off the chart. The sirens haven't stopped since I woke up. For god sake, I am just a scientist deployed on a moon base. Are you guys really from the Space Administration?
+
+-> Yes! We are Aerospace Technology Specialists!
+    Amo: We work for the Confederation Space Administration. Mr. Rabi and I are the technology specialists in aerospace.
+
+    Moonlander Pilot: Oh really? So how about you guys tell me how many sub-boost rockets CatTech's 2050 type Lunar Module has? 
+
+    Mr. Rabbit: Don’t you have a moon lander miniature? Do you know this?
+
+    Amo: What? I do like miniatures but I am not that kind of nerd who will remember every detail, every scratch of their model! Besides, you don’t know if that model is an accurate reproduction of the actual moon lander, the manufacturer may be jerry-building!
+
+    Mr. Rabbit: Then take your best shot!
+
+    Moonlander Pilot: Well, answer me now, so called specialist!
+    
+    -> seven
+        Moonlander Pilot: I knew it! The right answer is 4! I really can't believe it! I don't care who you are, do you think you should make such a dreadful joke at this critical moment? At a moment when people's lives are at stake! If my lunar module crashes into the city, thousands of lives will be lost, my life will be lost.
+    -> nine
+        Moonlander Pilot: I knew it! The right answer is 4! I really can't believe it! I don't care who you are, do you think you should make such a dreadful joke at this critical moment? At a moment when people's lives are at stake! If my lunar module crashes into the city, thousands of lives will be lost, my life will be lost.
+    -> ten
+        Moonlander Pilot: I knew it! The right answer is 4! I really can't believe it! I don't care who you are, do you think you should make such a dreadful joke at this critical moment? At a moment when people's lives are at stake! If my lunar module crashes into the city, thousands of lives will be lost, my life will be lost.
+
+    (static noise)
+    <<set_moon_lander_camera_inactive Dialogue>>
+
+-> Actually, I am a intern in an convenience store
+    Amo: I cannot continue this. I am actually an intern in a convenience store. I am so sorry that we are pretending to be experts, but we really wish we could help you. We believed we were trapped in a strange phenomenon and you may be key to solving it. 
+
+    Moonlander Pilot: I am gonna end our communication. Don’t occupy this channel any more. Every second you just wasted could have caused thousands of lives at stake!
+
+    (static noise)
+    <<set_moon_lander_camera_inactive Dialogue>>
+
+Mr. Rabbit: We lost her signal, she must enter the atmosphere, the ionization blackout cuts any electronic signal. 
+
+Amo: What should we do now? Try to reach to her next loop and convince her we are trapped in the same day and we need to work together?
+
+Mr. Rabbit: Amo, even if we had convinced that astronaut of the existence of the time loop, her moon lander is already badly damaged. She would have crashed in the city anyway, 
+
+Mr. Rabbit: What we should do is to report what is happening to the Confederation Space Administration. They would dispatch the expert to help her. Afterall, there isn’t much we can do from the ground.
+
+Mr. Rabbit: Or we can report the situation to Rabbit Heavy Industry. I don't know why they would build my mainframe in a convenience store, but with me as their key asset, they must not be sitting on their hands about the crisis we're facing.
+
+Amo: Is there nothing else we can do?
+
+Mr. Rabbit: I am sorry, Amo, but like she said, we are not professionals. This would be what is best for her, and for us.
+
+Mr. Rabbit: Let’s head back to the store, there is nothing we can do here. Now I have the frequency of her distress signal, we can communicate to her even in the store.  
+
+
+
+End of Milestone Demo Presented By Star Ring Team （David Liao & Leo Ji & Arnee Wen & Duan Yichen）
 ===
