@@ -9165,7 +9165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &655537780
 Transform:
   m_ObjectHideFlags: 0
@@ -9358,7 +9358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &668049868
 GameObject:
@@ -10058,7 +10058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &714811182
 Transform:
   m_ObjectHideFlags: 0
@@ -11516,7 +11516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &822654561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11861,7 +11861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &834260469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16094,7 +16094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1120011016
 Transform:
   m_ObjectHideFlags: 0
@@ -16554,7 +16554,7 @@ Transform:
   - {fileID: 154820791}
   - {fileID: 1755242607}
   m_Father: {fileID: 0}
-  m_RootOrder: 73
+  m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149354806
 GameObject:
@@ -20181,7 +20181,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1354779500
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23370,7 +23370,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1555836350
 Transform:
   m_ObjectHideFlags: 0
@@ -29896,7 +29896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1930265799
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -33648,7 +33648,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2122153028
 MonoBehaviour:
@@ -34282,12 +34282,12 @@ PrefabInstance:
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.36
+      value: -29.51
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 162.79
+      value: 163.94
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
