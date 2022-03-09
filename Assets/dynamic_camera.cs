@@ -11,6 +11,10 @@ public class dynamic_camera : MonoBehaviour
     public float current_fov;
     private float t;
     private float i;
+
+    float delay = 1.5f;
+   
+    float elapsed;
     void Start()
     {
        
@@ -21,7 +25,7 @@ public class dynamic_camera : MonoBehaviour
     {
        
         if (IsometricPlayerMovementController.movement==new Vector2(0,0)) {
-
+            elapsed = 0f;
             i = 0;
             main_camera.orthographicSize = Mathf.Lerp(current_fov, static_fov, t);
             t += 1f * Time.deltaTime;
@@ -29,10 +33,14 @@ public class dynamic_camera : MonoBehaviour
         }
         else
         {
-            t = 0;
-            main_camera.orthographicSize = Mathf.Lerp(static_fov, moving_fov, i);
-           i += 1f * Time.deltaTime;
-            current_fov = main_camera.orthographicSize;
+            elapsed += Time.deltaTime;
+            if (elapsed>delay)
+            {
+                t = 0;
+                main_camera.orthographicSize = Mathf.Lerp(static_fov, moving_fov, i);
+                i += 1f * Time.deltaTime;
+                current_fov = main_camera.orthographicSize;
+            }
         }
      
 

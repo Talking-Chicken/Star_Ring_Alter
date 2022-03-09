@@ -11,6 +11,7 @@ public class PlayerControl : MonoBehaviour
 {   
     public bool CanMove {get; set;}
 
+
     [BoxGroup("Dialogue")] public GameObject NPCToTalk;
     public static bool canTalk = false;
     [SerializeField, BoxGroup("Dialogue")] public DialogueRunner dialogueRunner;
@@ -69,6 +70,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+       
     }
 
     private void FixedUpdate()
