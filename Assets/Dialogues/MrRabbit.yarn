@@ -423,9 +423,9 @@ Mr. Rabbit: You ready?
 title: MoonLander.Start
 tags: 
 colorID: 0
-position: 6682,1028
+position: 6680,1026
 ---
-<<set_moon_lander_camer_active Dialogue>>
+<<set_moon_lander_camera_active Dialogue>>
 Moonlander Pilot: Mayday, mayday! This is Lunar Module Suisei. Request immediate help! This module is under stall warning and will crash into downtown at any moment.
 
 Amo: Lunar Module Suisei, this is, this is Amo, do you copy?
@@ -436,7 +436,7 @@ Amo: Gosh, what am I supposed to do? Is the moonlander still operational?
 
 Moonlander Pilot: I don’t know. Readings on the dashboard are all off the chart. The sirens haven't stopped since I woke up. For god sake, I am just a scientist deployed on a moon base. Are you guys really from the Space Administration?
 
--> Yes! We are Aerospace Technology Specialists!
+-> Yes!
     Amo: We work for the Confederation Space Administration. Mr. Rabi and I are the technology specialists in aerospace.
 
     Moonlander Pilot: Oh really? So how about you guys tell me how many sub-boost rockets CatTech's 2050 type Lunar Module has? 
@@ -459,7 +459,7 @@ Moonlander Pilot: I don’t know. Readings on the dashboard are all off the char
     (static noise)
     <<set_moon_lander_camera_inactive Dialogue>>
 
--> Actually, I am a intern in an convenience store
+-> No...
     Amo: I cannot continue this. I am actually an intern in a convenience store. I am so sorry that we are pretending to be experts, but we really wish we could help you. We believed we were trapped in a strange phenomenon and you may be key to solving it. 
 
     Moonlander Pilot: I am gonna end our communication. Don’t occupy this channel any more. Every second you just wasted could have caused thousands of lives at stake!
@@ -485,5 +485,5 @@ Mr. Rabbit: Let’s head back to the store, there is nothing we can do here. Now
 
 
 
-End of Milestone Demo Presented By Star Ring Team （David Liao & Leo Ji & Arnee Wen & Duan Yichen）
+Mr.Rabbit: End of Milestone Demo Presented By Star Ring Team （David Liao & Leo Ji & Arnee Wen & Duan Yichen）
 ===

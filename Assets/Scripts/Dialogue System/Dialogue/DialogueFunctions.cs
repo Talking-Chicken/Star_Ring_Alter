@@ -51,12 +51,12 @@ public class DialogueFunctions : MonoBehaviour
         return 0;
     }
 
-    [YarnCommand("set_moon_lander_camer_active")]
+    [YarnCommand("set_moon_lander_camera_active")]
     public void setMoonLanderCameraActive() {
         moonLanderCamera.SetActive(true);
     }
 
-    [YarnCommand("set_moon_lander_camer_inactive")]
+    [YarnCommand("set_moon_lander_camera_inactive")]
     public void setMoonLanderCameraInactive() {
         moonLanderCamera.SetActive(false);
     }
