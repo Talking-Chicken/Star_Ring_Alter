@@ -7,6 +7,7 @@ public class using_map : MonoBehaviour
     // Start is called before the first frame update
     public static bool map_on;
     public GameObject map;
+    public GameObject main_camera;
     void Start()
     {
         
@@ -15,14 +16,21 @@ public class using_map : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerControl.CanMove && Input.GetKey(KeyCode.M)) {
-            map.SetActive(true);
-            PlayerControl.CanMove = false;
+        if (Input.GetKeyUp(KeyCode.M)) {
+            if (map.activeSelf)
+            {
+                map.SetActive(false);
+
+                main_camera.SetActive(true);
+            } else
+            {
+                map.SetActive(true);
+
+                main_camera.SetActive(false);
+            }
+           
         }
 
-        if (map.activeSelf && Input.GetKey(KeyCode.M)) {
-            map.SetActive(false);
-            PlayerControl.CanMove = true;
-        }
+        
     }
 }
