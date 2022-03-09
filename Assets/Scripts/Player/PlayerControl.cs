@@ -39,7 +39,8 @@ public class PlayerControl : MonoBehaviour
     public PlayerStateDialogue stateDialogue = new PlayerStateDialogue();
     public PlayerStateUI stateUI = new PlayerStateUI();
 
-    public void ChangeToPreviousState() {ChangeState(previousState);}
+    public void ChangeToPreviousState() {StartCoroutine(waitToChange());} //change to previous state 0.5 seconds delay
+    IEnumerator waitToChange() {yield return new WaitForSeconds(0.5f); ChangeState(previousState);} //where delay actually happens
 
     public void ChangeState(PlayerStateBase newState)
     {
