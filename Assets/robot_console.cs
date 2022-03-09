@@ -19,5 +19,7 @@ public class robot_console : InteractiveObj
     {
         if (FindObjectOfType<DeliveryTunnel>().sentRobot)
             robot.SetActive(true);
+        
+        StartCoroutine(waitToChangeToExploreState());
     }
 }

@@ -28,5 +28,7 @@ public class coffee_bean_console : InteractiveObj
         {
             m_Animator.Play("coffee_go_down");
         }
+
+        StartCoroutine(waitToChangeToExploreState());
     }
 }

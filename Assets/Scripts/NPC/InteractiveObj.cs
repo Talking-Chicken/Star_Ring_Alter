@@ -62,4 +62,9 @@ public class InteractiveObj : MonoBehaviour
     {
         Debug.Log("INTERACT");
     }
+
+    public IEnumerator waitToChangeToExploreState() {
+        yield return new WaitForSeconds(0.5f);
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+    }
 }
