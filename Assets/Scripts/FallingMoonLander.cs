@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Yarn.Unity;
 
 public class FallingMoonLander : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+
+    [YarnCommand("change_to_roof_top")]
+    public void changeToRoofTop() {
+        StartCoroutine(waitToChangeScene());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    IEnumerator waitToChangeScene() {
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene("Main 1");
     }
 }
