@@ -23,5 +23,6 @@ public class PlayerStateExplore : PlayerStateBase
     }
     public override void LeaveState(PlayerControl player) {
         player.CanMove = false;
+        IsometricPlayerMovementController.movement = new Vector2(0,0);
     }
 }
