@@ -1036,10 +1036,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 1838806737}
   indicatorYPos: 1.48
+  invest_icon_offset: 0
   door: {fileID: 1611547989}
   talkingArea: {fileID: 112616933}
   UIContainer: {fileID: 288936116}
@@ -4341,10 +4342,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   isElevatorActivated: 0
   elevatorDoor: {fileID: 2119975315}
 --- !u!114 &245065828
@@ -4563,10 +4565,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 1649016017}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 1032237509}
   indicatorYPos: 1.71
+  invest_icon_offset: 0
   laptop: {fileID: 1716205473}
   laptopPOV: {fileID: 1279425558}
 --- !u!58 &267319214
@@ -7470,10 +7473,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!1 &477247015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10147,10 +10151,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 1649016017}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   robot: {fileID: 735662337}
 --- !u!4 &718094201
 Transform:
@@ -14893,10 +14898,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1044957006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16184,10 +16190,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1120679665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16281,10 +16288,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 977623991}
   indicatorYPos: 1.72
+  invest_icon_offset: 0
   UIContainer: {fileID: 1473615253}
   description: {fileID: 2086069185}
   itemIcon: {fileID: 21300000, guid: 9bbb7ffdc39283d4389b8fd33c2bec33, type: 3}
@@ -16802,10 +16810,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 100004, guid: 7b796b489cc4c447c91c00d4136b0e54, type: 3}
   indicatorYPos: 1.6
+  invest_icon_offset: 0
 --- !u!58 &1184834282
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16871,10 +16880,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1186866666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17163,7 +17173,7 @@ GameObject:
   - component: {fileID: 1208400366}
   - component: {fileID: 1208400365}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Invest_icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17178,14 +17188,14 @@ RectTransform:
   m_GameObject: {fileID: 1208400363}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 1914786733}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9945679, y: 74.97391}
+  m_AnchoredPosition: {x: 0, y: 74.97391}
   m_SizeDelta: {x: 103, y: 121}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208400365
@@ -18695,10 +18705,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 2146700505}
   indicatorYPos: 1.72
+  invest_icon_offset: 0
   tunnelExit: {fileID: 1303024534}
   UIContainer: {fileID: 301286650}
   description: {fileID: 894278807}
@@ -19753,10 +19764,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 1649016017}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   to_corridor: {fileID: 1867566129}
   to_roof_top: {fileID: 357932817}
   tile_corridor: {fileID: 1743364354}
@@ -21132,10 +21144,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!58 &1398327663
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25699,10 +25712,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1679210314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31244,10 +31258,11 @@ MonoBehaviour:
   canInven: 1
   canNeuro: 1
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   coffee_cover: {fileID: 1578285572}
 --- !u!61 &1983223526
 BoxCollider2D:
@@ -32839,10 +32854,11 @@ MonoBehaviour:
   canInven: 0
   canNeuro: 0
   runner: {fileID: 0}
-  player: {fileID: 0}
+  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &2049495825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34444,6 +34460,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0.53246236
       objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201198, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: delay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201199, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: downloadedApps.Array.data[0]
@@ -34459,6 +34480,11 @@ PrefabInstance:
       propertyPath: dialogueUI
       value: 
       objectReference: {fileID: 1115191637}
+    - target: {fileID: 1295384764881201200, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: invest_icon
+      value: 
+      objectReference: {fileID: 1208400363}
     - target: {fileID: 1295384764881201200, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: dialogueRunner
