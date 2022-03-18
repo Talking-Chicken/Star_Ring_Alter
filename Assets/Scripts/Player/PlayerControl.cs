@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField, BoxGroup("Dialogue")] public DialogueRunner dialogueRunner;
     [SerializeField, BoxGroup("Dialogue")] private DialogueUI dialogueUI;
 
+  
     //components
     Rigidbody2D myBody;
     private PlayerBackpack playerBackpack;
@@ -70,6 +71,7 @@ public class PlayerControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        
        
     }
 
@@ -77,7 +79,7 @@ public class PlayerControl : MonoBehaviour
     {
         currentState.FixedupdateState(this);
     }
-
+  
     /**
      * talk to NPC that is currently selecting and has a Talkable component (either in children or in main body)
      */

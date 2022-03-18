@@ -13,7 +13,7 @@ public class dynamic_camera : MonoBehaviour
     private float i;
     public float current_fov1;
 
-    float delay = 0.5f;
+    public float delay = 0.5f;
    
     float elapsed;
     float elapsed1;
