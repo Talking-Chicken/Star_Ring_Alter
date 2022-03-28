@@ -10,13 +10,12 @@ public class InteractiveObj : MonoBehaviour
     //COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON
     private Vector2 position;
     private Color themeColor;
-    private GameObject main_character;
+    [SerializeField] private GameObject main_character;
 
     [SerializeField] private bool canUse = true, canInven = true, canNeuro = true;
-    private PlayerControl player;
-    private GameObject invest_icon;
+    [SerializeField]private GameObject invest_icon;
     public DialogueRunner runner;
-    [SerializeField] PlayerControl playerControl;
+    PlayerControl playerControl;
 
     [SerializeField] private bool isTimeToTalk; //player can only talk to NPC when they have time to talk    [NPC is able to talk to player]
 
@@ -38,19 +37,22 @@ public class InteractiveObj : MonoBehaviour
     void Start()
     {
         playerControl = FindObjectOfType<PlayerControl>();
-        stateManager = FindObjectOfType<StateManager>();
-        invest_icon= GameObject.Find("Invest_icon");
+        invest_icon= GameObject.FindGameObjectWithTag("invest_icon");
         main_character = GameObject.Find("main_character");
         indicatorPos = position + new Vector2(0, indicatorYPos);
+        playerControl = FindObjectOfType<PlayerControl>();
     }
 
     void Update()
     {
+        if (invest_icon == null) GameObject.FindGameObjectWithTag("invest_icon");
+        if (playerControl == null) playerControl = FindObjectOfType<PlayerControl>();
         if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character)
         {
+            Debug.Log("incon on sth");
             invest_icon_set();
         }
-        else { invest_icon.SetActive(false); }
+        else {Debug.Log("icon not on sth"); invest_icon.SetActive(false); }
 
     }
 
