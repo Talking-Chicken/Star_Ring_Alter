@@ -29,13 +29,19 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
+    - NaughtyAttributes.Test
     - Assembly-CSharp
-    - Assembly-CSharp-firstpass
+    - NavMeshComponents
+    - NaughtyAttributes.Core
     - YarnSpinner.Unity
-    - Cinemachine
-    - AllIn1SpriteShaderAssembly
-    - CommandsInAnAssemblyDefinition
+    - YarnSpinner.Unity.Example
+    - YarnSpinnerTests
+    - com.talecrafter.animationimporter.Editor
     - YarnSpinner.Unity.Editor
+    - NaughtyAttributes.Editor
+    - NavMeshComponentsEditor
+    - PsdPlugin
+    - YarnSpinnerEditorTests
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
