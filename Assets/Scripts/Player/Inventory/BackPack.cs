@@ -32,7 +32,7 @@ public class BackPack : MonoBehaviour
      * 
      * @param g gameObject to be removed
      */
-    public void remove(GameObject g)
+    public virtual void remove(GameObject g)
     {
         if (backpack.Count > 0 && backpack.Contains(g))
         {

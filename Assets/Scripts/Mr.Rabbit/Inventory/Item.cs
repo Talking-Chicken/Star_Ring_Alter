@@ -14,6 +14,9 @@ public class Item : MonoBehaviour
     public bool consumable;
 
     public InteractiveObj interactiveObj { get; private set; }
+
+    //getters & setters
+    public string ItemName {get {return itemName;} set {itemName = value;}}
     void Start()
     {
         //connecting all things
@@ -72,6 +75,10 @@ public class Item : MonoBehaviour
 
     public virtual void useItem()
     {
+        Destroy(gameObject);
+    }
+
+    public virtual void useItemToInteractiveObj() {
         Destroy(gameObject);
     }
 }

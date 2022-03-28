@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerStateDialogue : PlayerStateBase
 {
     public override void EnterState(PlayerControl player) {
-        player.UIControl.closeTime();
+        
     }
     public override void UpdateState(PlayerControl player) {
 
@@ -14,6 +14,6 @@ public class PlayerStateDialogue : PlayerStateBase
 
     }
     public override void LeaveState(PlayerControl player) {
-        player.UIControl.openTime();
+        
     }
 }

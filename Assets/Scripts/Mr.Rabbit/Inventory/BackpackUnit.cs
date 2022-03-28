@@ -14,8 +14,12 @@ public class BackpackUnit : MonoBehaviour
     private string itemName, itemDescription, itemDescriptionAfterUse;
     [SerializeField] private Image itemImage;
 
+    private PlayerControl playerControl;
+
     void Start()
     {
+        playerControl = FindObjectOfType<PlayerControl>();
+
         //set up animator
         if (GetComponent<Animator>() != null)
             myAnimator = GetComponent<Animator>();
@@ -133,7 +137,11 @@ public class BackpackUnit : MonoBehaviour
         if (currentItem != null)
         {
             Item item = currentItem.GetComponent<Item>();
-            item.useItem();
+            if (playerControl.InteractingObj == null) {
+                item.useItem();
+            } else {
+                playerControl.InteractingObj.GetComponent<InteractiveObj>().useItem();
+            }
 
             //if it's comsumable, remove it from the queue of the backpack unit as well as from playerbackpack list
             if (item.consumable)

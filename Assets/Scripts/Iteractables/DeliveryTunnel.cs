@@ -45,6 +45,18 @@ public class DeliveryTunnel : InteractiveObj
             description.text = "this is the tunnel for coffee beans";
     }
 
+    public override void useItem()
+    {
+        GameObject deliveryItem = InventoryGUI.currentUnit.storedItem.Dequeue();
+        playerBackpack.remove(deliveryItem);
+        deliveryItem.SetActive(true);
+        Vector3 exitPos = tunnelExit.transform.position;
+        deliveryItem.transform.position = new Vector3(exitPos.x, exitPos.y, 42);
+        FindObjectOfType<PlayerControl>().UIControl.ChangeToIdleState();
+        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+        FindObjectOfType<PlayerControl>().UIControl.closeWindows();
+    }
+
     public void exit()
     {
         UIContainer.SetActive(false);

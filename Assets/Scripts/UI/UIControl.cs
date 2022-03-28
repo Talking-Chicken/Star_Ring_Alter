@@ -16,6 +16,10 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Neuro Impalnt GUI")] private NeuroImplantGUI neuroGUI;
     [SerializeField, BoxGroup("Time GUI")] private GameObject timeGUI;
 
+    //delegate
+    public delegate void CloseWindows();
+    public CloseWindows closeWindows;
+
     //getters & setters
     public PlayerControl Player {get {return player;} private set {player = value;}}
     public List<Button> SelectionButtons {get {return selectionButtons;} private set {selectionButtons = value;}}
@@ -56,6 +60,12 @@ public class UIControl : MonoBehaviour
     //change player state
     public void ChangePlayerState(PlayerStateBase newState) {player.ChangeState(newState);}
 
+    void Awake() {
+        closeWindows += closeSelectionMenu;
+        closeWindows += closeInventory;
+        closeWindows += closeNeuro;
+    }
+
     void Start()
     {
         player = FindObjectOfType<PlayerControl>();
@@ -69,6 +79,7 @@ public class UIControl : MonoBehaviour
         currentState.UpdateState(this);
     }
 
+    #region close & open Windows
     //open and close tabs
 
     /**
@@ -123,4 +134,5 @@ public class UIControl : MonoBehaviour
         timeGUI.gameObject.SetActive(false);
         Time_text.isTimePaused = true;
     }
+    #endregion
 }

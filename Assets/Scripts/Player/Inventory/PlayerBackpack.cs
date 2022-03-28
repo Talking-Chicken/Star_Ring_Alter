@@ -10,5 +10,9 @@ using UnityEngine;
  */
 public class PlayerBackpack : BackPack
 {
-    
+    public override void remove(GameObject g)
+    {
+        base.remove(g);
+        FindObjectOfType<InventoryGUI>().showDetail();
+    }
 }

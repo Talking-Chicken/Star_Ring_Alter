@@ -84,6 +84,10 @@ public class InteractiveObj : MonoBehaviour
         Debug.Log("INTERACT");
     }
 
+    public virtual void useItem() {
+        Debug.Log("using item");
+    }
+
     public IEnumerator waitToChangeToExploreState() {
         yield return new WaitForSeconds(0.5f);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);

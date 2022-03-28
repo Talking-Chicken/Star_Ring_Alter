@@ -37,9 +37,12 @@ public class InventoryGUI : MonoBehaviour
 
     //common outside managers
     KeyManager key;
+    PlayerControl playerControl;
 
     void Start()
     {
+        playerControl = FindObjectOfType<PlayerControl>();
+        if (playerControl == null) Debug.Log("playerCOnt is null");
         units = new BackpackUnit[collumn * row];
         xGap = Screen.width / 8.5f;
         yGap = xGap;
@@ -144,11 +147,12 @@ public class InventoryGUI : MonoBehaviour
     {
         nameText.text = currentUnit.getItemName();
 
-        if (!itemUsed)
-            descriptionText.text = currentUnit.getItemDesctription();
-        else
-            descriptionText.text = currentUnit.getItemDescriptionAfterUse();
-
+        if (playerControl.InteractingObj == null) {
+            if (!itemUsed)
+                descriptionText.text = currentUnit.getItemDesctription();
+            else
+                descriptionText.text = currentUnit.getItemDescriptionAfterUse();
+        }
         image.sprite = currentUnit.getIcon();
     }
 
