@@ -16,7 +16,7 @@ public class using_map : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.M)) {
+        if (Input.GetKeyUp(KeyCode.M)&&PlayerControl.show_invest) {
             if (map.activeSelf)
             {
                 map.SetActive(false);
