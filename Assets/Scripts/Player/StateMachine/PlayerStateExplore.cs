@@ -6,6 +6,7 @@ public class PlayerStateExplore : PlayerStateBase
 {
     public override void EnterState(PlayerControl player) {
         player.CanMove = true;
+        PlayerControl.show_invest=true;
     }
     public override void UpdateState(PlayerControl player) {
         if (PlayerControl.canTalk)
@@ -23,6 +24,7 @@ public class PlayerStateExplore : PlayerStateBase
     }
     public override void LeaveState(PlayerControl player) {
         player.CanMove = false;
+          PlayerControl.show_invest=false;
         IsometricPlayerMovementController.movement = new Vector2(0,0);
     }
 }

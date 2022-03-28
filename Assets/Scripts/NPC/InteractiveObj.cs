@@ -47,7 +47,7 @@ public class InteractiveObj : MonoBehaviour
     {
         if (invest_icon == null) GameObject.FindGameObjectWithTag("invest_icon");
         if (playerControl == null) playerControl = FindObjectOfType<PlayerControl>();
-        if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character)
+        if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character&& PlayerControl.show_invest)
         {
             Debug.Log("incon on sth");
             invest_icon_set();

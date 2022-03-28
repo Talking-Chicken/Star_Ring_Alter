@@ -17,7 +17,8 @@ public class PlayerControl : MonoBehaviour
     [SerializeField, BoxGroup("Dialogue")] public DialogueRunner dialogueRunner;
     [SerializeField, BoxGroup("Dialogue")] private DialogueUI dialogueUI;
 
-  
+    public static bool show_invest;
+
     //components
     Rigidbody2D myBody;
     private PlayerBackpack playerBackpack;
