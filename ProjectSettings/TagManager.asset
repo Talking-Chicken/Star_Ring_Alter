@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Interactive
   - glow_stick
+  - invest_icon
   layers:
   - Default
   - TransparentFX

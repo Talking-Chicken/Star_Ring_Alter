@@ -26,7 +26,7 @@ public class dynamic_camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(IsometricPlayerMovementController.movement);
+       //Debug.Log(IsometricPlayerMovementController.movement);
        
         if (IsometricPlayerMovementController.movement==new Vector2(0,0)) {
             elapsed1 += Time.deltaTime;

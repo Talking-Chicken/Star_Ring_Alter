@@ -558,7 +558,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 0
-  SorterPositionOffset: {x: -0.07373428, y: -0.009355545, z: 0.000118255615}
+  SorterPositionOffset: {x: 0.035755157, y: 0.018218994, z: 0.0010948181}
   SorterPositionOffset2: {x: 0, y: 0, z: 0}
   renderersToSort:
   - {fileID: 19042318}
@@ -1012,11 +1012,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4563de4f93d6e234183cf15d5785aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 1838806737}
   indicatorYPos: 1.48
@@ -2697,12 +2698,12 @@ PrefabInstance:
     - target: {fileID: 79777928221558379, guid: 7581abc6e21691047947a45c5da786ea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.64
+      value: 40.86
       objectReference: {fileID: 0}
     - target: {fileID: 79777928221558379, guid: 7581abc6e21691047947a45c5da786ea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.3
+      value: 50.3
       objectReference: {fileID: 0}
     - target: {fileID: 79777928221558379, guid: 7581abc6e21691047947a45c5da786ea,
         type: 3}
@@ -4318,11 +4319,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcad4e05da438947b518c83c3c00708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -4541,11 +4543,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb8ca5888a9baf4aa525dafbeb49a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 1032237509}
   indicatorYPos: 1.71
@@ -6030,7 +6033,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.30934715, y: 0.24306011}
+  m_Offset: {x: 0.30934715, y: -0.6171551}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6041,7 +6044,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3864021, y: 1.6628895}
+  m_Size: {x: 3.3864021, y: 1.5912018}
   m_EdgeRadius: 0
 --- !u!114 &360560301
 MonoBehaviour:
@@ -6232,13 +6235,13 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -3.9949274, y: 1.7201042}
+  - {x: -3.8130007, y: 1.6973705}
   - {x: -5.279539, y: 0.87511635}
   - {x: -5.265383, y: 0.76189995}
   - {x: -5.2936954, y: 0.7619004}
-  - {x: 2.3785276, y: -3.1856983}
-  - {x: 4.1345043, y: -2.4357443}
-  - {x: -4.02606, y: 1.6493421}
+  - {x: 2.469489, y: -3.3675659}
+  - {x: 4.2709503, y: -2.4130106}
+  - {x: -3.7597656, y: 1.6669393}
 --- !u!114 &379954416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7449,11 +7452,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -8277,6 +8281,53 @@ EdgeCollider2D:
   - {x: -2.8971934, y: -0.27103424}
   - {x: 0.6372571, y: -1.9588327}
   - {x: 2.2337134, y: -1.4522371}
+--- !u!1 &555746974
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555746975}
+  - component: {fileID: 555746976}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &555746975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555746974}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 911406767}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &555746976
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555746974}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.92
 --- !u!1 &558603446
 GameObject:
   m_ObjectHideFlags: 0
@@ -10127,11 +10178,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff7f384eb5e6e2408a0c2a075776fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -11394,7 +11446,7 @@ GameObject:
   - component: {fileID: 822465024}
   - component: {fileID: 822465026}
   m_Layer: 0
-  m_Name: operating software
+  m_Name: Mystery software
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11459,7 +11511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822465023}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.94, y: -4.75, z: 21.251469}
+  m_LocalPosition: {x: 35.48, y: -9.608, z: 21.251469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1398327661}
@@ -11480,7 +11532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Operating Software
   itemDescription: it can activate the maintenance robot
-  itemDescriptionAfterUse: 
+  itemDescriptionAfterUse: How can I activate it?
   icon: {fileID: 3133165347836741161, guid: 296adf52438ea714f9b918f4d44927a0, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
   consumable: 0
@@ -12233,6 +12285,7 @@ Transform:
   - {fileID: 296321215}
   - {fileID: 822465025}
   - {fileID: 889904441}
+  - {fileID: 911406767}
   m_Father: {fileID: 0}
   m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12860,6 +12913,108 @@ EdgeCollider2D:
   - {x: -2.0626984, y: -8.044777}
   - {x: -4.896652, y: -6.673504}
   - {x: -8.096283, y: -8.227608}
+--- !u!1 &911406766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 911406767}
+  - component: {fileID: 911406768}
+  - component: {fileID: 911406769}
+  m_Layer: 0
+  m_Name: operating software
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &911406767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911406766}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.89, y: -4.39, z: 21.251469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 555746975}
+  m_Father: {fileID: 861323023}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &911406768
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911406766}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 3133165347836741161, guid: 296adf52438ea714f9b918f4d44927a0,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.3500142, y: 0.68200004}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &911406769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911406766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f83caa1d1ff87a141ab384fbdabe9d79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: operating software
+  itemDescription: it can activate maintanence robot
+  itemDescriptionAfterUse: how can i activate it?
+  icon: {fileID: 3133165347836741161, guid: 296adf52438ea714f9b918f4d44927a0, type: 3}
+  themeColor: {r: 0.33962262, g: 0.073691696, b: 0.073691696, a: 0}
+  consumable: 0
 --- !u!1 &914308335 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 872937409, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
@@ -14874,11 +15029,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -16166,11 +16322,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -16264,11 +16421,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff03401d3743744ab0d87fdd69cdfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 977623991}
   indicatorYPos: 1.72
@@ -16786,11 +16944,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf89d89178ec474fbedae9e3564b204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 100004, guid: 7b796b489cc4c447c91c00d4136b0e54, type: 3}
   indicatorYPos: 1.6
@@ -16856,11 +17015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -17154,7 +17314,7 @@ GameObject:
   - component: {fileID: 1208400365}
   m_Layer: 5
   m_Name: Invest_icon
-  m_TagString: Untagged
+  m_TagString: invest_icon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17720,7 +17880,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -10.7}
+  m_AnchoredPosition: {x: 26.4, y: -14.7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1254714644
@@ -17770,8 +17930,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -18681,11 +18841,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5fe9c06e55cbc45b8d1adaa6f2e2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 2146700505}
   indicatorYPos: 1.72
@@ -19740,11 +19901,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea1b4fc7cfff1746b59fce367874a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -21120,11 +21282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed7e095a4a3c2b4092f4a91568ab32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -21139,12 +21302,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.065597534, y: 0}
+  m_Offset: {x: -1.248024, y: 0}
   serializedVersion: 2
-  m_Radius: 1.582367
+  m_Radius: 0.3999405
 --- !u!1 &1406269442
 GameObject:
   m_ObjectHideFlags: 0
@@ -21446,7 +21609,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1408323113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.13, y: 2.22, z: 61.173416}
+  m_LocalPosition: {x: -13.93, y: 3.62, z: 61.173416}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 233859748}
@@ -21468,7 +21631,7 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 1
-  SorterPositionOffset: {x: -1.3122082, y: -0.10662651, z: 0}
+  SorterPositionOffset: {x: -1.3122025, y: -0.10662651, z: 0}
   SorterPositionOffset2: {x: 0.8660698, y: -0.17927933, z: 0}
   renderersToSort:
   - {fileID: 1408323114}
@@ -23119,7 +23282,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: -11.4}
+  m_AnchoredPosition: {x: 25, y: -11.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1517736867
@@ -25688,11 +25851,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -30469,13 +30633,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 11400000, guid: 22b50e269046dae43b62f8af2b74c410,
+      objectReference: {fileID: 11400000, guid: 8ef9269a1ce2e1940a15fb1cc4c7cffa,
         type: 2}
     - target: {fileID: 2904160362190626953, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 1720486333462590694, guid: 22b50e269046dae43b62f8af2b74c410,
+      objectReference: {fileID: -1723639271663097706, guid: 8ef9269a1ce2e1940a15fb1cc4c7cffa,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93b173fbc1c022843b157310e9aa4e8a, type: 3}
@@ -31153,11 +31317,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3386a87d37d57c4984b1b7bb7502518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -32749,11 +32914,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  playerControl: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
@@ -34286,12 +34452,12 @@ PrefabInstance:
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 61.55
+      value: 70.03
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 42.9
+      value: 45.7
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}

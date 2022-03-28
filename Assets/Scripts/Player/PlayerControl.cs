@@ -26,7 +26,7 @@ public class PlayerControl : MonoBehaviour
 
     //detect and interact
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
-    private GameObject detectingObj = null;
+    [ShowNonSerializedField] private GameObject detectingObj = null;
 
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}
