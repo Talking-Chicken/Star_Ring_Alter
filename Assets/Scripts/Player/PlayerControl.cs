@@ -27,11 +27,13 @@ public class PlayerControl : MonoBehaviour
 
     //detect and interact
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
-    [ShowNonSerializedField] private GameObject detectingObj = null;
+    [ShowNonSerializedField] private GameObject detectingObj = null; //object that player raycating is detecting
+    [ShowNonSerializedField] private GameObject interactingObj = null; //object that player is interacting
 
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}
     public GameObject DetectingObj {get {return detectingObj;} set {detectingObj = value;}}
+    public GameObject InteractingObj {get {return interactingObj;} set {interactingObj = value;}}
     public KeyManager KeyManager {get {return key;} private set {key = value;}}
     public UIControl UIControl {get {return uiControl;} private set {uiControl = value;}}
     
@@ -183,7 +185,7 @@ public class PlayerControl : MonoBehaviour
     public void interact(GameObject interactingObject) {
         if (interactingObject.GetComponent<InteractiveObj>() != null)
         {
-            //interactingObject.GetComponent<InteractiveObj>().interact();
+            this.InteractingObj = interactingObject;
             UIControl.openSelectionMenu();
             ChangeState(stateUI);
         } else

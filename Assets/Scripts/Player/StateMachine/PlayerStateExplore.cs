@@ -7,6 +7,7 @@ public class PlayerStateExplore : PlayerStateBase
     public override void EnterState(PlayerControl player) {
         player.CanMove = true;
         PlayerControl.show_invest=true;
+        player.InteractingObj = null;
     }
     public override void UpdateState(PlayerControl player) {
         if (PlayerControl.canTalk)
