@@ -8,6 +8,7 @@ public class PlayerStateExplore : PlayerStateBase
         player.CanMove = true;
         PlayerControl.show_invest=true;
         player.InteractingObj = null;
+        player.UIControl.openTime();
     }
     public override void UpdateState(PlayerControl player) {
         if (PlayerControl.canTalk)
@@ -27,5 +28,6 @@ public class PlayerStateExplore : PlayerStateBase
         player.CanMove = false;
           PlayerControl.show_invest=false;
         IsometricPlayerMovementController.movement = new Vector2(0,0);
+        player.UIControl.closeTime();
     }
 }
