@@ -46,7 +46,8 @@ public class PlayerControl : MonoBehaviour
 
     public void ChangeToPreviousState() {StartCoroutine(waitToChange());} //change to previous state 0.5 seconds delay
     IEnumerator waitToChange() {yield return new WaitForSeconds(0.5f); ChangeState(previousState);} //where delay actually happens
-
+    RaycastHit2D[] RayArray;
+    int i;
     public void ChangeState(PlayerStateBase newState)
     {
         if (currentState != null)
@@ -140,7 +141,13 @@ public class PlayerControl : MonoBehaviour
     public bool detectInteractiveObj() {
         RaycastHit2D hit;
         if (GetComponent<IsometricPlayerMovementController>() != null)
-            hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<IsometricPlayerMovementController>().dir, Sight);
+          
+
+                hit = Physics2D.BoxCast(gameObject.transform.position,new Vector2(0.5f,0.5f),-1*Vector2.Angle(Vector2.up, GetComponent<IsometricPlayerMovementController>().dir), GetComponent<IsometricPlayerMovementController>().dir, 4.0f); 
+              
+            //hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<IsometricPlayerMovementController>().dir, Sight);
+  
+
         else {
             hit = Physics2D.Raycast(gameObject.transform.position, Vector2.down, Sight);
             Debug.LogWarning("doesn't detect isometric player movement controller");
