@@ -29,7 +29,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
     [ShowNonSerializedField] private GameObject detectingObj = null; //object that player raycating is detecting
     [ShowNonSerializedField] private GameObject interactingObj = null; //object that player is interacting
-
+    [SerializeField]GameObject raycaster;
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}
     public GameObject DetectingObj {get {return detectingObj;} set {detectingObj = value;}}
@@ -143,7 +143,7 @@ public class PlayerControl : MonoBehaviour
         if (GetComponent<IsometricPlayerMovementController>() != null)
           
 
-                hit = Physics2D.BoxCast(gameObject.transform.position,new Vector2(0.5f,0.5f),-1*Vector2.Angle(Vector2.up, GetComponent<IsometricPlayerMovementController>().dir), GetComponent<IsometricPlayerMovementController>().dir, 4.0f); 
+                hit = Physics2D.BoxCast(raycaster.transform.position,new Vector2(0.7f,0.7f),-1*Vector2.Angle(Vector2.up, GetComponent<IsometricPlayerMovementController>().dir), GetComponent<IsometricPlayerMovementController>().dir, 4.0f); 
               
             //hit = Physics2D.Raycast(gameObject.transform.position, GetComponent<IsometricPlayerMovementController>().dir, Sight);
   
