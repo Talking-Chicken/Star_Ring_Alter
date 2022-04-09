@@ -49,10 +49,10 @@ public class InteractiveObj : MonoBehaviour
         if (playerControl == null) playerControl = FindObjectOfType<PlayerControl>();
         if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character&& PlayerControl.show_invest)
         {
-            Debug.Log("incon on sth");
+
             invest_icon_set();
         }
-        else {Debug.Log("icon not on sth"); invest_icon.SetActive(false); }
+        else { invest_icon.SetActive(false); }
 
     }
 
