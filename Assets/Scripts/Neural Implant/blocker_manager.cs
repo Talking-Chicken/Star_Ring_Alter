@@ -15,6 +15,7 @@ public class blocker_manager : MonoBehaviour
     public float max_height;
     GameObject last_object;
     bool overload;
+    bool remove;
     public  static GameObject drag_object;
     
     void Start()
@@ -27,17 +28,18 @@ public class blocker_manager : MonoBehaviour
     {
 
         if ((blocks[blocks.Count - 1].transform.position.y - blocks[0].transform.position.y) > max_height) { overload = true; } else { overload = false; }
-        Debug.Log(drag_object);
-            if (drag_object != null) {
+        
+        if (drag_object != null) {
             if (blocks.Contains(drag_object))
             {
                 if (Vector2.Distance(drag_object.transform.position, this.transform.position) > 3)
                 {
-                    blocks.Remove(drag_object);
-
-                    drag_object.GetComponent<drag_neural>().back();
+                    remove = true;
+                  
+                    last_object = drag_object;
+                   
                 }
-                else { }
+                else { remove = false;}
                
                 
             }
@@ -56,15 +58,26 @@ public class blocker_manager : MonoBehaviour
 
         if(drag_object==null) {
 
-            if (close)
+            if (remove)
             {
-                     
-                    addblock(last_object);
-                    close = false;
-                
+                blocks.Remove(last_object);
+                last_object.GetComponent<drag_neural>().back();
+                remove = false;
+            }
+            else
+            {
+                Debug.Log(remove);
+                sortblocker();
+            }
 
+            if (close)
+            {  
+                addblock(last_object);
+                close = false;
             }
             else { last_object.GetComponent<drag_neural>().back(); }
+
+            
             Debug.Log("run");
             last_object = null;
             sortblocker();
