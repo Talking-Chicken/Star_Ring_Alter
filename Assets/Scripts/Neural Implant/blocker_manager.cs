@@ -6,6 +6,7 @@ public class blocker_manager : MonoBehaviour
 {
     // Start is called before the first frame update
     public List<GameObject> blocks;
+    public  List<GameObject> indicator;
     float intial_y_pos=0;
     float halfHeight;
     float distance;
@@ -17,21 +18,35 @@ public class blocker_manager : MonoBehaviour
     GameObject last_object;
     bool overload;
     bool remove;
+    GameObject current_indicator;
     [SerializeField] GameObject storage_indicator;
+    [SerializeField] GameObject UI_warning;
+    [SerializeField] GameObject UI_Exit;
     public  static GameObject drag_object;
     
     void Start()
     {
         sortblocker();
+        for (int i = 0; i < 8; i++)
+        {
+            current_indicator = Instantiate(storage_indicator, new Vector3(transform.position.x - 1.7f, transform.position.y+0.2f + i * 0.3f, 0), Quaternion.Euler(0, 0, 90));
+                
+            indicator.Add(current_indicator);
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < indicator.Count; i++)
+        {
+            if (i < storage) { indicator[i].SetActive(true); }
+            else { indicator[i].SetActive(false); }
+            if (storage > 5) { indicator[i].GetComponent<SpriteRenderer>().color = Color.red;UI_warning.SetActive(true);UI_Exit.SetActive(false); } else { indicator[i].GetComponent<SpriteRenderer>().color = Color.gray; UI_warning.SetActive(false); UI_Exit.SetActive(true); }
 
-        for (int i=0;i<storage;i++) {
-            Instantiate(storage_indicator, new Vector3(transform.position.x-2, transform.position.y+i*0.3f, 0), Quaternion.identity);
         }
+
 
         if ((blocks[blocks.Count - 1].transform.position.y - blocks[0].transform.position.y) > max_height) { overload = true; } else { overload = false; }
         
@@ -69,6 +84,7 @@ public class blocker_manager : MonoBehaviour
                 blocks.Remove(last_object);
                 last_object.GetComponent<drag_neural>().back();
                 remove = false;
+                storage = storage - 3;
             }
             else
             {
@@ -80,6 +96,7 @@ public class blocker_manager : MonoBehaviour
             {  
                 addblock(last_object);
                 close = false;
+                storage = storage + 3;
             }
             else { last_object.GetComponent<drag_neural>().back(); }
 
