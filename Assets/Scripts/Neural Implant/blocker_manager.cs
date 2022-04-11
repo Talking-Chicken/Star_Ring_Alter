@@ -12,10 +12,12 @@ public class blocker_manager : MonoBehaviour
     int closest_index;
     int current_index;
     bool close;
+    int storage=2;
     public float max_height;
     GameObject last_object;
     bool overload;
     bool remove;
+    [SerializeField] GameObject storage_indicator;
     public  static GameObject drag_object;
     
     void Start()
@@ -26,6 +28,10 @@ public class blocker_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        for (int i=0;i<storage;i++) {
+            Instantiate(storage_indicator, new Vector3(transform.position.x-2, transform.position.y+i*0.3f, 0), Quaternion.identity);
+        }
 
         if ((blocks[blocks.Count - 1].transform.position.y - blocks[0].transform.position.y) > max_height) { overload = true; } else { overload = false; }
         
