@@ -6,6 +6,8 @@ public class NeuroImplantAdjuster : InteractiveObj
 {
     private NeuroComputerGUI UI;
     private UIControl uiControl;
+    [SerializeField] GameObject adjusterCamera;
+    [SerializeField] GameObject adjusterUIContainer;
     private void Start()
     {
         UI = GetComponentInParent<NeuroComputerGUI>();
@@ -14,14 +16,17 @@ public class NeuroImplantAdjuster : InteractiveObj
 
     public override void interact()
     {
-        if (UI.isShowingUI)
-        {
-            UI.hideUI();
-            uiControl.ChangeState(uiControl.stateIdle);
-            uiControl.Player.ChangeState(uiControl.Player.stateExplore);
-        } else
-        {
-            UI.showUI();
-        }
+        // if (UI.isShowingUI)
+        // {
+        //     UI.hideUI();
+        //     uiControl.ChangeState(uiControl.stateIdle);
+        //     uiControl.Player.ChangeState(uiControl.Player.stateExplore);
+        // } else
+        // {
+        //     UI.showUI();
+        // }
+        Camera.main.gameObject.SetActive(false);
+        adjusterCamera.SetActive(true);
+        adjusterUIContainer.SetActive(true);
     }
 }

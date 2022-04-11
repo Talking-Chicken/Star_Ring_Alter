@@ -3723,11 +3723,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221179332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.21, y: -1.04, z: 0}
+  m_LocalPosition: {x: -4.2099915, y: -1.0399933, z: 0}
   m_LocalScale: {x: 0.5938499, y: 0.5938499, z: 0.5938499}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 7
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &221179334
 MonoBehaviour:
@@ -11331,11 +11331,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 761765857}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.05, y: 2.598, z: 41.345875}
+  m_LocalPosition: {x: -5.049988, y: 2.5980072, z: 41.345875}
   m_LocalScale: {x: 0.13591155, y: 0.13591155, z: 0.13591155}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 4
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &761765859
 SpriteRenderer:
@@ -11546,6 +11546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777328521}
   - component: {fileID: 777328522}
+  - component: {fileID: 777328523}
   m_Layer: 0
   m_Name: Neuro Implant Block (OS)
   m_TagString: Untagged
@@ -11561,11 +11562,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 777328520}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -1.77, z: 0}
+  m_LocalPosition: {x: 0.22000122, y: -1.7700043, z: 0}
   m_LocalScale: {x: 0.5938499, y: 0.5938499, z: 0.5938499}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 5
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &777328522
 SpriteRenderer:
@@ -11618,6 +11619,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &777328523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777328520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 391add35aa2868f4bb1687abf4262f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverride: 0
+  appName: Operating System
+  memoryStorage: 4
+  description: The Operating System
+  icon: {fileID: -3829701751879224553, guid: 63707257d07121145999bcba598e6e32, type: 3}
 --- !u!1 &787377417
 GameObject:
   m_ObjectHideFlags: 0
@@ -11720,11 +11738,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 788887456}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -2.93, z: 0}
+  m_LocalPosition: {x: -0.070007324, y: -2.9299927, z: 0}
   m_LocalScale: {x: 1.72995, y: 1.72995, z: 1.72995}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 0
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &788887458
 SpriteRenderer:
@@ -13933,12 +13951,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939932517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.34, y: -0.26, z: 41.345875}
+  m_LocalPosition: {x: 3.3399963, y: -0.2599945, z: 41.345875}
   m_LocalScale: {x: 1.98, y: 3, z: 1}
   m_Children:
   - {fileID: 2059985917}
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 1
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &939932519
 SpriteRenderer:
@@ -17902,6 +17920,7 @@ MonoBehaviour:
   indicator: {fileID: 100004, guid: 7b796b489cc4c447c91c00d4136b0e54, type: 3}
   indicatorYPos: 1.6
   invest_icon_offset: 0
+  adjusterUIContainer: {fileID: 1282998312}
 --- !u!58 &1184834282
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -19489,6 +19508,47 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 54
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1282998312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282998313}
+  m_Layer: 0
+  m_Name: Neuro Adjuster Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1282998313
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282998312}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1505724753}
+  - {fileID: 761765858}
+  - {fileID: 777328521}
+  - {fileID: 1542758013}
+  - {fileID: 221179333}
+  - {fileID: 2140821544}
+  - {fileID: 1494034048}
+  - {fileID: 1699467133}
+  - {fileID: 939932518}
+  - {fileID: 2001026517}
+  - {fileID: 788887457}
+  m_Father: {fileID: 2073027524}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285013754
 GameObject:
@@ -23732,12 +23792,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494034047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.05, y: 2.63, z: 41.345875}
+  m_LocalPosition: {x: -5.049988, y: 2.630005, z: 41.345875}
   m_LocalScale: {x: 0.059767473, y: 0.059767473, z: 0.059767473}
   m_Children:
   - {fileID: 305309555}
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 9
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1494034049
 SpriteRenderer:
@@ -24146,11 +24206,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505724752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.8, z: 0}
+  m_LocalPosition: {x: 0, y: -2.800003, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 3
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1505724754
 MonoBehaviour:
@@ -24620,6 +24680,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1542758013}
   - component: {fileID: 1542758014}
+  - component: {fileID: 1542758015}
   m_Layer: 0
   m_Name: Neuro Implant Block (GUI)
   m_TagString: Untagged
@@ -24635,11 +24696,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1542758012}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: -0.36, z: 0}
+  m_LocalPosition: {x: 0.25, y: -0.3600006, z: 0}
   m_LocalScale: {x: 0.5938499, y: 0.5938499, z: 0.5938499}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 6
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1542758014
 SpriteRenderer:
@@ -24692,6 +24753,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1542758015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542758012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60859fa8eb202274197af65eeed3453e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverride: 0
+  appName: GUI module
+  memoryStorage: 4
+  description: See the World
+  icon: {fileID: 1931027794438572486, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
 --- !u!1 &1553593334
 GameObject:
   m_ObjectHideFlags: 0
@@ -27332,7 +27410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1692266234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27531,8 +27609,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 41.345875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 10
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1699467134
 SpriteRenderer:
@@ -33400,8 +33478,8 @@ RectTransform:
   m_LocalScale: {x: 0.059767473, y: 0.059767473, z: 0.059767473}
   m_Children:
   - {fileID: 73220247}
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 2
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -34837,7 +34915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2073027524}
   m_Layer: 0
-  m_Name: -----------------Neural Implant Adjuster--------------
+  m_Name: ----------Neural Implant Adjuster--------------
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34854,17 +34932,7 @@ Transform:
   m_LocalPosition: {x: 346.83603, y: 228.17839, z: -41.345875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 788887457}
-  - {fileID: 939932518}
-  - {fileID: 2001026517}
-  - {fileID: 1505724753}
-  - {fileID: 761765858}
-  - {fileID: 777328521}
-  - {fileID: 1542758013}
-  - {fileID: 221179333}
-  - {fileID: 2140821544}
-  - {fileID: 1494034048}
-  - {fileID: 1699467133}
+  - {fileID: 1282998313}
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36110,11 +36178,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140821543}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.21, y: 0.57, z: 0}
+  m_LocalPosition: {x: -4.2099915, y: 0.5700073, z: 0}
   m_LocalScale: {x: 0.5938499, y: 0.5938499, z: 0.5938499}
   m_Children: []
-  m_Father: {fileID: 2073027524}
-  m_RootOrder: 8
+  m_Father: {fileID: 1282998313}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2140821545
 BoxCollider2D:
