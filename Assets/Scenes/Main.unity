@@ -3707,8 +3707,9 @@ GameObject:
   - component: {fileID: 221179335}
   - component: {fileID: 221179334}
   - component: {fileID: 221179336}
+  - component: {fileID: 221179337}
   m_Layer: 0
-  m_Name: neural_implants_2
+  m_Name: Neuro Implant Block (Eng)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3817,6 +3818,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.74, y: 2.07}
   m_EdgeRadius: 0
+--- !u!114 &221179337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221179332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de967afed5c4da84b87928f7c1cf16f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverride: 0
+  appName: engineering module
+  memoryStorage: 3
+  description: to build, fix, and disassemble
+  icon: {fileID: 670099381952144614, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
 --- !u!1 &221852234
 GameObject:
   m_ObjectHideFlags: 0
@@ -11529,7 +11547,7 @@ GameObject:
   - component: {fileID: 777328521}
   - component: {fileID: 777328522}
   m_Layer: 0
-  m_Name: neural_implants_0
+  m_Name: Neuro Implant Block (OS)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24603,7 +24621,7 @@ GameObject:
   - component: {fileID: 1542758013}
   - component: {fileID: 1542758014}
   m_Layer: 0
-  m_Name: neural_implants_1
+  m_Name: Neuro Implant Block (GUI)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27314,7 +27332,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1692266234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34824,7 +34842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2073027524
 Transform:
   m_ObjectHideFlags: 0
@@ -36076,8 +36094,9 @@ GameObject:
   - component: {fileID: 2140821547}
   - component: {fileID: 2140821546}
   - component: {fileID: 2140821545}
+  - component: {fileID: 2140821548}
   m_Layer: 0
-  m_Name: neural_implants_2 (1)
+  m_Name: Neuro Implant Block (Hack)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36187,6 +36206,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2140821548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140821543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05d6467fb51a23240b758ed98a688ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOverride: 0
+  appName: hacking module
+  memoryStorage: 3
+  description: hacking things, found in black market
+  icon: {fileID: 3949469904818043356, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
 --- !u!1 &2146700505
 GameObject:
   m_ObjectHideFlags: 0
