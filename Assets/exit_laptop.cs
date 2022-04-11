@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class exit_laptop : MonoBehaviour
 {
-    public GameObject main_camera;
-    public GameObject laptop_camera;
+    [SerializeField] private GameObject main_camera;
+    [SerializeField] private GameObject laptop_camera;
+
+    [SerializeField] private GameObject GUI;
     Collider2D collider;
 
-    private StateManager state;
     void Start()
     {
-        state = FindObjectOfType<StateManager>();
         collider = GetComponent<Collider2D>();
     }
 
@@ -27,12 +27,10 @@ public class exit_laptop : MonoBehaviour
             Debug.Log("test");
             main_camera.SetActive(true);
             laptop_camera.SetActive(false);
-
+            GUI.SetActive(false);
             Cursor.visible = true;
 
             //transit back to explore state
-            state.transitionState(State.Explore);
-
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
         }
     }

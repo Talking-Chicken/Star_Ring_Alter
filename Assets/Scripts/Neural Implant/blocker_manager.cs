@@ -24,8 +24,11 @@ public class blocker_manager : MonoBehaviour
     [SerializeField] GameObject UI_Exit;
     public  static GameObject drag_object;
     
+    private PlayerControl player;
+
     void Start()
     {
+        player = FindObjectOfType<PlayerControl>();
         sortblocker();
         for (int i = 0; i < 8; i++)
         {
@@ -61,8 +64,6 @@ public class blocker_manager : MonoBehaviour
                    
                 }
                 else { remove = false;}
-               
-                
             }
             else
             {
@@ -117,6 +118,17 @@ public class blocker_manager : MonoBehaviour
             i.transform.position = new Vector3(transform.position.x, intial_y_pos + halfHeight, 0);
             intial_y_pos = intial_y_pos + halfHeight * 2;
         }
+
+        //linked apps list to player neuro device
+        List<NeuroImplantApp> apps = new List<NeuroImplantApp>();
+        foreach(GameObject block in blocks) {
+            if (block.GetComponent<NeuroImplantApp>() == null)
+                Debug.LogWarning(block.name + " cannot found neuro implant app component :(");
+            else {
+                apps.Add(block.GetComponent<NeuroImplantApp>());
+            }
+        }
+        player.GetComponent<NeuroImplantDevice>().downloadedApps = apps;
         
     }
     void search()
@@ -139,7 +151,6 @@ public class blocker_manager : MonoBehaviour
     }
     void addblock(GameObject block)
     {
-
         blocks.Insert(closest_index,block);
         sortblocker();
     }

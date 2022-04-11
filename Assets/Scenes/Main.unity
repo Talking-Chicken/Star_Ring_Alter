@@ -3323,6 +3323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main_camera: {fileID: 39912041}
   laptop_camera: {fileID: 1279425558}
+  GUI: {fileID: 1716205473}
 --- !u!61 &204810886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11401,6 +11402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main_camera: {fileID: 39912041}
   laptop_camera: {fileID: 1692266233}
+  GUI: {fileID: 1282998312}
 --- !u!61 &761765861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -17920,6 +17922,7 @@ MonoBehaviour:
   indicator: {fileID: 100004, guid: 7b796b489cc4c447c91c00d4136b0e54, type: 3}
   indicatorYPos: 1.6
   invest_icon_offset: 0
+  adjusterCamera: {fileID: 1692266233}
   adjusterUIContainer: {fileID: 1282998312}
 --- !u!58 &1184834282
 CircleCollider2D:
@@ -19524,7 +19527,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1282998313
 Transform:
   m_ObjectHideFlags: 0
@@ -21957,7 +21960,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 7.2770424, y: -3.0601804}
+  - {x: 7.302541, y: -0.5494578}
+  - {x: 7.239446, y: -3.117798}
   - {x: 8.759864, y: -3.7187033}
 --- !u!68 &1379452833
 EdgeCollider2D:
