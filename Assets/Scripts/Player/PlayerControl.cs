@@ -109,6 +109,17 @@ public class PlayerControl : MonoBehaviour
     }
 
     /**
+     * talk to self and start with specific node
+     * @param startNode node that is the staring of the dialogue
+     */
+    public void talkToSelf(string startNode)
+    {
+        ChangeState(stateDialogue);
+        dialogueRunner.startNode = startNode;
+        dialogueRunner.StartDialogue();
+    }
+
+    /**
      * talk to NPC that is currently selecting and has a talkable component, with this specity start node
      * @param startNode string that dialogue runner is starting
      */
