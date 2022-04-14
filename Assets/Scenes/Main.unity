@@ -36494,13 +36494,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: -13.3
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.2
+      value: 27.94
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
@@ -36549,14 +36564,70 @@ PrefabInstance:
       objectReference: {fileID: 198687947}
     - target: {fileID: 1295384764881201194, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 354bc2094889bd943bd1ca57e989a181,
+        type: 3}
+    - target: {fileID: 1295384764881201194, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201195, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b4921f836f6992149827f642bfc90b76, type: 2}
+    - target: {fileID: 1295384764881201196, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: SorterPositionOffset.x
+      value: -0.16933548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201196, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: SorterPositionOffset.y
+      value: 0.19593811
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201196, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: movingDependencies.Array.data[0]
       value: 
       objectReference: {fileID: 1014633928}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5750896
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.2517052
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.21923202
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.2527294
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.645
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.975
+      objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201199, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: downloadedApps.Array.data[0]
