@@ -6,8 +6,6 @@ using UnityEngine.EventSystems;
 
 public class BackpackUnit : MonoBehaviour
 {
-    Animator myAnimator;
-
     public Queue<GameObject> storedItem = new Queue<GameObject>();
     private int index;
     [SerializeField] private Sprite icon;
@@ -19,18 +17,6 @@ public class BackpackUnit : MonoBehaviour
     void Start()
     {
         playerControl = FindObjectOfType<PlayerControl>();
-
-        //set up animator
-        if (GetComponent<Animator>() != null)
-            myAnimator = GetComponent<Animator>();
-        else
-            Debug.LogWarning(name + " don't have a animator");
-        //set up image for item icon in children
-        if (GetComponentInChildren<Image>() != null)
-            itemImage = GetComponentInChildren<Image>();
-        else
-            Debug.LogWarning("cannot detect item icon slot");
-        
     }
 
     
@@ -102,6 +88,7 @@ public class BackpackUnit : MonoBehaviour
     public void chooseThisUnit()
     {
         InventoryGUI.currentItemIndex = index;
+        InventoryGUIControl.currentUnit = this;
     }
 
     public string getItemName()

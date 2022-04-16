@@ -42,7 +42,7 @@ public class InventoryGUI : MonoBehaviour
     void Start()
     {
         playerControl = FindObjectOfType<PlayerControl>();
-        if (playerControl == null) Debug.Log("playerCOnt is null");
+        if (playerControl == null) Debug.Log("playerControl is null");
         units = new BackpackUnit[collumn * row];
         xGap = Screen.width / 8.5f;
         yGap = xGap;
