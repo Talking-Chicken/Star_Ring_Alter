@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class BackpackUnit : MonoBehaviour
 {
     public Queue<GameObject> storedItem = new Queue<GameObject>();
+    public Queue<Item> items = new Queue<Item>();
     private int index;
     [SerializeField] private Sprite icon;
     private string itemName, itemDescription, itemDescriptionAfterUse;
@@ -16,6 +17,10 @@ public class BackpackUnit : MonoBehaviour
 
     //getters & setters
     public int Index {get => index; set => index = value;}
+    public Sprite Icon {get => icon; set => icon = value;}
+    public string ItemName {get => itemName; set => itemName = value;}
+    public string ItemDes {get => itemDescription; set => itemDescription = value;}
+    public string ItemDescriptionAfterUse {get => itemDescriptionAfterUse; set => itemDescriptionAfterUse = value;}
 
     void Start()
     {
@@ -44,7 +49,12 @@ public class BackpackUnit : MonoBehaviour
         //part 2
 
         //part 3
-        itemImage.sprite = icon;
+        if (Icon != null) {
+            itemImage.color = new Color(255,255,255,255);
+            itemImage.sprite = icon;
+        }
+        else
+            itemImage.color = new Color(0,0,0,0);
     }
 
     public void setStoredItem(Item storedItem)

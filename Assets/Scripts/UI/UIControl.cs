@@ -13,9 +13,14 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Player")]private PlayerControl player;
     private KeyManager _key;
     [SerializeField, BoxGroup("General GUI")] private GameObject backgroundContainer, tabContainer;
-    [SerializeField, BoxGroup("Invetory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
-    [SerializeField, BoxGroup("Neuro Impalnt GUI")] private NeuroImplantGUI neuroGUI;
+    [SerializeField, BoxGroup("Inventory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
+    [SerializeField, BoxGroup("Inventory GUI")] private InventoryGUIControl inventoryControl;
+    [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroImplantGUI neuroGUI;
     [SerializeField, BoxGroup("Time GUI")] private GameObject timeGUI;
+    [SerializeField, BoxGroup("Inventory GUI")] private Button inventoryTab;
+    [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
+    [SerializeField, BoxGroup("Map GUI")] private Button mapTab;
+    [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
 
     //delegate
     public delegate void CloseWindows();
@@ -87,11 +92,9 @@ public class UIControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
-        Debug.Log(currentState);
     }
 
     #region close & open Windows
-    //open and close tabs
 
     /**
     * create (set active) selection menu object (inventory & neruo implant selection) as default 
@@ -122,6 +125,7 @@ public class UIControl : MonoBehaviour
     public void openInventory() {
         inventoryContainer.SetActive(true);
         //inventoryGUI.showInventory();
+        inventoryTab.Select();
         ChangeState(stateInventory);
     }
     public void closeInventory() {
@@ -131,6 +135,7 @@ public class UIControl : MonoBehaviour
     public void openNeuro() {
         neuroContainer.SetActive(true);
         //neuroGUI.initializeAppArea();
+        neuroImplantTab.Select();
         ChangeState(stateNeuro);
     }
 
@@ -164,4 +169,8 @@ public class UIControl : MonoBehaviour
         tabContainer.SetActive(false);
     }
     #endregion
+
+    public void showItems() {
+        inventoryControl.showItems();
+    }
 }

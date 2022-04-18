@@ -5,7 +5,9 @@ using UnityEngine;
 public class UIStateNeuro : UIStateBase
 {
     public override void EnterState(UIControl UI) {
-        UI.openNeuro();
+        UI.openGUI += UI.openNeuro;
+        UI.closeGUI += UI.closeNeuro;
+        UI.openGUI();
     }
     public override void UpdateState(UIControl UI) {
         //press Neuro Implant or Mr.Rabbit one more time to close it, then change UI state to idle and player state to explore
@@ -16,6 +18,8 @@ public class UIStateNeuro : UIStateBase
         }
     }
     public override void LeaveState(UIControl UI) {
-        
+        UI.closeGUI();
+        UI.openGUI -= UI.openNeuro;
+        UI.closeGUI -= UI.closeNeuro;
     }
 }

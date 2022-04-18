@@ -20,13 +20,17 @@ public class InventoryGUIControl : MonoBehaviour
 
     public static BackpackUnit currentUnit;
 
-    private PlayerControl player;
+    [SerializeField] private PlayerControl player;
+    [SerializeField] private PlayerBackpack playerBackpack;
+
+    private List<Item> items = new List<Item>();
 
     //getters & setters
     public int CurrentIndex {get => currentIndex; set => currentIndex = value;}
     void Start()
     {
-        player = FindObjectOfType<PlayerControl>();
+        // player = FindObjectOfType<PlayerControl>();
+        // playerBackpack = FindObjectOfType<PlayerBackpack>();
         //check if everything is set up
         if (itemTypeText == null) Debug.LogWarning("item type text is null");
         if (itemNameText == null) Debug.LogWarning("item name text is null");
@@ -49,8 +53,48 @@ public class InventoryGUIControl : MonoBehaviour
         Debug.Log(currentUnit.name);
     }
 
-    public void showItem() {
+    /* set imgae, description, name, and type of the item to backpackUnit
+       if there's no item sign to backpackUnit, then no icon will be shown*/
+    public void showItems() {
+        //link item list to player backpack
+        items.Clear();
+        if (playerBackpack == null) Debug.Log("playerbackpack is null");
+        if (player == null) Debug.Log("player is null");
+        for (int i = 0; i < playerBackpack.backpack.Count; i++) {
+            if (playerBackpack.backpack[i].GetComponent<Item>() != null)
+                items.Add(playerBackpack.backpack[i].GetComponent<Item>());
+            else
+                Debug.LogWarning(playerBackpack.backpack[i].name + " doesn't have a item component");
+        }
         
+        //set infomation of item to backpackUnit and show them
+        for (int i = 0; i < bakcpackUnits.Count; i++)
+        {
+            bakcpackUnits[i].items.Clear();
+            if (items.Count > i)
+                bakcpackUnits[i].items.Enqueue(items[i]);
+
+            if (bakcpackUnits[i].items.Count > 0) {
+                bakcpackUnits[i].Icon = items[i].getIcon();
+                bakcpackUnits[i].ItemName = items[i].getName();
+                bakcpackUnits[i].ItemDes = items[i].getDescription();
+                bakcpackUnits[i].ItemDes = items[i].getDescriptionAfterUse();
+            } else {
+                bakcpackUnits[i].resetStoredItem();
+            }
+            bakcpackUnits[i].showUnit();
+        }
+    }
+
+    /* show name, type, and description of item in GUI*/
+    public void showInfo(Item item) {
+        if (item != null) {
+            itemTypeText.text = item.Type.ToString();
+            itemDesText.text = item.getDescription();
+            itemNameText.text = item.getName();
+        } else {
+            
+        }
     }
 
     public void changeCurrentUnit() {
@@ -64,7 +108,7 @@ public class InventoryGUIControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
             targetIndex = Mathf.Min(currentIndex + grid.constraintCount, bakcpackUnits.Count-1);
 
-        if (targetIndex != currentIndex) {    
+        if (targetIndex != currentIndex) { 
             if (checkValid(targetIndex)) {
                 setCurrentUnit(targetIndex);
             } else {
@@ -87,6 +131,8 @@ public class InventoryGUIControl : MonoBehaviour
         bakcpackUnits[index].GetComponent<Button>().Select();
         bakcpackUnits[index].GetComponent<Button>().onClick.Invoke();
         currentIndex = index;
+
+        showInfo(currentUnit.items.Peek());
     }
     
 }
