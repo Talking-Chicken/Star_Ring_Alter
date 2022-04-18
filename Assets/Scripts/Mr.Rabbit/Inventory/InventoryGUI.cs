@@ -61,7 +61,6 @@ public class InventoryGUI : MonoBehaviour
                     GameObject g = Instantiate(Unit, new Vector2(xStart + (n * xGap), yStart - (i * yGap)), Unit.transform.rotation);
                     g.GetComponent<RectTransform>().SetParent(backpackBG.GetComponent<RectTransform>());
                     units[currentSize] = g.GetComponent<BackpackUnit>();
-                    units[currentSize].setIndex(currentSize);
   
                     currentSize++;
                 } else

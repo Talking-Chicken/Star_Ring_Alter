@@ -14,6 +14,9 @@ public class BackpackUnit : MonoBehaviour
 
     private PlayerControl playerControl;
 
+    //getters & setters
+    public int Index {get => index; set => index = value;}
+
     void Start()
     {
         playerControl = FindObjectOfType<PlayerControl>();
@@ -42,16 +45,6 @@ public class BackpackUnit : MonoBehaviour
 
         //part 3
         itemImage.sprite = icon;
-    }
-
-    public void setIndex(int index)
-    {
-        this.index = index;
-    }
-
-    public int getIndex()
-    {
-        return index;
     }
 
     public void setStoredItem(Item storedItem)
@@ -89,6 +82,7 @@ public class BackpackUnit : MonoBehaviour
     {
         InventoryGUI.currentItemIndex = index;
         InventoryGUIControl.currentUnit = this;
+        FindObjectOfType<InventoryGUIControl>().CurrentIndex = Index;
     }
 
     public string getItemName()
