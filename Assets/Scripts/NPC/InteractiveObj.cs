@@ -32,12 +32,14 @@ public class InteractiveObj : MonoBehaviour
     public bool CanInven {get {return canInven;}}
     public bool CanNeuro {get {return canNeuro;}}
 
-   
+   void Awake() {
+       invest_icon = GameObject.FindGameObjectWithTag("invest_icon");
+   }
 
     void Start()
     {
         playerControl = FindObjectOfType<PlayerControl>();
-        invest_icon= GameObject.FindGameObjectWithTag("invest_icon");
+        //invest_icon = GameObject.FindGameObjectWithTag("invest_icon");
         main_character = GameObject.Find("main_character");
         indicatorPos = position + new Vector2(0, indicatorYPos);
         playerControl = FindObjectOfType<PlayerControl>();

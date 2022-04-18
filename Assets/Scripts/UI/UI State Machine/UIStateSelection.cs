@@ -7,6 +7,7 @@ public class UIStateSelection : UIStateBase
 {
     private int currentSelectionIndex;
     public override void EnterState(UIControl UI) {
+        UI.openSelectionMenu();
         currentSelectionIndex = 0;
     }
     public override void UpdateState(UIControl UI) {

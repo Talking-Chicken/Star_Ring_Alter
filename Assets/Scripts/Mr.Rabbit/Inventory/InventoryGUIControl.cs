@@ -37,7 +37,7 @@ public class InventoryGUIControl : MonoBehaviour
         for (int i = 0; i < bakcpackUnits.Count; i++) {
             bakcpackUnits[i].Index = i;
         }
-        
+
         setCurrentUnit(0);
     }
 

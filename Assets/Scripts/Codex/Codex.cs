@@ -9,19 +9,12 @@ using Yarn.Unity;
  */
 public class Codex : MonoBehaviour
 {
-    public Hashtable DialogueNodes;
+    public Dictionary<string, int> DialogueNodes = new Dictionary<string, int>();
 
     [SerializeField] private DialogueRunner runner;
 
-    private void Awake()
-    {
-        DialogueNodes = new Hashtable();
-    }
-
     void Start()
     {
-        //don't know why initiating hashtable in awake doesn't work
-        DialogueNodes = new Hashtable();
         runner.AddFunction("visitCount", 0, delegate (Yarn.Value[] parameters)
         {
             return getNodeVisited();
@@ -54,6 +47,8 @@ public class Codex : MonoBehaviour
      */
     public void setNodeVisited()
     {
+        if (DialogueNodes == null) Debug.Log("dialogue nodes is null");
+        if (runner == null) Debug.Log("dialogue runner is null");
         if (DialogueNodes.ContainsKey(runner.CurrentNodeName))
             DialogueNodes[runner.CurrentNodeName] = (int)DialogueNodes[runner.CurrentNodeName] + 1;
         else
@@ -71,7 +66,12 @@ public class Codex : MonoBehaviour
 
     public int getNodeVisited()
     {
-        return (int)DialogueNodes[runner.CurrentNodeName];
+        if (DialogueNodes != null) {
+            return (int)DialogueNodes[runner.CurrentNodeName];
+        } else {
+            Debug.Log("dialogue nodes is null");
+            return 0;
+        }
     }
 
     /**

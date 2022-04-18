@@ -5,11 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class CodexData
 {
-    public Hashtable dialogueNodesCount;
+    public Dictionary<string, int> dialogueNodesCount;
 
     public CodexData(Codex codex)
     {
-        dialogueNodesCount = new Hashtable();
+        dialogueNodesCount = new Dictionary<string, int>();
         dialogueNodesCount = codex.DialogueNodes;
     }
 }

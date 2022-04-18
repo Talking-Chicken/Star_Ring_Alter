@@ -26,7 +26,7 @@ public class random_conversation : MonoBehaviour
         {
            parts = lines[i].Split(","[0]);
             if (parts[0]== "check_elevator_door") {
-                player.talkToSelf("test");
+                //player.talkToSelf("test");
                     Debug.Log(parts[2]); 
             }
         }

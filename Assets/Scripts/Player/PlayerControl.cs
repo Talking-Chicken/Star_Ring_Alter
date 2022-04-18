@@ -23,12 +23,12 @@ public class PlayerControl : MonoBehaviour
     Rigidbody2D myBody;
     private PlayerBackpack playerBackpack;
     private KeyManager key;
-    [SerializeField, BoxGroup("UI")] private UIControl uiControl;
+    private UIControl uiControl;
 
     //detect and interact
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
-    [ShowNonSerializedField] private GameObject detectingObj = null; //object that player raycating is detecting
-    [ShowNonSerializedField] private GameObject interactingObj = null; //object that player is interacting
+    private GameObject detectingObj = null; //object that player raycating is detecting
+    private GameObject interactingObj = null; //object that player is interacting
     [SerializeField]GameObject raycaster;
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}
@@ -66,6 +66,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+        UIControl = FindObjectOfType<UIControl>();
         ChangeState(stateExplore);
         myBody = GetComponent<Rigidbody2D>();
         key = FindObjectOfType<KeyManager>();
@@ -204,8 +205,9 @@ public class PlayerControl : MonoBehaviour
         if (interactingObject.GetComponent<InteractiveObj>() != null)
         {
             this.InteractingObj = interactingObject;
-            UIControl.openSelectionMenu();
+            //UIControl.openSelectionMenu();
             ChangeState(stateUI);
+            UIControl.ChangeToSelectionState();
         } else
         {
             pickUp();

@@ -10,8 +10,9 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator, useButton, invenButton, neuroButton;
     [SerializeField, BoxGroup("Selection Menu"),ReorderableList] private List<Button> selectionButtons;
 
-    private PlayerControl player;
+    [SerializeField, BoxGroup("Player")]private PlayerControl player;
     private KeyManager _key;
+    [SerializeField, BoxGroup("General GUI")] private GameObject backgroundContainer, tabContainer;
     [SerializeField, BoxGroup("Invetory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
     [SerializeField, BoxGroup("Neuro Impalnt GUI")] private NeuroImplantGUI neuroGUI;
     [SerializeField, BoxGroup("Time GUI")] private GameObject timeGUI;
@@ -20,8 +21,11 @@ public class UIControl : MonoBehaviour
     public delegate void CloseWindows();
     public CloseWindows closeWindows;
 
+    public delegate void Open();
+    public Open openGUI, closeGUI;
+
     //getters & setters
-    public PlayerControl Player {get {return player;} private set {player = value;}}
+    public PlayerControl Player {get {return player;} private set {Debug.Log("setting player");player = value;}}
     public List<Button> SelectionButtons {get {return selectionButtons;} private set {selectionButtons = value;}}
     public GameObject SelectionIndicator {get {return selectionIndicator;} private set {selectionIndicator = value;}}
     public KeyManager Key {get {return _key;} private set {_key = value;}}
@@ -56,19 +60,25 @@ public class UIControl : MonoBehaviour
     public void ChangeToNeuroState() {ChangeState(stateNeuro);}
     public void ChangeToIdleState() {ChangeState(stateIdle);}
     public void ChangeToInvestigateState() {ChangeState(stateInvestigate);}
+    public void ChangeToSelectionState() {ChangeState(stateSelection);}
 
     //change player state
-    public void ChangePlayerState(PlayerStateBase newState) {player.ChangeState(newState);}
+    public void ChangePlayerState(PlayerStateBase newState) {Player.ChangeState(newState);}
 
     void Awake() {
         closeWindows += closeSelectionMenu;
         closeWindows += closeInventory;
         closeWindows += closeNeuro;
+
+        openGUI += openBackground;
+        openGUI += openTabs;
+
+        closeGUI += closeBackground;
+        closeGUI += closeTabs;
     }
 
     void Start()
     {
-        player = FindObjectOfType<PlayerControl>();
         Key = FindObjectOfType<KeyManager>();
         currentState = stateIdle;
     }
@@ -77,6 +87,7 @@ public class UIControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        Debug.Log(currentState);
     }
 
     #region close & open Windows
@@ -88,7 +99,9 @@ public class UIControl : MonoBehaviour
     * position of selection menu should be above player's interactingObj  
     */
     public void openSelectionMenu() {
-        if (player.DetectingObj != null && player.DetectingObj != player.gameObject) {
+        if (Player == null) Debug.Log("player is null");
+
+        if (Player.DetectingObj != null && Player.DetectingObj != Player.gameObject) {
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateUI);
             ChangeState(stateSelection);
             selectionMenu.SetActive(true);
@@ -108,7 +121,7 @@ public class UIControl : MonoBehaviour
     
     public void openInventory() {
         inventoryContainer.SetActive(true);
-        inventoryGUI.showInventory();
+        //inventoryGUI.showInventory();
         ChangeState(stateInventory);
     }
     public void closeInventory() {
@@ -117,7 +130,7 @@ public class UIControl : MonoBehaviour
 
     public void openNeuro() {
         neuroContainer.SetActive(true);
-        neuroGUI.initializeAppArea();
+        //neuroGUI.initializeAppArea();
         ChangeState(stateNeuro);
     }
 
@@ -133,6 +146,22 @@ public class UIControl : MonoBehaviour
     public void closeTime() {
         timeGUI.gameObject.SetActive(false);
         Time_text.isTimePaused = true;
+    }
+
+    public void openBackground() {
+        backgroundContainer.SetActive(true);
+    }
+
+    public void closeBackground() {
+        backgroundContainer.SetActive(false);
+    }
+
+    public void openTabs() {
+        tabContainer.SetActive(true);
+    }
+
+    public void closeTabs() {
+        tabContainer.SetActive(false);
     }
     #endregion
 }
