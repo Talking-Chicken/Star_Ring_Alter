@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using NaughtyAttributes;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 /* this class control the look and operation of inventory section of Mr.Rabbit*/
 public class InventoryGUIControl : MonoBehaviour
@@ -89,7 +90,8 @@ public class InventoryGUIControl : MonoBehaviour
     /* show name, type, and description of item in GUI*/
     public void showInfo(Item item) {
         if (item != null) {
-            itemTypeText.text = item.Type.ToString();
+            //make spaces between lower and upper case letters 
+            itemTypeText.text = Regex.Replace(item.Type.ToString(), @"([a-z])([A-Z])", "$1 $2");
             itemDesText.text = item.getDescription();
             itemNameText.text = item.getName();
         } else {

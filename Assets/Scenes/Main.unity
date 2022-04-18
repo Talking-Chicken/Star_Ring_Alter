@@ -4042,11 +4042,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de967afed5c4da84b87928f7c1cf16f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOverride: 0
-  appName: engineering module
+  isOverride: 1
+  appName: Engineering Module
   memoryStorage: 3
-  description: to build, fix, and disassemble
+  description: 'A Professional Training Module developed by Cat Technology that allows
+    its user to possess all the expertise of a Confederate certified engineer.  Users
+    of this Module can perform tasks including but not limited to Including but not
+    limited to welding, repairs, and alterations. However, several confederation
+    organizations have refused to recognize neural implant modules as a substitute
+    for specialist education.  Every usage of the Engineering Module requires a certain
+    amount of Mechanical Parts. '
+  descriptionAfterUse: 
   icon: {fileID: 670099381952144614, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
+  type: 1
 --- !u!1 &221852234
 GameObject:
   m_ObjectHideFlags: 0
@@ -12056,11 +12064,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 391add35aa2868f4bb1687abf4262f7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOverride: 0
-  appName: Operating System
+  isOverride: 1
+  appName: Neural Implant Operating System
   memoryStorage: 4
-  description: The Operating System
+  description: 'A standard operating system released by Rabbit Heavy Industry to
+    translate human brain''s neural signals into neural implant''s computer language.
+    This specific module has used a special decode algorithm to adapt to the brain
+    structure of patients with Neural Implant Rejection Syndrome.  **Do not remove
+    this module without the guidance and permission of a professional. Any damage
+    caused by the unauthorized operation is not the responsibility of Rabbit Heavy
+    Industry and its properties** '
+  descriptionAfterUse: 
   icon: {fileID: -3829701751879224553, guid: 63707257d07121145999bcba598e6e32, type: 3}
+  type: 2
 --- !u!1 &787377417
 GameObject:
   m_ObjectHideFlags: 0
@@ -25884,11 +25900,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60859fa8eb202274197af65eeed3453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOverride: 0
-  appName: GUI module
+  isOverride: 1
+  appName: Personal Information Assistant
   memoryStorage: 4
-  description: See the World
+  description: 'A module developed by the Life Department of Rabbit Heavy Industry.
+    It will automatically read the wireless modules of electronic devices in the
+    user''s vicinity and display them on their retina. Many labor organizations have
+    mentioned that this device has improved the work efficiency of workers in complex
+    electronic environments. The software also supports displaying personal information
+    such as the user''s location and local time.  **Do not remove this module without
+    the guidance and permission of a professional. Any damage caused by the unauthorized
+    operation is not the responsibility of Rabbit Heavy Industry and its properties** '
+  descriptionAfterUse: 
   icon: {fileID: 1931027794438572486, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
+  type: 2
 --- !u!1 &1553593334
 GameObject:
   m_ObjectHideFlags: 0
@@ -37189,11 +37214,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d6467fb51a23240b758ed98a688ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOverride: 0
+  isOverride: 1
   appName: hacking module
   memoryStorage: 3
-  description: hacking things, found in black market
+  description: 'An illegal copy of the Confederation Global Security Department''s
+    hacking program, also known as the "Master key."  It allows its user to access
+    most industrial standard electronic devices without system permission.   Every
+    usage of this Hacking Module requires a certain amount of Electronic Components. '
+  descriptionAfterUse: 
   icon: {fileID: 3949469904818043356, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
+  type: 0
 --- !u!1 &2146700505
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 
+public enum NeuroType {IllegalCopy, CatTechnology, RabbitHeavyIndustry}
+
 /**
  * this is the parent class of neuro implant downloadedApps
  * each app will have a name, certain memory storage, and interact function
@@ -16,19 +18,24 @@ public class NeuroImplantApp : MonoBehaviour
 
     [SerializeField] private int memoryStorage;
     [SerializeField] private string description;
+    [SerializeField] private string descriptionAfterUse;
     [SerializeField] private Sprite icon;
+    [SerializeField] private NeuroType type;
 
     //getters & setters
+    public string APPName {get => appName; set => appName = value;}
     public int MemoryStorage {get {return memoryStorage;} set {memoryStorage = value;}}
     public string Description {get {return description;} set {description = value;}}
+    public string DesctiptionAfterUse {get => descriptionAfterUse; set => descriptionAfterUse = value;}
     public Sprite Icon {get {return icon;} private set {icon = value;}}
+    public NeuroType Type {get => type; set => type = value;}
 
     /**
      * to use this neuro implant app, each app has different functions
      */
     public virtual void interact()
     {
-        Debug.LogWarning("trying to use the interact funtion of the app " + appName + ", but this app doesn't have any interact function");
+        Debug.LogWarning("trying to use the interact funtion of the app " + APPName + ", but this app doesn't have any interact function");
     }
 
     /**
@@ -38,7 +45,7 @@ public class NeuroImplantApp : MonoBehaviour
      */
     public int compareTo(NeuroImplantApp other)
     {
-        return this.appName.ToLower().Trim().CompareTo(other.appName.ToLower().Trim());
+        return this.APPName.ToLower().Trim().CompareTo(other.APPName.ToLower().Trim());
     }
 
     //draw its GUI on Mr.Rabbit's neuro impant section
@@ -49,7 +56,7 @@ public class NeuroImplantApp : MonoBehaviour
         if (Icon != null) {
             icon.sprite = Icon;
         } else 
-            Debug.LogWarning("haven't set a icon to this neuro implant " + appName);
+            Debug.LogWarning("haven't set a icon to this neuro implant " + APPName);
 
         //second set the background to the correct size;
         RectTransform rTransform = GetComponent<RectTransform>();
