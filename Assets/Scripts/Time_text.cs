@@ -9,6 +9,7 @@ public class Time_text : MonoBehaviour
 {
     public DateTime time;
     private TMP_Text textClock;
+    public static DateTime time_2;
     public int change_rate;
 
     public static bool isTimePaused = false;
@@ -25,6 +26,7 @@ public class Time_text : MonoBehaviour
         string minute = LeadingZero(time.Minute);
         string second = LeadingZero(time.Second);
         textClock.text = minute + ":" + second;
+      
         if (time.Minute==24) {
             time = new DateTime(time.Year, time.Month, time.Day, time.Hour, 0, 0); ;
         }
@@ -33,6 +35,7 @@ public class Time_text : MonoBehaviour
     {
         if (!isTimePaused)
             time = time + new TimeSpan(0, 0, 0, 0, change_rate);
+        time_2 = time;
     }
     string LeadingZero(int n)
     {

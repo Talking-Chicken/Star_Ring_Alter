@@ -17,7 +17,9 @@ public class random_conversation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Time_text.time_2.Minute>=11) {
+
+        }
     }
     void readCSV()
     {
@@ -27,7 +29,7 @@ public class random_conversation : MonoBehaviour
            parts = lines[i].Split(","[0]);
             if (parts[0]== "check_elevator_door") {
                 //player.talkToSelf("test");
-                    Debug.Log(parts[2]); 
+
             }
         }
     
