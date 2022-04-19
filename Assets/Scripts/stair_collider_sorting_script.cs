@@ -10,6 +10,7 @@ public class stair_collider_sorting_script : MonoBehaviour
 
     public GameObject stair_blocker;
     public GameObject stair_blocker_2;
+    public PolygonCollider2D detection;
     void Start()
     {
 
@@ -31,7 +32,7 @@ public class stair_collider_sorting_script : MonoBehaviour
       
             Collider2D triggerbox = GetComponent<PolygonCollider2D>();
       
-        if (other.transform.position.y < triggerbox.bounds.center.y)
+        if (other.transform.position.y < detection.bounds.center.y)
         {
             stair_active = true;
             active_stair();
@@ -45,7 +46,7 @@ public class stair_collider_sorting_script : MonoBehaviour
 
         Collider2D triggerbox = GetComponent<PolygonCollider2D>();
 
-        if (other.transform.position.y < triggerbox.bounds.center.y)
+        if (other.transform.position.y < detection.bounds.center.y)
         {
            
             stair_active = false;
@@ -61,7 +62,7 @@ public class stair_collider_sorting_script : MonoBehaviour
         EdgeCollider2D[] edge;
 
         edge = GetComponents<EdgeCollider2D>();
-        GetComponent<SpriteRenderer>().sortingOrder = GameObject.Find("main_character").GetComponent<SpriteRenderer>().sortingOrder-1;
+      GetComponent<SpriteRenderer>().sortingOrder = GameObject.Find("main_character").GetComponent<SpriteRenderer>().sortingOrder-1;
 
         for (int i = 0; i < edge.Length; i++)
         {
@@ -76,7 +77,7 @@ public class stair_collider_sorting_script : MonoBehaviour
     {
        
         EdgeCollider2D[] edge;
-        GetComponent<SpriteRenderer>().sortingOrder = GameObject.Find("main_character").GetComponent<SpriteRenderer>().sortingOrder + 1;
+     GetComponent<SpriteRenderer>().sortingOrder = GameObject.Find("main_character").GetComponent<SpriteRenderer>().sortingOrder + 1;
 
         edge = GetComponents<EdgeCollider2D>();
 
