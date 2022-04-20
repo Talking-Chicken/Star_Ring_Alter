@@ -15492,6 +15492,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1499318146}
+    - target: {fileID: 4369923765637156447, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_text
+      value: Interact
+      objectReference: {fileID: 0}
     - target: {fileID: 7396794736808363666, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -21203,6 +21208,7 @@ MonoBehaviour:
   indicatorYPos: 0
   invest_icon_offset: 0
   talkingNode: Rita.1
+  anim: {fileID: 1643505293}
 --- !u!60 &1308799864
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -21231,7 +21237,8 @@ PolygonCollider2D:
     - - {x: -4.178687, y: 2.135341}
       - {x: -5.4608846, y: 0.19863582}
       - {x: -3.9313278, y: -1.1416981}
-      - {x: -0.5720168, y: -2.7485595}
+      - {x: 0.8421921, y: -3.8027096}
+      - {x: 3.570922, y: 0.3873453}
       - {x: 2.0700366, y: 1.9504945}
       - {x: -2.3288178, y: 3.3838992}
 --- !u!1 &1318003570
@@ -25780,7 +25787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9ce624a1527f047b899c93c0d5f5ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  change_rate: 400
+  change_rate: 30
 --- !u!114 &1517736868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28181,7 +28188,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   dialogueFile: {fileID: 2480198943629176163, guid: e923f99f24f6dde4cbb12371727d4daf,
     type: 3}
-  startNode: Rita.1
+  startNode: 
   dialogueBubbleFile: {fileID: 0}
   bubbleTalkingNode: 
   idle: {fileID: 0}

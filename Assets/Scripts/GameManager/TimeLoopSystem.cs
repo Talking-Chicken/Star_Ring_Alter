@@ -43,7 +43,8 @@ public class TimeLoopSystem : MonoBehaviour
         FindObjectOfType<StateManager>().transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
-      
+        DateTime today = DateTime.Today;
+        Time_text.time_2 = new DateTime(today.Year, today.Month, today.Day, 0, 19, 0);
         SceneManager.LoadScene("cut_scene_2");
     }
 }

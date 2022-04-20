@@ -28,7 +28,8 @@ public class Time_text : MonoBehaviour
         textClock.text = minute + ":" + second;
       
         if (time.Minute==24) {
-            time = new DateTime(time.Year, time.Month, time.Day, time.Hour, 0, 0); ;
+            time = new DateTime(time.Year, time.Month, time.Day, time.Hour, 0, 0);
+            time_2 = time;
         }
     }
     private void FixedUpdate()
