@@ -5,8 +5,10 @@ using UnityEngine;
 public class random_conversation : MonoBehaviour
 {
     // Start is called before the first frame update
+    
+    public static string[] lines;
     public TextAsset file;
-    public string[] lines;
+    [SerializeField] string[] lines_2;
     string[] parts;
     bool once = true;
     [SerializeField] PlayerControl player;
@@ -22,6 +24,7 @@ public class random_conversation : MonoBehaviour
          player.talkToSelf("Random_dialogue.Time_Remind");
             once = false;
         }
+        lines_2=lines;
     }
     void readCSV()
     {
@@ -29,10 +32,7 @@ public class random_conversation : MonoBehaviour
         for (var i = 0; i < lines.Length; i++)
         {
            parts = lines[i].Split(","[0]);
-            if (parts[0]== "check_elevator_door") {
-                //player.talkToSelf("test");
-
-            }
+           
         }
     
 

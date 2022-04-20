@@ -1053,7 +1053,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_MethodName: transitToExploreState
+        m_MethodName: ChangeToPreviousState
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1100,6 +1100,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2904160361801640347}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onOptionsEnd:
     m_PersistentCalls:
       m_Calls:
@@ -1124,6 +1135,17 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2904160361801640347}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   onCommand:
     m_PersistentCalls:
@@ -1191,6 +1213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runner: {fileID: 2904160361790625062}
+  moonLanderCamera: {fileID: 0}
 --- !u!1 &2904160361790625059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1235,11 +1258,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yarnScripts: []
+  yarnScripts:
+  - {fileID: 2480198943629176163, guid: 7466ad2a413554945a9c35504140fa6e, type: 3}
+  - {fileID: 2480198943629176163, guid: e923f99f24f6dde4cbb12371727d4daf, type: 3}
   textLanguage: 
   variableStorage: {fileID: 2904160361790625057}
   dialogueUI: {fileID: 2904160361090383376}
-  startNode: Prologue_Start
+  startNode: 
   startAutomatically: 0
   onNodeStart:
     m_PersistentCalls:
@@ -1339,7 +1364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 123123123123123123123123123123
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1442,8 +1467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228.73, y: 48.9}
-  m_SizeDelta: {x: 95.550476, y: 18.279465}
+  m_AnchoredPosition: {x: -114.42, y: 48.9}
+  m_SizeDelta: {x: 324.16852, y: 18.279465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2904160362190626958
 CanvasRenderer:
@@ -1474,8 +1499,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8ef9269a1ce2e1940a15fb1cc4c7cffa, type: 2}
+  m_sharedMaterial: {fileID: -1723639271663097706, guid: 8ef9269a1ce2e1940a15fb1cc4c7cffa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

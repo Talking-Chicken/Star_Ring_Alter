@@ -16,3 +16,33 @@ position: -31,-127
 ---
 Rita: Sorry! I am in the middle of the cutscene, cannot pause the game now, talk to you later.
 ===
+title: Rita.3
+position: 0,0.5
+---
+Amo: Are you getting better at this game? What is it called, “end.”?
+Rita: I am still trying to get used to the joystick, it is very different from playing games with a neural implant.
+Amo: Most kids nowadays don’t even recognize physical game consoles.
+Rita: Yeah, kids in my school all use touchless devices, they never know the fun of touching an actual keyboard. The sounds of the Cylindrical keys when you press them are music to me.  I can talk about mechanical keyboards all day if you don’t stop me now. 
+Amo: I know, for the vast majority of time in my life, I have to use physical devices instead of neural implants. 
+Rita: That is exactly why you are so good at retro gaming.I wish I can be as good as you.
+Amo: I hope you don’t have to go through what I have experienced.
+===
+title: Rita.4
+position: 0,0.5
+---
+Rita: Hey Amo! You have a minute?
+Amo: Sorry, I am in the middle of something now.
+Rita: Oh, it won’t take long, I just found something interesting about your neural implant.
+Rita: Do you know the Neural Implant Rejection Syndrome is actually caused by a patient's own Foregin Body Response?
+Rita: Normally,  insertion of a neural implant in the cortex is considered a violent process since it causes significant damage to the surrounding tissue. This will subsequently initiate the brain’s healing process.
+Rita: But people with Rejection Syndrome have a unique brain structure, their brain will over respond to the insertion and create new skin around the implant, that tissue will then try to push the neural implant out.
+Rita: If a neural implant is forcibly inserted in such cases, there is a risk that the patient's central nervous system may be severely damaged, and in severe cases, paralysis or even death may occur.
+Amo: I remembered hearing that from my Attending Physician. I am glad they found out my condition during the pre-surgery examination.
+Amo: So how did they solve this problem? I mean I can use this so-called extracorporeal wearable neural implant now, and it functions just like the normal implants. 
+Rita: The prototype device you are wearing now is equivalent to first structuring a circuit from the outside of the skull to the cortex, and then linking a normal neural implant to this circuit outside the brain. 
+Rita: This way neural implant’s biocompatibility is not an issue anymore, and it also avoids attack of the Rejection Syndrome.
+Amo: That sounds reasonable, so why don’t they produce more of them so everyone can use neural implants.
+Rita: That is what I want to talk to you about. The technology used on this extracorporeal wearable neural implant is actually more fundamental than the mass production version. 
+Rita: It almost sounds like someone wants people to wear the internal neural implants.
+Rita: Anyway, just another interesting fact I found out when I was surfing on the internet.
+===

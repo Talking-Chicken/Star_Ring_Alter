@@ -18,10 +18,10 @@ Mr. Rabbit: Amo, just to remind you, it is nearly 11 am, this loop will end soon
 title: Random_dialogue.End_of_loop
 position: 89,-208
 ---
-Device 0803: Factor Amo’s attempts to avoid disasters in this loop have all failed.
-Device 0803: To avoid the destruction of this individual, active Time Loop Portorcal. 
-Device 0803: Reset time, in 3… 2…. 1…. 
-Device 0803: Reset.
+Stabilization Device: Factor Amo’s attempts to avoid disasters in this loop have all failed.
+Stabilization Device: To avoid the destruction of this individual, active Time Loop Portorcal. 
+Stabilization Device: Reset time, in 3… 2…. 1…. 
+Stabilization Device: Reset.
 <<Load_Scene Mr_Rabbit Main>>
 ===
 title: Random_dialogue.2
