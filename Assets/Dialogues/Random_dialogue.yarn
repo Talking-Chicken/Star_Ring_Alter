@@ -1,0 +1,31 @@
+﻿title: Random_dialogue.1
+tags:
+---
+Mr. Rabbit: Amo, did you feel tired?
+Amo: Mentally yes? But physically I can still hold on….., thank you for asking.
+Mr. Rabbit: That's what makes me wonder. We may have been trapped in this time loop phenomenon for over 1344 hours. That's fine by me, I'm just an AI, but it's strange to me that you as a human are not visibly tired.
+Amo: Hey, I thought you were worried about me for a moment.
+Mr. Rabbit: What I am trying to say is that it is now we return to the earlier time every time loop. At least not every piece of us. Otherwise, you will be exhausted by now.
+Amo: Do you think figuring this out will help us better understand the principles of the time loop?
+Mr. Rabbit: If we want to break the cycle, it's sooner or later, and I hope we can figure it out today.
+Amo: I'm pretty sure that won't be the problem.
+===
+title: Random_dialogue.Time_Remind
+position: -100,-136
+---
+Mr. Rabbit: Amo, just to remind you, it is nearly 11 am, this loop will end soon. If you wanna do something, do it now. Otherwise everything will be reset. 
+===
+title: Random_dialogue.End_of_loop
+position: 89,-208
+---
+Device 0803: Factor Amo’s attempts to avoid disasters in this loop have all failed.
+Device 0803: To avoid the destruction of this individual, active Time Loop Portorcal. 
+Device 0803: Reset time, in 3… 2…. 1…. 
+Device 0803: Reset.
+<<Load_Scene Mr_Rabbit Main>>
+===
+title: Random_dialogue.2
+position: -160,-32
+---
+
+===

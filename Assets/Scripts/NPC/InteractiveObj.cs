@@ -31,6 +31,7 @@ public class InteractiveObj : MonoBehaviour
     public bool CanUse {get {return canUse;}}
     public bool CanInven {get {return canInven;}}
     public bool CanNeuro {get {return canNeuro;}}
+    public PlayerControl Player { get => playerControl; }
 
    void Awake() {
        invest_icon = GameObject.FindGameObjectWithTag("invest_icon");

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 
+
 /**
  * time loop system is a class controlling time loop.
  * it shows current time and the time that triggers the loop [note that only minute will count down]
@@ -36,12 +37,13 @@ public class TimeLoopSystem : MonoBehaviour
      */
     public static void reset()
     {
+        
         FindObjectOfType<Codex>().saveDialgoueNodesCount();
 
         FindObjectOfType<StateManager>().transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+      
+        SceneManager.LoadScene("cut_scene_2");
     }
 }

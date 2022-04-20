@@ -7,13 +7,13 @@ using Yarn.Unity;
 public class FallingMoonLander : MonoBehaviour
 {
 
-    [YarnCommand("change_to_roof_top")]
-    public void changeToRoofTop() {
-        StartCoroutine(waitToChangeScene());
+    [YarnCommand("Load_Scene")]
+    public void changeToRoofTop(string scene) {
+        StartCoroutine(waitToChangeScene(scene));
     }
 
-    IEnumerator waitToChangeScene() {
+    IEnumerator waitToChangeScene(string scene) {
         yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene("Main 1");
+        SceneManager.LoadScene(scene);
     }
 }

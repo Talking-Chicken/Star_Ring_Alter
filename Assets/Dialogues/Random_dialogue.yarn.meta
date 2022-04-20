@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 37725d6f0dd4a944381d1f6deac88cf7
+guid: 7466ad2a413554945a9c35504140fa6e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -9,9 +9,8 @@ ScriptedImporter:
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
   baseLanguageID: en-US
-  stringIDs:
-  - Moonlander_Pilot-Moonlander_Pilot.Help-0
-  compilationStatus: 1
+  stringIDs: []
+  compilationStatus: 0
   isSuccesfullyCompiled: 1
   compilationErrorMessage: 
   baseLanguage: {instanceID: 0}

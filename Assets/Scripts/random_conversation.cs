@@ -8,6 +8,7 @@ public class random_conversation : MonoBehaviour
     public TextAsset file;
     public string[] lines;
     string[] parts;
+    bool once = true;
     [SerializeField] PlayerControl player;
     void Start()
     {
@@ -17,8 +18,9 @@ public class random_conversation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time_text.time_2.Minute>=11) {
-
+        if (Time_text.time_2.Minute>=23&&once) {
+         player.talkToSelf("Random_dialogue.Time_Remind");
+            once = false;
         }
     }
     void readCSV()
