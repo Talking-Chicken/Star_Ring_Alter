@@ -1,4 +1,3 @@
-﻿Column1,Column2,Column3,Column4
 Condition Name,Type,State,Comment
 check_elevator_door,bool,FALSE,player first enter corridor and saw the brokwn door
 hacking_module,bool,FALSE,player download the hacking
@@ -19,6 +18,6 @@ loop_time,int,0,time of loop
 epart_num,int,0,number of e parts
 gear_num,int,0,number of metal gear
 OS_maintain_num,int,0,number of maintaince OS software
-Rita.1,bool,FALSE,dialogue node
-Rita.3,bool,FALSE,dialogue node
-Rita.4,bool,FALSE,dialogue node
+Rita.1,bool,TRUE,dialogue_node
+Rita.3,bool,TRUE,dialogue_node
+Rita.4,bool,TRUE,dialogue_node
