@@ -41,8 +41,9 @@ public class Rita : InteractiveObj
     }
     public override void interact()
     {
-        base.Player.ChangeState(Player.stateExplore);
-        base.Player.talkToSelf(talkingNode);
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf(talkingNode);
     }
 
     void CSV()
@@ -51,8 +52,14 @@ public class Rita : InteractiveObj
         Debug.Log("test");
         for (var i = 0; i < random_conversation.lines.Length; i++)
         {
-            parts = random_conversation.lines[i].Split(","[0]);
-            if (parts[3] == "dialogue_node" && parts[2]=="TRUE")
+            parts = random_conversation.lines[i].Split(',');
+            parts[3] = parts[3].Replace("\r", "");
+            if (parts[3].Equals("dialogue"))
+                Debug.Log(i + " is equals to dialogue node");
+            if (parts[2].Equals("TRUE"))
+                Debug.Log(i + " is equal to true");
+
+            if (parts[3].Equals("dialogue") && parts[2].Equals("TRUE"))
             {
                 talkingNode = parts[0];
                 

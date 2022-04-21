@@ -9088,8 +9088,8 @@ MonoBehaviour:
   renderBelowAll: 0
   movingDependencies: []
   sortType: 1
-  SorterPositionOffset: {x: -1.135704, y: -1.4345627, z: 0}
-  SorterPositionOffset2: {x: 1.583992, y: -1.344902, z: 0}
+  SorterPositionOffset: {x: -1.0050964, y: -1.9334183, z: 0}
+  SorterPositionOffset2: {x: 1.8927002, y: -0.721344, z: 0}
   renderersToSort:
   - {fileID: 511376517}
 --- !u!68 &511376519
@@ -9108,11 +9108,14 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 0.75503016, y: -0.53796387}
-  - {x: -1.1395264, y: -1.3917847}
-  - {x: -0.37200928, y: -1.9127426}
-  - {x: 1.776413, y: -1.3833313}
-  - {x: 0.76918554, y: -0.5678482}
+  - {x: 0.6125512, y: -0.6923752}
+  - {x: 0.018989563, y: -1.3154602}
+  - {x: -0.32774353, y: -1.5279236}
+  - {x: -0.9792328, y: -1.6055756}
+  - {x: -0.9537964, y: -1.9127426}
+  - {x: 1.6221161, y: -1.4187317}
+  - {x: 1.8298416, y: -0.7954025}
+  - {x: 0.5851493, y: -0.6866226}
 --- !u!1001 &516394873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11489,7 +11492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 151cf65dbe08dc24fbe4410f85f2da6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  file: {fileID: 4900000, guid: 1dd77af95b6cf9c4aac2e4aa018ff9c8, type: 3}
+  file: {fileID: 4900000, guid: 9c9258ecb57d88f4ab10b335892784dd, type: 3}
   lines_2: []
   player: {fileID: 1649016017}
 --- !u!1 &714811181

@@ -28,10 +28,11 @@ public class random_conversation : MonoBehaviour
     }
     void readCSV()
     {
-       lines = file.text.Split("\n"[0]);
-        for (var i = 0; i < lines.Length; i++)
+        lines = file.text.Split("\n"[0]);
+        //lines = file.text.Split(System.Environment.NewLine.ToCharArray());
+        for (int i = 0; i < lines.Length; i++)
         {
-           parts = lines[i].Split(","[0]);
+           //parts = lines[i].Split(',');
            
         }
     
