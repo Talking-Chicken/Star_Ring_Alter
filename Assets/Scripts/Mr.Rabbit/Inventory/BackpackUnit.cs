@@ -27,13 +27,6 @@ public class BackpackUnit : MonoBehaviour
         playerControl = FindObjectOfType<PlayerControl>();
     }
 
-    
-    void Update()
-    {
-        
-    }
-
-
     /**
      * this function will be called in showInventory() function is called, from Inventory GUI
      * 
@@ -93,7 +86,7 @@ public class BackpackUnit : MonoBehaviour
         InventoryGUI.currentItemIndex = index;
         InventoryGUIControl.currentUnit = this;
         FindObjectOfType<InventoryGUIControl>().CurrentIndex = Index;
-    }
+}
 
     public string getItemName()
     {

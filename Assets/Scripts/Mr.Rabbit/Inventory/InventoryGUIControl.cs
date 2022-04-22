@@ -51,7 +51,6 @@ public class InventoryGUIControl : MonoBehaviour
     {
         CurrentIndex = currentIndex;
         changeCurrentUnit();
-        Debug.Log(currentUnit.name);
     }
 
     /* set imgae, description, name, and type of the item to backpackUnit
@@ -85,6 +84,9 @@ public class InventoryGUIControl : MonoBehaviour
             }
             bakcpackUnits[i].showUnit();
         }
+
+        //set current Unit back to the first one
+        setCurrentUnit(0);
     }
 
     /* show name, type, and description of item in GUI*/
@@ -95,7 +97,9 @@ public class InventoryGUIControl : MonoBehaviour
             itemDesText.text = item.getDescription();
             itemNameText.text = item.getName();
         } else {
-            
+            itemTypeText.text = "Type";
+            itemDesText.text = "Description";
+            itemNameText.text = "Name";
         }
     }
 
@@ -132,9 +136,11 @@ public class InventoryGUIControl : MonoBehaviour
     public void setCurrentUnit(int index) {
         bakcpackUnits[index].GetComponent<Button>().Select();
         bakcpackUnits[index].GetComponent<Button>().onClick.Invoke();
-        currentIndex = index;
 
-        showInfo(currentUnit.items.Peek());
+        if (currentUnit.items.Count > 0)
+            showInfo(currentUnit.items.Peek());
+        else
+            showInfo(null);
     }
     
 }
