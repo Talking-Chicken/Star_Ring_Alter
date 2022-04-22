@@ -26,7 +26,7 @@ public class random_conversation : MonoBehaviour
             once = false;
         }
         if (Time_text.time_2.Minute >=23 && Time_text.time_2.Second >= 58&&once1) { 
-            player.talkToSelf("Random_dialogue.End_remind"); 
+            player.talkToSelf("Random_dialogue.End_Remind"); 
             once1 = false; 
         }
         lines_2=lines;
