@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using NaughtyAttributes;
 using UnityEngine.UI;
+using System.Text.RegularExpressions;
 
 /* this class control the look and operation of inventory section of Mr.Rabbit*/
 public class InventoryGUIControl : MonoBehaviour
@@ -50,7 +51,6 @@ public class InventoryGUIControl : MonoBehaviour
     {
         CurrentIndex = currentIndex;
         changeCurrentUnit();
-        Debug.Log(currentUnit.name);
     }
 
     /* set imgae, description, name, and type of the item to backpackUnit
@@ -84,16 +84,22 @@ public class InventoryGUIControl : MonoBehaviour
             }
             bakcpackUnits[i].showUnit();
         }
+
+        //set current Unit back to the first one
+        setCurrentUnit(0);
     }
 
     /* show name, type, and description of item in GUI*/
     public void showInfo(Item item) {
         if (item != null) {
-            itemTypeText.text = item.Type.ToString();
+            //make spaces between lower and upper case letters 
+            itemTypeText.text = Regex.Replace(item.Type.ToString(), @"([a-z])([A-Z])", "$1 $2");
             itemDesText.text = item.getDescription();
             itemNameText.text = item.getName();
         } else {
-            
+            itemTypeText.text = "Type";
+            itemDesText.text = "Description";
+            itemNameText.text = "Name";
         }
     }
 
@@ -130,9 +136,11 @@ public class InventoryGUIControl : MonoBehaviour
     public void setCurrentUnit(int index) {
         bakcpackUnits[index].GetComponent<Button>().Select();
         bakcpackUnits[index].GetComponent<Button>().onClick.Invoke();
-        currentIndex = index;
 
-        showInfo(currentUnit.items.Peek());
+        if (currentUnit.items.Count > 0)
+            showInfo(currentUnit.items.Peek());
+        else
+            showInfo(null);
     }
     
 }

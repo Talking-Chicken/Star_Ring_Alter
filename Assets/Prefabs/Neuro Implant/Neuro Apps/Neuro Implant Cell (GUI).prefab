@@ -92,7 +92,9 @@ MonoBehaviour:
   appName: GUI module
   memoryStorage: 3
   description: See the World
+  descriptionAfterUse: 
   icon: {fileID: 1931027794438572486, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
+  type: 2
 --- !u!1 &3080542911306876465
 GameObject:
   m_ObjectHideFlags: 0

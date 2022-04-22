@@ -16,6 +16,7 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Inventory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
     [SerializeField, BoxGroup("Inventory GUI")] private InventoryGUIControl inventoryControl;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroImplantGUI neuroGUI;
+    [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroGUIControl neuroControl;
     [SerializeField, BoxGroup("Time GUI")] private GameObject timeGUI;
     [SerializeField, BoxGroup("Inventory GUI")] private Button inventoryTab;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
@@ -172,5 +173,9 @@ public class UIControl : MonoBehaviour
 
     public void showItems() {
         inventoryControl.showItems();
+    }
+
+    public void showNeuroApps() {
+        neuroControl.showApps();
     }
 }
