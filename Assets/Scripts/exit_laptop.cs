@@ -22,9 +22,6 @@ public class exit_laptop : MonoBehaviour
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         if (Input.GetMouseButtonDown(0) && collider == Physics2D.OverlapPoint(mousePos2D))
         {
-
-
-            Debug.Log("test");
             main_camera.SetActive(true);
             laptop_camera.SetActive(false);
             GUI.SetActive(false);
@@ -32,6 +29,9 @@ public class exit_laptop : MonoBehaviour
 
             //transit back to explore state
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+
+            //transit back to UI idle state
+            FindObjectOfType<UIControl>().ChangeState(FindObjectOfType<UIControl>().stateIdle);
         }
     }
 }

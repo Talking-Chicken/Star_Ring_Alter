@@ -9,6 +9,8 @@ public class UIStateIdle : UIStateBase
         UI.closeSelectionMenu();
     }
     public override void UpdateState(UIControl UI) {
+        if (Input.GetKeyUp(KeyCode.Tab))
+            UI.openNeuro();
         if (Input.GetKeyUp(UI.Key.openBackpack))
             UI.openInventory();
         if (Input.GetKeyUp(UI.Key.openNeuro))
