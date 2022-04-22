@@ -22,7 +22,7 @@ public class Rita : InteractiveObj
     private void Update()
     {
   
-        if (Time_text.time_2.Minute >= 20)
+        if (Time_text.time_2.Minute >= 21)
         {
             talkingNode = "Rita.2";
             anim.Play("rita_gaming");
