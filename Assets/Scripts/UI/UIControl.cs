@@ -22,19 +22,22 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
     [SerializeField, BoxGroup("Map GUI")] private Button mapTab;
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
+    private bool isInventoryOnly = false, isNeuroOnly = false;
 
     //delegate
     public delegate void CloseWindows();
     public CloseWindows closeWindows;
 
     public delegate void Open();
-    public Open openGUI, closeGUI;
+    public Open openGUI, closeGUI, disableTab, activeTab;
 
     //getters & setters
     public PlayerControl Player {get {return player;} private set {Debug.Log("setting player");player = value;}}
     public List<Button> SelectionButtons {get {return selectionButtons;} private set {selectionButtons = value;}}
     public GameObject SelectionIndicator {get {return selectionIndicator;} private set {selectionIndicator = value;}}
     public KeyManager Key {get {return _key;} private set {_key = value;}}
+    public bool IsInventoryOnly {get => isInventoryOnly; set => isInventoryOnly = value;}
+    public bool IsNeuroOnly {get => isNeuroOnly; set => isNeuroOnly = value;}
 
     //state machine
     public UIStateIdle stateIdle = new UIStateIdle();
@@ -63,7 +66,9 @@ public class UIControl : MonoBehaviour
 
     //those change to state are used for unity button on click events
     public void ChangeToInventoryState() {ChangeState(stateInventory);}
+    public void ChangeToInventoryOnlyState() {IsInventoryOnly = true; ChangeState(stateInventory);}
     public void ChangeToNeuroState() {ChangeState(stateNeuro);}
+    public void ChangeToNeuroOnlyState() {IsNeuroOnly = true; ChangeState(stateNeuro);}
     public void ChangeToIdleState() {ChangeState(stateIdle);}
     public void ChangeToInvestigateState() {ChangeState(stateInvestigate);}
     public void ChangeToSelectionState() {ChangeState(stateSelection);}
@@ -81,6 +86,16 @@ public class UIControl : MonoBehaviour
 
         closeGUI += closeBackground;
         closeGUI += closeTabs;
+
+        disableTab += disableInventoryTab;
+        disableTab += disableIntelTab;
+        disableTab += disableMapTab;
+        disableTab += disableNeuroImplantTab;
+
+        activeTab += activeintelTab;
+        activeTab += activeInventoryTab;
+        activeTab += activeNeuroImplantTab;
+        activeTab += activeMapTab;
     }
 
     void Start()
@@ -168,6 +183,38 @@ public class UIControl : MonoBehaviour
 
     public void closeTabs() {
         tabContainer.SetActive(false);
+    }
+
+    public void disableInventoryTab() {
+        inventoryTab.interactable = false;
+    }
+
+    public void activeInventoryTab() {
+        inventoryTab.interactable = true;
+    }
+
+    public void disableNeuroImplantTab() {
+        neuroImplantTab.interactable = false;
+    }
+
+    public void activeNeuroImplantTab() {
+        neuroImplantTab.interactable = true;
+    }
+
+    public void disableMapTab() {
+        mapTab.interactable = false;
+    }
+
+    public void activeMapTab() {
+        mapTab.interactable = true;
+    }
+
+    public void disableIntelTab() {
+        intelTab.interactable = false;
+    }
+
+    public void activeintelTab() {
+        intelTab.interactable = true;
     }
     #endregion
 

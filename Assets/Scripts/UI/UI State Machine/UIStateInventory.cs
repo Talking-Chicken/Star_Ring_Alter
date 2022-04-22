@@ -9,6 +9,12 @@ public class UIStateInventory : UIStateBase
         UI.closeGUI += UI.closeInventory;
         UI.openGUI();
         UI.showItems();
+
+        if (UI.IsInventoryOnly) {
+            UI.disableTab -= UI.disableInventoryTab;
+            UI.disableTab();
+            UI.disableTab += UI.disableInventoryTab;
+        }
     }
     public override void UpdateState(UIControl UI) {
         //press inventory or Mr.Rabbit one more time to close it, then change UI state to idle and player state to explore
@@ -28,5 +34,8 @@ public class UIStateInventory : UIStateBase
         UI.closeGUI();
         UI.openGUI -= UI.openInventory;
         UI.closeGUI -= UI.closeInventory;
+
+        UI.activeTab();
+        UI.IsInventoryOnly = false;
     }
 }

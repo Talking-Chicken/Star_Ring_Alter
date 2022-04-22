@@ -9,6 +9,12 @@ public class UIStateNeuro : UIStateBase
         UI.closeGUI += UI.closeNeuro;
         UI.openGUI();
         UI.showNeuroApps();
+
+        if (UI.IsNeuroOnly){
+            UI.disableTab -= UI.disableNeuroImplantTab;
+            UI.disableTab();
+            UI.disableTab += UI.disableNeuroImplantTab;
+        }
     }
     public override void UpdateState(UIControl UI) {
         //press Neuro Implant or Mr.Rabbit one more time to close it, then change UI state to idle and player state to explore
@@ -22,5 +28,8 @@ public class UIStateNeuro : UIStateBase
         UI.closeGUI();
         UI.openGUI -= UI.openNeuro;
         UI.closeGUI -= UI.closeNeuro;
+
+        UI.activeTab();
+        UI.IsNeuroOnly = false;
     }
 }
