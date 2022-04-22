@@ -67,6 +67,8 @@ public class Codex : MonoBehaviour
     public int getNodeVisited()
     {
         if (DialogueNodes != null) {
+            if (!DialogueNodes.ContainsKey(runner.CurrentNodeName))
+                setNodeVisited();
             return (int)DialogueNodes[runner.CurrentNodeName];
         } else {
             Debug.Log("dialogue nodes is null");

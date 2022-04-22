@@ -54,10 +54,6 @@ public class Rita : InteractiveObj
         {
             parts = random_conversation.lines[i].Split(',');
             parts[3] = parts[3].Replace("\r", "");
-            if (parts[3].Equals("dialogue"))
-                Debug.Log(i + " is equals to dialogue node");
-            if (parts[2].Equals("TRUE"))
-                Debug.Log(i + " is equal to true");
 
             if (parts[3].Equals("dialogue") && parts[2].Equals("TRUE"))
             {

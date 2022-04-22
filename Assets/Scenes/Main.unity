@@ -13724,7 +13724,7 @@ MonoBehaviour:
     caused by the unauthorized operation is not the responsibility of Rabbit Heavy
     Industry and its properties** '
   descriptionAfterUse: 
-  icon: {fileID: -3829701751879224553, guid: 63707257d07121145999bcba598e6e32, type: 3}
+  icon: {fileID: 8860993200015972265, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
   type: 2
 --- !u!1 &787377417
 GameObject:
