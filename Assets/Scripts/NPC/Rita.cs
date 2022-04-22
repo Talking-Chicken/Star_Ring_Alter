@@ -37,7 +37,7 @@ public class Rita : InteractiveObj
                 once = false;
             }
         
-             }
+        }
     }
     public override void interact()
     {
@@ -63,6 +63,20 @@ public class Rita : InteractiveObj
                break;
             }
         }
+    }
 
+    public override void useItem()
+    {
+        //get item first
+        Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
+        if (deliveryItem.ItemName.ToLower().Trim().Contains("gear"))
+            talkingNode = "Rita.React_Gear";
+        else
+            talkingNode = "Rita.React_Other";
+
+        //trigger rita's reaction dialogue to the item    
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf(talkingNode);
     }
 }

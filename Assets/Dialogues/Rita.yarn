@@ -46,3 +46,13 @@ Rita: That is what I want to talk to you about. The technology used on this extr
 Rita: It almost sounds like someone wants people to wear the internal neural implants.
 Rita: Anyway, just another interesting fact I found out when I was surfing on the internet.
 ===
+title: Rita.React_Gear
+position: 0,0.5
+---
+Rita: what a gear!
+===
+title: Rita.React_Other
+position: 0,0,5
+---
+Rita: what a thing!
+===
