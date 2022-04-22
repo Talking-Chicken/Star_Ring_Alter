@@ -143,4 +143,10 @@ public class InventoryGUIControl : MonoBehaviour
             showInfo(null);
     }
     
+    /* use current unit's item*/
+    public void useItem() {
+        currentUnit.useItem();
+        Debug.Log("used item in inventory gui control ");
+    }
+
 }

@@ -28,7 +28,7 @@ public class PlayerControl : MonoBehaviour
     //detect and interact
     [SerializeField, Range(5.0f, 15.0f)] private float _sight; 
     private GameObject detectingObj = null; //object that player raycating is detecting
-    private GameObject interactingObj = null; //object that player is interacting
+    [SerializeField] private GameObject interactingObj = null; //object that player is interacting
     [SerializeField]GameObject raycaster;
     //getters & setters
     public float Sight{get {return _sight;} private set {_sight = value;}}

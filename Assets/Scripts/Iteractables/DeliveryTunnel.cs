@@ -47,14 +47,15 @@ public class DeliveryTunnel : InteractiveObj
 
     public override void useItem()
     {
-        GameObject deliveryItem = InventoryGUI.currentUnit.storedItem.Dequeue();
-        playerBackpack.remove(deliveryItem);
-        deliveryItem.SetActive(true);
+        Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
+        playerBackpack.remove(deliveryItem.gameObject);
+        deliveryItem.gameObject.SetActive(true);
         Vector3 exitPos = tunnelExit.transform.position;
         deliveryItem.transform.position = new Vector3(exitPos.x, exitPos.y, 42);
         FindObjectOfType<PlayerControl>().UIControl.ChangeToIdleState();
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
         FindObjectOfType<PlayerControl>().UIControl.closeWindows();
+        Debug.Log("using item in delivery tunnel");
     }
 
     public void exit()

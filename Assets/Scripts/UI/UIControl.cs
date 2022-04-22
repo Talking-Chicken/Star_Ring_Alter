@@ -178,4 +178,10 @@ public class UIControl : MonoBehaviour
     public void showNeuroApps() {
         neuroControl.showApps();
     }
+
+    /* use current selecting item of inventoryGUIControl */
+    public void useItem() {
+        inventoryControl.useItem();
+        Debug.Log("used item in ui control");
+    }
 }

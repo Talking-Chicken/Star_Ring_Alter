@@ -110,28 +110,30 @@ public class BackpackUnit : MonoBehaviour
 
     public void useItem()
     {
-        GameObject currentItem;
-        if (storedItem.Count > 0)
+        Debug.Log("starting using item in backpack unit");
+        Item currentItem;
+        if (items.Count > 0)
         {
-            currentItem = storedItem.Peek();
+            currentItem = items.Peek();
         }
         else
             currentItem = null;
         
         if (currentItem != null)
         {
-            Item item = currentItem.GetComponent<Item>();
             if (playerControl.InteractingObj == null) {
-                item.useItem();
+                currentItem.useItem();
+                Debug.Log("playercontrol.interactingobj is null");
             } else {
                 playerControl.InteractingObj.GetComponent<InteractiveObj>().useItem();
+                Debug.Log("playercontrol.interactingobj is not null: " +playerControl.InteractingObj.name);
             }
 
             //if it's comsumable, remove it from the queue of the backpack unit as well as from playerbackpack list
-            if (item.consumable)
+            if (currentItem.consumable)
             {
-                storedItem.Dequeue();
-                FindObjectOfType<PlayerBackpack>().backpack.Remove(currentItem);
+                items.Dequeue();
+                FindObjectOfType<PlayerBackpack>().backpack.Remove(currentItem.gameObject);
             }
 
             if (storedItem.Count <= 0)
@@ -139,5 +141,8 @@ public class BackpackUnit : MonoBehaviour
                 resetStoredItem();
             }
         }
+        if (currentItem == null)
+            Debug.Log("current item is null");
+        Debug.Log("finished using item in backpack unit");
     }
 }

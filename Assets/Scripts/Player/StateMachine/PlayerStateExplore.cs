@@ -7,7 +7,7 @@ public class PlayerStateExplore : PlayerStateBase
     public override void EnterState(PlayerControl player) {
         player.CanMove = true;
         PlayerControl.show_invest=true;
-        player.InteractingObj = null;
+        //player.InteractingObj = null;
         player.UIControl.openTime();
     }
     public override void UpdateState(PlayerControl player) {
