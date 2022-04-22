@@ -11,6 +11,7 @@ public class random_conversation : MonoBehaviour
     [SerializeField] string[] lines_2;
     string[] parts;
     bool once = true;
+    bool once1 = true;
     [SerializeField] PlayerControl player;
     void Start()
     {
@@ -23,6 +24,10 @@ public class random_conversation : MonoBehaviour
         if (Time_text.time_2.Minute>=23&&once) {
          player.talkToSelf("Random_dialogue.Time_Remind");
             once = false;
+        }
+        if (Time_text.time_2.Minute >=23 && Time_text.time_2.Second >= 58&&once1) { 
+            player.talkToSelf("Random_dialogue.End_remind"); 
+            once1 = false; 
         }
         lines_2=lines;
     }
