@@ -37213,6 +37213,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904160361790625062, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
+      propertyPath: yarnScripts.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904160361790625062, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
+      propertyPath: yarnScripts.Array.data[2]
+      value: 
+      objectReference: {fileID: 2480198943629176163, guid: c27d26189ebf4ed45abfeceac6e34f03,
+        type: 3}
+    - target: {fileID: 2904160361790625062, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
       propertyPath: onNodeStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1914786732}
