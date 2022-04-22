@@ -1,0 +1,28 @@
+fileFormatVersion: 2
+guid: c27d26189ebf4ed45abfeceac6e34f03
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  baseLanguageID: zh-CN
+  stringIDs:
+  - Investigate-Investigate.1-0
+  - Investigate-Investigate.2-1
+  - Investigate-Investigate.3-2
+  - Investigate-Investigate.4-3
+  - Investigate-Investigate.5-4
+  - Investigate-Investigate.6-5
+  - Investigate-Investigate.7-6
+  - Investigate-Investigate.8-7
+  - Investigate-Investigate.9-8
+  - Investigate-Investigate.10-9
+  - Investigate-Investigate.11-10
+  compilationStatus: 1
+  isSuccesfullyCompiled: 1
+  compilationErrorMessage: 
+  baseLanguage: {instanceID: 0}
+  localizations: []
