@@ -15,7 +15,10 @@ public class random_conversation : MonoBehaviour
     [SerializeField] PlayerControl player;
     void Start()
     {
-        readCSV();
+        if (ES3.KeyExists("Condition")) { lines= ES3.Load<string[]>("Condition");
+        }
+        else { readCSV(); }
+         
     }
 
     // Update is called once per frame
