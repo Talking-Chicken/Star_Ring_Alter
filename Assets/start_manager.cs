@@ -23,10 +23,15 @@ public class start_manager : MonoBehaviour
     public void NewGame() 
     {
         SceneManager.LoadScene("Main");
+        ES3.Save("Condition", null);
         UI_SE.PlayOneShot(clicked);
     }
     public void ControlButton()
     {
+        if (ES3.KeyExists("Condition"))
+        {
+            SceneManager.LoadScene("Main");
+        }
         ControlPanel.SetActive(true);
         UI_SE.PlayOneShot(clicked);
     }
