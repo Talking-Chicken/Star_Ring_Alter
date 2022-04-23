@@ -231,4 +231,9 @@ public class UIControl : MonoBehaviour
         inventoryControl.useItem();
         Debug.Log("used item in ui control");
     }
+
+    /* use current selecting neuro implant of NeuroImplantGUIControl */
+    public void useNeuroImplant() {
+        neuroControl.useNeuroImplant();
+    }
 }

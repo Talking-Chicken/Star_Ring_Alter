@@ -139,4 +139,8 @@ public class NeuroGUIControl : MonoBehaviour
 
         showInfo(currentUnit.NeuroApp);
     }
+
+    public void useNeuroImplant() {
+        currentUnit.useNeuroImplant();
+    }
 }

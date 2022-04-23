@@ -10,8 +10,7 @@ public class Rita : InteractiveObj
     bool once;
 
    [SerializeField] string[] parts;
-    public string TalkingNode { get => talkingNode; set => talkingNode = value;
-    }
+    public string TalkingNode { get => talkingNode; set => talkingNode = value;}
 
     private void Start()
     {
@@ -70,13 +69,27 @@ public class Rita : InteractiveObj
         //get item first
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
         if (deliveryItem.ItemName.ToLower().Trim().Contains("gear"))
-            talkingNode = "Rita.React_Gear";
+            TalkingNode = "Rita.React_Gear";
         else
-            talkingNode = "Rita.React_Other";
+            TalkingNode = "Rita.React_Other";
 
         //trigger rita's reaction dialogue to the item    
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        player.talkToSelf(talkingNode);
+        player.talkToSelf(TalkingNode);
+    }
+
+    public override void useNeuroImplant()
+    {
+        NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
+        if (app.GetComponent<OperatingSystemModule>() != null)
+            TalkingNode = "Rita.React_OS_Module";
+        else
+            TalkingNode = "Rita.React_Other_Module";
+        
+        //trigger Rita's reaction dialogue to the neuro app
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf(TalkingNode);
     }
 }

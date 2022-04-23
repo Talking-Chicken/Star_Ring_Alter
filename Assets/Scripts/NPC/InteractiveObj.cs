@@ -91,6 +91,10 @@ public class InteractiveObj : MonoBehaviour
         Debug.Log("using item");
     }
 
+    public virtual void useNeuroImplant() {
+        Debug.Log("using neuro implant");
+    }
+
     public IEnumerator waitToChangeToExploreState() {
         yield return new WaitForSeconds(0.5f);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);

@@ -56,3 +56,15 @@ position: 0,0,5
 ---
 Rita: what a thing!
 ===
+
+title: Rita.React_OS_Module
+position: 0,0.5
+---
+Rita: what a operating system module!
+===
+
+title: Rita.React_Other_Module
+position: 0,0.5
+---
+Rita: what a neuro app!
+===

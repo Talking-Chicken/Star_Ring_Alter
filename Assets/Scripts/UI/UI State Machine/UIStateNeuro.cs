@@ -23,6 +23,12 @@ public class UIStateNeuro : UIStateBase
             UI.Player.ChangeState(UI.Player.stateExplore);
             UI.ChangeState(UI.stateIdle);
         }
+
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            UI.Player.ChangeState(UI.Player.stateExplore);
+            UI.ChangeState(UI.stateIdle);
+            UI.useNeuroImplant();
+        }
     }
     public override void LeaveState(UIControl UI) {
         UI.closeGUI();

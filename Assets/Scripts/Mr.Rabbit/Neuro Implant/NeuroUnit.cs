@@ -11,6 +11,8 @@ public class NeuroUnit : MonoBehaviour
     private int index;
     [SerializeField] private Image unitIconDisplayer;
 
+    private PlayerControl player;
+
     //getter & setter
     public NeuroImplantApp NeuroApp {get => neuroApp; set => neuroApp = value;}
     public int Index {get => index; set => index = value;}
@@ -19,15 +21,8 @@ public class NeuroUnit : MonoBehaviour
     public string NeuroDes {get => neuroDes; set => neuroDes = value;}
     public string NeuroDesAfterUse {get => neuroDesAfterUse; set => neuroDesAfterUse = value;}
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
+    void Start() {
+        player = FindObjectOfType<PlayerControl>();
     }
 
     public void resetDisplayingApp() {
@@ -54,5 +49,16 @@ public class NeuroUnit : MonoBehaviour
     {
         NeuroGUIControl.currentUnit = this;
         FindObjectOfType<NeuroGUIControl>().CurrentIndex = Index;
+    }
+
+    public void useNeuroImplant() 
+    {
+        if (NeuroApp != null) {
+            if (player.InteractingObj == null) {
+                NeuroApp.useNeuroImplant();
+            } else {
+                player.InteractingObj.GetComponent<InteractiveObj>().useNeuroImplant();
+            }
+        }
     }
 }

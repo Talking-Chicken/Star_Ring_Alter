@@ -64,4 +64,8 @@ public class NeuroImplantApp : MonoBehaviour
         
         rTransform.sizeDelta = new Vector2(rTransform.sizeDelta.x * MemoryStorage, rTransform.sizeDelta.y);
     }
+
+    public virtual void useNeuroImplant() {
+        
+    }
 }
