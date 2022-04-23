@@ -16,7 +16,7 @@ public class UIStateSelection : UIStateBase
         if (!UI.Player.InteractingObj.GetComponent<InteractiveObj>().CanInven && !UI.Player.InteractingObj.GetComponent<InteractiveObj>().CanNeuro)
             UI.IsInvestigateOnly = true;
 
-        if (UI.IsInvestigateOnly) {
+        if (!UI.IsInvestigateOnly) {
             if (Input.GetKeyUp(UI.Key.next)) {
                 
                 currentSelectionIndex = Mathf.Min(currentSelectionIndex + 1, UI.SelectionButtons.Count - 1);

@@ -38,7 +38,7 @@ public class UIControl : MonoBehaviour
     public KeyManager Key {get {return _key;} private set {_key = value;}}
     public bool IsInventoryOnly {get => isInventoryOnly; set => isInventoryOnly = value;}
     public bool IsNeuroOnly {get => isNeuroOnly; set => isNeuroOnly = value;}
-    public bool IsInvestigateOnly {get => isInventoryOnly; set => isInvestigateOnly = value;}
+    public bool IsInvestigateOnly {get => isInvestigateOnly; set => isInvestigateOnly = value;}
 
     //state machine
     public UIStateIdle stateIdle = new UIStateIdle();
