@@ -22,7 +22,7 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
     [SerializeField, BoxGroup("Map GUI")] private Button mapTab;
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
-    private bool isInventoryOnly = false, isNeuroOnly = false;
+    private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
 
     //delegate
     public delegate void CloseWindows();
@@ -38,6 +38,7 @@ public class UIControl : MonoBehaviour
     public KeyManager Key {get {return _key;} private set {_key = value;}}
     public bool IsInventoryOnly {get => isInventoryOnly; set => isInventoryOnly = value;}
     public bool IsNeuroOnly {get => isNeuroOnly; set => isNeuroOnly = value;}
+    public bool IsInvestigateOnly {get => isInventoryOnly; set => isInvestigateOnly = value;}
 
     //state machine
     public UIStateIdle stateIdle = new UIStateIdle();
