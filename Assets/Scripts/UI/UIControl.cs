@@ -24,6 +24,7 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
     private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
 
+
     //delegate
     public delegate void CloseWindows();
     public CloseWindows closeWindows;
