@@ -18284,6 +18284,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 5832333354896687607, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7396794736808363666, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -18367,6 +18372,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -6072055209333291618, guid: 4cf21690fdd965945acf9632171b52ba,
         type: 3}
+    - target: {fileID: 7396794737455709833, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396794737455709833, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396794737455709833, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1499318146}
+    - target: {fileID: 7396794737455709833, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396794737455709833, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeToMapState
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396794737455709833, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7754296799052954307, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -29477,6 +29512,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryContainer: {fileID: 1009475198}
   neuroContainer: {fileID: 1009475197}
+  mapContainer: {fileID: 1563789644}
+  intelContainer: {fileID: 0}
   selectionMenu: {fileID: 553650095}
   selectionIndicator: {fileID: 553650091}
   useButton: {fileID: 553650094}
@@ -30246,6 +30283,12 @@ MonoBehaviour:
   idle: {fileID: 0}
   smile: {fileID: 0}
   testString: 
+--- !u!1 &1563789644 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5832333354896687607, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+    type: 3}
+  m_PrefabInstance: {fileID: 1009475194}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1570350144
 GameObject:
   m_ObjectHideFlags: 0

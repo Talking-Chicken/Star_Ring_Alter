@@ -6,7 +6,7 @@ using NaughtyAttributes;
 
 public class UIControl : MonoBehaviour
 {
-    [SerializeField, BoxGroup("Mr.Rabbit System GUI Container")] private GameObject inventoryContainer, neuroContainer;
+    [SerializeField, BoxGroup("Mr.Rabbit System GUI Container")] private GameObject inventoryContainer, neuroContainer, mapContainer, intelContainer;
     [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator, useButton, invenButton, neuroButton;
     [SerializeField, BoxGroup("Selection Menu"),ReorderableList] private List<Button> selectionButtons;
 
@@ -46,6 +46,8 @@ public class UIControl : MonoBehaviour
     public UIStateInventory stateInventory = new UIStateInventory();
     public UIStateNeuro stateNeuro = new UIStateNeuro();
     public UIStateInvestigate stateInvestigate = new UIStateInvestigate();
+    public UIStateMap stateMap = new UIStateMap();
+    public UIStateIntel stateIntel = new UIStateIntel();
     private UIStateBase currentState;
 
     public void ChangeState(UIStateBase newState)
@@ -73,6 +75,7 @@ public class UIControl : MonoBehaviour
     public void ChangeToIdleState() {ChangeState(stateIdle);}
     public void ChangeToInvestigateState() {ChangeState(stateInvestigate);}
     public void ChangeToSelectionState() {ChangeState(stateSelection);}
+    public void ChangeToMapState() {ChangeState(stateMap);}
 
     //change player state
     public void ChangePlayerState(PlayerStateBase newState) {Player.ChangeState(newState);}
@@ -158,6 +161,26 @@ public class UIControl : MonoBehaviour
 
     public void closeNeuro() {
         neuroContainer.SetActive(false);
+    }
+
+    public void openMap() {
+        mapContainer.SetActive(true);
+        mapTab.Select();
+        ChangeState(stateMap);
+    }
+
+    public void closeMap() {
+        mapContainer.SetActive(false);
+    }
+
+    public void openIntel() {
+        intelContainer.SetActive(true);
+        intelTab.Select();
+        ChangeState(stateIntel);
+    }
+
+    public void closeIntel() {
+        intelContainer.SetActive(false);
     }
 
     public void openTime() {
