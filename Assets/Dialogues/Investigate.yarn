@@ -6,7 +6,9 @@ Amo:.I gotta keep my sci-fi collection away from Rita. There is no way she can s
 title: Investigate.2
 position: -27,-80
 ---
-Amo: What is written here? New….Drink Brand Promotion Strategy…. Miso and Cherry Flavor Soda.  Sounds like a flavor Rita would like to drink.
+<<Image Invest_Image_Canvas soda true>>
+Amo: What is written here? New….Drink Brand Promotion Strategy…. Mirin and Lemon Flavor Soda.  Sounds like a flavor Rita would like to drink.
+<<Image Invest_Image_Canvas soda false>>
 ===
 title: Investigate.3
 position: 0,0.5
