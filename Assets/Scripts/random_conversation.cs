@@ -15,7 +15,9 @@ public class random_conversation : MonoBehaviour
     [SerializeField] PlayerControl player;
     void Start()
     {
-        if (ES3.KeyExists("Condition")) { lines= ES3.Load<string[]>("Condition");
+        if (ES3.KeyExists("Condition1")) {
+         
+            lines= ES3.Load<string[]>("Condition1");
         }
         else { readCSV(); }
          

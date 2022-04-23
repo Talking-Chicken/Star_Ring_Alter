@@ -23,6 +23,7 @@ position: 0,0.5
 ---
 <<Image Invest_Image_Canvas cafe true>>
 Amo: Did Lacey draw this rabbit? That is so cute!
+<<Image Invest_Image_Canvas cafe false>>
 ===
 title: Investigate.6
 position: 0,0.5
