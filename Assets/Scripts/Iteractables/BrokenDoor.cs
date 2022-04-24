@@ -69,4 +69,34 @@ public class BrokenDoor : InteractiveObj
         state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
+
+    public override void useNeuroImplant()
+    {
+        NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
+        if (app.GetComponent<EngineeringModule>() != null) {
+            int gearCount = 0;
+            for (int i = 0; i < playerBackpack.backpack.Count; i++) {
+                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("gear"))
+                    gearCount++;
+            }
+
+            if (gearCount >= 3) {
+                door.door.SetActive(true);
+                door.gameObject.SetActive(false);
+
+                if (talkingArea != null)
+                    talkingArea.SetActive(true);
+
+                for (int i = playerBackpack.backpack.Count-1; i >= 0; i--) {
+                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("gear"))
+                        playerBackpack.backpack.RemoveAt(i);
+                }
+            } else {
+                //TODO: mention about that you don't have enough gear
+            }
+        } else {
+            //TODO: say something if player not showing engineering module
+        }
+           
+    }
 }
