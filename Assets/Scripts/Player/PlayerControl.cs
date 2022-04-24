@@ -45,9 +45,10 @@ public class PlayerControl : MonoBehaviour
     public PlayerStateUI stateUI = new PlayerStateUI();
 
     public void ChangeToPreviousState() {StartCoroutine(waitToChange());} //change to previous state 0.5 seconds delay
+    public void waitToChangeState(PlayerStateBase newState) {StartCoroutine(waitToChange(newState));}
     IEnumerator waitToChange() {yield return new WaitForSeconds(0.5f); ChangeState(previousState);} //where delay actually happens
-    RaycastHit2D[] RayArray;
-    int i;
+    IEnumerator waitToChange(PlayerStateBase newState) {yield return new WaitForSeconds(0.3f); ChangeState(newState);}
+
     public void ChangeState(PlayerStateBase newState)
     {
         if (currentState != null)

@@ -17,7 +17,7 @@ public class PlayerStateExplore : PlayerStateBase
                 player.talkToNPC();
         }
 
-        if (player.detectInteractiveObj() && Input.GetKeyUp(player.KeyManager.interact)) {
+        if (player.detectInteractiveObj() && Input.GetKeyDown(player.KeyManager.interact)) {
             player.interact(player.DetectingObj);
         }
     }

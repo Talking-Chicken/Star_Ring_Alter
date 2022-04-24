@@ -29,12 +29,6 @@ public class DeliveryTunnel : InteractiveObj
             Debug.LogWarning("haven't set coffee bean console yet");
     }
 
-    
-    void Update()
-    {
-        
-    }
-
     public override void interact()
     {
         state.transitionState(State.UI);
@@ -47,15 +41,31 @@ public class DeliveryTunnel : InteractiveObj
 
     public override void useItem()
     {
+        PlayerControl player = FindObjectOfType<PlayerControl>();
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
-        playerBackpack.remove(deliveryItem.gameObject);
-        deliveryItem.gameObject.SetActive(true);
-        Vector3 exitPos = tunnelExit.transform.position;
-        deliveryItem.transform.position = new Vector3(exitPos.x, exitPos.y, 42);
-        FindObjectOfType<PlayerControl>().UIControl.ChangeToIdleState();
-        FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
-        FindObjectOfType<PlayerControl>().UIControl.closeWindows();
-        Debug.Log("using item in delivery tunnel");
+        
+
+        if (deliveryItem.ItemName.ToLower().Trim().Contains("maintenance robot")) {
+            if (cofeeBeanCover.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up"))
+            {
+                GameObject robot = playerBackpack.remove("maintenance robot");
+                gameObject.AddComponent<MrRabbitTalk>();
+
+                FindObjectOfType<PlayerControl>().talkToSelf("MrRabbit.Maintenance_Robot_Summon_Ready");
+
+                sentRobot = true;
+            }
+        } else {
+            playerBackpack.remove(deliveryItem.gameObject);
+            deliveryItem.gameObject.SetActive(true);
+            Vector3 exitPos = tunnelExit.transform.position;
+            deliveryItem.transform.position = new Vector3(exitPos.x, exitPos.y, 42);   
+        }
+
+        
+        player.UIControl.waitToChangeState(Player.UIControl.stateIdle);
+        player.waitToChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+        player.UIControl.closeWindows();
     }
 
     public void exit()
@@ -78,7 +88,6 @@ public class DeliveryTunnel : InteractiveObj
             sentRobot = true;
         }
         UIContainer.SetActive(false);
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 }
