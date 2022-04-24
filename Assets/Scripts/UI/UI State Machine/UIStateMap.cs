@@ -15,7 +15,7 @@ public class UIStateMap : UIStateBase
     {
         
         if (Input.GetKeyDown(UI.Key.next)) {
-            UI.ChangeState(UI.stateMap);
+            UI.ChangeState(UI.stateInventory);
         } else if (Input.GetKeyDown(UI.Key.previous)) {
             UI.ChangeState(UI.stateNeuro);
         }
