@@ -6,7 +6,8 @@ public class UIStateInvestigate : UIStateBase
 {
     public override void EnterState(UIControl UI)
     {
-        UI.Player.DetectingObj.GetComponent<InteractiveObj>().interact();
+        if (UI.Player.DetectingObj.GetComponent<InteractiveObj>() != null)
+            UI.Player.DetectingObj.GetComponent<InteractiveObj>().interact();
     }
 
     public override void UpdateState(UIControl UI)

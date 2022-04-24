@@ -12,7 +12,7 @@ public class MaintenanceRobot : InteractiveObj
     [SerializeField, Tooltip("this is the icon for maintenance robot, when it turns into an item")] 
     Sprite itemIcon;
 
-    private PlayerBackpack playerbackpack;
+    private PlayerBackpack playerBackpack;
     private StateManager state;
     private Talkable talk;
 
@@ -20,7 +20,7 @@ public class MaintenanceRobot : InteractiveObj
     private GameObject talkingArea;
     void Start()
     {
-        playerbackpack = FindObjectOfType<PlayerBackpack>();
+        playerBackpack = FindObjectOfType<PlayerBackpack>();
         state = FindObjectOfType<StateManager>();
         talk = GetComponent<Talkable>();
     }
@@ -29,7 +29,7 @@ public class MaintenanceRobot : InteractiveObj
     {
         state.transitionState(State.UI);
         UIContainer.SetActive(true);
-        if (playerbackpack.contains("operating software"))
+        if (playerBackpack.contains("operating software"))
             description.text = "use operating software to active the robot?";
         else
             description.text = "this dude is broken";
@@ -48,13 +48,12 @@ public class MaintenanceRobot : InteractiveObj
 
     public void confirm()
     {
-        if (playerbackpack.contains("operating software"))
+        if (playerBackpack.contains("operating software"))
         {
             gameObject.transform.parent.gameObject.AddComponent<MaintenanceRobotItem>();
             GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
-            playerbackpack.remove("operating software");
+            playerBackpack.remove("operating software");
             UIContainer.SetActive(false);
-            state.transitionState(State.Explore);
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
             talkingArea.SetActive(true);
@@ -64,8 +63,23 @@ public class MaintenanceRobot : InteractiveObj
         {
             UIContainer.SetActive(false);
         }
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
+    }
+
+    public override void useItem()
+    {
+        Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
+        if (currentItem.ItemName.ToLower().Trim().Contains("operating software")) {
+            gameObject.transform.parent.gameObject.AddComponent<MaintenanceRobotItem>();
+            GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
+            playerBackpack.remove("operating software");
+            UIContainer.SetActive(false);
+            FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+
+            talkingArea.SetActive(true);
+
+            Destroy(this);
+        }
     }
 }
