@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class blocker_manager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class blocker_manager : MonoBehaviour
     float distance;
     int closest_index;
     int current_index;
+    [SerializeField] TextMeshPro description;
     bool close;
     int storage=2;
     public float max_height;
@@ -54,6 +56,10 @@ public class blocker_manager : MonoBehaviour
         if ((blocks[blocks.Count - 1].transform.position.y - blocks[0].transform.position.y) > max_height) { overload = true; } else { overload = false; }
         
         if (drag_object != null) {
+            if (drag_object.name.Equals("Neuro Implant Block (Hack)")) { description.text = "An illegal copy of the Confederation Global Security Department's hacking program, also known as the 'Master key.'"; }
+
+            if (drag_object.name.Equals("Neuro Implant Block (Eng)")) { description.text = "A Professional Training Module developed by Cat Technology that allows its user to possess all the expertise of a Confederate certified engineer."; }
+
             if (blocks.Contains(drag_object))
             {
                 if (Vector2.Distance(drag_object.transform.position, this.transform.position) > 3)
@@ -100,7 +106,7 @@ public class blocker_manager : MonoBehaviour
                 storage = storage + 3;
             }
             else { last_object.GetComponent<drag_neural>().back(); }
-
+            description.text = null;
             
             Debug.Log("run");
             last_object = null;
