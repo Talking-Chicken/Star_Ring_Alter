@@ -33,17 +33,18 @@ public class DeliveryTunnel : InteractiveObj
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        state.transitionState(State.UI);
-        UIContainer.SetActive(true);
+       // state.transitionState(State.UI);
+        //UIContainer.SetActive(true);
         if (playerBackpack.contains("maintenance robot") && cofeeBeanCover.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up"))
-            description.text = "send maintenance robot through this tunnel";
+            player.talkToSelf("Response_player_action.interact_tunnel.4");
         else
-            description.text = "this is the tunnel for coffee beans";
+            player.talkToSelf("Response_player_action.interact_tunnel.1");
     }
 
     public override void useItem()
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
 
         if (cofeeBeanCover.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up")) {
@@ -51,7 +52,7 @@ public class DeliveryTunnel : InteractiveObj
                 GameObject robot = playerBackpack.remove("maintenance robot");
                 gameObject.AddComponent<MrRabbitTalk>();
 
-                player.ChangeState(player.stateExplore);
+              
                 player.talkToSelf("MrRabbit.Maintenance_Robot_Tunnel");            
 
                 sentRobot = true;
@@ -62,9 +63,13 @@ public class DeliveryTunnel : InteractiveObj
                 deliveryItem.transform.position = new Vector3(exitPos.x, exitPos.y, 42);
                 FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
                 FindObjectOfType<PlayerControl>().UIControl.closeWindows();
+                player.talkToSelf("Response_player_action.interact_tunnel.5");
+
             }
         }else {
             //TODO: describe what happens when coffee bean cover is not up
+          
+            player.talkToSelf("Response_player_action.interact_tunnel.3");
         }
         FindObjectOfType<PlayerControl>().UIControl.ChangeToIdleState();
         
@@ -72,7 +77,9 @@ public class DeliveryTunnel : InteractiveObj
 
     public override void useNeuroImplant()
     {
-        //TODO: describe what happens when player trying to use neuro implant for delivery tunnel
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response_player_action.interact_tunnel.2");
     }
 
     public void exit()

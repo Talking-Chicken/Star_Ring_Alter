@@ -62,7 +62,7 @@ Mr. Rabbit: You would need a media contain Maintenance Protocol to get this robo
 title: Response_player_action.interact_tunnel.1
 position: -45,-75
 ---
-Mr. Rabbit: This 
+Mr. Rabbit: This coffee bean tunnel is part of this store's delivery system. If you throw something here, you may find where it is led to.
 ===
 title: Response_player_action.interact_robot.2
 position: -45,-75
@@ -73,4 +73,25 @@ title: Response_player_action.interact_robot.3
 position: -45,-75
 ---
 Amo: Hmmm, I don't think that is the right one.
+===
+title: Response_player_action.interact_tunnel.2
+position: -45,-75
+---
+Amo: I don't think I should use Neural Implant here.
+===
+title: Response_player_action.interact_tunnel.3
+position: -45,-75
+---
+Amo: No matter what I want to do with this delivery tunnel, I need lift the cover first. The switch is right next to it.
+===
+title: Response_player_action.interact_tunnel.4
+position: -45,-75
+---
+Amo: Now I have the robot, I should put it in the tunnel. It will guide itself to the Maintenance Tunnel.
+===
+title: Response_player_action.interact_tunnel.5
+position: -45,-75
+---
+<<SE System_sounds_effect drop>>
+Amo: Alright, I throw that stuff. If Mr. Rabbit was right I may find it around corridor.
 ===
