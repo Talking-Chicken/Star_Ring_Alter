@@ -29,12 +29,6 @@ public class UIStateNeuro : UIStateBase
             UI.ChangeState(UI.stateIdle);
             UI.useNeuroImplant();
         }
-        
-        if (!UI.IsNeuroOnly) {
-            if (Input.GetKeyDown(UI.Key.next)) {
-                UI.ChangeState(UI.stateMap);
-            }
-        }
     }
     public override void LeaveState(UIControl UI) {
         UI.closeGUI();

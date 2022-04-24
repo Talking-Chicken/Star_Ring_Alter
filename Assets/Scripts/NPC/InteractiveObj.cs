@@ -43,9 +43,7 @@ public class InteractiveObj : MonoBehaviour
         //invest_icon = GameObject.FindGameObjectWithTag("invest_icon");
         main_character = GameObject.Find("main_character");
         indicatorPos = position + new Vector2(0, indicatorYPos);
-
-        if (Player == null) Debug.Log("player is null");
-        if (playerControl == null) Debug.Log("player control is null");
+        playerControl = FindObjectOfType<PlayerControl>();
     }
 
     void Update()
@@ -90,7 +88,7 @@ public class InteractiveObj : MonoBehaviour
     }
 
     public virtual void useItem() {
-        Player.ChangeState(Player.stateUI);
+        Debug.Log("using item");
     }
 
     public virtual void useNeuroImplant() {
