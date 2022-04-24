@@ -70,6 +70,11 @@ public class BrokenDoor : InteractiveObj
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 
+    public override void useItem()
+    {
+        //TODO: describe what happens when player trying to use item for broken elevator door
+    }
+
     public override void useNeuroImplant()
     {
         NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;

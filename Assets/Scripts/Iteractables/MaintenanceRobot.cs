@@ -39,6 +39,29 @@ public class MaintenanceRobot : InteractiveObj
         talk.getPlayer().talkToNPC();
     }
 
+    public override void useItem()
+    {
+        Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
+        if (currentItem.ItemName.ToLower().Trim().Contains("operating software")) {
+            gameObject.transform.parent.gameObject.AddComponent<MaintenanceRobotItem>();
+            GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
+            playerbackpack.remove("operating software");
+            UIContainer.SetActive(false);
+            FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+
+            talkingArea.SetActive(true);
+
+            Destroy(this);
+        } else {
+            //TODO: using items that is not operating software
+        }
+    }
+
+    public override void useNeuroImplant()
+    {
+        //TODO: describe what happens when player trying to use neuro implant
+    }
+
     public void exitUI()
     {
         UIContainer.SetActive(false);
@@ -54,7 +77,6 @@ public class MaintenanceRobot : InteractiveObj
             GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
             playerbackpack.remove("operating software");
             UIContainer.SetActive(false);
-            state.transitionState(State.Explore);
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
             talkingArea.SetActive(true);
@@ -64,7 +86,6 @@ public class MaintenanceRobot : InteractiveObj
         {
             UIContainer.SetActive(false);
         }
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
     }
