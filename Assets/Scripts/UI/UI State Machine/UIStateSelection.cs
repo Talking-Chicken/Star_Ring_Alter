@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIStateSelection : UIStateBase
 {
     private int currentSelectionIndex;
+ 
     public override void EnterState(UIControl UI) {
         UI.openSelectionMenu();
         currentSelectionIndex = 0;
@@ -14,9 +15,12 @@ public class UIStateSelection : UIStateBase
         //put indicator to correct position
         UI.SelectionIndicator.transform.position = UI.SelectionButtons[currentSelectionIndex].transform.position;
         if (!UI.Player.InteractingObj.GetComponent<InteractiveObj>().CanInven && !UI.Player.InteractingObj.GetComponent<InteractiveObj>().CanNeuro)
-            UI.IsInvestigateOnly = true;
+        { UI.IsInvestigateOnly = true;
+          UI.QEkeyContainer.SetActive(false);
+        } 
 
         if (!UI.IsInvestigateOnly) {
+           UI.QEkeyContainer.SetActive(true);
             if (Input.GetKeyUp(UI.Key.next)) {
                 
                 currentSelectionIndex = Mathf.Min(currentSelectionIndex + 1, UI.SelectionButtons.Count - 1);

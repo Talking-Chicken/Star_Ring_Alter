@@ -8,12 +8,12 @@ public class UIControl : MonoBehaviour
 {
     [SerializeField, BoxGroup("Mr.Rabbit System GUI Container")] private GameObject inventoryContainer, neuroContainer, mapContainer, intelContainer;
     [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator, useButton, invenButton, neuroButton;
-    [SerializeField, BoxGroup("Selection Menu"),ReorderableList] private List<Button> selectionButtons;
+    [SerializeField, BoxGroup("Selection Menu"), ReorderableList] private List<Button> selectionButtons;
 
-    [SerializeField, BoxGroup("Player")]private PlayerControl player;
+    [SerializeField, BoxGroup("Player")] private PlayerControl player;
     private KeyManager _key;
     [SerializeField, BoxGroup("General GUI")] private GameObject backgroundContainer, tabContainer;
-    [SerializeField, BoxGroup("Inventory GUI")]private InventoryGUI inventoryGUI; //class that take care of present inventory
+    [SerializeField, BoxGroup("Inventory GUI")] private InventoryGUI inventoryGUI; //class that take care of present inventory
     [SerializeField, BoxGroup("Inventory GUI")] private InventoryGUIControl inventoryControl;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroImplantGUI neuroGUI;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroGUIControl neuroControl;
@@ -22,6 +22,7 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
     [SerializeField, BoxGroup("Map GUI")] private Button mapTab;
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
+    [SerializeField, BoxGroup("Selection Menu QE")] public GameObject QEkeyContainer;
     private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
 
     //delegate
