@@ -68,6 +68,12 @@ public class UIControl : MonoBehaviour
         }
     }
 
+    public void waitToChangeState(UIStateBase newState) {
+        StartCoroutine(waitToChange(newState));
+    }
+
+    IEnumerator waitToChange(UIStateBase newState) {yield return new WaitForSeconds(0.3f); ChangeState(newState);}
+
     //those change to state are used for unity button on click events
     public void ChangeToInventoryState() {ChangeState(stateInventory);}
     public void ChangeToInventoryOnlyState() {IsInventoryOnly = true; ChangeState(stateInventory);}
@@ -254,7 +260,6 @@ public class UIControl : MonoBehaviour
     /* use current selecting item of inventoryGUIControl */
     public void useItem() {
         inventoryControl.useItem();
-        Debug.Log("used item in ui control");
     }
 
     /* use current selecting neuro implant of NeuroImplantGUIControl */
