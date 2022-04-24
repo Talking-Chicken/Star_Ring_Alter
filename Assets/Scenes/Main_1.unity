@@ -248,6 +248,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: gear family!
   icon: {fileID: -4710488717584078819, guid: 3336673a3c3d3e64684e1bc5de177252, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!212 &7273590
 SpriteRenderer:
@@ -540,6 +541,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: where should I insert the card?
   icon: {fileID: 6712669436868686576, guid: 7bbcc5cb3acf21447a2981cb9550b02d, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
   level: 1
 --- !u!114 &19042321
@@ -1032,14 +1034,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4563de4f93d6e234183cf15d5785aa0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 1838806737}
   indicatorYPos: 1.48
+  invest_icon_offset: 0
   door: {fileID: 1611547989}
   talkingArea: {fileID: 112616933}
   UIContainer: {fileID: 288936116}
@@ -2123,7 +2127,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.29999542, y: -0.23999023, z: -24.769457}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 216945718}
   m_Father: {fileID: 1143371486}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3233,6 +3238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   main_camera: {fileID: 39912041}
   laptop_camera: {fileID: 1279425558}
+  GUI: {fileID: 0}
 --- !u!61 &204810886
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3400,6 +3406,133 @@ EdgeCollider2D:
   - {x: -1.7750264, y: -3.6423357}
   - {x: 1.0027956, y: -2.437902}
   - {x: -1.7159135, y: -1.0897365}
+--- !u!1 &216945717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216945718}
+  - component: {fileID: 216945719}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &216945718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216945717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 154820791}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &216945719
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216945717}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b46a90536b7929248b9f06d36e24c007, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &218913590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4337,14 +4470,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bcad4e05da438947b518c83c3c00708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   isElevatorActivated: 0
   elevatorDoor: {fileID: 2119975315}
 --- !u!114 &245065828
@@ -4559,14 +4694,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb8ca5888a9baf4aa525dafbeb49a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 1649016017}
   isTimeToTalk: 0
   indicator: {fileID: 1032237509}
   indicatorYPos: 1.71
+  invest_icon_offset: 0
   laptop: {fileID: 1716205473}
   laptopPOV: {fileID: 1279425558}
 --- !u!58 &267319214
@@ -5672,6 +5809,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: e part + e part + e part
   icon: {fileID: 7890885249903857091, guid: bb28f365501552341bc4719da0fa966f, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!212 &325623171
 SpriteRenderer:
@@ -7464,14 +7602,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!1 &477247015
 GameObject:
   m_ObjectHideFlags: 0
@@ -9989,6 +10129,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: more gears!!!
   icon: {fileID: -2457398369473172917, guid: 3336673a3c3d3e64684e1bc5de177252, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!212 &707277289
 SpriteRenderer:
@@ -10141,14 +10282,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ff7f384eb5e6e2408a0c2a075776fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 1649016017}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   robot: {fileID: 735662337}
 --- !u!4 &718094201
 Transform:
@@ -10904,6 +11047,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   computer_camera: {fileID: 1279425560}
+  folder_icon: {fileID: 0}
+  laptop: {fileID: 0}
 --- !u!4 &772591855 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 79777928221558379, guid: 7581abc6e21691047947a45c5da786ea,
@@ -11496,6 +11641,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: 
   icon: {fileID: 3133165347836741161, guid: 296adf52438ea714f9b918f4d44927a0, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!1 &822654560
 GameObject:
@@ -12387,6 +12533,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: 'e part '
   icon: {fileID: 7890885249903857091, guid: bb28f365501552341bc4719da0fa966f, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!212 &889904443
 SpriteRenderer:
@@ -14609,6 +14756,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: e part + e part
   icon: {fileID: 7890885249903857091, guid: bb28f365501552341bc4719da0fa966f, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!212 &1037069369
 SpriteRenderer:
@@ -14887,14 +15035,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1044957006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16178,14 +16328,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1120679665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16275,14 +16427,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eff03401d3743744ab0d87fdd69cdfae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 977623991}
   indicatorYPos: 1.72
+  invest_icon_offset: 0
   UIContainer: {fileID: 1473615253}
   description: {fileID: 2086069185}
   itemIcon: {fileID: 21300000, guid: 9bbb7ffdc39283d4389b8fd33c2bec33, type: 3}
@@ -16796,14 +16950,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf89d89178ec474fbedae9e3564b204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 100004, guid: 7b796b489cc4c447c91c00d4136b0e54, type: 3}
   indicatorYPos: 1.6
+  invest_icon_offset: 0
+  adjusterCamera: {fileID: 0}
+  adjusterUIContainer: {fileID: 0}
 --- !u!58 &1184834282
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16865,14 +17023,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1186866666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18615,14 +18775,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a5fe9c06e55cbc45b8d1adaa6f2e2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 2146700505}
   indicatorYPos: 1.72
+  invest_icon_offset: 0
   tunnelExit: {fileID: 1303024534}
   UIContainer: {fileID: 301286650}
   description: {fileID: 894278807}
@@ -18668,6 +18830,7 @@ MonoBehaviour:
   itemDescriptionAfterUse: it needs its brothers to be useful
   icon: {fileID: 7788272166801629151, guid: 3336673a3c3d3e64684e1bc5de177252, type: 3}
   themeColor: {r: 0, g: 0, b: 0, a: 0}
+  type: 0
   consumable: 0
 --- !u!1 &1297923798
 GameObject:
@@ -19673,14 +19836,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ea1b4fc7cfff1746b59fce367874a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 1649016017}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   to_corridor: {fileID: 1867566129}
   to_roof_top: {fileID: 357932817}
   tile_corridor: {fileID: 1743364354}
@@ -21052,14 +21217,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed7e095a4a3c2b4092f4a91568ab32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!58 &1398327663
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -25619,14 +25786,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &1679210314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29711,6 +29880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stair_blocker: {fileID: 1873673031}
   stair_blocker_2: {fileID: 1894233891}
+  detection: {fileID: 0}
 --- !u!212 &1916648853
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -31159,14 +31329,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3386a87d37d57c4984b1b7bb7502518, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 1
   canNeuro: 1
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
   coffee_cover: {fileID: 1578285572}
 --- !u!61 &1983223526
 BoxCollider2D:
@@ -32754,14 +32926,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
   canUse: 1
   canInven: 0
   canNeuro: 0
+  invest_icon: {fileID: 0}
   runner: {fileID: 0}
-  player: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
+  invest_icon_offset: 0
 --- !u!114 &2049495825
 MonoBehaviour:
   m_ObjectHideFlags: 0
