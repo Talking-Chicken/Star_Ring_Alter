@@ -101,6 +101,10 @@ public class BrokenDoor : InteractiveObj
                     if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("gear"))
                         playerBackpack.backpack.RemoveAt(i);
                 }
+               /* PlayerControl player = FindObjectOfType<PlayerControl>();
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Response_player_action.interact_door.5");*/
+
             } else {
                 PlayerControl player = FindObjectOfType<PlayerControl>();
                 player.ChangeState(player.stateExplore);

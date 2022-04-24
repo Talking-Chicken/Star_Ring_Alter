@@ -10,7 +10,7 @@ public class DeliveryTunnel : InteractiveObj
 
     [SerializeField] GameObject UIContainer;
     [SerializeField] TextMeshProUGUI description;
-
+   
     private PlayerBackpack playerBackpack;
     private StateManager state;
 
@@ -31,6 +31,8 @@ public class DeliveryTunnel : InteractiveObj
 
     public override void interact()
     {
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
         state.transitionState(State.UI);
         UIContainer.SetActive(true);
         if (playerBackpack.contains("maintenance robot") && cofeeBeanCover.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up"))
@@ -43,6 +45,7 @@ public class DeliveryTunnel : InteractiveObj
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
+
         if (cofeeBeanCover.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_up")) {
             if (deliveryItem.ItemName.ToLower().Trim().Contains("maintenance robot")) {
                 GameObject robot = playerBackpack.remove("maintenance robot");

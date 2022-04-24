@@ -13,7 +13,7 @@ using System;
 public class TimeLoopSystem : MonoBehaviour
 {
     private Time_text time;
-    [SerializeField] private int endingHour;
+    [SerializeField] int endingHour;
     private DateTime endingTime;
     void Start()
     {
@@ -27,7 +27,9 @@ public class TimeLoopSystem : MonoBehaviour
 
     void Update()
     {
-        if (time.time >= endingTime) {
+        //  if (time.time >= endingTime)
+        if (Time_text.time_2 >= endingTime)
+        {
             reset();
         }
     }
@@ -38,14 +40,14 @@ public class TimeLoopSystem : MonoBehaviour
     public static void reset()
     {
         
-        FindObjectOfType<Codex>().saveDialgoueNodesCount();
+       FindObjectOfType<Codex>().saveDialgoueNodesCount();
 
         FindObjectOfType<StateManager>().transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
         DateTime today = DateTime.Today;
         Time_text.time_2 = new DateTime(today.Year, today.Month, today.Day, 0, 19, 0);
-        ES3.Save("Condition1",random_conversation.lines, "SaveFile.es3");
+        ES3.Save("Condition1",random_conversation.lines);
         SceneManager.LoadScene("cut_scene_2");
     }
 }

@@ -15,9 +15,11 @@ public class MaintenanceRobot : InteractiveObj
     private PlayerBackpack playerbackpack;
     private StateManager state;
     private Talkable talk;
+    private bool first_time;
 
     [SerializeField, BoxGroup("talking area")]
     private GameObject talkingArea;
+    [SerializeField] string[] parts;
     void Start()
     {
         playerbackpack = FindObjectOfType<PlayerBackpack>();
@@ -27,16 +29,37 @@ public class MaintenanceRobot : InteractiveObj
 
     public override void interact()
     {
-        state.transitionState(State.UI);
-        UIContainer.SetActive(true);
-        if (playerbackpack.contains("operating software"))
+        // state.transitionState(State.UI);
+        //UIContainer.SetActive(true);
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+
+        for (var i = 0; i < random_conversation.lines.Length; i++)
+        {
+            parts = random_conversation.lines[i].Split(',');
+            parts[0] = parts[0].Replace("\r", "");
+
+            if (parts[0].Equals("check_broken_robot") && parts[2].Equals("FALSE"))
+            {
+
+
+                random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "TRUE" + "," + parts[3];
+                first_time = true;
+                break;
+            } else if (parts[0].Equals("check_broken_robot") && parts[2].Equals("TRUE")) { first_time = false; }
+           
+        }
+
+        if (first_time) { player.talkToSelf("MrRabbit.Maintenance_Robot_Start"); } 
+        
+        else if (playerbackpack.contains("operating software"))
             description.text = "use operating software to active the robot?";
         else
-            description.text = "this dude is broken";
+            player.talkToSelf("Response_player_action.interact_robot.1");
 
         //talk about the laptop with Mr.Rabbit
-        talk.getPlayer().NPCToTalk = gameObject;
-        talk.getPlayer().talkToNPC();
+        //talk.getPlayer().NPCToTalk = gameObject;
+        //talk.getPlayer().talkToNPC();
     }
 
     public override void useItem()
@@ -60,6 +83,9 @@ public class MaintenanceRobot : InteractiveObj
     public override void useNeuroImplant()
     {
         //TODO: describe what happens when player trying to use neuro implant
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response_player_action.interact_door.6");
     }
 
     public void exitUI()

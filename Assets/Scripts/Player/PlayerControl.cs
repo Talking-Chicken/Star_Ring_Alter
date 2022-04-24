@@ -10,7 +10,8 @@ using NaughtyAttributes;
 public class PlayerControl : MonoBehaviour
 {   
     public bool CanMove {get; set;}
-
+    [SerializeField] AudioClip pickup;
+    [SerializeField] AudioSource audio;
 
     [BoxGroup("Dialogue")] public GameObject NPCToTalk;
     public static bool canTalk = false;
@@ -221,7 +222,7 @@ public class PlayerControl : MonoBehaviour
     public void pickUp()
     {
         playerBackpack.add(detectingObj);
-       
+        audio.PlayOneShot(pickup);
         detectingObj.SetActive(false);
         detectingObj = null;
     }

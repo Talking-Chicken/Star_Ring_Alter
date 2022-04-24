@@ -43,3 +43,24 @@ position: -45,-75
 ---
 Amo: That is not the right Neural Implant Module.  
 ===
+title: Response_player_action.interact_door.5
+position: -45,-75
+---
+<<SE System_sounds_effect fix_door>>
+Amo: Nice! I have fixed this door!
+===
+title: Response_player_action.interact_door.6
+position: -45,-75
+---
+Mr. Rabbit: I don't think any Neural Implant Module will work on this hardware.
+===
+title: Response_player_action.interact_robot.1
+position: -45,-75
+---
+Mr. Rabbit: You would need a media contain Maintenance Protocol to get this robot running again. Check where Lacey spend most of his time.
+===
+title: Response_player_action.interact_tunnel.1
+position: -45,-75
+---
+Mr. Rabbit: This 
+===
