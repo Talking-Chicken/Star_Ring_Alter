@@ -37,6 +37,21 @@ public class laptop_camera : InteractiveObj
         }
     }
 
+    public override void useItem()
+    {
+        base.useItem();
+        Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
+        if (currentItem.ItemName.ToLower().Trim().Contains("access card")) {
+            laptop.SetActive(true);
+            Cursor.visible = false;
+            laptopPOV.SetActive(true);
+
+            //talk about the laptop with Mr.Rabbit
+            talk.getPlayer().NPCToTalk = gameObject;
+            talk.getPlayer().talkToNPC();
+        }
+    }
+
     IEnumerator waitToChangeState(PlayerStateBase newState) {
         yield return new WaitForSeconds(0.5f);
         FindObjectOfType<PlayerControl>().ChangeState(newState);

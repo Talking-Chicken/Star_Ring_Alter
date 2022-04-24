@@ -14,6 +14,11 @@ public class UIStateMap : UIStateBase
     public override void UpdateState(UIControl UI)
     {
         
+        if (Input.GetKeyDown(UI.Key.next)) {
+            UI.ChangeState(UI.stateMap);
+        } else if (Input.GetKeyDown(UI.Key.previous)) {
+            UI.ChangeState(UI.stateNeuro);
+        }
     }
 
     public override void LeaveState(UIControl UI)
