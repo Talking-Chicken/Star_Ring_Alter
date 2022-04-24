@@ -6,7 +6,7 @@ using TMPro;
 
 public class elevator_control : InteractiveObj
 {
-    // Start is called before the first frame update
+    
     public GameObject to_corridor;
     public GameObject to_roof_top;
     public GameObject tile_corridor;
@@ -65,6 +65,63 @@ public class elevator_control : InteractiveObj
                 description.text = "go back to store";
         }
 
+    }
+
+    public override void useItem()
+    {
+        //TODO: describe what happens after using item for elevator
+    }
+
+    public override void useNeuroImplant()
+    {
+        NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
+        if (app.GetComponent<HackingModule>() != null) {
+            int ePartCount = 0;
+            for (int i = 0; i < playerBackpack.backpack.Count; i++) {
+                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("e part"))
+                    ePartCount++;
+            }
+
+            if (ePartCount >= 3) {
+                for (int i = playerBackpack.backpack.Count-1; i >= 0; i--) {
+                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("e part"))
+                        playerBackpack.backpack.RemoveAt(i);
+                }
+
+                if (state == 1)
+                {
+                    state = 0;
+                    m_Animator.Play("up");
+                    StartCoroutine(moving_up());
+                    sound_effect.PlayOneShot(machine);
+                    tile_corridor.SetActive(false);
+                    tile_roof_top.SetActive(false);
+                    blocker.SetActive(true);
+                    to_corridor.SetActive(false);
+                    to_roof_top.SetActive(false);
+                }
+                if (state == 2)
+                {
+                    state = 3;
+                    m_Animator.Play("down");
+                    sound_effect.PlayOneShot(machine);
+                    StartCoroutine(moving_down());
+                    tile_corridor.SetActive(false);
+                    tile_roof_top.SetActive(false);
+                    blocker.SetActive(true);
+                    to_corridor.SetActive(false);
+                    to_roof_top.SetActive(false);
+                }
+
+                console.isElevatorActivated = true;
+
+                //TODO: tell amo that we are going up
+            } else {
+                //TODO: remind player that they don't have enough e parts
+            }
+        } else {
+            //TODO: describe to player when they trying to use other neuro implant for elevator
+        }
     }
     IEnumerator moving_up()
     {
