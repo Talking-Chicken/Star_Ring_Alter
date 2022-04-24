@@ -64,3 +64,13 @@ position: -45,-75
 ---
 Mr. Rabbit: This 
 ===
+title: Response_player_action.interact_robot.2
+position: -45,-75
+---
+Amo: I have the Maintenance Protocol. I should use it to boot up this Robot's system.
+===
+title: Response_player_action.interact_robot.3
+position: -45,-75
+---
+Amo: Hmmm, I don't think that is the right one.
+===

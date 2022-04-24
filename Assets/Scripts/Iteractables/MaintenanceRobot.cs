@@ -53,9 +53,9 @@ public class MaintenanceRobot : InteractiveObj
         if (first_time) { player.talkToSelf("MrRabbit.Maintenance_Robot_Start"); } 
         
         else if (playerbackpack.contains("operating software"))
-            description.text = "use operating software to active the robot?";
-        else
             player.talkToSelf("Response_player_action.interact_robot.1");
+        else
+            player.talkToSelf("Response_player_action.interact_robot.2");
 
         //talk about the laptop with Mr.Rabbit
         //talk.getPlayer().NPCToTalk = gameObject;
@@ -76,13 +76,16 @@ public class MaintenanceRobot : InteractiveObj
 
             Destroy(this);
         } else {
-            //TODO: using items that is not operating software
+           
+            PlayerControl player = FindObjectOfType<PlayerControl>();
+            player.ChangeState(player.stateExplore);
+            player.talkToSelf("Response_player_action.interact_robot.3");
         }
     }
 
     public override void useNeuroImplant()
     {
-        //TODO: describe what happens when player trying to use neuro implant
+       
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         player.talkToSelf("Response_player_action.interact_door.6");

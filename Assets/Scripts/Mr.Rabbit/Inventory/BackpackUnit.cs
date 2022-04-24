@@ -95,7 +95,8 @@ public class BackpackUnit : MonoBehaviour
         InventoryGUI.currentItemIndex = index;
         InventoryGUIControl.currentUnit = this;
         FindObjectOfType<InventoryGUIControl>().CurrentIndex = Index;
-}
+        //FindObjectOfType<InventoryGUIControl>().setCurrentUnit(this.Index);
+    }
 
     public string getItemName()
     {
