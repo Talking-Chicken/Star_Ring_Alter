@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class BackpackUnit : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class BackpackUnit : MonoBehaviour
     private int index;
     [SerializeField] private Sprite icon;
     private string itemName, itemDescription, itemDescriptionAfterUse;
-    [SerializeField] private Image itemImage;
+    [SerializeField] private Image itemImage, counterImage;
+    [SerializeField] private TextMeshProUGUI counterText;
 
     private PlayerControl playerControl;
 
@@ -48,6 +50,13 @@ public class BackpackUnit : MonoBehaviour
         }
         else
             itemImage.color = new Color(0,0,0,0);
+
+        if (items.Count > 1) {
+            counterImage.gameObject.SetActive(true);
+            counterText.text = items.Count.ToString();
+        } else {
+            counterImage.gameObject.SetActive(false);
+        }
     }
 
     public void setStoredItem(Item storedItem)

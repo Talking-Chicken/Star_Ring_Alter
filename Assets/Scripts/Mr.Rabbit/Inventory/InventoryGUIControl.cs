@@ -58,12 +58,10 @@ public class InventoryGUIControl : MonoBehaviour
     public void showItems() {
         //link item list to player backpack
         items.Clear();
-        if (playerBackpack == null) Debug.Log("playerbackpack is null");
-        if (player == null) Debug.Log("player is null");
         for (int i = 0; i < playerBackpack.backpack.Count; i++) {
-            if (playerBackpack.backpack[i].GetComponent<Item>() != null)
+            if (playerBackpack.backpack[i].GetComponent<Item>() != null) {
                 items.Add(playerBackpack.backpack[i].GetComponent<Item>());
-            else
+            } else
                 Debug.LogWarning(playerBackpack.backpack[i].name + " doesn't have a item component");
         }
         
@@ -71,6 +69,17 @@ public class InventoryGUIControl : MonoBehaviour
         for (int i = 0; i < bakcpackUnits.Count; i++)
         {
             bakcpackUnits[i].items.Clear();
+
+            // foreach(Item item in items) {
+            //     if (bakcpackUnits[i].items.Count > 0) {
+            //         if (item.ItemName.Equals(bakcpackUnits[i].items.Peek().ItemName)) {
+            //             bakcpackUnits[i].items.Enqueue(item);
+            //             items.Remove(item);
+            //         }
+            //     } else {
+            //         bakcpackUnits[i].items.Enqueue(item);
+            //     }
+            // }
             if (items.Count > i)
                 bakcpackUnits[i].items.Enqueue(items[i]);
 
