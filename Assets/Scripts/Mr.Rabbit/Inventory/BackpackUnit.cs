@@ -110,6 +110,7 @@ public class BackpackUnit : MonoBehaviour
 
     public void useItem()
     {
+        Debug.Log("starting using item in backpack unit");
         Item currentItem;
         if (items.Count > 0)
         {
@@ -122,8 +123,10 @@ public class BackpackUnit : MonoBehaviour
         {
             if (playerControl.InteractingObj == null) {
                 currentItem.useItem();
+                Debug.Log("playercontrol.interactingobj is null");
             } else {
                 playerControl.InteractingObj.GetComponent<InteractiveObj>().useItem();
+                Debug.Log("playercontrol.interactingobj is not null: " +playerControl.InteractingObj.name);
             }
 
             //if it's comsumable, remove it from the queue of the backpack unit as well as from playerbackpack list
@@ -138,5 +141,8 @@ public class BackpackUnit : MonoBehaviour
                 resetStoredItem();
             }
         }
+        if (currentItem == null)
+            Debug.Log("current item is null");
+        Debug.Log("finished using item in backpack unit");
     }
 }

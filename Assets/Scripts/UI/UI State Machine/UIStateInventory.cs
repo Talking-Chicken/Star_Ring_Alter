@@ -29,11 +29,6 @@ public class UIStateInventory : UIStateBase
             UI.ChangeState(UI.stateIdle);
             UI.useItem();
         }
-
-        if (!UI.IsInventoryOnly) {
-            if (Input.GetKeyDown(UI.Key.previous))
-                UI.ChangeState(UI.stateMap);
-        }
     }
     public override void LeaveState(UIControl UI) {
         UI.closeGUI();
