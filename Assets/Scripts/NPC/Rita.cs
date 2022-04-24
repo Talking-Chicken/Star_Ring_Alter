@@ -70,6 +70,8 @@ public class Rita : InteractiveObj
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
         if (deliveryItem.ItemName.ToLower().Trim().Contains("gear"))
             TalkingNode = "Rita.React_Gear";
+        else if(deliveryItem.ItemName.ToLower().Trim().Contains("access card"))
+            TalkingNode = "Rita.React_Access";
         else
             TalkingNode = "Rita.React_Other";
 
