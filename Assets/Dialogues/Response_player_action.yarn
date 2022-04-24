@@ -11,10 +11,35 @@ Rita: I "borrowed" that laptop from my dad. It is his bastion host, so you canno
 title: Response_player_action.check_broken_door
 position: -45,-75
 ---
-Amo: The elevator door broken. I need fix it first in order to get to the rooftop.
+Amo: The elevator door broken. I need fix it first in order to get to the rooftop. Maybe find a Maintenance Robot first?
 ===
 title: Response_player_action.access_card
 position: -45,-75
 ---
 Amo: This is Lacey's access card. I may wanna ask Rita about what to do with it.
+===
+title: Response_player_action.use_item_on_door
+position: -45,-75
+---
+Mr. Rabbit: Amo, what are you doing? You cannot just use a item on the door. If you wanna fix door, try use your neural implant or find a Maintenance Robot.
+===
+title: Response_player_action.interact_door.1
+position: -45,-75
+---
+Amo: With the help of neural implant, I now know how to fix it now, but I would need some Mechanical Parts to do that.
+===
+title: Response_player_action.interact_door.2
+position: -45,-75
+---
+Amo: I would need more Mechanical Parts to fix this door.
+===
+title: Response_player_action.interact_door.3
+position: -45,-75
+---
+Amo: Now I have enough Mechanical Parts, I should use my neural implant to fix this door.
+===
+title: Response_player_action.interact_door.4
+position: -45,-75
+---
+Amo: That is not the right Neural Implant Module.  
 ===

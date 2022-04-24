@@ -27,19 +27,22 @@ public class BrokenDoor : InteractiveObj
 
     public override void interact()
     {
-        state.transitionState(State.UI);
-        UIContainer.SetActive(true);
+        // state.transitionState(State.UI);
+        //UIContainer.SetActive(true);
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+    
         if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "engineering module"))
         {
             if (playerBackpack.contains("gear 5") && playerBackpack.contains("gear 4") && playerBackpack.contains("gear 3"))
-                description.text = "spend three gears to fix the door";
+                player.talkToSelf("Response_player_action.interact_door.3");
             else if (playerBackpack.contains("gear 5") || playerBackpack.contains("gear 4") || playerBackpack.contains("gear 3"))
-                description.text = "find more gears to fix the door";
+                player.talkToSelf("Response_player_action.interact_door.2");
             else
-                description.text = "I know how to fix it, but I need gears to fix it";
+                player.talkToSelf("Response_player_action.interact_door.1");
         } else
         {
-            description.text = "it's a broken door, I have no idea how to fix it";
+            player.talkToSelf("Response_player_action.check_broken_door");
         }
 
         
@@ -72,7 +75,9 @@ public class BrokenDoor : InteractiveObj
 
     public override void useItem()
     {
-        //TODO: describe what happens when player trying to use item for broken elevator door
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response_player_action.use_item_on_door");
     }
 
     public override void useNeuroImplant()
@@ -97,10 +102,14 @@ public class BrokenDoor : InteractiveObj
                         playerBackpack.backpack.RemoveAt(i);
                 }
             } else {
-                //TODO: mention about that you don't have enough gear
+                PlayerControl player = FindObjectOfType<PlayerControl>();
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Response_player_action.interact_door.2");
             }
         } else {
-            //TODO: say something if player not showing engineering module
+            PlayerControl player = FindObjectOfType<PlayerControl>();
+            player.ChangeState(player.stateExplore);
+            player.talkToSelf("Response_player_action.interact_door.4");
         }
            
     }
