@@ -211,6 +211,7 @@ public class PlayerControl : MonoBehaviour
             UIControl.ChangeToSelectionState();
         } else
         {
+            UIControl.ChangeToIdleState();
             pickUp();
         }
     }

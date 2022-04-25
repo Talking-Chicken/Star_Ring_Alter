@@ -16,8 +16,10 @@ public class ManagerConsole : InteractiveObj
     public override void interact()
     {
         isElevatorActivated = true;
+        Player.ChangeState(Player.stateExplore);
         if (!triggered) {
             triggered = true;
+            Player.UIControl.ChangeState(Player.UIControl.stateIdle);
             Player.ChangeState(Player.stateExplore);
             if (elevatorDoor.activeSelf)
             {
