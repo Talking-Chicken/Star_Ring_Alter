@@ -34,13 +34,13 @@ public class KeyManager : MonoBehaviour
     private void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.U))
+        /*if (Input.GetKeyDown(KeyCode.U))
         {
             FindObjectOfType<Codex>().saveDialgoueNodesCount();
 
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
-        }
+        }*/
 
         if (Input.GetKeyUp(KeyCode.CapsLock)) {
             Debug.Log("cap");
