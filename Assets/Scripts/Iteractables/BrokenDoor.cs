@@ -34,9 +34,9 @@ public class BrokenDoor : InteractiveObj
     
         if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "engineering module"))
         {
-            if (playerBackpack.contains("gear 5") && playerBackpack.contains("gear 4") && playerBackpack.contains("gear 3"))
+            if (getGearCount() >= 3)
                 player.talkToSelf("Response_player_action.interact_door.3");
-            else if (playerBackpack.contains("gear 5") || playerBackpack.contains("gear 4") || playerBackpack.contains("gear 3"))
+            else if (getGearCount() >= 1)
                 player.talkToSelf("Response_player_action.interact_door.2");
             else
                 player.talkToSelf("Response_player_action.interact_door.1");
@@ -52,7 +52,7 @@ public class BrokenDoor : InteractiveObj
     {
         if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "engineering module"))
         {
-            if (playerBackpack.contains("gear 5") && playerBackpack.contains("gear 4") && playerBackpack.contains("gear 3"))
+            if (getGearCount() >= 3)
             {
                 door.door.SetActive(true);
                 door.gameObject.SetActive(false);
@@ -84,13 +84,8 @@ public class BrokenDoor : InteractiveObj
     {
         NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
         if (app.GetComponent<EngineeringModule>() != null) {
-            int gearCount = 0;
-            for (int i = 0; i < playerBackpack.backpack.Count; i++) {
-                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("gear"))
-                    gearCount++;
-            }
 
-            if (gearCount >= 3) {
+            if (getGearCount() >= 3) {
                 door.door.SetActive(true);
                 door.gameObject.SetActive(false);
 
@@ -98,7 +93,7 @@ public class BrokenDoor : InteractiveObj
                     talkingArea.SetActive(true);
 
                 for (int i = playerBackpack.backpack.Count-1; i >= 0; i--) {
-                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("gear"))
+                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("mechanical parts"))
                         playerBackpack.backpack.RemoveAt(i);
                 }
                /* PlayerControl player = FindObjectOfType<PlayerControl>();
@@ -114,7 +109,15 @@ public class BrokenDoor : InteractiveObj
             PlayerControl player = FindObjectOfType<PlayerControl>();
             player.ChangeState(player.stateExplore);
             player.talkToSelf("Response_player_action.interact_door.4");
-        }
-           
+        }  
+    }
+
+    public int getGearCount() {
+        int gearCount = 0;
+            for (int i = 0; i < playerBackpack.backpack.Count; i++) {
+                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("mechanical parts"))
+                    gearCount++;
+            }
+        return gearCount;
     }
 }
