@@ -23,7 +23,7 @@ public class Rita : InteractiveObj
   
         if (Time_text.time_2.Minute >= 21)
         {
-            talkingNode = "Rita.2";
+           // talkingNode = "Rita.2";
             anim.Play("rita_gaming");
             
         }
@@ -40,10 +40,22 @@ public class Rita : InteractiveObj
     }
     public override void interact()
     {
+        
         PlayerControl player = FindObjectOfType<PlayerControl>();
-        CSV();
-        player.ChangeState(player.stateExplore);
-        player.talkToSelf(talkingNode);
+        if (Time_text.time_2.Minute >= 21)
+        {
+            talkingNode = "Rita.2";
+            player.ChangeState(player.stateExplore);
+            player.talkToSelf(talkingNode);
+            //anim.Play("rita_gaming");
+
+        }
+        else {
+            CSV();
+            player.ChangeState(player.stateExplore);
+            player.talkToSelf(talkingNode);
+        }
+        
     }
 
     void CSV()

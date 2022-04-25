@@ -169,7 +169,8 @@ Amo: Let me check my neural implant. That device is left on the second floor, th
 <<elseif searchAppInDownload("engineering module")>>
     Mr. Rabbit: You'll be able to fix that door yourself if you can find some spare Mechanical Parts. That neural implant makes it so you can overcome simple engineering challenges like that. 
     Amo: Simple? I thought that Neural Implant with an engineering module would make me a real engineer! At least that's what I heard from advertisements in the re-education camp. 
-    Mr. Rabbit: In principle, yes. Take soldering, for example, Neural Implant can grant you better control over your body, so you won’t burn yourself while soldering, and it will tell you where to put your solder. Still, you have to do the soldering yourself. The Neural Implant will inform you of what to do and aid you in motor control, but without practical experience and education, you won't ever become an expert engineer. 
+    Mr. Rabbit: In principle, yes. Take soldering, for example, Neural Implant can grant you better control over your body, so you won’t burn yourself while soldering, and it will tell you where to put your solder. 
+    Mr. Rabbit: Still, you have to do the soldering yourself. The Neural Implant will inform you of what to do and aid you in motor control, but without practical experience and education, you won't ever become an expert engineer. 
 <<endif>>
 ===
 title: MrRabbit.Rita_Laptop_Intro
