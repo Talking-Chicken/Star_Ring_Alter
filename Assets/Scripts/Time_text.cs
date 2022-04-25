@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Time_text : MonoBehaviour
 {
+    [SerializeField] private GameObject container;
     public DateTime time;
     private TMP_Text textClock;
     public static DateTime time_2;
@@ -23,11 +25,15 @@ public class Time_text : MonoBehaviour
    
     void Update()
     {
+        if (SceneManager.GetActiveScene().name.Equals("Main_1"))
+            isTimePaused = true;
+
         string minute = LeadingZero(time.Minute);
         string second = LeadingZero(time.Second);
         textClock.text = minute + ":" + second;
-      
-        if (time.Minute==24) {
+
+        if (time.Minute == 24)
+        {
             time = new DateTime(time.Year, time.Month, time.Day, time.Hour, 0, 0);
             time_2 = time;
         }

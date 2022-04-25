@@ -14,8 +14,7 @@ public class elevator_control : InteractiveObj
     public GameObject blocker;
     Animator m_Animator;
     private int state;//0=moving up 1=first floor 2=second floor 3=moving down
-    [SerializeField] AudioSource audio;
-    [SerializeField] AudioClip clip;
+    
     [SerializeField, BoxGroup("control access")]
     private ManagerConsole console;
 
@@ -65,12 +64,12 @@ public class elevator_control : InteractiveObj
             if (state == 1)
             {
                 player.talkToSelf("Response_player_action.interact_elevator.2");
-                audio.PlayOneShot(clip);
+              
             }
             if (state == 2)
             {
                 player.talkToSelf("Response_player_action.interact_elevator.3");
-                audio.PlayOneShot(clip);
+               
             }
             }
 
@@ -129,7 +128,7 @@ public class elevator_control : InteractiveObj
                 console.isElevatorActivated = true;
 
                 player.talkToSelf("Response_player_action.interact_elevator.10");
-                audio.PlayOneShot(clip);
+               
             } else {
                 player.talkToSelf("Response_player_action.interact_elevator.9");
             }

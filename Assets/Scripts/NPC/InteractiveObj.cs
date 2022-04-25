@@ -41,7 +41,7 @@ public class InteractiveObj : MonoBehaviour
     {
         playerControl = FindObjectOfType<PlayerControl>();
         //invest_icon = GameObject.FindGameObjectWithTag("invest_icon");
-        main_character = GameObject.Find("main_character");
+        main_character = FindObjectOfType<PlayerControl>().gameObject;
         indicatorPos = position + new Vector2(0, indicatorYPos);
         playerControl = FindObjectOfType<PlayerControl>();
     }
@@ -49,10 +49,10 @@ public class InteractiveObj : MonoBehaviour
     void Update()
     {
         if (invest_icon == null) GameObject.FindGameObjectWithTag("invest_icon");
-        if (playerControl == null) playerControl = FindObjectOfType<PlayerControl>();
-        if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character&& PlayerControl.show_invest)
+        if (playerControl == null) playerControl = FindObjectOfType<PlayerControl>();   
+        if (main_character == null) main_character = FindObjectOfType<PlayerControl>().gameObject;
+        if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character && PlayerControl.show_invest)
         {
-
             invest_icon_set();
         }
         else { invest_icon.SetActive(false); }

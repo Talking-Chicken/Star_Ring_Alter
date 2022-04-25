@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using UnityEngine.SceneManagement;
 
 public class UIControl : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
     [SerializeField, BoxGroup("Selection Menu QE")] public GameObject QEkeyContainer;
     private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
+
+    public bool isInMain_1 = false;
 
     //delegate
     public delegate void CloseWindows();
@@ -107,6 +110,13 @@ public class UIControl : MonoBehaviour
     {
         Key = FindObjectOfType<KeyManager>();
         currentState = stateIdle;
+
+        if (SceneManager.GetActiveScene().name.Equals("Main_1"))
+        {
+            Debug.Log("22");
+            isInMain_1 = true;
+        }
+        Debug.Log(SceneManager.GetActiveScene().name);
     }
 
     

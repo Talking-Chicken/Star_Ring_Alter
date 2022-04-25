@@ -9,12 +9,16 @@ public class UIStateIdle : UIStateBase
         UI.closeSelectionMenu();
     }
     public override void UpdateState(UIControl UI) {
-        if (Input.GetKeyUp(KeyCode.Tab))
-            UI.openNeuro();
-        if (Input.GetKeyUp(UI.Key.openBackpack))
-            UI.openInventory();
-        if (Input.GetKeyUp(UI.Key.openNeuro))
-            UI.openNeuro();
+        if (!UI.isInMain_1)
+        {
+            
+            if (Input.GetKeyUp(KeyCode.Tab))
+                UI.openNeuro();
+            if (Input.GetKeyUp(UI.Key.openBackpack))
+                UI.openInventory();
+            if (Input.GetKeyUp(UI.Key.openNeuro))
+                UI.openNeuro();
+        }
     }
     public override void LeaveState(UIControl UI) {
         //change player state when change UI state into state that have real funtionality

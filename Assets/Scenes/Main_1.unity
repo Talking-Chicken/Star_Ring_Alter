@@ -16441,6 +16441,7 @@ MonoBehaviour:
   description: {fileID: 2086069185}
   itemIcon: {fileID: 21300000, guid: 9bbb7ffdc39283d4389b8fd33c2bec33, type: 3}
   talkingArea: {fileID: 1452644628}
+  parts: []
 --- !u!114 &1124323452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18788,6 +18789,8 @@ MonoBehaviour:
   tunnelExit: {fileID: 1303024534}
   UIContainer: {fileID: 301286650}
   description: {fileID: 894278807}
+  audio: {fileID: 0}
+  clip: {fileID: 0}
   cofeeBeanCover: {fileID: 1578285572}
   talkingArea: {fileID: 2021890031}
   sentRobot: 0
@@ -18957,6 +18960,131 @@ EdgeCollider2D:
   - {x: 8.391487, y: -5.541794}
   - {x: -2.6242065, y: 0.15209961}
   - {x: -9.140985, y: -1.9811859}
+--- !u!1001 &1300772717
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1921139694}
+    m_Modifications:
+    - target: {fileID: 3994244217658591428, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_Name
+      value: New Mr Rabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244217658591430, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1649016017}
+    - target: {fileID: 3994244217658591430, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: timeGUI
+      value: 
+      objectReference: {fileID: 721165124}
+    - target: {fileID: 3994244218286716802, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994244218644521924, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: runner
+      value: 
+      objectReference: {fileID: 1946369523}
+    - target: {fileID: 3994244218866833486, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057337857244642480, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057337857244642480, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057337857244642480, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057337857244642480, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5057337857244642480, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f9cd128eff2cc14cbb499e7d99df06c, type: 3}
+--- !u!4 &1300772718 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3994244217658591429, guid: 0f9cd128eff2cc14cbb499e7d99df06c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1300772717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1303024534
 GameObject:
   m_ObjectHideFlags: 0
@@ -29473,6 +29601,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1649016017}
+    - target: {fileID: 1914786735, guid: 4c182fcce7f8e0e42b09568e02eb5a9a, type: 3}
       propertyPath: timeGUI
       value: 
       objectReference: {fileID: 406263669}
@@ -29594,6 +29726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mr.Rabbit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6292406906279106806, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6292406906279106811, guid: 4c182fcce7f8e0e42b09568e02eb5a9a,
         type: 3}
@@ -29983,6 +30120,7 @@ Transform:
   - {fileID: 336990373}
   - {fileID: 345246713}
   - {fileID: 1200730492}
+  - {fileID: 1300772718}
   m_Father: {fileID: 0}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
