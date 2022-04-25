@@ -14,7 +14,7 @@ public class UIStateIntel : UIStateBase
     public override void UpdateState(UIControl UI)
     {
         if (Input.GetKeyDown(UI.Key.previous)) {
-            UI.ChangeState(UI.stateMap);
+            UI.ChangeState(UI.stateInventory);
         }
     }
 

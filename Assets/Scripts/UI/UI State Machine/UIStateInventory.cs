@@ -34,6 +34,8 @@ public class UIStateInventory : UIStateBase
         if (!UI.IsInventoryOnly) {
             if (Input.GetKeyDown(UI.Key.previous)) {
                 UI.ChangeState(UI.stateMap);
+            } else if (Input.GetKeyDown(UI.Key.next)) {
+                UI.ChangeState(UI.stateIntel);
             }
         }
     }
