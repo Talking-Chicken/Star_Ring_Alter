@@ -13,6 +13,7 @@ using System;
 public class TimeLoopSystem : MonoBehaviour
 {
     private Time_text time;
+    public static int time_loop_count;
     [SerializeField] int endingHour;
     private DateTime endingTime;
     void Start()
