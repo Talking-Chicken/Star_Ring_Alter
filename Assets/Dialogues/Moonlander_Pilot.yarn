@@ -3,6 +3,6 @@ tags:
 colorID: 0
 position: 1722,555
 ---
-Moonlander Pilot: Mayday, mayday! This is Lunar Module Suisei. Request immediate help! This module is under stall warning and will crash into a populated area at any moment.
+Moonlander Pilot: Mayday, mayday! This is Lunar Module Suisei. Requesting immediate aid! This module is under stall warning and will crash into a populated area at any moment!
 <<Load_Scene falling_moon_lander Main_1>>
 ===

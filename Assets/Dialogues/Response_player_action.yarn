@@ -1,17 +1,17 @@
 ﻿title: Response_player_action.Rita.1
 tags:
 ---
-Rita: If you wanna use that laptop, you will need a Electronic Media first, like a access card.
+Rita: If you wanna use that laptop, you will need to insert some sort of Electronic Media first, like an access card.
 ===
 title: Response_player_action.Rita.2
 position: -45,-75
 ---
-Rita: I "borrowed" that laptop from my dad. It is his bastion host, so you cannot access it through neural implant. Only physical interaction is allowed. 
+Rita: I "borrowed" that laptop from my dad. It is his bastion host, so you cannot access it through neural implant. Only physical interaction is allowed. Isn't that cool? 
 ===
 title: Response_player_action.check_broken_door
 position: -45,-75
 ---
-Amo: The elevator door broken. I need fix it first in order to get to the rooftop. Maybe find a Maintenance Robot first?
+Amo: Door's busted. I'll need fix it first in order to get to the rooftop. Maybe find a Maintenance Robot first?
 ===
 title: Response_player_action.access_card
 position: -45,-75
@@ -21,12 +21,12 @@ Amo: This is Lacey's access card. I may wanna ask Rita about what to do with it.
 title: Response_player_action.use_item_on_door
 position: -45,-75
 ---
-Mr. Rabbit: Amo, what are you doing? You cannot just use a item on the door. If you wanna fix door, try use your neural implant or find a Maintenance Robot.
+Mr. Rabbit: Amo, what are you doing? You can't just use a item on the door. If you wanna fix door, try use your neural implant or find a Maintenance Robot.
 ===
 title: Response_player_action.interact_door.1
 position: -45,-75
 ---
-Amo: With the help of neural implant, I now know how to fix it now, but I would need some Mechanical Parts to do that.
+Amo: With the help of neural implant, I now know how to fix it now, but I'd need some Mechanical Parts to achieve that.
 ===
 title: Response_player_action.interact_door.2
 position: -45,-75
@@ -47,7 +47,7 @@ title: Response_player_action.interact_door.5
 position: -45,-75
 ---
 <<SE System_sounds_effect fix_door>>
-Amo: Nice! I have fixed this door!
+Amo: Door's fixed! Nice.
 ===
 title: Response_player_action.interact_door.6
 position: -45,-75
@@ -57,7 +57,7 @@ Mr. Rabbit: I don't think any Neural Implant Module will work on this hardware.
 title: Response_player_action.interact_robot.1
 position: -45,-75
 ---
-Mr. Rabbit: You would need a media contain Maintenance Protocol to get this robot running again. Check where Lacey spend most of his time.
+Mr. Rabbit: You'd need a media containing the Maintenance Protocol to get this robot running again. Check where Lacey spends most of his time.
 ===
 title: Response_player_action.interact_tunnel.1
 position: -45,-75
@@ -133,12 +133,12 @@ Amo: I have enough Electronic Components now. I can use my Hacking Module to hac
 title: Response_player_action.interact_elevator.8
 position: -45,-75
 ---
-Mr. Rabbit: That is not the right Neural Implant Module.
+Mr. Rabbit: That's not the right Neural Implant Module.
 ===
 title: Response_player_action.interact_elevator.9
 position: -45,-75
 ---
-Mr. Rabbit: Amo! You need more Electronic Components to hack this terminal.
+Mr. Rabbit: Amo, slow down! You need more Electronic Components to hack this terminal.
 ===
 title: Response_player_action.interact_elevator.10
 position: -45,-75
@@ -153,5 +153,5 @@ Mr. Rabbit: You can use that with your Neural Implant, if you have the right mod
 title: Response.Portorcal
 position: -45,-75
 ---
-Mr. Rabbit: That is operating system for robot.
+Mr. Rabbit: That's the operating system for robot.
 ===
