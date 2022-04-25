@@ -8,14 +8,14 @@ public class Rita : InteractiveObj
     [SerializeField] Animator anim;
 
     bool once;
-
+    bool none = false;
    [SerializeField] string[] parts;
     public string TalkingNode { get => talkingNode; set => talkingNode = value;}
 
     private void Start()
     {
-        once = true;
-        CSV();
+        none = false;
+      //  CSV();
 
     }
     private void Update()
@@ -41,6 +41,7 @@ public class Rita : InteractiveObj
     public override void interact()
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
+        CSV();
         player.ChangeState(player.stateExplore);
         player.talkToSelf(talkingNode);
     }
@@ -59,8 +60,27 @@ public class Rita : InteractiveObj
                 talkingNode = parts[0];
                 
                 random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "FALSE" + "," + parts[3];
+                none = true;
                break;
             }
+        }
+        if (none == false)
+        {
+            for (var i = 0; i < random_conversation.lines.Length; i++)
+            {
+                parts = random_conversation.lines[i].Split(',');
+                parts[3] = parts[3].Replace("\r", "");
+
+                if (parts[3].Equals("dialogue") && parts[2].Equals("FALSE"))
+                {
+                    talkingNode = parts[0];
+
+                    random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "TRUE" + "," + parts[3];
+                    none = true;
+                    break;
+                }
+            }
+            CSV();
         }
     }
 
