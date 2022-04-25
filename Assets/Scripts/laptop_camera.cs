@@ -21,21 +21,8 @@ public class laptop_camera : InteractiveObj
     public override void interact()
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
-        if (playerBackpack.contains("access card") && !laptop.activeSelf)
-        {
-            player.ChangeState(player.stateUI);
-            laptop.SetActive(true);
-            Cursor.visible = false;
-            laptopPOV.SetActive(true);
-
-            //talk about the laptop with Mr.Rabbit
-            talk.getPlayer().NPCToTalk = gameObject;
-            talk.getPlayer().talkToNPC();
-
-            //Display.displays[1].Activate();
-        } else {
-            StartCoroutine(waitToChangeState(FindObjectOfType<PlayerControl>().stateExplore));
-        }
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response_player_action.Rita.1");
     }
 
     public override void useItem()
@@ -58,7 +45,9 @@ public class laptop_camera : InteractiveObj
 
     public override void useNeuroImplant()
     {
-        //TODO: describe what happens if player trying to use neuro implant for rita's laptop
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response_player_action.Rita.2");
     }
 
     IEnumerator waitToChangeState(PlayerStateBase newState) {
