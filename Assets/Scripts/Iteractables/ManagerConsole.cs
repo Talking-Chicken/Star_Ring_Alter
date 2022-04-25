@@ -17,7 +17,8 @@ public class ManagerConsole : InteractiveObj
     {
         isElevatorActivated = true;
         Player.ChangeState(Player.stateExplore);
-        if (!triggered) {
+        if (!triggered)
+        {
             triggered = true;
             Player.UIControl.ChangeState(Player.UIControl.stateIdle);
             Player.ChangeState(Player.stateExplore);
@@ -25,11 +26,16 @@ public class ManagerConsole : InteractiveObj
             {
                 Player.NPCToTalk = gameObject;
                 Player.talkToNPC("MrRabbit.Manager_Office_Elevator_Access_Fixed");
-            } else
+            }
+            else
             {
                 Player.NPCToTalk = gameObject;
                 Player.talkToNPC("MrRabbit.Manager_Office_Elevator_Access_UnFixed");
             }
+        }
+        else {
+            Player.NPCToTalk = gameObject;
+            Player.talkToNPC("Manager.DoubleCheck");
         }
     }
 }

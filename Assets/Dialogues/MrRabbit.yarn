@@ -293,7 +293,7 @@ tags: Manager_Office Elevator
 colorID: 5
 position: 4120,1020
 ---
-System Warning: The elevator will remaining lockdown until the maintenance procedure is over.
+System Warning: Unlock elevator pannel. The elevator will remaining nonoperational until the maintenance procedure is over.
 ===
 title: MrRabbit.Amo_Toy_Start
 tags: 
@@ -496,4 +496,9 @@ position: 408,758.5
 Amo: Alright, I have moved all the things you request.
 
 Mr. Rabbit: Thanks, Amo. You can check around to clear your mind, when you are ready, go to that communication device.
+===
+title: Manager.DoubleCheck
+position: 408,758.5
+---
+Mr. Rabbit: There is nothing to do here.
 ===
