@@ -39,7 +39,9 @@ public class laptop_camera : InteractiveObj
             talk.getPlayer().NPCToTalk = gameObject;
             talk.getPlayer().talkToNPC();
         } else {
-            //TODO: describe what happens if player trying to use other items
+           
+            player.ChangeState(player.stateExplore);
+            player.talkToSelf("Response_player_action.Rita.1");
         }
     }
 

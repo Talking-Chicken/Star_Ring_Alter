@@ -16,6 +16,7 @@ public class laptop_manager : MonoBehaviour
   
     public GameObject loading_back;
     public GameObject drag_object;
+    [SerializeField] GameObject exit_icon;
     public Sprite folder_icon;
 
     [SerializeField, BoxGroup("access")]
@@ -37,7 +38,7 @@ public class laptop_manager : MonoBehaviour
             
             A = false;
         }
-       
+   
         if (loading_bar.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("finish_loading"))
         {
             loading_back.SetActive(false);
@@ -65,6 +66,7 @@ public class laptop_manager : MonoBehaviour
             {
                 accessCard = FindObjectOfType<PlayerBackpack>().getItem("access card").GetComponent<AccessCard>();
                 accessCard.level = 2;
+                exit_icon.SetActive(true);
             }
 
             Destroy(drag_object);
