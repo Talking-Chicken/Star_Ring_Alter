@@ -456,7 +456,7 @@ Moonlander Pilot: I don’t know. Readings on the dashboard are all off the char
     -> ten
         Moonlander Pilot: I knew it! The right answer is 4! I really can't believe it! I don't care who you are, do you think you should make such a dreadful joke at this critical moment? At a moment when people's lives are at stake! If my lunar module crashes into the city, thousands of lives will be lost, my life will be lost.
 
-    (static noise)
+    Moonlander Pilot: static noise
     <<set_moon_lander_camera_inactive Dialogue>>
 
 -> No...
@@ -464,7 +464,7 @@ Moonlander Pilot: I don’t know. Readings on the dashboard are all off the char
 
     Moonlander Pilot: I am gonna end our communication. Don’t occupy this channel any more. Every second you just wasted could have caused thousands of lives at stake!
 
-    (static noise)
+    Moonlander Pilot: static noise
     <<set_moon_lander_camera_inactive Dialogue>>
 
 Mr. Rabbit: We lost her signal, she must enter the atmosphere, the ionization blackout cuts any electronic signal. 
@@ -483,7 +483,13 @@ Mr. Rabbit: I am sorry, Amo, but like she said, we are not professionals. This w
 
 Mr. Rabbit: Let’s head back to the store, there is nothing we can do here. Now I have the frequency of her distress signal, we can communicate to her even in the store.  
 
+Amo: There is still chance, I can answer her question in the next time loop.
 
 
-Mr.Rabbit: End of Milestone Demo Presented By Star Ring Team （David Liao & Leo Ji & Arnee Wen & Duan Yichen）
+Thank You: End of Sloan Grant Demo Presented By Star Ring Team (David Liao & Leo Ji & Arnee Wen & Duan Yichen)
+===
+title: Rabbit.New_loop
+position: 408,758.5
+---
+Mr. Rabbit: 
 ===

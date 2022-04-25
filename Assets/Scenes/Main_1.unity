@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -30667,6 +30667,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1921139694}
     m_Modifications:
+    - target: {fileID: 803834661, guid: 93b173fbc1c022843b157310e9aa4e8a, type: 3}
+      propertyPath: moonLanderCamera
+      value: 
+      objectReference: {fileID: 154820787}
     - target: {fileID: 2904160361090383376, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
