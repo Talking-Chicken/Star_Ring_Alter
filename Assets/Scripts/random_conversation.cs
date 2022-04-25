@@ -27,10 +27,12 @@ public class random_conversation : MonoBehaviour
     void Update()
     {
         if (Time_text.time_2.Minute>=23&&once) {
-         player.talkToSelf("Random_dialogue.Time_Remind");
+            player.ChangeState(player.stateExplore);
+            player.talkToSelf("Random_dialogue.Time_Remind");
             once = false;
         }
-        if (Time_text.time_2.Minute >=23 && Time_text.time_2.Second >= 58&&once1) { 
+        if (Time_text.time_2.Minute >=23 && Time_text.time_2.Second >= 58&&once1) {
+            player.ChangeState(player.stateExplore);
             player.talkToSelf("Random_dialogue.End_Remind"); 
             once1 = false; 
         }
