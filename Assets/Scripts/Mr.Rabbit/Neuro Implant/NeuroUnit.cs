@@ -49,6 +49,11 @@ public class NeuroUnit : MonoBehaviour
     {
         NeuroGUIControl.currentUnit = this;
         FindObjectOfType<NeuroGUIControl>().CurrentIndex = Index;
+        //TODO: write this part in neuro gui control
+        if (NeuroGUIControl.currentUnit.neuroApp != null)
+            FindObjectOfType<NeuroGUIControl>().showInfo(NeuroGUIControl.currentUnit.NeuroApp);
+        else
+            FindObjectOfType<NeuroGUIControl>().showInfo(null);
     }
 
     public void useNeuroImplant() 

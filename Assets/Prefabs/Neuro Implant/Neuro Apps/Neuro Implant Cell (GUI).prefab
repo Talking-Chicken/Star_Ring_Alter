@@ -89,9 +89,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOverride: 1
-  appName: GUI module
+  appName: Personal Information Assistant
   memoryStorage: 3
-  description: See the World
+  description: 'A module developed by the Life Department of Rabbit Heavy Industry.
+    It will automatically read the wireless modules of electronic devices in the
+    user''s vicinity and display them on their retina. Many labor organizations have
+    mentioned that this device has improved the work efficiency of workers in complex
+    electronic environments. The software also supports displaying personal information
+    such as the user''s location and local time.  **Do not remove this module without
+    the guidance and permission of a professional. Any damage caused by the unauthorized
+    operation is not the responsibility of Rabbit Heavy Industry and its properties** '
   descriptionAfterUse: 
   icon: {fileID: 1931027794438572486, guid: 3ca7427e22e60824489b3f79e98bd5e2, type: 3}
   type: 2
