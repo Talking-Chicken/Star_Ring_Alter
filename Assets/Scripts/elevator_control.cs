@@ -14,7 +14,8 @@ public class elevator_control : InteractiveObj
     public GameObject blocker;
     Animator m_Animator;
     private int state;//0=moving up 1=first floor 2=second floor 3=moving down
-
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip clip;
     [SerializeField, BoxGroup("control access")]
     private ManagerConsole console;
 
@@ -42,39 +43,51 @@ public class elevator_control : InteractiveObj
 
     public override void interact()
     {
-        stateManager.transitionState(State.UI);
-        UIContainer.SetActive(true);
+        //stateManager.transitionState(State.UI);
+       // UIContainer.SetActive(true);
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
         if (!console.isElevatorActivated)
         {
             if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "hacking module"))
             {
                 if (playerBackpack.contains("e part 0") && playerBackpack.contains("e part 1") && playerBackpack.contains("e part 3"))
-                    description.text = "spend 3 e parts to hack this elevator";
+                    player.talkToSelf("Response_player_action.interact_elevator.7");
                 else if (playerBackpack.contains("e part 0") || playerBackpack.contains("e part 1") || playerBackpack.contains("e part 3"))
-                    description.text = "I know how to hack it, but I need more e parts";
+                    player.talkToSelf("Response_player_action.interact_elevator.6");
                 else
-                    description.text = "I have no e parts to help me hack it";
+                    player.talkToSelf("Response_player_action.interact_elevator.5");
             }
             else
-                description.text = "looks like I don't have access to use this elevator";
+                player.talkToSelf("Response_player_action.interact_elevator.4");
         } else
         {
             if (state == 1)
-                description.text = "go to the roof?";
+            {
+                player.talkToSelf("Response_player_action.interact_elevator.2");
+                audio.PlayOneShot(clip);
+            }
             if (state == 2)
-                description.text = "go back to store";
-        }
+            {
+                player.talkToSelf("Response_player_action.interact_elevator.3");
+                audio.PlayOneShot(clip);
+            }
+            }
 
     }
 
     public override void useItem()
     {
-        //TODO: describe what happens after using item for elevator
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response_player_action.interact_elevator.1");
     }
 
     public override void useNeuroImplant()
     {
         NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
         if (app.GetComponent<HackingModule>() != null) {
             int ePartCount = 0;
             for (int i = 0; i < playerBackpack.backpack.Count; i++) {
@@ -115,12 +128,13 @@ public class elevator_control : InteractiveObj
 
                 console.isElevatorActivated = true;
 
-                //TODO: tell amo that we are going up
+                player.talkToSelf("Response_player_action.interact_elevator.10");
+                audio.PlayOneShot(clip);
             } else {
-                //TODO: remind player that they don't have enough e parts
+                player.talkToSelf("Response_player_action.interact_elevator.9");
             }
         } else {
-            //TODO: describe to player when they trying to use other neuro implant for elevator
+            player.talkToSelf("Response_player_action.interact_elevator.8");
         }
     }
     IEnumerator moving_up()

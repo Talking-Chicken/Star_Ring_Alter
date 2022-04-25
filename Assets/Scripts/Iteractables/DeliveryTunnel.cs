@@ -10,7 +10,8 @@ public class DeliveryTunnel : InteractiveObj
 
     [SerializeField] GameObject UIContainer;
     [SerializeField] TextMeshProUGUI description;
-   
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip clip;
     private PlayerBackpack playerBackpack;
     private StateManager state;
 
@@ -64,6 +65,7 @@ public class DeliveryTunnel : InteractiveObj
                 FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
                 FindObjectOfType<PlayerControl>().UIControl.closeWindows();
                 player.talkToSelf("Response_player_action.interact_tunnel.5");
+                audio.PlayOneShot(clip);
 
             }
         }else {

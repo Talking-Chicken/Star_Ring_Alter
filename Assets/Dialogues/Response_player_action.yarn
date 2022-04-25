@@ -95,3 +95,53 @@ position: -45,-75
 <<SE System_sounds_effect drop>>
 Amo: Alright, I throw that stuff. If Mr. Rabbit was right I may find it around corridor.
 ===
+title: Response_player_action.interact_elevator.1
+position: -45,-75
+---
+Amo: I don't think anything I have now will work here.
+===
+title: Response_player_action.interact_elevator.2
+position: -45,-75
+---
+Amo: Time to go the rooftop.
+===
+title: Response_player_action.interact_elevator.3
+position: -45,-75
+---
+Amo: Going down.
+===
+title: Response_player_action.interact_elevator.4
+position: -45,-75
+---
+Mr. Rabbit: This elevator is still in the lock-down mode. You should use the terminal in the manager officer or hack it through the neural implant to unlock it.
+===
+title: Response_player_action.interact_elevator.5
+position: -45,-75
+---
+Amo: With the help of neural implant, I now know how to hack this terminal, but I would need some Electronic Components to do that.
+===
+title: Response_player_action.interact_elevator.6
+position: -45,-75
+---
+Amo: I would need more Electronic Components to hack this terminal.
+===
+title: Response_player_action.interact_elevator.7
+position: -45,-75
+---
+Amo: I have enough Electronic Components now. I can use my Hacking Module to hack this elevator.
+===
+title: Response_player_action.interact_elevator.8
+position: -45,-75
+---
+Mr. Rabbit: That is not the right Neural Implant Module.
+===
+title: Response_player_action.interact_elevator.9
+position: -45,-75
+---
+Mr. Rabbit: Amo! You need more Electronic Components to hack this terminal.
+===
+title: Response_player_action.interact_elevator.10
+position: -45,-75
+---
+Mr. Rabbit: You've hacked the terminal. Time to go to the rooftop.
+===
