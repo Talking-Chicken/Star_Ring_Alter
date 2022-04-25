@@ -145,3 +145,13 @@ position: -45,-75
 ---
 Mr. Rabbit: You've hacked the terminal. Time to go to the rooftop.
 ===
+title: Response.gear
+position: -45,-75
+---
+Mr. Rabbit: You can use that with your Neural Implant, if you have the right module installed.
+===
+title: Response.Portorcal
+position: -45,-75
+---
+Mr. Rabbit: That is operating system for robot.
+===

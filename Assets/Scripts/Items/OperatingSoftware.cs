@@ -7,7 +7,10 @@ public class OperatingSoftware : Item
 
     public override void useItem()
     {
-        setDescriptionAfterUse("how you want to use it? you suppose to plug it into somewhere");
-        Debug.Log("using operating software");
+        // setDescriptionAfterUse("how you want to use it? you suppose to plug it into somewhere");
+        // Debug.Log("using operating software");
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        player.talkToSelf("Response.Portorcal");
     }
 }
