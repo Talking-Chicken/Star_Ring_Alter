@@ -1261,6 +1261,9 @@ MonoBehaviour:
   yarnScripts:
   - {fileID: 2480198943629176163, guid: 7466ad2a413554945a9c35504140fa6e, type: 3}
   - {fileID: 2480198943629176163, guid: e923f99f24f6dde4cbb12371727d4daf, type: 3}
+  - {fileID: 2480198943629176163, guid: c27d26189ebf4ed45abfeceac6e34f03, type: 3}
+  - {fileID: 2480198943629176163, guid: e10dab6b658540b429473f6dc4246a07, type: 3}
+  - {fileID: 2480198943629176163, guid: 34322fd6caf086b42895ac25b437bc5a, type: 3}
   textLanguage: 
   variableStorage: {fileID: 2904160361790625057}
   dialogueUI: {fileID: 2904160361090383376}
@@ -1391,8 +1394,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1444,6 +1447,7 @@ GameObject:
   - component: {fileID: 2904160362190626952}
   - component: {fileID: 2904160362190626958}
   - component: {fileID: 2904160362190626953}
+  - component: {fileID: 647797303}
   m_Layer: 5
   m_Name: Name Text (TMP)
   m_TagString: Untagged
@@ -1525,8 +1529,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1567,3 +1571,16 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &647797303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2904160362190626955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aabec81549204254ab62a026942e9b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textobj: {fileID: 2904160362190626953}
