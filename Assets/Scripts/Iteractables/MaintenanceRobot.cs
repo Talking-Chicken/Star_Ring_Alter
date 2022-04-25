@@ -52,7 +52,7 @@ public class MaintenanceRobot : InteractiveObj
 
         if (first_time) { player.talkToSelf("MrRabbit.Maintenance_Robot_Start"); } 
         
-        else if (playerbackpack.contains("operating software"))
+        else if (playerbackpack.contains("Maintenance Protocol"))
             player.talkToSelf("Response_player_action.interact_robot.1");
         else
             player.talkToSelf("Response_player_action.interact_robot.2");
@@ -65,10 +65,10 @@ public class MaintenanceRobot : InteractiveObj
     public override void useItem()
     {
         Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
-        if (currentItem.ItemName.ToLower().Trim().Contains("operating software")) {
+        if (currentItem.ItemName.ToLower().Trim().Contains("Maintenance Protocol".ToLower().Trim())) {
             gameObject.transform.parent.gameObject.AddComponent<MaintenanceRobotItem>();
             GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
-            playerbackpack.remove("operating software");
+            playerbackpack.remove("Maintenance Protocol");
             UIContainer.SetActive(false);
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 
@@ -100,11 +100,11 @@ public class MaintenanceRobot : InteractiveObj
 
     public void confirm()
     {
-        if (playerbackpack.contains("operating software"))
+        if (playerbackpack.contains("Maintenance Protocol"))
         {
             gameObject.transform.parent.gameObject.AddComponent<MaintenanceRobotItem>();
             GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
-            playerbackpack.remove("operating software");
+            playerbackpack.remove("Maintenance Protocol");
             UIContainer.SetActive(false);
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
 

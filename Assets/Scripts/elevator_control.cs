@@ -50,9 +50,9 @@ public class elevator_control : InteractiveObj
         {
             if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "hacking module"))
             {
-                if (playerBackpack.contains("e part 0") && playerBackpack.contains("e part 1") && playerBackpack.contains("e part 3"))
+                if (getElectroniCount() >= 3)
                     player.talkToSelf("Response_player_action.interact_elevator.7");
-                else if (playerBackpack.contains("e part 0") || playerBackpack.contains("e part 1") || playerBackpack.contains("e part 3"))
+                else if (getElectroniCount() >= 1)
                     player.talkToSelf("Response_player_action.interact_elevator.6");
                 else
                     player.talkToSelf("Response_player_action.interact_elevator.5");
@@ -88,15 +88,10 @@ public class elevator_control : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         if (app.GetComponent<HackingModule>() != null) {
-            int ePartCount = 0;
-            for (int i = 0; i < playerBackpack.backpack.Count; i++) {
-                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("e part"))
-                    ePartCount++;
-            }
 
-            if (ePartCount >= 3) {
+            if (getElectroniCount() >= 3) {
                 for (int i = playerBackpack.backpack.Count-1; i >= 0; i--) {
-                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("e part"))
+                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("electronic components"))
                         playerBackpack.backpack.RemoveAt(i);
                 }
 
@@ -166,10 +161,8 @@ public class elevator_control : InteractiveObj
     public void confirm()
     {
         if (console.isElevatorActivated 
-            || ((playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "hacking module")) 
-                 && playerBackpack.contains("e part 0") 
-                 && playerBackpack.contains("e part 1") 
-                 && playerBackpack.contains("e part 3")))
+            || (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "hacking module") 
+            &&  getElectroniCount() >= 3))
         {
             if (state == 1)
             {
@@ -206,5 +199,14 @@ public class elevator_control : InteractiveObj
         UIContainer.SetActive(false);
         stateManager.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+    }
+
+    public int getElectroniCount() {
+        int ePartCount = 0;
+            for (int i = 0; i < playerBackpack.backpack.Count; i++) {
+                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("electronic components"))
+                    ePartCount++;
+            }
+        return ePartCount;
     }
 }
