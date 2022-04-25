@@ -67,6 +67,7 @@ public class laptop_manager : MonoBehaviour
                 accessCard = FindObjectOfType<PlayerBackpack>().getItem("access card").GetComponent<AccessCard>();
                 accessCard.level = 2;
                 exit_icon.SetActive(true);
+                laptop_camera.workdone = true;
             }
 
             Destroy(drag_object);

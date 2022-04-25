@@ -9,6 +9,7 @@ public class laptop_camera : InteractiveObj
     StateManager state;
     [SerializeField] GameObject laptop;
     [SerializeField] GameObject laptopPOV;
+    public static bool workdone;
 
     private Talkable talk;
     private void Start()
@@ -29,20 +30,30 @@ public class laptop_camera : InteractiveObj
     {
         Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
         PlayerControl player = FindObjectOfType<PlayerControl>();
-        if (currentItem.ItemName.ToLower().Trim().Contains("access card")) {
-            player.ChangeState(player.stateUI);
-            laptop.SetActive(true);
-            Cursor.visible = false;
-            laptopPOV.SetActive(true);
-
-            //talk about the laptop with Mr.Rabbit
-            talk.getPlayer().NPCToTalk = gameObject;
-            talk.getPlayer().talkToNPC();
-        } else {
-           
+        if (workdone == true)
+        {
             player.ChangeState(player.stateExplore);
-            player.talkToSelf("Response_player_action.Rita.1");
+            Player.talkToNPC("Manager.DoubleCheck");
+        } else {
+            if (currentItem.ItemName.ToLower().Trim().Contains("access card"))
+            {
+                player.ChangeState(player.stateUI);
+                laptop.SetActive(true);
+                Cursor.visible = false;
+                laptopPOV.SetActive(true);
+
+                //talk about the laptop with Mr.Rabbit
+                talk.getPlayer().NPCToTalk = gameObject;
+                talk.getPlayer().talkToNPC();
+            }
+            else
+            {
+
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Response_player_action.Rita.1");
+            }
         }
+        
     }
 
     public override void useNeuroImplant()
