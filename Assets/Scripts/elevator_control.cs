@@ -63,13 +63,30 @@ public class elevator_control : InteractiveObj
         {
             if (state == 1)
             {
-               // player.talkToSelf("Response_player_action.interact_elevator.2");
-              
+              player.talkToSelf("Response_player_action.interact_elevator.2");
+                state = 0;
+                m_Animator.Play("up");
+                StartCoroutine(moving_up());
+                sound_effect.PlayOneShot(machine);
+                tile_corridor.SetActive(false);
+                tile_roof_top.SetActive(false);
+                blocker.SetActive(true);
+                to_corridor.SetActive(false);
+                to_roof_top.SetActive(false);
+
             }
             if (state == 2)
             {
-              //  player.talkToSelf("Response_player_action.interact_elevator.3");
-               
+              player.talkToSelf("Response_player_action.interact_elevator.3");
+                state = 3;
+                m_Animator.Play("down");
+                sound_effect.PlayOneShot(machine);
+                StartCoroutine(moving_down());
+                tile_corridor.SetActive(false);
+                tile_roof_top.SetActive(false);
+                blocker.SetActive(true);
+                to_corridor.SetActive(false);
+                to_roof_top.SetActive(false);
             }
             }
 
@@ -87,54 +104,67 @@ public class elevator_control : InteractiveObj
         NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        if (app.GetComponent<HackingModule>() != null) {
+        if (!console.isElevatorActivated)
+        {
+            if (app.GetComponent<HackingModule>() != null)
+            {
 
-            if (getElectroniCount() >= 3) {
-                for (int i = playerBackpack.backpack.Count-1; i >= 0; i--) {
-                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("electronic components"))
-                        playerBackpack.backpack.RemoveAt(i);
-                }
-
-                if (state == 1)
+                if (getElectroniCount() >= 3)
                 {
-                    state = 0;
-                    m_Animator.Play("up");
-                    StartCoroutine(moving_up());
-                    sound_effect.PlayOneShot(machine);
-                    tile_corridor.SetActive(false);
-                    tile_roof_top.SetActive(false);
-                    blocker.SetActive(true);
-                    to_corridor.SetActive(false);
-                    to_roof_top.SetActive(false);
+                    for (int i = playerBackpack.backpack.Count - 1; i >= 0; i--)
+                    {
+                        if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("electronic components"))
+                            playerBackpack.backpack.RemoveAt(i);
+                    }
+
+                    if (state == 1)
+                    {
+                        state = 0;
+                        m_Animator.Play("up");
+                        StartCoroutine(moving_up());
+                        sound_effect.PlayOneShot(machine);
+                        tile_corridor.SetActive(false);
+                        tile_roof_top.SetActive(false);
+                        blocker.SetActive(true);
+                        to_corridor.SetActive(false);
+                        to_roof_top.SetActive(false);
+                    }
+                    if (state == 2)
+                    {
+                        state = 3;
+                        m_Animator.Play("down");
+                        sound_effect.PlayOneShot(machine);
+                        StartCoroutine(moving_down());
+                        tile_corridor.SetActive(false);
+                        tile_roof_top.SetActive(false);
+                        blocker.SetActive(true);
+                        to_corridor.SetActive(false);
+                        to_roof_top.SetActive(false);
+                    }
+
+                    console.isElevatorActivated = true;
+
+                    player.talkToSelf("Response_player_action.interact_elevator.10");
+
                 }
-                if (state == 2)
+                else
                 {
-                    state = 3;
-                    m_Animator.Play("down");
-                    sound_effect.PlayOneShot(machine);
-                    StartCoroutine(moving_down());
-                    tile_corridor.SetActive(false);
-                    tile_roof_top.SetActive(false);
-                    blocker.SetActive(true);
-                    to_corridor.SetActive(false);
-                    to_roof_top.SetActive(false);
+                    player.talkToSelf("Response_player_action.interact_elevator.9");
                 }
-
-                console.isElevatorActivated = true;
-
-                player.talkToSelf("Response_player_action.interact_elevator.10");
-               
-            } else {
-                player.talkToSelf("Response_player_action.interact_elevator.9");
             }
-        } else {
-            player.talkToSelf("Response_player_action.interact_elevator.8");
+            else
+            {
+                player.talkToSelf("Response_player_action.interact_elevator.8");
+            }
+        }
+        else {
+            player.talkToSelf("Response.elevator_unlocked");
         }
     }
     IEnumerator moving_up()
     {
         
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
         //After we have waited 5 seconds print the time again.
    
@@ -147,7 +177,7 @@ public class elevator_control : InteractiveObj
     IEnumerator moving_down()
     {
 
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
 
         //After we have waited 5 seconds print the time again.
 

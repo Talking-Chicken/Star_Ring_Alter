@@ -170,3 +170,8 @@ position: -45,-75
 ---
 Amo: I have already updated the permission level of this access card.
 ===
+title: Response.elevator_unlocked
+position: -45,-75
+---
+Amo: This control panel is already unlocked. There is no need to hack it again.
+===
