@@ -63,12 +63,12 @@ public class elevator_control : InteractiveObj
         {
             if (state == 1)
             {
-                player.talkToSelf("Response_player_action.interact_elevator.2");
+               // player.talkToSelf("Response_player_action.interact_elevator.2");
               
             }
             if (state == 2)
             {
-                player.talkToSelf("Response_player_action.interact_elevator.3");
+              //  player.talkToSelf("Response_player_action.interact_elevator.3");
                
             }
             }
