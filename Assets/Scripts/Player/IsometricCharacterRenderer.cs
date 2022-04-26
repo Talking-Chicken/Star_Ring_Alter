@@ -20,6 +20,7 @@ public class IsometricCharacterRenderer : MonoBehaviour
         //cache the animator component
         animator = GetComponent<Animator>();
         foot_step_clip = "Convience Store";
+      
     }
 
 

@@ -30,21 +30,32 @@ public class laptop_camera : InteractiveObj
     {
         Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
         PlayerControl player = FindObjectOfType<PlayerControl>();
-        if (workdone == true)
-        {
-            player.ChangeState(player.stateExplore);
-            Player.talkToNPC("Manager.DoubleCheck");
-        } else {
+     
+          
+      
+          
+      
             if (currentItem.ItemName.ToLower().Trim().Contains("access card"))
             {
-                player.ChangeState(player.stateUI);
-                laptop.SetActive(true);
-                Cursor.visible = false;
-                laptopPOV.SetActive(true);
+                Item accessCard = playerBackpack.getItem("access card");
 
-                //talk about the laptop with Mr.Rabbit
-                talk.getPlayer().NPCToTalk = gameObject;
-                talk.getPlayer().talkToNPC();
+                if (accessCard.GetComponent<AccessCard>().level < 2)
+                {
+                    player.ChangeState(player.stateUI);
+                    laptop.SetActive(true);
+                    Cursor.visible = false;
+                    laptopPOV.SetActive(true);
+
+                    //talk about the laptop with Mr.Rabbit
+                    talk.getPlayer().NPCToTalk = gameObject;
+                    talk.getPlayer().talkToNPC();
+                }
+                else
+                {
+                    player.ChangeState(player.stateExplore);
+                    Player.talkToNPC("Response.laptop");
+                }
+
             }
             else
             {
@@ -52,7 +63,7 @@ public class laptop_camera : InteractiveObj
                 player.ChangeState(player.stateExplore);
                 player.talkToSelf("Response_player_action.Rita.1");
             }
-        }
+        
         
     }
 
