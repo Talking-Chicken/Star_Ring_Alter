@@ -57,6 +57,7 @@ public class DeliveryTunnel : InteractiveObj
                 player.talkToSelf("MrRabbit.Maintenance_Robot_Tunnel");            
 
                 sentRobot = true;
+                talkingArea.SetActive(true);
             } else {
                 playerBackpack.remove(deliveryItem.gameObject);
                 deliveryItem.gameObject.SetActive(true);
