@@ -48,7 +48,7 @@ public class TimeLoopSystem : MonoBehaviour
 
         DateTime today = DateTime.Today;
         Time_text.time_2 = new DateTime(today.Year, today.Month, today.Day, 0, 19, 0);
-        ES3.Save("Condition1",random_conversation.lines);
+        ES3.Save("Condition1",random_conversation.lines, "Star_Ring_Save/myFile.es3");
         SceneManager.LoadScene("cut_scene_2");
     }
 }

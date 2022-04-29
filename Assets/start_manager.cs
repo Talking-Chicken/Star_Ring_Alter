@@ -23,7 +23,7 @@ public class start_manager : MonoBehaviour
     }
     public void Continue()
     {
-        if (ES3.KeyExists("Condition1"))
+        if (ES3.KeyExists("Condition1", "Star_Ring_Save/myFile.es3"))
         {
             SceneManager.LoadScene("Main");
         }

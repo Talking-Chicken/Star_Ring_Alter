@@ -15,13 +15,13 @@ public class random_conversation : MonoBehaviour
     [SerializeField] PlayerControl player;
     void Start()
     {
-        if (start_manager.new_game|| ES3.KeyExists("Condition1")) {
+        if (start_manager.new_game) {
             readCSV();
             start_manager.new_game = false;
         }
         else {
-            lines = ES3.Load<string[]>("Condition1");
-            Debug.Log("find key");
+            lines = ES3.Load<string[]>("Condition1", "Star_Ring_Save/myFile.es3");
+            Debug.Log("load key");
         }
          
     }
@@ -45,11 +45,11 @@ public class random_conversation : MonoBehaviour
     {
         lines = file.text.Split("\n"[0]);
         //lines = file.text.Split(System.Environment.NewLine.ToCharArray());
-        for (int i = 0; i < lines.Length; i++)
+       /* for (int i = 0; i < lines.Length; i++)
         {
            //parts = lines[i].Split(',');
            
-        }
+        }*/
     
 
     }
