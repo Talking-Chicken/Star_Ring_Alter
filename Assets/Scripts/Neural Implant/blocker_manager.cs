@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Yarn.Unity;
 
 public class blocker_manager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class blocker_manager : MonoBehaviour
     [SerializeField] GameObject UI_warning;
     [SerializeField] GameObject UI_Exit;
     public  static GameObject drag_object;
+    [SerializeField] DialogueRunner dialogue;
     
     private PlayerControl player;
 
@@ -44,6 +46,10 @@ public class blocker_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dialogue.IsDialogueRunning)
+        { Cursor.lockState = CursorLockMode.Locked; }
+        else { Cursor.lockState = CursorLockMode.None; }
+
         for (int i = 0; i < indicator.Count; i++)
         {
             if (i < storage) { indicator[i].SetActive(true); }

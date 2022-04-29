@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Yarn.Unity;
 
 public class laptop_manager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class laptop_manager : MonoBehaviour
     [SerializeField, BoxGroup("access")]
     private GameObject accessFile;
     private AccessCard accessCard;
+    [SerializeField] DialogueRunner dialogue;
     void Start()
     {
         A = true;
@@ -30,6 +32,9 @@ public class laptop_manager : MonoBehaviour
     
     void Update()
     {
+        if (dialogue.IsDialogueRunning)
+        { Cursor.lockState = CursorLockMode.Locked; }
+        else { Cursor.lockState = CursorLockMode.None; }
         Vector3 mousePos = computer_camera.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
         if (id_card.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_inserted") && A)

@@ -44,7 +44,7 @@ public class PlayerControl : MonoBehaviour
     public PlayerStateExplore stateExplore = new PlayerStateExplore();
     public PlayerStateDialogue stateDialogue = new PlayerStateDialogue();
     public PlayerStateUI stateUI = new PlayerStateUI();
-
+    
     public void ChangeToPreviousState() {StartCoroutine(waitToChange());} //change to previous state 0.5 seconds delay
     IEnumerator waitToChange() {yield return new WaitForSeconds(0.5f); ChangeState(previousState);} //where delay actually happens
     RaycastHit2D[] RayArray;

@@ -10,6 +10,7 @@ public class start_manager : MonoBehaviour
     public GameObject CreditPanel;
     public AudioSource UI_SE;
     public AudioClip clicked;
+    public AudioClip buzzer;
     public static bool new_game=false;
     void Start()
     {
@@ -25,9 +26,11 @@ public class start_manager : MonoBehaviour
     {
         if (ES3.KeyExists("Condition1", "Star_Ring_Save/myFile.es3"))
         {
+            UI_SE.PlayOneShot(clicked);
             SceneManager.LoadScene("Main");
+
         }
-        UI_SE.PlayOneShot(clicked);
+        UI_SE.PlayOneShot(buzzer);
 
     }
     public void NewGame() 

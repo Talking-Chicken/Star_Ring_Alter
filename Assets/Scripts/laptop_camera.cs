@@ -43,7 +43,7 @@ public class laptop_camera : InteractiveObj
                 {
                     player.ChangeState(player.stateUI);
                     laptop.SetActive(true);
-                    Cursor.visible = false;
+                   // Cursor.visible = false;
                     laptopPOV.SetActive(true);
 
                     //talk about the laptop with Mr.Rabbit

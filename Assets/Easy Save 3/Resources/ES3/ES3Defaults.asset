@@ -29,8 +29,8 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - NaughtyAttributes.Test
     - Assembly-CSharp
+    - NaughtyAttributes.Test
     - NavMeshComponents
     - NaughtyAttributes.Core
     - YarnSpinner.Unity
