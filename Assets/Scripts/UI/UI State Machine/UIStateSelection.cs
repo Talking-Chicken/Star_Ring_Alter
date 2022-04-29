@@ -35,6 +35,12 @@ public class UIStateSelection : UIStateBase
         if (Input.GetKeyDown(UI.Key.interact)) {
             UI.SelectionButtons[currentSelectionIndex].onClick.Invoke();
         }
+
+        //exit selection state
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            UI.ChangePlayerState(UI.Player.stateExplore);
+            UI.ChangeToIdleState();
+        }
     }
     public override void LeaveState(UIControl UI) {
         UI.closeSelectionMenu();

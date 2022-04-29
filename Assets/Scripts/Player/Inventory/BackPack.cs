@@ -50,7 +50,7 @@ public class BackPack : MonoBehaviour
     {
         if (backpack.Count > 0)
             foreach (GameObject item in backpack)
-                if (item.GetComponent<Item>().getName().ToLower().Trim().Equals(itemName))
+                if (item.GetComponent<Item>().getName().ToLower().Trim().Equals(itemName) || item.GetComponent<Item>().getName().Equals(itemName))
                 {
                     remove(item);
                     return item;

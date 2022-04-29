@@ -56,28 +56,23 @@ public class MaintenanceRobot : InteractiveObj
             player.talkToSelf("Response_player_action.interact_robot.1");
         else
             player.talkToSelf("Response_player_action.interact_robot.2");
-
-        //talk about the laptop with Mr.Rabbit
-        //talk.getPlayer().NPCToTalk = gameObject;
-        //talk.getPlayer().talkToNPC();
     }
 
     public override void useItem()
     {
+        PlayerControl player = FindObjectOfType<PlayerControl>();
         Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
         if (currentItem.ItemName.ToLower().Trim().Contains("Maintenance Protocol".ToLower().Trim())) {
             gameObject.transform.parent.gameObject.AddComponent<MaintenanceRobotItem>();
             GetComponentInParent<MaintenanceRobotItem>().setIcon(itemIcon);
             playerbackpack.remove("Maintenance Protocol");
             UIContainer.SetActive(false);
-            FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+            player.ChangeState(player.stateExplore);
 
-            talkingArea.SetActive(true);
-
+            //talkingArea.SetActive(true);
+            player.talkToSelf("MrRabbit.Maintenance_Robot_Fixed");
             Destroy(this);
         } else {
-           
-            PlayerControl player = FindObjectOfType<PlayerControl>();
             player.ChangeState(player.stateExplore);
             player.talkToSelf("Response_player_action.interact_robot.3");
         }
