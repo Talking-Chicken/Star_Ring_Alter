@@ -207,6 +207,7 @@ public class PlayerControl : MonoBehaviour
             //UIControl.openSelectionMenu();
             ChangeState(stateUI);
             UIControl.ChangeToSelectionState();
+            IsometricPlayerMovementController.movement = new Vector2(0,0);
         } else
         {
             UIControl.ChangeToIdleState();

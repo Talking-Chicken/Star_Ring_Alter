@@ -53,9 +53,9 @@ public class MaintenanceRobot : InteractiveObj
         if (first_time) { player.talkToSelf("MrRabbit.Maintenance_Robot_Start"); } 
         
         else if (playerbackpack.contains("Maintenance Protocol"))
-            player.talkToSelf("Response_player_action.interact_robot.1");
-        else
             player.talkToSelf("Response_player_action.interact_robot.2");
+        else
+            player.talkToSelf("Response_player_action.interact_robot.1");
     }
 
     public override void useItem()

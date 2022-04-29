@@ -29,5 +29,6 @@ public class PlayerStateExplore : PlayerStateBase
           PlayerControl.show_invest=false;
         IsometricPlayerMovementController.movement = new Vector2(0,0);
         player.UIControl.closeTime();
+        // IsometricPlayerMovementController.movement = new Vector2(0,0);
     }
 }
