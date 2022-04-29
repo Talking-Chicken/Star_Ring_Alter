@@ -220,7 +220,7 @@ position: 3278,729
 Amo: Rabbit, what do you think we can find up there?
 Mr. Rabbit: The magical fan device that creates a whirl of time and caused all the mischief in all the loops. 
 Amo: Are you for real right now? Is there seriously a crazy sci-fi device on our rooftop that resets the time after 12?
-Mr. Rabbit: 'Course now, dummy. Star Ring is just a convenience store, there is no way we can find equipment that is powerful enough to disturb the flow of time here.
+Mr. Rabbit: Of course no, dummy. Star Ring is just a convenience store, there is no way we can find equipment that is powerful enough to disturb the flow of time here.
 Amo: Unless this time loop is caused by magic?
 Mr. Rabbit: There is no magic in this world.
 ===
@@ -270,12 +270,12 @@ position: 4103,768
     Amo: Rabbit Heavy... what's my sponsor got to do with this?
     Mr. Rabbit: To begin with, they're the sponsor of nearly everything in this city. If it's not Rabbit Heavy, there's no other company around.
     Amo: What should we do now? The manager is out of town, there is no way we can reach her or whoever has access to her officer.
-    Mr. Rabbit：Well we're tight on time, so give me a sec.
+    Mr. Rabbit: Well we're tight on time, so give me a sec.
     Mr. Rabbit: ...
     Mr. Rabbit: You remember that high school girl who always stayed late in the dining area on the first floor? The one with a clunky laptop?
     Amo: Rita? She's a good girl. But, what is wrong with her laptop?
     Mr. Rabbit: No idea how she got her hands on it but somehow it has the security protocol of Rabbit Heavy Industry on it. Normally I wouldn't tolerate such a dangerous device in the store, but I guess today we can be less strict.
-    Mr. Rabbit: Bring Lacey’s access card to her laptop. I will tell you what to do next when we get there. If my guesses about the security system are correct, we might be able to rely on Rabbit Heavy Industry's vulnerabilities to modify our permission.
+    Mr. Rabbit: Bring Lacey's access card to her laptop. I will tell you what to do next when we get there. If my guesses about the security system are correct, we might be able to rely on Rabbit Heavy Industry's vulnerabilities to modify our permission.
 <<endif>>
 ===
 title: MrRabbit.Manager_Office_Access_Machine_No_Card
@@ -317,7 +317,7 @@ position: 5091,690
 ---
 Mr. Rabbit: Okay, can you remind me again why we need your personal toy collection?
 Amo: Don't call my miniature a toy! They are accurate reproductions of actual objects at the appropriate scale. They can help us to simulate events in outer space well and thus solve the time loop we are stuck in. 
-Mr. Rabbit: Oh god, you geek... You even have the Cat Tech’s 2050 limited-edition Moon Lander, isn’t that exclusive in-store selling? 
+Mr. Rabbit: Oh god, you geek... You even have the Cat Tech's 2050 limited-edition Moon Lander, isn't that exclusive in-store selling? 
 Amo: Yeah, I kinda snuck out of Autumn-8 and paid an old friend who has a neural implant to buy that model for me. And I got suspended for two weeks after I returned to the re-education camp, but it was well worth it.
 ===
 title: MrRabbit.Powercell_Start
@@ -334,9 +334,9 @@ tags:
 colorID: 0
 position: 5454,693
 ---
-Mr. Rabbit: Don’t touch it, it's at its perfect temperature and brightness.
+Mr. Rabbit: Don't touch it, it's at its perfect temperature and brightness.
 Amo: But it's freezing up here.
-Mr. Rabbit: Well, I can’t feel the difference anyway.
+Mr. Rabbit: Well, I can't feel the difference anyway.
 ===
 title: MrRabbit.Book_Start
 tags: 
@@ -353,7 +353,7 @@ colorID: 0
 position: 5723,707
 ---
 Amo: Ah, I've been reading science fiction for so many years, I'm wracking my brains but I can't find a plot that might help our current situation.
-Mr. Rabbit: Are those books from the re-education camp’s library?
+Mr. Rabbit: Are those books from the re-education camp's library?
 Amo: Well, in Autumn-8 we can't access the internet without a device, which are quite hard to come by because they're so antique, so physical books are quite common in the camp.
 Mr. Rabbit: You're missing my point... Aren't those books the public property of the re-education camp, how come you have them now?
 Amo: You know what, I think this chapter could explain the time loop phenomenon that happened to us. I need to spend some time, you know, in order to study it properly.
@@ -438,7 +438,7 @@ Moonlander Pilot: Amo? Are you Space Administration? Thank god someone answered 
 
 Amo: Oh god, what am I supposed to do? Is the moonlander still operational? 
 
-Moonlander Pilot: I don’t know. Readings on the dashboard are all off the charts. The sirens haven't stopped since I woke up. For Christ's sake, I am just a scientist deployed on a moon base. Are you guys really from the Space Administration?
+Moonlander Pilot: I don't know. Readings on the dashboard are all off the charts. The sirens haven't stopped since I woke up. For Christ's sake, I am just a scientist deployed on a moon base. Are you guys really from the Space Administration?
 
 -> Yes!
     Amo: We work for the Confederation Space Administration. Mr. Rabbit and I are the technology specialists in aerospace.
@@ -447,7 +447,7 @@ Moonlander Pilot: I don’t know. Readings on the dashboard are all off the char
 
     Amo: ...ah.
 
-    Mr. Rabbit: Don’t you have a moon lander miniature? Do you know this?
+    Mr. Rabbit: Don't you have a moon lander miniature? Do you know this?
 
     Amo: What? I do like miniatures but I am not that kind of nerd who will remember every detail, every scratch of their model! Besides, you don’t know if that model is an accurate reproduction of the actual moon lander, the manufacturer may be jerry-building!
 

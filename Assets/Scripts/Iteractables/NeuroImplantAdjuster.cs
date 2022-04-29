@@ -25,6 +25,12 @@ public class NeuroImplantAdjuster : InteractiveObj
         // {
         //     UI.showUI();
         // }
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+
+        player.ChangeState(player.stateUI);
+        player.talkToSelf("Response.neural_implant_adjuster");
+      
+
         Camera.main.gameObject.SetActive(false);
         adjusterCamera.SetActive(true);
         adjusterUIContainer.SetActive(true);

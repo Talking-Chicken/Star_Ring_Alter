@@ -15,11 +15,14 @@ public class random_conversation : MonoBehaviour
     [SerializeField] PlayerControl player;
     void Start()
     {
-        if (ES3.KeyExists("Condition1")) {
-         
-            lines= ES3.Load<string[]>("Condition1");
+        if (start_manager.new_game|| ES3.KeyExists("Condition1")) {
+            readCSV();
+            start_manager.new_game = false;
         }
-        else { readCSV(); }
+        else {
+            lines = ES3.Load<string[]>("Condition1");
+            Debug.Log("find key");
+        }
          
     }
 

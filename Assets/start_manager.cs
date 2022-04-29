@@ -10,6 +10,7 @@ public class start_manager : MonoBehaviour
     public GameObject CreditPanel;
     public AudioSource UI_SE;
     public AudioClip clicked;
+    public static bool new_game=false;
     void Start()
     {
         
@@ -20,18 +21,32 @@ public class start_manager : MonoBehaviour
     {
         
     }
+    public void Continue()
+    {
+        if (ES3.KeyExists("Condition1"))
+        {
+            SceneManager.LoadScene("Main");
+        }
+        UI_SE.PlayOneShot(clicked);
+
+    }
     public void NewGame() 
     {
+      
+        
+        /*if (ES3.KeyExists("Condition1"))
+        {
+            ES3.DeleteFile("SaveFile");
+        }*/
+        //
+        new_game = true;
+        //DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("Main");
-        ES3.Save("Condition", null);
         UI_SE.PlayOneShot(clicked);
     }
     public void ControlButton()
     {
-        if (ES3.KeyExists("Condition"))
-        {
-            SceneManager.LoadScene("Main");
-        }
+      
         ControlPanel.SetActive(true);
         UI_SE.PlayOneShot(clicked);
     }
@@ -50,4 +65,5 @@ public class start_manager : MonoBehaviour
         CreditPanel.SetActive(false);
         UI_SE.PlayOneShot(clicked);
     }
+   
 }

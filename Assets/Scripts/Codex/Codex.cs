@@ -15,6 +15,7 @@ public class Codex : MonoBehaviour
 
     void Start()
     {
+        if (start_manager.new_game) { resetDialogueNodesCount(); }
         runner.AddFunction("visitCount", 0, delegate (Yarn.Value[] parameters)
         {
             return getNodeVisited();
@@ -23,9 +24,9 @@ public class Codex : MonoBehaviour
     
     void Update()
     {
-        //TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-            resetDialogueNodesCount();
+        //reset node
+       // if (Input.GetKeyDown(KeyCode.Alpha1))
+           // 
     }
 
     /**

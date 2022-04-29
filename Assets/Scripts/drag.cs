@@ -7,7 +7,7 @@ public class drag : MonoBehaviour
     bool canMove;
     bool dragging;
     Collider2D collider;
-  
+    Vector2 orginal_pos;
     public Camera computer_camera;
 
     void Start()
@@ -15,7 +15,7 @@ public class drag : MonoBehaviour
         collider = GetComponent<Collider2D>();
         canMove = false;
         dragging = false;
-       
+        orginal_pos = transform.position;
 
     }
 
@@ -53,12 +53,16 @@ public class drag : MonoBehaviour
         {
             canMove = false;
             dragging = false;
+            back();
         }
-     
-    }
+       
 
-   
-           
-    
+    }
+    public void back()
+    { this.transform.position = orginal_pos; }
+
+
+
+
 
 }
