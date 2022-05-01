@@ -9,6 +9,8 @@ TagManager:
   - Interactive
   - glow_stick
   - invest_icon
+  - Projectile
+  - Ground
   layers:
   - Default
   - TransparentFX
