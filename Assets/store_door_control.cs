@@ -8,13 +8,17 @@ public class store_door_control : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject door;
     [SerializeField] GameObject door1;
+    [SerializeField] AudioClip clip;
+    [SerializeField] AudioSource audio;
     bool once=true;
     bool once1=false;
     void Update()
     {
        
         if (Vector2.Distance(player.transform.position, this.transform.position) < 7) {
-            if (once && door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("front_door_still")) { once = false;
+            if (once && door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("front_door_still")) {
+                audio.PlayOneShot(clip);
+                once = false;
                // Debug.Log("yes");
                 door.GetComponent<Animator>().Play("open");
                 door1.GetComponent<Animator>().Play("open_right");
@@ -25,6 +29,7 @@ public class store_door_control : MonoBehaviour
         {
             if (once1&& door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("stay_open"))
             {
+                audio.PlayOneShot(clip);
                 door.GetComponent<Animator>().Play("close");
                 door1.GetComponent<Animator>().Play("close_right");
                 once1 = false;
