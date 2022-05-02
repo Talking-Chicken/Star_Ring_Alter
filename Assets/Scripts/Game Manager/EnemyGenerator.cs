@@ -39,11 +39,11 @@ public class EnemyGenerator : MonoBehaviour
                 int randomChoose = (int)Random.Range(0, 1.99f);
                 //spawn from left
                 if (randomChoose == 0) {
-                    GameObject sin = Instantiate(sineEnemy, new Vector2(worldBound.bounds.min.x - 1+ worldBound.transform.position.x, sineSpawnY+ worldBound.transform.position.y), Quaternion.identity);
+                    GameObject sin = Instantiate(sineEnemy, new Vector2(worldBound.bounds.min.x - 0.5f+ worldBound.transform.position.x, sineSpawnY+ worldBound.transform.position.y), Quaternion.identity);
                     sin.GetComponent<SineEnemy>().IsMovingRight = true;
                     Instantiate(flyEnemy, new Vector2(worldBound.bounds.min.x - 1+ worldBound.transform.position.x, flySpawnY+ worldBound.transform.position.y), Quaternion.identity);
                 } else { //spawn from right
-                    GameObject sin = Instantiate(sineEnemy, new Vector2(worldBound.bounds.max.x + 1+worldBound.transform.position.x, sineSpawnY+ worldBound.transform.position.y), Quaternion.identity);
+                    GameObject sin = Instantiate(sineEnemy, new Vector2(worldBound.bounds.max.x + 0.5f+worldBound.transform.position.x, sineSpawnY+ worldBound.transform.position.y), Quaternion.identity);
                     sin.GetComponent<SineEnemy>().IsMovingRight = false;
                     Instantiate(flyEnemy, new Vector2(worldBound.bounds.max.x + 1+worldBound.transform.position.x, flySpawnY+ worldBound.transform.position.y), Quaternion.identity);
                 }

@@ -28,6 +28,9 @@ public class PlayerControlArcade : MonoBehaviour
 
     private AudioSource audioSource;
 
+    //cameara shake
+    [SerializeField, Header("Camera")] Camera shakingCamera; 
+
     //getters & setters
     public int HandSize {get {return handSize;} private set {handSize = value;}}
     public Card CurrentCard {get {return currentCard;} private set {currentCard = value;}}
@@ -169,7 +172,7 @@ public class PlayerControlArcade : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.GetComponent<EnemyBullet>() != null) {
-            Camera.main.GetComponent<CameraShake>().shake();
+            shakingCamera.GetComponent<CameraShake>().shake();
             audioSource.Play();
             Destroy(gameObject);
         }
@@ -177,7 +180,7 @@ public class PlayerControlArcade : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.gameObject.GetComponent<Enemy>() != null) {
-            Camera.main.GetComponent<CameraShake>().shake();
+            shakingCamera.GetComponent<CameraShake>().shake();
             audioSource.Play();
             Destroy(gameObject);
         }

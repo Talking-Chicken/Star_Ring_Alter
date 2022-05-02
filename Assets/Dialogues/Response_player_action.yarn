@@ -184,5 +184,26 @@ title: Response.Token_coin
 position: -45,-75
 ---
 : To redeem your prize, please bring this token to the storage room.
-Amo: Wait... What?
+Amo: Wait... What? Is that sound from this coin?
+===
+title: Response.Arcade_No_Coin
+position: -45,-75
+---
+Amo: Nowadays, even arcades is controlled through Neural Implant, then what is the point of having a physical machine here. If it wasn't for the experience of actual physical interaction, who would play arcade. 
+Amo: I would need to find a token coin first if I want to play this game.
+===
+title: Response.Arcade_Yes_Coin
+position: -45,-75
+---
+Amo: All I need to do is insert the coin I found, and then I can play this so called "Real Time Card Game".
+===
+title: Response.Arcade_wrong_item
+position: -45,-75
+---
+Amo: How am I supposed to use this on an arcade?
+===
+title: Response.front_door
+position: -45,-75
+---
+Mr. Rabbit: Wait Amo, what are you doing? Don't give up! 
 ===

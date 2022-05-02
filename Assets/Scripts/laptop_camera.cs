@@ -35,9 +35,9 @@ public class laptop_camera : InteractiveObj
       
           
       
-            if (currentItem.ItemName.ToLower().Trim().Contains("access card"))
+            if (currentItem.ItemName.ToLower().Trim().Contains("Access Card".ToLower().Trim()))
             {
-                Item accessCard = playerBackpack.getItem("access card");
+                Item accessCard = playerBackpack.getItem("Access Card".ToLower().Trim());
 
                 if (accessCard.GetComponent<AccessCard>().level < 2)
                 {
