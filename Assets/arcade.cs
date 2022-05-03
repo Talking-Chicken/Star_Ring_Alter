@@ -13,88 +13,172 @@ public class arcade : InteractiveObj
     [SerializeField] GameObject error;
     [SerializeField] GameObject eparts;
     private bool broken = false;
-    public static bool once=false;
+    public static bool once = false;
     public static float score;
     private Talkable talk;
+    private string[] parts;
+    bool beat;
     private void Start()
     {
+        beat = false;
         state = FindObjectOfType<StateManager>();
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         talk = GetComponent<Talkable>();
+        for (var i = 0; i < random_conversation.lines.Length; i++)
+        {
+            parts = random_conversation.lines[i].Split(',');
+            parts[0] = parts[0].Replace("\r", "");
+
+            if (parts[0].Equals("beat_arcade") && parts[2].Equals("TRUE"))
+            {
+
+                beat = true;
+                break;
+            }
+
+
+        }
     }
     private void Update()
     {
-       
-        if (score>=14&&broken==false) {
-
-            error.SetActive(true);
-            broken = true;
-            eparts.SetActive(true);
-            PlayerControl player = FindObjectOfType<PlayerControl>();
-            player.ChangeState(player.stateExplore);
-           
-            player.talkToSelf("Response.win_arcade");
-        }
         if (once)
         {
             Time_text time_text = FindObjectOfType<Time_text>();
             time_text.addtime1((int)score);
             once = false;
+            if (score >= 14)
+            {
+
+                error.SetActive(true);
+                broken = true;
+                eparts.SetActive(true);
+                PlayerControl player = FindObjectOfType<PlayerControl>();
+                player.ChangeState(player.stateExplore);
+                if (beat) { player.talkToSelf("Response.win_arcade_beat"); } else { player.talkToSelf("Response.win_arcade"); }
+                
+
+                for (var i = 0; i < random_conversation.lines.Length; i++)
+                {
+                    parts = random_conversation.lines[i].Split(',');
+                    parts[0] = parts[0].Replace("\r", "");
+
+                    if (parts[0].Equals("beat_arcade") && parts[2].Equals("FALSE"))
+                    {
+
+
+                        random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "TRUE" + "," + parts[3];
+
+                        break;
+                    }
+
+
+                }
+            }
+
+            if (score < 14)
+            {
+
+                PlayerControl player = FindObjectOfType<PlayerControl>();
+                player.ChangeState(player.stateExplore);
+                if (beat) { player.talkToSelf("Response.arcade_finish_game_beat"); } else { player.talkToSelf("Response.arcade_finish_game"); }
+               
+            }
         }
+
     }
     public override void interact()
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
 
-        if (broken) { player.talkToSelf("Response.broken_arcade"); } else
+        if (broken) { player.talkToSelf("Response.broken_arcade"); }
+        else
         {
-            if (playerBackpack.contains("Token Coin"))
-            {
-                player.talkToSelf("Response.Arcade_Yes_Coin");
-            }
+            if (beat) { player.talkToSelf("Response.arcade_check_if_beat"); }
+
             else
             {
-                player.talkToSelf("Response.Arcade_No_Coin");
+                if (playerBackpack.contains("Token Coin"))
+                {
+                    player.talkToSelf("Response.Arcade_Yes_Coin");
+                }
+                else
+                {
+                    player.talkToSelf("Response.Arcade_No_Coin");
+                }
             }
+
         }
 
 
-     
+
     }
-     
-    
+
+
     public override void useItem()
     {
         Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
         PlayerControl player = FindObjectOfType<PlayerControl>();
 
-
-
-
-
-        if (currentItem.ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim()))
+        if (broken) { player.talkToSelf("Response.broken_arcade"); }
+        else
         {
-            player.ChangeState(player.stateUI);
-            Arcade.SetActive(true);
-            // Cursor.visible = false;
-            ArcadePOV.SetActive(true);
-            audio.PlayOneShot(clip);
-            for (int i = playerBackpack.backpack.Count - 1; i >= 0; i--)
+
+
+
+            if (currentItem.ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim()))
             {
-                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim()))
-                    playerBackpack.backpack.RemoveAt(i);
+                player.ChangeState(player.stateUI);
+                Arcade.SetActive(true);
+                // Cursor.visible = false;
+                ArcadePOV.SetActive(true);
+                audio.PlayOneShot(clip);
+                for (int i = playerBackpack.backpack.Count - 1; i >= 0; i--)
+                {
+                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim()))
+                        playerBackpack.backpack.RemoveAt(i);
+                }
+            }
+            else
+            {
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Response.Arcade_wrong_item");
             }
         }
-        else {
-            player.ChangeState(player.stateExplore);
-            player.talkToSelf("Response.Arcade_wrong_item");
-        }
-    
-}
-
-    public override void useNeuroImplant() {
-        
     }
 
+    public override void useNeuroImplant()
+    {
+        NeuroImplantApp app = NeuroGUIControl.currentUnit.NeuroApp;
+        PlayerControl player = FindObjectOfType<PlayerControl>();
+        player.ChangeState(player.stateExplore);
+        if (broken) { player.talkToSelf("Response.broken_arcade"); }
+        else
+        {
+
+            if (app.GetComponent<HackingModule>() != null)
+            {
+                if (beat)
+                {
+                    player.ChangeState(player.stateExplore);
+                    player.talkToSelf("Response.arcade_hacking_beat");
+                    error.SetActive(true);
+                    broken = true;
+                    eparts.SetActive(true);
+                }
+                else
+                {
+                    player.ChangeState(player.stateExplore);
+                    player.talkToSelf("Response.arcade_hacking_no_beat");
+                }
+            }
+            else
+            {
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Response.neural_arcade_wrong");
+            }
+
+
+        }
+    }
 }

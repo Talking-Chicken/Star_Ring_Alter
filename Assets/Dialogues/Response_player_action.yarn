@@ -212,10 +212,12 @@ position: -45,-75
 ---
 Amo: Nice! I got the grand prize. 
 Mr. Rabbit: Looks like someone broke this machine.
-<<SE Audio_yarn broken_arcade>>
+<<SE System_sounds_effect broken_arcade>>
 Amo: Wait, what? I didn’t do anything!
 Mr. Rabbit: Anyway, it also drops an electronic component, pick it up if u need it. 
 Amo: At least the time we waste isn't for nothing.
+Mr. Rabbit: While you are playing, I have recorded your operations in a series of electrical signals. 
+Mr. Rabbit: So now I can duplicate your action to skip the gameplay if you want to get the electronic components from this machine quickly. 
 ===
 title: Response.broken_arcade
 position: -45,-75
@@ -225,6 +227,64 @@ Amo: This arcade is already broken.
 title: Response.neural_arcade_wrong
 position: -45,-75
 ---
-Amo: I don't think I can use anything module on this arcade.
-Mr. Rabbit: This arcade is controlled through neural implant.
+Amo: I don't think I can use that module on this arcade.
+===
+title: Response.arcade_finish_game
+position: -45,-75
+---
+Amo: Oh no, I lose the game.
+Mr. Rabbit: How do you win in this game?
+Amo: You gotta survive for more than 60 mins to receive the grand prize.
+Amo: I don't know what they are offering in Star Ring, but when I was in a re-education camp, the prize we received for beating the game was an astronaut action figure.
+Mr. Rabbit: The one in your suite?
+Amo: Yup, now you know how good I am at playing those retro games.
+Mr. Rabbit: If you find another token coin, you can always play another round. Although I don't think you should waste another round of time on 
+Amo: Relax, bunny, we are in a time loop, literally time enough for gaming.
+===
+title: Response.arcade_first
+position: -45,-75
+---
+Mr. Rabbit: Real-Time… Card game…, what kind of name is that?
+Amo: This is a game about dodging the enemy’s attack while shooting bullets to fight back. However, your movements are limited by the card you have, so you should constantly use your cards to get a better hand. 
+Amo: But there is a cold-down moment between each click, so clicking without thinking can bring you trouble. 
+===
+title: Response.arcade_check_if_beat
+position: -45,-75
+---
+Mr. Rabbit: Hey Amo. I have recorded your game performance in the previous loop, if you want me to boost the gameplay for you, I can do it now and save some time for us.
+Mr. Rabbit: All you need to do is use the neural implant’s hacking module and I can do the rest for you. You don’t even need to find the arcade coin.
+===
+title: Response.arcade_narrative_after_beat
+position: -45,-75
+---
+Mr. Rabbit: You do know I can store digital information between time loops, right? Why don’t you just let me skip the gaming process for you, and we can get the grand prize immediately?
+Amo: Rabbit! You have to appreciate the fun of gaming one day. No one can steal the joy of the game from me.
+===
+title: Response.arcade_hacking_no_beat
+position: -45,-75
+---
+Mr. Rabbit: I think I can hack this arcade for you, but I would need the encoding format of this arcade’s save file, which means you should at least beat this game once.
+===
+title: Response.arcade_hacking_beat
+position: -45,-75
+---
+Amo: Hey, Mr. Rabbit, can you help me speedrun this arcade.
+Mr. Rabbit: Alright, here we go. Hacking….
+<<SE System_sounds_effect broken_arcade>>
+Mr. Rabbit: Hacking complete, and we break this machine again.
+Amo: This spot has become a stable source of income for electronic components.
+===
+title: Response.arcade_finish_game_beat
+position: -45,-75
+---
+Amo: Oh no, I lose the game.
+Mr. Rabbit: If you want me to play the game for you, just use the hacking module on this arcade. 
+===
+title: Response.win_arcade_beat
+position: -45,-75
+---
+Amo: Nice! I got the grand prize. 
+Mr. Rabbit: And break the arcade machine again.
+<<SE System_sounds_effect broken_arcade>>
+Amo: This spot has become a stable source of income for electronic components.
 ===
