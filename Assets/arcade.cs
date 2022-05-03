@@ -91,4 +91,10 @@ public class arcade : InteractiveObj
             player.talkToSelf("Response.Arcade_wrong_item");
         }
     
-}}
+}
+
+    public override void useNeuroImplant() {
+        
+    }
+
+}
