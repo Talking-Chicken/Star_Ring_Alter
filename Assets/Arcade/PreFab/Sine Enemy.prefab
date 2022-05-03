@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.6
-  frenquency: 1
-  magnitude: 0.008
+  frenquency: 0.7
+  magnitude: 0.004
 --- !u!95 &3461244810016746049
 Animator:
   serializedVersion: 3

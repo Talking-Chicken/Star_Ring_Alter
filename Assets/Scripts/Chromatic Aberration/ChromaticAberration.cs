@@ -13,6 +13,9 @@ public class ChromaticAberration : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
+        Debug.LogWarning("w tf");
+        if (Shader.Find("Hidden/ChromaticAberration") != null) Debug.LogWarning("thisis not null");
+        else Debug.LogWarning("this is  mi;l;");
         material = new Material(Shader.Find("Hidden/ChromaticAberration"));
 	}
 

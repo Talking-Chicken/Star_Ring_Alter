@@ -8,8 +8,13 @@ public class arcade : InteractiveObj
     StateManager state;
     [SerializeField] GameObject Arcade;
     [SerializeField] GameObject ArcadePOV;
-
-
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip clip;
+    [SerializeField] GameObject error;
+    [SerializeField] GameObject eparts;
+    private bool broken = false;
+    private bool once = true;
+    public static float score;
     private Talkable talk;
     private void Start()
     {
@@ -17,22 +22,45 @@ public class arcade : InteractiveObj
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         talk = GetComponent<Talkable>();
     }
+    private void Update()
+    {
+       
+        if (score>=14&&broken==false) {
+
+            error.SetActive(true);
+            broken = true;
+            eparts.SetActive(true);
+            PlayerControl player = FindObjectOfType<PlayerControl>();
+            player.ChangeState(player.stateExplore);
+           
+            player.talkToSelf("Response.win_arcade");
+        }
+        if (once)
+        {
+            Time_text time_text = FindObjectOfType<Time_text>();
+            time_text.addtime1((int)score);
+            once = false;
+        }
+    }
     public override void interact()
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        
 
-
-
-        if (playerBackpack.contains("Token Coin"))
+        if (broken) { player.talkToSelf("Response.broken_arcade"); } else
         {
-            player.talkToSelf("Response.Arcade_Yes_Coin");
+            if (playerBackpack.contains("Token Coin"))
+            {
+                player.talkToSelf("Response.Arcade_Yes_Coin");
+            }
+            else
+            {
+                player.talkToSelf("Response.Arcade_No_Coin");
+            }
         }
-        else 
-        {
-            player.talkToSelf("Response.Arcade_No_Coin");
-        }
+
+
+     
     }
      
     
@@ -51,7 +79,12 @@ public class arcade : InteractiveObj
             Arcade.SetActive(true);
             // Cursor.visible = false;
             ArcadePOV.SetActive(true);
-
+            audio.PlayOneShot(clip);
+            for (int i = playerBackpack.backpack.Count - 1; i >= 0; i--)
+            {
+                if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim()))
+                    playerBackpack.backpack.RemoveAt(i);
+            }
         }
         else {
             player.ChangeState(player.stateExplore);

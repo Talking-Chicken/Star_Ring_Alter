@@ -13,6 +13,8 @@ public class Time_text : MonoBehaviour
     private TMP_Text textClock;
     public static DateTime time_2;
     public int change_rate;
+    bool once;
+    int addtime;
 
     public static bool isTimePaused = false;
     void Awake()
@@ -40,9 +42,21 @@ public class Time_text : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!isTimePaused)
-            time = time + new TimeSpan(0, 0, 0, 0, change_rate);
+        if (!isTimePaused) { 
+            if (once) { 
+                time = time + new TimeSpan(0, 0, 0, 0, addtime*change_rate*50);
+                once = false; 
+            } 
+
+            time = time + new TimeSpan(0, 0, 0, 0, change_rate); }
+           
         time_2 = time;
+    }
+    public void addtime1(int time1) {
+    
+        once = true;
+        Debug.Log("once" + time1);
+        addtime = time1;
     }
     string LeadingZero(int n)
     {

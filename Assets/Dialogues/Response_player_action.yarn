@@ -207,3 +207,23 @@ position: -45,-75
 ---
 Mr. Rabbit: Amo, what are you doing? Don't give up now! The source of the time loop gotta be inside this store. We need to resolve this crisis. Don't leave this store!
 ===
+title: Response.win_arcade
+position: -45,-75
+---
+Amo: Nice! I got the grand prize. 
+Mr. Rabbit: Looks like someone broke this machine.
+<<SE Audio_yarn broken_arcade>>
+Amo: Wait, what? I didn’t do anything!
+Mr. Rabbit: Anyway, it also drops an electronic component, pick it up if u need it. 
+Amo: At least the time we waste isn't for nothing.
+===
+title: Response.broken_arcade
+position: -45,-75
+---
+Amo: This arcade is already broken.
+===
+title: Response.neural_arcade_wrong
+position: -45,-75
+---
+Amo: This arcade is already broken.
+===
