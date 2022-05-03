@@ -40,7 +40,7 @@ public class ScoreManager : MonoBehaviour
                 arcade_camera.SetActive(false);
                 arcade.score = score;
                 main_camera.SetActive(true);
-               
+                arcade.once = true;
                 main_player.ChangeState(main_player.stateExplore);
                 //transit back to UI idle state
                 FindObjectOfType<UIControl>().ChangeState(FindObjectOfType<UIControl>().stateIdle);

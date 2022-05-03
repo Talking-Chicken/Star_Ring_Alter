@@ -13,7 +13,7 @@ public class arcade : InteractiveObj
     [SerializeField] GameObject error;
     [SerializeField] GameObject eparts;
     private bool broken = false;
-    private bool once = true;
+    public static bool once=false;
     public static float score;
     private Talkable talk;
     private void Start()
