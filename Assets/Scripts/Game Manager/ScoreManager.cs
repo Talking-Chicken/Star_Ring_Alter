@@ -16,7 +16,7 @@ public class ScoreManager : MonoBehaviour
 
     private PlayerControlArcade player;
     private PlayerControl main_player;
-
+    [SerializeField] GameObject player_arcade;
 
     //getter
     public float Score {get {return score;}}
@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     }
     void Update()
     {
-        if (player != null) {
+        if (player_arcade.activeSelf&&arcade_narrative.start==false) {
             score += Time.deltaTime;
             scoreText.text = ((int)score).ToString();
         } else {
@@ -41,6 +41,15 @@ public class ScoreManager : MonoBehaviour
                 arcade.score = score;
                 main_camera.SetActive(true);
                 arcade.once = true;
+                GameObject[] gos;
+                gos = GameObject.FindGameObjectsWithTag("arcade");
+                score = 1.0f;
+                foreach (GameObject go in gos)
+                {
+                    Destroy(go);
+                    
+                }
+              // player_arcade.SetActive(true);
                 main_player.ChangeState(main_player.stateExplore);
                 //transit back to UI idle state
                 FindObjectOfType<UIControl>().ChangeState(FindObjectOfType<UIControl>().stateIdle);

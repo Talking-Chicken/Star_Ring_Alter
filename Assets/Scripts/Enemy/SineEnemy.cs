@@ -20,4 +20,9 @@ public class SineEnemy : Enemy
 
         transform.position = pos + transform.up * Mathf.Sin(base.elapsedTime * frenquency) * magnitude;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<WorldBound>() != null) Debug.Log("world bound!!");
+    }
 }

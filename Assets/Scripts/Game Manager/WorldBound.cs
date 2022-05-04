@@ -19,6 +19,4 @@ public class WorldBound : MonoBehaviour
             Destroy(collider.gameObject);
         }
     }
-
-    
 }

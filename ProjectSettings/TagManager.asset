@@ -11,6 +11,7 @@ TagManager:
   - invest_icon
   - Projectile
   - Ground
+  - arcade
   layers:
   - Default
   - TransparentFX

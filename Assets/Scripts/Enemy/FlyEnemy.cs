@@ -46,6 +46,7 @@ public class FlyEnemy : Enemy
 
     //shott toward target transform position a bullet
     private void shootBullet() {
+        GetComponent<AudioSource>().Play();
         if (FindObjectOfType<PlayerControlArcade>() != null)
             Instantiate(bullet, transform.position, Quaternion.identity);
     }

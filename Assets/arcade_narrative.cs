@@ -13,6 +13,7 @@ public class arcade_narrative : MonoBehaviour
     [SerializeField] GameObject BGM;
     private bool first_time;
     bool beat;
+    public static bool start;
     void Start()
     {
         for (var i = 0; i < random_conversation.lines.Length; i++)
@@ -55,9 +56,13 @@ public class arcade_narrative : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!dialogue.IsDialogueRunning) { arcade_player.SetActive(true); manager.SetActive(true);BGM.SetActive(true);
+        if (!dialogue.IsDialogueRunning&&start) { 
+            arcade_player.SetActive(true); 
+            manager.SetActive(true);
+            BGM.SetActive(true);
             PlayerControl player = FindObjectOfType<PlayerControl>();
             player.ChangeState(player.stateUI);
+            start = false;
         }
     }
 }

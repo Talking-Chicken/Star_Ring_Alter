@@ -46,7 +46,7 @@ public class arcade : InteractiveObj
             Time_text time_text = FindObjectOfType<Time_text>();
             time_text.addtime1((int)score);
             once = false;
-            if (score >= 14)
+            if (score >= 40)
             {
 
                 error.SetActive(true);
@@ -75,7 +75,7 @@ public class arcade : InteractiveObj
                 }
             }
 
-            if (score < 14)
+            if (score < 40)
             {
 
                 PlayerControl player = FindObjectOfType<PlayerControl>();
@@ -133,10 +133,11 @@ public class arcade : InteractiveObj
                 // Cursor.visible = false;
                 ArcadePOV.SetActive(true);
                 audio.PlayOneShot(clip);
+                arcade_narrative.start = true;
                 for (int i = playerBackpack.backpack.Count - 1; i >= 0; i--)
                 {
-                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim()))
-                        playerBackpack.backpack.RemoveAt(i);
+                    if (playerBackpack.backpack[i].GetComponent<Item>().ItemName.ToLower().Trim().Contains("Token Coin".ToLower().Trim())) { playerBackpack.backpack.RemoveAt(i); break; }
+                        
                 }
             }
             else

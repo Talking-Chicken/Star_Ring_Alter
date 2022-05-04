@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NaughtyAttributes;
 
 public class EnemyBullet : MonoBehaviour
 {
-    private Vector2 targetDirection;
-    private float speed;
+    [ShowNonSerializedField] private Vector2 targetDirection;
+    [ShowNonSerializedField] private float speed;
     private bool isAlive = true;
     private Animator myAnim;
     void Start()

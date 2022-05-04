@@ -32,7 +32,7 @@ public class EnemyGenerator : MonoBehaviour
                 difficultyScore[i] = 0;
             }
         }
-
+        
         //spawn enemies
         if (((int)scoreManager.Score)%10 == 0 && !isSpawned && FindObjectOfType<PlayerControlArcade>() != null) {
             for (int i = 0; i < (int)spawnRate; i++) {
@@ -41,11 +41,11 @@ public class EnemyGenerator : MonoBehaviour
                 if (randomChoose == 0) {
                     GameObject sin = Instantiate(sineEnemy, new Vector2(worldBound.bounds.min.x - 0.5f+ worldBound.transform.position.x, sineSpawnY+ worldBound.transform.position.y), Quaternion.identity);
                     sin.GetComponent<SineEnemy>().IsMovingRight = true;
-                    Instantiate(flyEnemy, new Vector2(worldBound.bounds.min.x - 0.5f+ worldBound.transform.position.x, flySpawnY+ worldBound.transform.position.y), Quaternion.identity);
+                    Instantiate(flyEnemy, new Vector2(worldBound.bounds.min.x + 0.5f + worldBound.transform.position.x, flySpawnY+ worldBound.transform.position.y), Quaternion.identity);
                 } else { //spawn from right
                     GameObject sin = Instantiate(sineEnemy, new Vector2(worldBound.bounds.max.x + 0.5f+worldBound.transform.position.x, sineSpawnY+ worldBound.transform.position.y), Quaternion.identity);
                     sin.GetComponent<SineEnemy>().IsMovingRight = false;
-                    Instantiate(flyEnemy, new Vector2(worldBound.bounds.max.x + 0.5f+worldBound.transform.position.x, flySpawnY+ worldBound.transform.position.y), Quaternion.identity);
+                    Instantiate(flyEnemy, new Vector2(worldBound.bounds.max.x - 0.5f +worldBound.transform.position.x, flySpawnY+ worldBound.transform.position.y), Quaternion.identity);
                 }
             }
             StartCoroutine(waitToSpawn());
