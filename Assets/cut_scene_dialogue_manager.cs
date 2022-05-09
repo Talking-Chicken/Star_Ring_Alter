@@ -22,7 +22,7 @@ public class cut_scene_dialogue_manager : MonoBehaviour
                 else { runner.startNode = "Random_dialogue.End_of_loop_1"; }
             }
 
-
+            
 
 
 

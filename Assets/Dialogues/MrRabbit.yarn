@@ -123,7 +123,8 @@ colorID: 1
 position: 2027,396
 ---
 Amo: Finally finished up here. What now? Do I just take this robot to the busted elevator door?
-Mr. Rabbit: See the coffee bean delivery tunnel in this room? Place the robot there. Systems work so that the cargo tunnels are connected to the maintenance tunnels. Return to the corridor, submit a maintenance request, and the system will bring the robot right to your doorstep! Or rather, the elevator door. 
+Mr. Rabbit: See the coffee bean delivery tunnel in this room? Place the robot there. 
+Mr. Rabbit: We can then return to the corridor, submit a maintenance request, and the system will bring the robot right to your doorstep! Or rather, the elevator door.
 Amo: Means we can leave everything to the maintenance robot. Good.
 ===
 title: MrRabbit.Maintenance_Robot_Tunnel
@@ -154,25 +155,18 @@ tags: Elevator
 colorID: 3
 position: 3032,723
 ---
-Amo: It never crossed my mind as to why we couldn't use this elevator. 
-Mr. Rabbit: 32 hours ago, Lacey, a Star-Ring convenience store employee, attempted to transport 20 crates of coffee beans to the rooftop. It all came to a head when the Maintenance Robot misidentified him as an industrial spy and assumed he is trying to steal our secret coffee recipe. 
+Amo: It never crossed my mind as to why we couldn't use this elevator.
+Mr. Rabbit: 32 hours ago, Lacey, a Star-Ring convenience store employee, attempted to transport 20 crates of coffee beans to the rooftop. 
+Mr. Rabbit: It all came to a head when the Maintenance Robot misidentified him as an industrial spy and assumed he was trying to steal our secret coffee recipe.
 Amo: That's hilarious, I have no idea how the robot came to that conclusion. And that robot broke the door to stop Lacey?
-Mr. Rabbit: Well, its AI isn't exactly top of the shelf when it comes to tech. And actually, no, Lacey threw box after box of coffee beans at the robot that pursued him, smashing the robot into the elevator door. The elevator was out of order after that little incident.
-Amo: Well that's awesome. Was the elevator the only way up?
-Mr. Rabbit: Well alternatively, there is ductwork consisting of cargo and maintenance tunnels, but I would advise against using it. You are a little bigger than crate of a coffee beans.
-Mr. Rabbit: You'll can unlock the elevator if it's fixed by the manager officer in the black door just down this corridor. To fix that door, you better get the maintenance robot Lacey broke that day to work. That is the only spare maintenance robot this store has. 
-Amo: Let me check my neural implant. That device is left on the second floor, the coffee house part of this store. I need to go to the storefront to get to the second floor.
-
-<<if searchAppInDownload("hacking module")>>
-    Mr. Rabbit: But you can override that lockdown with your neural implant. Something I did all the time when I was all alone. In other words, every single day before you came and I was integrated in your exoplant. 
-    Amo: In other words, am I your first conversation partner?
-    Mr. Rabbit: My victims are mostly from Rabbit Heavy Industry, their defensive matrices are more challenging. The Confederation and Cat Technology are using passive firewalls, which require little memory but are vulnerable if you know where to hit.
-<<elseif searchAppInDownload("engineering module")>>
-    Mr. Rabbit: You'll be able to fix that door yourself if you can find some spare Mechanical Parts. That neural implant makes it so you can overcome simple engineering challenges like that. 
-    Amo: Simple? I thought that Neural Implant with an engineering module would make me a real engineer! At least that's what I heard from advertisements in the re-education camp. 
-    Mr. Rabbit: In principle, yes. Take soldering, for example, Neural Implant can grant you better control over your body, so you won’t burn yourself while soldering, and it will tell you where to put your solder. 
-    Mr. Rabbit: Still, you have to do the soldering yourself. The Neural Implant will inform you of what to do and aid you in motor control, but without practical experience and education, you won't ever become an expert engineer. 
-<<endif>>
+Mr. Rabbit: Actually, no, Lacey threw box after box of coffee beans at the robot that pursued him, smashing the robot into the elevator door. 
+Amo: And the elevator was out of order after that little incident. Well that's awesome. Was the elevator the only way up?
+Mr. Rabbit: Alternatively, there is ductwork consisting of cargo and maintenance tunnels.
+Mr. Rabbit: But I would advise against using it. You are a little bigger than a crate of coffee beans.
+Mr. Rabbit: We should fix that door first. You better use the maintenance robot Lacey broke that day to work. That is the only spare maintenance robot this store has.
+Mr. Rabbit: Or, You can fix that door yourself if you have an Engineering Module installed in your neural implant. Then all you need is a few Mechanical Parts.
+Mr.Rabbit: I have organized all the information in your neural implant.Free feel to call me when you need me.
+System: You can now use TAB or ESC to use your neural implant.
 ===
 title: MrRabbit.Rita_Laptop_Intro
 tags: Laptop Rita
