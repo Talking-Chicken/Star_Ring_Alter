@@ -42,3 +42,12 @@ position: -160,-32
 ---
 Mr. Rabbit: Amo, it's nearly midnight again. Let's meet again in the next time loop.
 ===
+title: Random_dialogue.End_of_loop_1
+position: 89,-208
+---
+Stabilization Device: Reset time, in 3…
+Stabilization Device: 2….
+Stabilization Device: 1….
+Stabilization Device: Reset.
+<<Load_Scene Mr_Rabbit Main>>
+===

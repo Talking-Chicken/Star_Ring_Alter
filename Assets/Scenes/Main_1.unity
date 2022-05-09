@@ -2139,7 +2139,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 154820787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdf678490122e1f42aa56c26821b65c5, type: 3}
   m_Name: 
@@ -2463,6 +2463,7 @@ MonoBehaviour:
   exit_icon: {fileID: 0}
   folder_icon: {fileID: 21300000, guid: f8654f11529b4d54dbd7e3db13844dc2, type: 3}
   accessFile: {fileID: 1889367851}
+  dialogue: {fileID: 0}
 --- !u!1 &177801149
 GameObject:
   m_ObjectHideFlags: 0
@@ -3240,6 +3241,7 @@ MonoBehaviour:
   main_camera: {fileID: 39912041}
   laptop_camera: {fileID: 1279425558}
   GUI: {fileID: 0}
+  dialogue: {fileID: 0}
 --- !u!61 &204810886
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -15,6 +15,7 @@ public class TimeLoopSystem : MonoBehaviour
     private Time_text time;
     public static int time_loop_count;
     [SerializeField] int endingHour;
+   // private string[] parts;
     private DateTime endingTime;
     void Start()
     {
@@ -45,10 +46,23 @@ public class TimeLoopSystem : MonoBehaviour
 
         FindObjectOfType<StateManager>().transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
+        for (var i = 0; i < random_conversation.lines.Length; i++)
+        {
+           string[] parts = random_conversation.lines[i].Split(',');
+            parts[0] = parts[0].Replace("\r", "");
 
+            if (parts[0].Equals("loop_time"))
+            {
+                int loop = System.Convert.ToInt32(parts[2]);
+                loop = loop + 1;
+                random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + loop.ToString() + "," + parts[3];
+            }
+
+        }
         DateTime today = DateTime.Today;
         Time_text.time_2 = new DateTime(today.Year, today.Month, today.Day, 0, 19, 0);
         ES3.Save("Condition1",random_conversation.lines, "Star_Ring_Save/myFile.es3");
         SceneManager.LoadScene("cut_scene_2");
     }
+     
 }
