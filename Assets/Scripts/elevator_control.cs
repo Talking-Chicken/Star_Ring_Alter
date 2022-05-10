@@ -6,7 +6,6 @@ using TMPro;
 
 public class elevator_control : InteractiveObj
 {
-    
     public GameObject to_corridor;
     public GameObject to_roof_top;
     public GameObject tile_corridor;

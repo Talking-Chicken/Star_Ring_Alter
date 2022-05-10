@@ -19,6 +19,12 @@ public class UIStateMap : UIStateBase
         } else if (Input.GetKeyDown(UI.Key.previous)) {
             UI.ChangeState(UI.stateNeuro);
         }
+
+        UI.debugCameraZ();
+        UI.zoomMap();
+        UI.moveMap();
+        UI.debugCameraZ();
+        //UI.lockMapCameraZ();
     }
 
     public override void LeaveState(UIControl UI)

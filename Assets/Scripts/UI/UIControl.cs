@@ -22,6 +22,9 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Inventory GUI")] private Button inventoryTab;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
     [SerializeField, BoxGroup("Map GUI")] private Button mapTab;
+    [SerializeField, BoxGroup("Map GUI")] private Collider2D mapBound;
+    [SerializeField, BoxGroup("Map GUI")] private Camera mapCamera;
+    [SerializeField, BoxGroup("Map GUI")] private float minMapCameraSize, maxMapCameraSize, mapZoomSpeed, mapMoveSpeed;
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
     [SerializeField, BoxGroup("Selection Menu QE")] public GameObject QEkeyContainer;
     private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
@@ -113,7 +116,6 @@ public class UIControl : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name.Equals("Main_1"))
         {
-            Debug.Log("22");
             isInMain_1 = true;
         }
         Debug.Log(SceneManager.GetActiveScene().name);
@@ -123,6 +125,7 @@ public class UIControl : MonoBehaviour
     void Update()
     {
         currentState.UpdateState(this);
+        //lockMapCameraZ();
     }
 
     #region close & open Windows
@@ -269,5 +272,45 @@ public class UIControl : MonoBehaviour
     /* use current selecting neuro implant of NeuroImplantGUIControl */
     public void useNeuroImplant() {
         neuroControl.useNeuroImplant();
+    }
+
+    /* control the map using arrow key (add mouse button latter) */
+    public void moveMap() {
+        Vector3 moveDir = Vector2.zero;
+        if (Input.GetKey(KeyCode.UpArrow))
+            moveDir += new Vector3(0,1,0);
+        if (Input.GetKey(KeyCode.DownArrow))
+            moveDir += new Vector3(0,-1,0);
+        if (Input.GetKey(KeyCode.LeftArrow))
+            moveDir += new Vector3(-1,0,0);
+        if (Input.GetKey(KeyCode.RightArrow))
+            moveDir += new Vector3(1,0,0);
+        
+        Vector2 currentPos = mapCamera.transform.position;
+        float newX = Mathf.Clamp(currentPos.x + moveDir.x * mapMoveSpeed * Time.deltaTime, mapBound.bounds.min.x, mapBound.bounds.max.x);
+        float newY = Mathf.Clamp(currentPos.y + moveDir.y * mapMoveSpeed * Time.deltaTime, mapBound.bounds.min.y, mapBound.bounds.max.y);
+
+        Vector3 smoothPos = Vector3.Lerp(mapCamera.transform.position, new Vector3(newX, newY, gameObject.transform.position.z), 0.2f);
+
+        mapCamera.transform.position = smoothPos;
+        
+    }
+
+    public void lockMapCameraZ() {
+        mapCamera.transform.position = new Vector3(mapCamera.transform.position.x, mapCamera.transform.position.y, 0.5f);
+    }
+
+    public void debugCameraZ()
+    {Debug.Log(mapCamera.transform.position.z);}
+
+    /* players can use [z]/[x] or mouse wheel to zoom in/out of the map, by changeing map camera's size */
+    public void zoomMap() {
+        float zoomValue = 0;
+        if (Input.GetKey(KeyCode.Z))
+            zoomValue = mapZoomSpeed;
+        if (Input.GetKey(KeyCode.X))
+            zoomValue = -mapZoomSpeed;
+        
+        mapCamera.orthographicSize = Mathf.Clamp(mapCamera.orthographicSize + zoomValue * Time.deltaTime, minMapCameraSize, maxMapCameraSize);
     }
 }
