@@ -24,7 +24,7 @@ Stabilization Device: Reset time, in 3…
 Stabilization Device: 2….
 Stabilization Device: 1….
 Stabilization Device: Reset.
-<<Load_Scene Mr_Rabbit Main>>
+<<Cutscene Dialogue>>
 ===
 title: Random_dialogue.2
 position: -160,-32
@@ -49,5 +49,22 @@ Stabilization Device: Reset time, in 3…
 Stabilization Device: 2….
 Stabilization Device: 1….
 Stabilization Device: Reset.
-<<Load_Scene Mr_Rabbit Main>>
+<<Cutscene Dialogue>>
+===
+title: Random_dialogue.Memory
+position: 89,-208
+---
+: Core City Shoham Memorial Hospital
+: One year ago
+<<wait 2>>
+===
+title: Random_dialogue.Memory_1
+position: 89,-208
+---
+Neural Implantologist: Aborting the surgery, her test report just came out.
+Anesthesiologist: Is she one of them? Did she also have rejection syndrome?
+Neural Implantologist: Confirmed. There is no way she can survive this surgery. I have acknowledged the Ministry of Health. People from Autumn-8 will pick her up tomorrow. 
+Neural Implantologist: If she cannot use the neural implant, there is no room for her in this society.
+Anesthesiologist: Poor kid, she will spend the rest of her life there.
+<<Load_Scene Main_Camera Main>>
 ===

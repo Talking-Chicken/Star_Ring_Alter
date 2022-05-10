@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -23450,7 +23450,6 @@ GameObject:
   - component: {fileID: 1517736866}
   - component: {fileID: 1517736869}
   - component: {fileID: 1517736868}
-  - component: {fileID: 1517736867}
   m_Layer: 5
   m_Name: Time Text
   m_TagString: Untagged
@@ -23477,20 +23476,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -11.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1517736867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517736865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc9ce624a1527f047b899c93c0d5f5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  container: {fileID: 0}
-  change_rate: 10
 --- !u!114 &1517736868
 MonoBehaviour:
   m_ObjectHideFlags: 0
