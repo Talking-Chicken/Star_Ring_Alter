@@ -56,7 +56,6 @@ position: 89,-208
 ---
 : Core City Shoham Memorial Hospital
 : One year ago
-<<wait 2>>
 ===
 title: Random_dialogue.Memory_1
 position: 89,-208
@@ -66,5 +65,25 @@ Anesthesiologist: Is she one of them? Did she also have rejection syndrome?
 Neural Implantologist: Confirmed. There is no way she can survive this surgery. I have acknowledged the Ministry of Health. People from Autumn-8 will pick her up tomorrow. 
 Neural Implantologist: If she cannot use the neural implant, there is no room for her in this society.
 Anesthesiologist: Poor kid, she will spend the rest of her life there.
+<<Cutscene Dialogue>>
 <<Load_Scene Main_Camera Main>>
+===
+title: Random_dialogue.Memory_2
+position: 89,-208
+---
+: Autumn-8 Neural implant Rejector Re-education Institution
+: Three months ago
+===
+title: Random_dialogue.Memory_3
+position: 89,-208
+---
+She: No way! How did you get this?
+Amo: If you tell the supervisor I sneaked out, I will knock your head off.
+She: Oh my gosh, look at its details; it even replicates the number of rocket thrusters on this model!
+Amo: I know, I know. I let my friend do the checkout for me in the store. That shop dude was staring at me the whole time. I think he might have realized I am an implant rejector.
+She: Hey, it is not our fault that we cannot use those chips!
+She: Speak of neural implant, I am glad you passed that experiment's interview. 
+Amo: I don't really know. An exoplant that can bypass our syndrome? Sounds too good to be true.
+She: Who knows, you may be the first to get out of this camp one day.
+She: Now, let me take a closer look at this gorgeous. 
 ===
