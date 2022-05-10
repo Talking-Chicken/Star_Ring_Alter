@@ -20,8 +20,11 @@ public class UIStateMap : UIStateBase
             UI.ChangeState(UI.stateNeuro);
         }
 
+        UI.debugCameraZ();
         UI.zoomMap();
-        
+        UI.moveMap();
+        UI.debugCameraZ();
+        //UI.lockMapCameraZ();
     }
 
     public override void LeaveState(UIControl UI)
