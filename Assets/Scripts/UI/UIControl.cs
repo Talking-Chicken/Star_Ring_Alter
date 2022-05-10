@@ -22,6 +22,9 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Inventory GUI")] private Button inventoryTab;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private Button neuroImplantTab;
     [SerializeField, BoxGroup("Map GUI")] private Button mapTab;
+    [SerializeField, BoxGroup("Map GUI")] private Collider2D mapBound;
+    [SerializeField, BoxGroup("Map GUI")] private Camera mapCamera;
+    [SerializeField, BoxGroup("Map GUI")] private float minMapCameraSize, maxMapCameraSize, mapZoomSpeed;
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
     [SerializeField, BoxGroup("Selection Menu QE")] public GameObject QEkeyContainer;
     private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
@@ -113,7 +116,6 @@ public class UIControl : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name.Equals("Main_1"))
         {
-            Debug.Log("22");
             isInMain_1 = true;
         }
         Debug.Log(SceneManager.GetActiveScene().name);
@@ -269,5 +271,21 @@ public class UIControl : MonoBehaviour
     /* use current selecting neuro implant of NeuroImplantGUIControl */
     public void useNeuroImplant() {
         neuroControl.useNeuroImplant();
+    }
+
+    /* control the map using arrow key (add mouse button latter) */
+    public void moveMap(Vector2 direction) {
+        
+    }
+
+    /* players can use [z]/[x] or mouse wheel to zoom in/out of the map, by changeing map camera's size */
+    public void zoomMap() {
+        float zoomValue = 0;
+        if (Input.GetKey(KeyCode.Z))
+            zoomValue = mapZoomSpeed;
+        if (Input.GetKey(KeyCode.X))
+            zoomValue = -mapZoomSpeed;
+        
+        mapCamera.orthographicSize = Mathf.Clamp(mapCamera.orthographicSize + zoomValue * Time.deltaTime, minMapCameraSize, maxMapCameraSize);
     }
 }
