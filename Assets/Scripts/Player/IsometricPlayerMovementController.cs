@@ -13,6 +13,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public static Vector2 movement = new Vector2(0, 0); //direction that player is going [can be (0,0)]
 
     private PlayerControl player; //custom script
+   
+  
 
     private void Awake()
     {
@@ -40,20 +42,21 @@ public class IsometricPlayerMovementController : MonoBehaviour
             rbody.MovePosition(newPos);
         } else
         {
-            isoRenderer.SetDirection(new Vector2(0,0));
+            isoRenderer.SetDirection(new Vector2(0, 0));
         }
-        
+
+
     }
     void setDir() //give dir a Vector2 value, according to WASD that player is pressing
     {
-        if (Input.GetAxis("Vertical")>0)
+        if (Input.GetAxis("Vertical") > 0)
         {
             if (Input.GetAxis("Horizontal") < 0)
             {
                 dir = new Vector2(-0.75f, 0.75f);
                 movement = dir;
             }
-            else if (Input.GetAxis("Horizontal") >0)
+            else if (Input.GetAxis("Horizontal") > 0)
             {
                 dir = new Vector2(0.75f, 0.75f);
                 movement = dir;
@@ -66,7 +69,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
-            if (Input.GetAxis("Horizontal")<0)
+            if (Input.GetAxis("Horizontal") < 0)
             {
                 dir = new Vector2(-0.75f, -0.75f);
                 movement = dir;
@@ -100,4 +103,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
             }
         }
     }
+
+   
 }
