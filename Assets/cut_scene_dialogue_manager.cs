@@ -62,7 +62,14 @@ public class cut_scene_dialogue_manager : MonoBehaviour
                 {
                     camera.GetComponent<FadeCamera>().FadeOut(2f);
                     audio.Stop();
-                    StartCoroutine(ExampleCoroutine());
+                    if (looptime.Equals("2"))
+                    {
+                        StartCoroutine(ExampleCoroutine2());
+                    }
+                    else if (looptime.Equals("1"))
+                    { StartCoroutine(ExampleCoroutine()); }
+                    else { SceneManager.LoadScene("Main"); }
+
                     cutscene = 2;
 
                     break;//Intro
@@ -79,7 +86,7 @@ public class cut_scene_dialogue_manager : MonoBehaviour
                     {
                         runner.startNode = "Random_dialogue.Memory_2";
                         runner.StartDialogue();
-                        StartCoroutine(ExampleCoroutine2());
+                       
                         audio.PlayOneShot(door);
                         cutscene = 4;
                         StartCoroutine(ExampleCoroutine1());
@@ -94,7 +101,7 @@ public class cut_scene_dialogue_manager : MonoBehaviour
                         cutscene = 4;
                         StartCoroutine(ExampleCoroutine1());
                     }
-                    else { SceneManager.LoadScene("Main"); }
+            
                         
 
                     break;//Intro
@@ -117,12 +124,14 @@ public class cut_scene_dialogue_manager : MonoBehaviour
 
 
                     if (looptime.Equals("2"))
-                    { interaction_text.text = "Press Space to turn on Desk Lamp"; }
+                    { interaction_text.text = "Press Space to turn on Desk Lamp"; 
+                        cutscene = 6; }
                     else if (looptime.Equals("1"))
                     {
                         interaction_text.text = "Press Space to turn off Surgical Light";
+                        cutscene = 6;
                     }
-                    cutscene = 6;
+                    
                     break;//Intro
                 }
             case (6):
@@ -133,8 +142,18 @@ public class cut_scene_dialogue_manager : MonoBehaviour
                         interaction_text.text = "";
                         audio.PlayOneShot(light_off);
                         audio.PlayOneShot(robot);
-                        memory_1.GetComponent<Animator>().Play("memory_1");
-                        runner.startNode = "Random_dialogue.Memory_1";
+
+                        if (looptime.Equals("2"))
+                        {
+                            memory_2.GetComponent<Animator>().Play("light_on");
+                            runner.startNode = "Random_dialogue.Memory_3";
+                        }
+                        else if (looptime.Equals("1"))
+                        {
+                            memory_1.GetComponent<Animator>().Play("memory_1");
+                            runner.startNode = "Random_dialogue.Memory_1";
+                        }
+                           
                         runner.StartDialogue();
                         cutscene = 7;
                     }

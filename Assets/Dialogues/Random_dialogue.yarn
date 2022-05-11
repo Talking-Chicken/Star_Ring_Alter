@@ -86,4 +86,6 @@ She: Speak of neural implant, I am glad you passed that experiment's interview.
 Amo: I don't really know. An exoplant that can bypass our syndrome? Sounds too good to be true.
 She: Who knows, you may be the first to get out of this camp one day.
 She: Now, let me take a closer look at this gorgeous. 
+<<Cutscene Dialogue>>
+<<Load_Scene Main_Camera Main>>
 ===
