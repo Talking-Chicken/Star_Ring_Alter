@@ -1,0 +1,27 @@
+Condition Name,Type,State,Comment
+check_elevator_door,bool,FALSE,player first enter corridor and saw the brokwn door
+hacking_module,bool,FALSE,player download the hacking
+engineering_module,bool,FALSE,player download the engineer
+check_broken_robot,bool,FALSE,check the broken robot on 2nd floor
+fix_robot,bool,FALSE,the robot at second floor is fixed
+download_hacking_first,bool,TRUE,Download hacking implant for the first time
+download_engineering_first,bool,TRUE,Download engineering implant for the first time
+robot_in_the_tunnel,bool,FALSE,put the robot in the tunnel
+elevator_unlocked,bool,FALSE,elevator door is unlocked (hacking or manager office)
+elevator_fixed,bool,FALSE,elevator door is fixed (engineer or robot)
+cut_scene_1_played,bool,FALSE,player watch the cut scene video 
+manager_office_first,bool,FALSE,first time enter manager office
+manager_office_fail,bool,FALSE,try to eneter the manager office but without authority
+working_card_lacey,int,0,lacey's working card
+level_access,int,0,player's level access
+loop_time,int,0,time of loop
+epart_num,int,0,number of e parts
+gear_num,int,0,number of metal gear
+OS_maintain_num,int,0,number of maintaince OS software
+Rita.1,bool,TRUE,dialogue
+Rita.3,bool,TRUE,dialogue
+Rita.4,bool,TRUE,dialogue
+beat_arcade,bool,FALSE,win second floor arcade
+arcade_first_play,bool,TRUE,first time check arcade
+sec_station_checked,bool,FALSE,LV2 access forever
+spy_terminal,bool,FALSE,active_spy_terminal

@@ -46,7 +46,7 @@ public class MaintenanceRobot : InteractiveObj
                 random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "TRUE" + "," + parts[3];
                 first_time = true;
                 break;
-            } else if (parts[0].Equals("check_broken_robot") && parts[2].Equals("TRUE")) { first_time = false; }
+            } else if (parts[0].Equals("check_broken_robot") && parts[2].Equals("TRUE")) { first_time = false;break; }
            
         }
 

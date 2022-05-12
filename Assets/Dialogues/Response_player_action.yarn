@@ -288,3 +288,23 @@ Mr. Rabbit: And break the arcade machine again.
 <<SE System_sounds_effect broken_arcade>>
 Amo: This spot has become a stable source of income for electronic components.
 ===
+title: Response.security_station
+position: -45,-75
+---
+Mr. Rabbit: This appears to be a security station. Hmmm, I see. Amo, connect me to this device.
+Amo: What is this for? 
+Mr. Rabbit: Well, despite my looks, recall that I was designed to be THE hub of Star Ring convenience store. 
+Mr. Rabbit: Like how I connected to you through your Neural Implant, my original purpose would have allowed me to access every device inside the store.
+Mr. Rabbit: But without a thorough integration to the store, I can't access everything... at least not yet.
+Mr. Rabbit: That's where you come in. If you connect me with those devices, I can gain their control. This way, I can change your level of access anytime you want.
+Mr. Rabbit: The more security station you found, the greater access I have to the store.
+Amo: So we don't have to start over every time loop? Rabbit, you've outdone yourself! 
+Mr. Rabbit: Accessing your permission data… Rewrite your access level…
+Mr. Rabbit: Done, you will stay as Level 2 form now.
+System: Amo's permission level is updated. Her level of access will begin from Lv.2 at the start of each time loop.
+===
+title: Response.security_station_2
+position: -45,-75
+---
+Mr. Rabbit: I already have access to this station. There is nothing to do in here.
+===

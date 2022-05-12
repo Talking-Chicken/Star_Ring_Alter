@@ -17,6 +17,8 @@ public class terminal_system : MonoBehaviour
     public AudioClip granted;
     public AudioClip denied;
     public AudioClip siren;
+    bool grant;
+    string[] parts;
     private PlayerBackpack playerBackpack;
     void Start()
     {
@@ -90,10 +92,35 @@ public class terminal_system : MonoBehaviour
      */
     public bool checkAccess(int level)
     {
+        for (var i = 0; i < random_conversation.lines.Length; i++)
+        {
+            parts = random_conversation.lines[i].Split(',');
+            parts[0] = parts[0].Replace("\r", "");
+
+            if (parts[0].Equals("sec_station_checked") )
+            {
+                
+                if (parts[2].Equals("TRUE"))
+                {
+                   
+
+                    grant = true;
+                  //  Debug.Log("test" + grant);
+                    break;
+                }
+
+            }
+           
+
+        }
         Item accessCard = playerBackpack.getItem("access card");
-        if (accessCard != null)
-            if (accessCard.GetComponent<AccessCard>().level >= level)
-                return true;
-        return false;
+        if (grant) { return true; }
+        else
+        {
+            if (accessCard != null)
+                if (accessCard.GetComponent<AccessCard>().level >= level)
+                    return true;
+            return false;
+        }
     }
 }
