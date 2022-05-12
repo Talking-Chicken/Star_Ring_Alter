@@ -12,6 +12,7 @@ public class NeuroUnit : MonoBehaviour
     [SerializeField] private Image unitIconDisplayer;
 
     private PlayerControl player;
+    private NeuroGUIControl neuroGUIControl;
 
     //getter & setter
     public NeuroImplantApp NeuroApp {get => neuroApp; set => neuroApp = value;}
@@ -23,6 +24,8 @@ public class NeuroUnit : MonoBehaviour
 
     void Start() {
         player = FindObjectOfType<PlayerControl>();
+        neuroGUIControl = FindObjectOfType<NeuroGUIControl>();
+        if (neuroGUIControl == null) Debug.LogWarning("NEuro GUI CONtrol is null");
     }
 
     public void resetDisplayingApp() {

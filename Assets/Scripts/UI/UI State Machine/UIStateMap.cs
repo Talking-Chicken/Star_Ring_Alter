@@ -20,10 +20,8 @@ public class UIStateMap : UIStateBase
             UI.ChangeState(UI.stateNeuro);
         }
 
-        UI.debugCameraZ();
         UI.zoomMap();
         UI.moveMap();
-        UI.debugCameraZ();
         //UI.lockMapCameraZ();
     }
 

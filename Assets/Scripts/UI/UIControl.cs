@@ -300,9 +300,6 @@ public class UIControl : MonoBehaviour
         mapCamera.transform.position = new Vector3(mapCamera.transform.position.x, mapCamera.transform.position.y, 0.5f);
     }
 
-    public void debugCameraZ()
-    {Debug.Log(mapCamera.transform.position.z);}
-
     /* players can use [z]/[x] or mouse wheel to zoom in/out of the map, by changeing map camera's size */
     public void zoomMap() {
         float zoomValue = 0;
