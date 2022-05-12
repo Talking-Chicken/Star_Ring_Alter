@@ -20,7 +20,7 @@ public class TimeLoopSystem : MonoBehaviour
     void Start()
     {
         //load information from last loop
-        FindObjectOfType<Codex>().loadDialogueNodesCount();
+      //  FindObjectOfType<Codex>().loadDialogueNodesCount();
 
         time = FindObjectOfType<Time_text>();
 
