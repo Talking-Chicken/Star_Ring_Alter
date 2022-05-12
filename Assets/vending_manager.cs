@@ -8,8 +8,9 @@ public class vending_manager : MonoBehaviour
 
     public Transform[] pos_list;
     int i = 0;
-    Vector2 dist;
-    [SerializeField] GameObject player; 
+    float dist;
+    [SerializeField] GameObject player;
+    [SerializeField] GameObject cat_icon;
     int loop_count;
     void Start()
     {
@@ -19,14 +20,15 @@ public class vending_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("loop:"+loop_count);
-        while(i<=pos_list.Length) {
-       
-            if (Vector2.Distance(player.transform.position,pos_list[i].position)<1) {
+        if (loop_count>=3) { loop_count = 0;cat_icon.SetActive(true); }
+        
+            dist = Vector2.Distance(player.transform.position, pos_list[i].position);
+        Debug.Log("loopcount:" + loop_count);
+        if (dist<1.5f) {
                 i = i + 1;
 
             }
-            if (Vector2.Distance(player.transform.position, pos_list[i].position) > 5)
+            if (dist > 6)
             {
                 i = 0;
                 loop_count = 0;
@@ -36,8 +38,8 @@ public class vending_manager : MonoBehaviour
             {
                 loop_count++;
                 i = 0;
-            
+               
             }
         }
-    }
+    
 }
