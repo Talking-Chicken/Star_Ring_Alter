@@ -80,6 +80,7 @@ public class UIControl : MonoBehaviour
     public void ChangeToInvestigateState() {ChangeState(stateInvestigate);}
     public void ChangeToSelectionState() {ChangeState(stateSelection);}
     public void ChangeToMapState() {ChangeState(stateMap);}
+    public void ChangeToIntelState() {ChangeState(stateIntel);}
 
     //change player state
     public void ChangePlayerState(PlayerStateBase newState) {Player.ChangeState(newState);}
