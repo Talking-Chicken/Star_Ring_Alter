@@ -13,14 +13,10 @@ public class IntelUnit : MonoBehaviour
 
     [SerializeField, BoxGroup("GUI")] private TextMeshProUGUI intelNameText;
     [SerializeField, BoxGroup("GUI")] private Image intelIconImage;
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
+    public void showIntelUnit()
     {
-        
+        intelNameText.text = intelName;
+        intelIconImage.sprite = intelIcon;
     }
 }
