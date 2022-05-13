@@ -11,7 +11,7 @@ public class arcade : InteractiveObj
     [SerializeField] AudioSource audio;
     [SerializeField] AudioClip clip;
     [SerializeField] GameObject error;
-    [SerializeField] GameObject eparts;
+    [SerializeField] GameObject[] eparts;
     private bool broken = false;
     public static bool once = false;
     public static float score;
@@ -39,7 +39,7 @@ public class arcade : InteractiveObj
 
         }
     }
-    private void Update()
+    private async void Update()
     {
         if (once)
         {
@@ -51,7 +51,8 @@ public class arcade : InteractiveObj
 
                 error.SetActive(true);
                 broken = true;
-                eparts.SetActive(true);
+                for(int i=0;i<eparts.Length;i++){eparts[i].SetActive(true);}
+                
                 PlayerControl player = FindObjectOfType<PlayerControl>();
                 player.ChangeState(player.stateExplore);
                 if (beat) { player.talkToSelf("Response.win_arcade_beat"); } else { player.talkToSelf("Response.win_arcade"); }
@@ -166,7 +167,7 @@ public class arcade : InteractiveObj
                     player.talkToSelf("Response.arcade_hacking_beat");
                     error.SetActive(true);
                     broken = true;
-                    eparts.SetActive(true);
+                    for(int i=0;i<eparts.Length;i++){eparts[i].SetActive(true);}
                 }
                 else
                 {
