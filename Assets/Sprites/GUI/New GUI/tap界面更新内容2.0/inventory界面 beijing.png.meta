@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 105ad9f649df62a44a344bc61a8d91f6
+guid: 5be8ed1e46b055a489e66f4daa52d660
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 762751392967548613
-    second: "inventory\u754C\u9762_0"
-  - first:
-      213: 385853252733329432
-    second: "inventory\u754C\u9762_1"
-  - first:
-      213: 1330409172860053401
-    second: "inventory\u754C\u9762_2"
+      213: 2733021682262001933
+    second: "inventory\u754C\u9762 beijing_0"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -108,64 +102,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "inventory\u754C\u9762_0"
+      name: "inventory\u754C\u9762 beijing_0"
       rect:
         serializedVersion: 2
-        x: 199
-        y: 1259
-        width: 75
-        height: 75
+        x: 125
+        y: 1087
+        width: 3592
+        height: 427
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ced3c5c956d59a00800000000000000
-      internalID: 762751392967548613
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "inventory\u754C\u9762_1"
-      rect:
-        serializedVersion: 2
-        x: 3566
-        y: 1245
-        width: 75
-        height: 75
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 81069903d73da5500800000000000000
-      internalID: 385853252733329432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "inventory\u754C\u9762_2"
-      rect:
-        serializedVersion: 2
-        x: 405
-        y: 1186
-        width: 230
-        height: 230
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 997ae3a0810967210800000000000000
-      internalID: 1330409172860053401
+      spriteID: d09caa66db4ade520800000000000000
+      internalID: 2733021682262001933
       vertices: []
       indices: 
       edges: []

@@ -51,10 +51,10 @@ public class BackpackUnit : MonoBehaviour
         else
             itemImage.color = new Color(0,0,0,0);
 
-        if (items.Count > 1) {
+        if (items.Count > 1 && counterImage != null) {
             counterImage.gameObject.SetActive(true);
             counterText.text = items.Count.ToString();
-        } else {
+        } else if (counterImage != null) {
             counterImage.gameObject.SetActive(false);
         }
     }
