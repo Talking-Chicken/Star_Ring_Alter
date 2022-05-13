@@ -8,6 +8,6 @@ public class strange_message : Item
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        player.talkToSelf("Investigate.15");
+        player.talkToSelf("Investigate.16");
     }
 }

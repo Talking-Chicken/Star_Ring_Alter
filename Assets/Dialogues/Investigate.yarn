@@ -80,3 +80,10 @@ position: 0,0.5
 Amo: What could this message mean? 
 <<Image Invest_Image_Canvas hint false>>
 ===
+title: Investigate.16
+position: 0,0.5
+---
+<<Image Invest_Image_Canvas hint true>>
+Amo: What could this message mean? 
+<<Image Invest_Image_Canvas hint false>>
+===
