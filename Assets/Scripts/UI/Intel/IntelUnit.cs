@@ -9,6 +9,7 @@ public class IntelUnit : MonoBehaviour
 {
     [SerializeField, BoxGroup("Intel Info"),ResizableTextArea]private string intelName, intelDes;
     [SerializeField, BoxGroup("Intel Info")] private Sprite intelIcon;
+    [SerializeField, BoxGroup("Link")] private List<IntelUnit> nextUnits;
 
     [SerializeField, BoxGroup("GUI")] private TextMeshProUGUI intelNameText;
     [SerializeField, BoxGroup("GUI")] private Image intelIconImage;
