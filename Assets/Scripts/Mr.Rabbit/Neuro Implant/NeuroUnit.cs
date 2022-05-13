@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NeuroUnit : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class NeuroUnit : MonoBehaviour
     private NeuroImplantApp neuroApp;
     private Sprite icon;
     private int index;
-    [SerializeField] private Image unitIconDisplayer;
+    [SerializeField] private TextMeshProUGUI unitNameDisplayer;
 
     private PlayerControl player;
     private NeuroGUIControl neuroGUIControl;
@@ -37,12 +38,11 @@ public class NeuroUnit : MonoBehaviour
 
     public void showUnit()
     {
-        if (Icon != null) {
-            unitIconDisplayer.color = new Color(255,255,255,255);
-            unitIconDisplayer.sprite = icon;
+        if (Icon != null && unitNameDisplayer != null) {
+            unitNameDisplayer.text = neuroName;
         }
-        else
-            unitIconDisplayer.color = new Color(0,0,0,0);
+        else if (unitNameDisplayer != null)
+            unitNameDisplayer.text = "?";
     }
 
     /**
