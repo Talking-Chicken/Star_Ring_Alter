@@ -30,7 +30,7 @@ Amo: Did Lacey draw this rabbit? That is so cute!
 title: Investigate.6
 position: 0,0.5
 ---
-Amo: Maybe one day I will get a locker too. 
+Amo: Lacey's locker. Maybe after I become offical staff I will get a locker too. 
 ===
 title: Investigate.7
 position: 0,0.5
@@ -56,4 +56,27 @@ title: Investigate.11
 position: 0,0.5
 ---
 Amo: Is this coffee bean grinder? I don’t know, it is Lacey who always hangs out on the second floor. I wonder where he is now.
+===
+title: Investigate.12
+position: 0,0.5
+---
+Amo: Now I can open Lacey's locker with his access card. Should I check if there is anything useful in his locker?
+===
+title: Investigate.13
+position: 0,0.5
+---
+Mr. Rabbit: If you wanna check Lacey's locker, using his access card may be a better idea?
+===
+title: Investigate.14
+position: 0,0.5
+---
+Amo: Sorry, Lacey, I may have to violate your privacy. But I will need anything useful to break the loop.
+Amo: Oh, it is pretty empty. Hmm, this is weird. What is this?
+===
+title: Investigate.15
+position: 0,0.5
+---
+<<Image Invest_Image_Canvas hint true>>
+Amo: What could this message mean? 
+<<Image Invest_Image_Canvas hint false>>
 ===
