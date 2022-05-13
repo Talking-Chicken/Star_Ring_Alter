@@ -22,7 +22,8 @@ public class elevator_control : InteractiveObj
     private StateManager stateManager;
     public AudioClip machine;
     public AudioSource sound_effect;
-        
+    string[] parts;
+    bool first;
 
     [SerializeField, BoxGroup("UI")] GameObject UIContainer;
     [SerializeField, BoxGroup("UI")] TextMeshProUGUI description;
@@ -37,6 +38,8 @@ public class elevator_control : InteractiveObj
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         playerNeuroDevice = FindObjectOfType<PlayerControl>().GetComponent<NeuroImplantDevice>();
         stateManager = FindObjectOfType<StateManager>();
+
+ 
     }
 
     public override void interact()
@@ -45,19 +48,41 @@ public class elevator_control : InteractiveObj
        // UIContainer.SetActive(true);
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
+
+
+        for (var i = 0; i < random_conversation.lines.Length; i++)
+        {
+            parts = random_conversation.lines[i].Split(',');
+            parts[0] = parts[0].Replace("\r", "");
+
+            if (parts[0].Equals("elevator_unlocked") && parts[2].Equals("FALSE"))
+            {
+                first = true;
+                random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "TRUE" + "," + parts[3];
+                break;
+            }
+            else if (parts[0].Equals("elevator_unlocked") && parts[2].Equals("TRUE")) { first = false; break; }
+        }
+
+
+
         if (!console.isElevatorActivated)
         {
-            if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "hacking module"))
-            {
-                if (getElectroniCount() >= 3)
-                    player.talkToSelf("Response_player_action.interact_elevator.7");
-                else if (getElectroniCount() >= 1)
-                    player.talkToSelf("Response_player_action.interact_elevator.6");
-                else
-                    player.talkToSelf("Response_player_action.interact_elevator.5");
-            }
+            if (first) { player.talkToSelf("elevator_first"); }
             else
-                player.talkToSelf("Response_player_action.interact_elevator.4");
+            {
+                if (playerNeuroDevice.search(playerNeuroDevice.downloadedApps, "hacking module"))
+                {
+                    if (getElectroniCount() >= 3)
+                        player.talkToSelf("Response_player_action.interact_elevator.7");
+                    else if (getElectroniCount() >= 1)
+                        player.talkToSelf("Response_player_action.interact_elevator.6");
+                    else
+                        player.talkToSelf("Response_player_action.interact_elevator.5");
+                }
+                else
+                    player.talkToSelf("Response_player_action.interact_elevator.4");
+            }
         } else
         {
             if (state == 1)
