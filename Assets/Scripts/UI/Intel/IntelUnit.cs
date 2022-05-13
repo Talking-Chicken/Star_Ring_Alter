@@ -14,9 +14,19 @@ public class IntelUnit : MonoBehaviour
     [SerializeField, BoxGroup("GUI")] private TextMeshProUGUI intelNameText;
     [SerializeField, BoxGroup("GUI")] private Image intelIconImage;
 
+    //getters & setters
+    public string IntelName { get => intelName;}
+    public string IntelDes { get => intelDes; }
+    public Sprite IntelIcon { get => intelIcon; }
+
     public void showIntelUnit()
     {
         intelNameText.text = intelName;
         intelIconImage.sprite = intelIcon;
+    }
+
+    public void chooseThisUnit()
+    {
+        IntelGUIControl.CurrentUnit = this;
     }
 }
