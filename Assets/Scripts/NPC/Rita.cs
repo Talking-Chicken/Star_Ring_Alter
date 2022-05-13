@@ -111,10 +111,14 @@ public class Rita : InteractiveObj
     {
         //get item first
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
-        if (deliveryItem.ItemName.ToLower().Trim().Contains("gear"))
+        if (deliveryItem.ItemName.ToLower().Trim().Contains("mechanical parts"))
             TalkingNode = "Rita.React_Gear";
         else if(deliveryItem.ItemName.ToLower().Trim().Contains("access card"))
             TalkingNode = "Rita.React_Access";
+        else if (deliveryItem.ItemName.ToLower().Trim().Contains("electronic components"))
+            TalkingNode = "Rita.React_epart";
+        else if (deliveryItem.ItemName.ToLower().Trim().Contains("strange message"))
+            TalkingNode = "Rita.React_message";
         else
             TalkingNode = "Rita.React_Other";
 

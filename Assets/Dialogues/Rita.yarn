@@ -49,7 +49,7 @@ Rita: Anyway, just another interesting fact I found out when downloading knowled
 title: Rita.React_Gear
 position: 0,0.5
 ---
-Rita: Cool gear you've got there. 
+Rita: Cool gear you've got there. If you want to use it to fix something you must have engineering module installed first.
 ===
 title: Rita.React_Other
 position: 0,0,5
@@ -78,4 +78,19 @@ position: -31,-127
 ---
 Rita: Sorry! I'm in the middle of the cutscene, can't pause the game now, talk to you later!
 Rita: But look what I found! A token coin for the arcade upstair! You wanna try to beat my best score?
+===
+title: Rita.React_epart
+position: 0,0.5
+---
+Rita: Oh you got yourself Electronic Components. If you want to use it to hack something you must have hacking module installed first.
+===
+title: Rita.React_message
+position: 0,0.5
+---
+Amo: Rita, I found this paper, somewhere in the store. What do you think is written on it?
+<<Image Invest_Image_Canvas hint true>>
+Rita: Oh my, this is cool! It looks like a cipher. You know, whoever used this paper for messaging must be really careful; this person doesn't trust the technology.
+Rita: I don't know what this is, but the machine on the right looks like that vending machine nearby by the counter.
+<<Image Invest_Image_Canvas hint false>>
+Amo: Thanks for your wisdom, Rita.
 ===

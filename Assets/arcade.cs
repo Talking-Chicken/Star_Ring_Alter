@@ -43,8 +43,8 @@ public class arcade : InteractiveObj
     {
         if (once)
         {
-            Time_text time_text = FindObjectOfType<Time_text>();
-            time_text.addtime1((int)score);
+            //Time_text time_text = FindObjectOfType<Time_text>();
+           // time_text.addtime1((int)score);
             once = false;
             if (score >= 40)
             {
