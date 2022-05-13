@@ -24,14 +24,15 @@ public class Card : MonoBehaviour
 
     //set a indicator at the card position, when mouse is hover on it
     public void examineThisCard() {
-        if (player != null && player.CurrentState == player.statePlay)
-            player.selectCurrentCard(this);
+        //if (player != null && player.CurrentState == player.statePlay)
+            
     }
 
     //use this card, when player clicked on it
     public void selectThisCard() {
-        if (player != null && player.CurrentState == player.statePlay)
+        if (player != null)
         {
+            player.selectCurrentCard(this);
             audioSource.Play();
             player.ChangeToMoveState();
         }
