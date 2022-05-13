@@ -108,9 +108,9 @@ public class NeuroGUIControl : MonoBehaviour
             targetIndex = Mathf.Max(0,currentIndex-1);
         if (Input.GetKeyDown(KeyCode.D))
             targetIndex = Mathf.Min(currentIndex+1, neuroUnits.Count-1);
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             targetIndex = Mathf.Max(0, currentIndex - grid.constraintCount);
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             targetIndex = Mathf.Min(currentIndex + grid.constraintCount, neuroUnits.Count-1);
 
         if (targetIndex != currentIndex) { 

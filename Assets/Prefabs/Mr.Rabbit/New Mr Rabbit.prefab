@@ -74,6 +74,8 @@ MonoBehaviour:
   mapZoomSpeed: 0
   mapMoveSpeed: 0
   intelTab: {fileID: 3870086382950504983}
+  intelUnitsContainer: {fileID: 643994503099274967}
+  intelBound: {fileID: 9112814806877397972}
   QEkeyContainer: {fileID: 8960466393103536113}
   isInMain_1: 0
 --- !u!1 &3994244218286716801
@@ -493,6 +495,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
         type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 69ae2b6f610dcd64cb9d18f4f31388b1,
+        type: 3}
+    - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
+        type: 3}
       propertyPath: intelName
       value: 'Arcade '
       objectReference: {fileID: 0}
@@ -717,6 +725,12 @@ PrefabInstance:
       value: If I survive long enough in the arcade game, the arcade will break and
         give me a bunch of parts
       objectReference: {fileID: 0}
+    - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 7890885249903857091, guid: bb28f365501552341bc4719da0fa966f,
+        type: 3}
     - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
         type: 3}
       propertyPath: intelName
@@ -945,6 +959,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
         type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: deedd0e61d6044743a2c7499de928717,
+        type: 3}
+    - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
+        type: 3}
       propertyPath: intelName
       value: Spy Terminal
       objectReference: {fileID: 0}
@@ -1082,6 +1102,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3994244218286716802}
     m_Modifications:
+    - target: {fileID: 51542364115887760, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 9c99bf765d6686944bb8f60e42ba178f,
+        type: 3}
     - target: {fileID: 101798762609065173, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1216,6 +1242,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 379330890326804817, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: a4f4a4ef615895e449079606d54ac40a,
+        type: 3}
     - target: {fileID: 490762034289319830, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -1890,6 +1922,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25.625366
       objectReference: {fileID: 0}
+    - target: {fileID: 1988670494070911940, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 3133165347836741161, guid: 296adf52438ea714f9b918f4d44927a0,
+        type: 3}
     - target: {fileID: 2005983353358848484, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2010,6 +2048,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -173.22
       objectReference: {fileID: 0}
+    - target: {fileID: 2449857456463607113, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 670099381952144614, guid: 3ca7427e22e60824489b3f79e98bd5e2,
+        type: 3}
     - target: {fileID: 2482480065389650830, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2034,6 +2078,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627132349123339482, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2646995366691033892, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
@@ -2065,6 +2114,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -296.44
       objectReference: {fileID: 0}
+    - target: {fileID: 2721804613581768593, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 7788272166801629151, guid: 3336673a3c3d3e64684e1bc5de177252,
+        type: 3}
     - target: {fileID: 2755421318488220569, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2790,6 +2845,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -85.7
       objectReference: {fileID: 0}
+    - target: {fileID: 4802440782438985206, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 9bbb7ffdc39283d4389b8fd33c2bec33,
+        type: 3}
     - target: {fileID: 4866294730183072824, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -2895,6 +2956,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -46.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5022081743057889732, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: a456b7f77d3b85c409ddbebd1c970186,
+        type: 3}
     - target: {fileID: 5061529948337192707, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3305,6 +3372,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -125.14717
       objectReference: {fileID: 0}
+    - target: {fileID: 6564436354100378102, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 3949469904818043356, guid: 3ca7427e22e60824489b3f79e98bd5e2,
+        type: 3}
+    - target: {fileID: 6634150724466706841, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 6712669436868686576, guid: 7bbcc5cb3acf21447a2981cb9550b02d,
+        type: 3}
     - target: {fileID: 6717017430313145897, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -3394,6 +3473,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312570844443872374, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7396450209506396806, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
@@ -4513,6 +4597,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8800685853613773608, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 09cb04d61c3b4694bb0293c011cc43fd,
+        type: 3}
     - target: {fileID: 8829232719554107495, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4593,6 +4683,12 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -46.5
       objectReference: {fileID: 0}
+    - target: {fileID: 9218069400267440141, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 7890885249903857091, guid: bb28f365501552341bc4719da0fa966f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16687b4f6e8b05f42aff35e8a5a4bb02, type: 3}
 --- !u!224 &5057337857187986874 stripped
@@ -4619,6 +4715,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1825899484887223383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3330554981991439721, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+    type: 3}
+  m_PrefabInstance: {fileID: 3994244219320684862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8960466393103536113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5419975781307080399, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+    type: 3}
+  m_PrefabInstance: {fileID: 3994244219320684862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8926991564592009924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5516184362437968890, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
@@ -4673,12 +4781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1825899484317949500 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3330554982563008258, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
-    type: 3}
-  m_PrefabInstance: {fileID: 3994244219320684862}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1468828230306961979 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2525451259319110405, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
@@ -4697,15 +4799,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74477b96eeb502b4eaa638d97b551ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1825899484887223383 stripped
+--- !u!1 &643994503099274967 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 3330554981991439721, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+  m_CorrespondingSourceObject: {fileID: 4576090853458380777, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
     type: 3}
   m_PrefabInstance: {fileID: 3994244219320684862}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1596612109381138032 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2397649710756898638, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+--- !u!61 &9112814806877397972 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5267345952722432746, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
     type: 3}
   m_PrefabInstance: {fileID: 3994244219320684862}
   m_PrefabAsset: {fileID: 0}
@@ -4757,9 +4859,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8960466393103536113 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5419975781307080399, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
+--- !u!224 &1596612109381138032 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2397649710756898638, guid: 16687b4f6e8b05f42aff35e8a5a4bb02,
     type: 3}
   m_PrefabInstance: {fileID: 3994244219320684862}
   m_PrefabAsset: {fileID: 0}
@@ -4880,6 +4982,12 @@ PrefabInstance:
       propertyPath: intelDes
       value: There is a strange note in Lacey's locker. What could it mean?
       objectReference: {fileID: 0}
+    - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 75899008531fd624587a9814af96a15b,
+        type: 3}
     - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
         type: 3}
       propertyPath: intelName
@@ -5107,6 +5215,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
         type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f6a8d77fd1b3cb4ba6b7e4e945fca07,
+        type: 3}
+    - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
+        type: 3}
       propertyPath: intelName
       value: Token Coin
       objectReference: {fileID: 0}
@@ -5331,6 +5445,12 @@ PrefabInstance:
       value: Lacey's locker is at the end of the corridor. I suppose you can open
         it with his work card.
       objectReference: {fileID: 0}
+    - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
+        type: 3}
+      propertyPath: intelIcon
+      value: 
+      objectReference: {fileID: 21300000, guid: 1a45667e37aca77459773be183a8b90a,
+        type: 3}
     - target: {fileID: 5911351393852551575, guid: 62e4b641f9366aa49ad84771d0be3ea5,
         type: 3}
       propertyPath: intelName

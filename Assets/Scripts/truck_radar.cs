@@ -18,7 +18,7 @@ public class truck_radar : MonoBehaviour
         // If it hits something...
         if (hit.collider!= null)
         {
-            Debug.Log(hit.collider.gameObject.name);
+            //Debug.Log(hit.collider.gameObject.name);
         }
         
     }

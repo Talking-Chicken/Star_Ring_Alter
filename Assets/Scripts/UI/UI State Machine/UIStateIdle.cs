@@ -13,7 +13,7 @@ public class UIStateIdle : UIStateBase
         {
             
             if (Input.GetKeyUp(KeyCode.Tab))
-                UI.openNeuro();
+                UI.ChangeToIntelState();
             if (Input.GetKeyUp(UI.Key.openBackpack))
                 UI.openInventory();
             if (Input.GetKeyUp(UI.Key.openNeuro))

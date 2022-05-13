@@ -24,6 +24,8 @@ public class UIControl : MonoBehaviour
     [SerializeField, BoxGroup("Map GUI")] private Camera mapCamera;
     [SerializeField, BoxGroup("Map GUI")] private float minMapCameraSize, maxMapCameraSize, mapZoomSpeed, mapMoveSpeed;
     [SerializeField, BoxGroup("Intel GUI")] private Button intelTab;
+    [SerializeField, BoxGroup("Intel GUI")] private GameObject intelUnitsContainer;
+    [SerializeField, BoxGroup("Intel GUI")] private Collider2D intelBound;
     [SerializeField, BoxGroup("Selection Menu QE")] public GameObject QEkeyContainer;
     private bool isInventoryOnly = false, isNeuroOnly = false, isInvestigateOnly = false;
 
@@ -275,13 +277,13 @@ public class UIControl : MonoBehaviour
     /* control the map using arrow key (add mouse button latter) */
     public void moveMap() {
         Vector3 moveDir = Vector2.zero;
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             moveDir += new Vector3(0,1,0);
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
             moveDir += new Vector3(0,-1,0);
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
             moveDir += new Vector3(-1,0,0);
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
             moveDir += new Vector3(1,0,0);
         
         Vector2 currentPos = mapCamera.transform.position;
@@ -307,5 +309,27 @@ public class UIControl : MonoBehaviour
             zoomValue = -mapZoomSpeed;
         
         mapCamera.orthographicSize = Mathf.Clamp(mapCamera.orthographicSize + zoomValue * Time.deltaTime, minMapCameraSize, maxMapCameraSize);
+    }
+
+    public void moveIntel()
+    {
+        Vector3 moveDir = Vector2.zero;
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
+            moveDir += new Vector3(0, 1, 0);
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
+            moveDir += new Vector3(0, -1, 0);
+        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+            moveDir += new Vector3(-1, 0, 0);
+        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+            moveDir += new Vector3(1, 0, 0);
+
+        Vector2 currentPos = intelUnitsContainer.transform.position;
+        float newX = Mathf.Clamp(currentPos.x + moveDir.x * mapMoveSpeed * Time.deltaTime, intelBound.bounds.min.x, intelBound.bounds.max.x);
+        float newY = Mathf.Clamp(currentPos.y + moveDir.y * mapMoveSpeed * Time.deltaTime, intelBound.bounds.min.y, intelBound.bounds.max.y);
+
+        Vector3 smoothPos = Vector3.Lerp(intelUnitsContainer.transform.position, new Vector3(newX, newY, gameObject.transform.position.z), 0.2f);
+
+        intelUnitsContainer.transform.position = smoothPos;
+
     }
 }
