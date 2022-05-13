@@ -179,6 +179,7 @@ title: Response.neural_implant_adjuster
 position: -45,-75
 ---
 Mr. Rabbit: You can configure your neural implant module here. Just drag the module you need to the central column. You cannot exit the confconfiguration irguration process if the storage limit is exceeded.
+Mr. Rabbit: The grey modules are built within your neural implant, so you cannot remove them. The green one is the engineering module and the brown one is the hacking module.
 ===
 title: Response.Token_coin
 position: -45,-75
