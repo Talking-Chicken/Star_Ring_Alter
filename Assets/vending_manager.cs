@@ -29,9 +29,12 @@ public class vending_manager : MonoBehaviour
 
             }
             else { clue = false; }
-         
-
+            if (parts[0].Equals("spy_terminal") && parts[2].Equals("TRUE"))
+            {
+                cat_icon.SetActive(true);
+            }
         }
+      
     }
 
     // Update is called once per frame
@@ -58,5 +61,7 @@ public class vending_manager : MonoBehaviour
                
             }
         }
+
+    
     
 }
