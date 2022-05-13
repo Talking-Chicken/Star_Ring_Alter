@@ -9,13 +9,19 @@ public class Rita : InteractiveObj
 
     bool once;
     bool none = false;
+    bool coin;
+    [SerializeField] GameObject token;
    [SerializeField] string[] parts;
+    PlayerBackpack playerBackpack;
+    [SerializeField] AudioSource audio;
+    [SerializeField] AudioClip pickup;
     public string TalkingNode { get => talkingNode; set => talkingNode = value;}
 
     private void Start()
     {
         none = false;
-      //  CSV();
+        playerBackpack = FindObjectOfType<PlayerBackpack>();
+        //  CSV();
 
     }
     private void Update()
@@ -44,7 +50,12 @@ public class Rita : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         if (Time_text.time_2.Minute >= 21)
         {
-            talkingNode = "Rita.2";
+            if (coin == false) { coin = true; talkingNode = "Rita.6"; 
+                playerBackpack.add(token);
+                audio.PlayOneShot(pickup);
+                token.SetActive(false);
+            } else { talkingNode = "Rita.2"; }
+           
             player.ChangeState(player.stateExplore);
             player.talkToSelf(talkingNode);
             //anim.Play("rita_gaming");
