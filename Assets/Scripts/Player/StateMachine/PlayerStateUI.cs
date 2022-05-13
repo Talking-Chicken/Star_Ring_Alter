@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerStateUI : PlayerStateBase
 {
     public override void EnterState(PlayerControl player) {
-
     }
     public override void UpdateState(PlayerControl player) {
         

@@ -11,6 +11,12 @@ public class InventoryGUIControl : MonoBehaviour
 {
     [SerializeField, BoxGroup("Description Section")] 
     private TextMeshProUGUI itemTypeText, itemNameText, itemDesText;
+    [SerializeField, BoxGroup("Description Section")]
+    private Sprite detailBackground, emptyBackground;
+    [SerializeField, BoxGroup("Description Section")]
+    private Image descriptionBackgroundImage;
+    [SerializeField, BoxGroup("Description Section")] private List<GameObject> descriptionDeclorations;
+
     [SerializeField, BoxGroup("Backpack Units")]
     private List<BackpackUnit> bakcpackUnits;
 
@@ -101,26 +107,39 @@ public class InventoryGUIControl : MonoBehaviour
     /* show name, type, and description of item in GUI*/
     public void showInfo(Item item) {
         if (item != null) {
+            foreach (GameObject deco in descriptionDeclorations)
+                deco.SetActive(true);
+
             //make spaces between lower and upper case letters 
             itemTypeText.text = Regex.Replace(item.Type.ToString(), @"([a-z])([A-Z])", "$1 $2");
             itemDesText.text = item.getDescription();
             itemNameText.text = item.getName();
+            descriptionBackgroundImage.sprite = emptyBackground;
+            
+            foreach (GameObject deco in descriptionDeclorations)
+                if (deco.GetComponent<RectTransform>() != null)
+                    deco.GetComponent<RectTransform>().ForceUpdateRectTransforms();
+
         } else {
-            itemTypeText.text = "Type";
-            itemDesText.text = "Description";
-            itemNameText.text = "Name";
+            foreach (GameObject deco in descriptionDeclorations)
+                deco.SetActive(false);
+
+            itemTypeText.text = "";
+            itemDesText.text = "";
+            itemNameText.text = "";
+            descriptionBackgroundImage.sprite = detailBackground;
         }
     }
 
     public void changeCurrentUnit() {
         int targetIndex = currentIndex;
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             targetIndex = Mathf.Max(0,currentIndex-1);
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             targetIndex = Mathf.Min(currentIndex+1, bakcpackUnits.Count-1);
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
             targetIndex = Mathf.Max(0, currentIndex - grid.constraintCount);
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.S))
             targetIndex = Mathf.Min(currentIndex + grid.constraintCount, bakcpackUnits.Count-1);
 
         if (targetIndex != currentIndex) { 

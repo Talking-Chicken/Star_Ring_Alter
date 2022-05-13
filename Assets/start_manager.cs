@@ -68,5 +68,9 @@ public class start_manager : MonoBehaviour
         CreditPanel.SetActive(false);
         UI_SE.PlayOneShot(clicked);
     }
+
+    public void quit() {
+        Application.Quit();
+    }
    
 }

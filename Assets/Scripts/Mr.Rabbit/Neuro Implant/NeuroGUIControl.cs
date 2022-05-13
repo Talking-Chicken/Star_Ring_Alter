@@ -10,6 +10,9 @@ public class NeuroGUIControl : MonoBehaviour
 {
     [SerializeField, BoxGroup("Description Section")] 
     private TextMeshProUGUI neuroTypeText, neuroNameText, neuroDesText;
+    [SerializeField, BoxGroup("Description Section")]
+    private Image neuroImage;
+
     [SerializeField, BoxGroup("Neuro Units")]
     private List<NeuroUnit> neuroUnits;
 
@@ -95,10 +98,15 @@ public class NeuroGUIControl : MonoBehaviour
             neuroTypeText.text = Regex.Replace(app.Type.ToString(), @"([a-z])([A-Z])", "$1 $2");
             neuroDesText.text = app.Description;
             neuroNameText.text = app.appName;
+            neuroImage.color = new Color(255,255,255,255);
+            neuroImage.sprite = app.Icon;
         } else {
-            neuroTypeText.text = "Type";
-            neuroDesText.text = "Desctiption";
-            neuroNameText.text = "Name";   
+            neuroTypeText.text = "";
+            neuroDesText.text = "";
+            neuroNameText.text = "";
+            neuroImage.color = new Color(255,255,255,0);
+            neuroImage.sprite = null;
+            
         }
     }
 

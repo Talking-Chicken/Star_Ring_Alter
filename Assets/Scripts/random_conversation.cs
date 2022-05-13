@@ -17,6 +17,7 @@ public class random_conversation : MonoBehaviour
     {
         if (start_manager.new_game) {
             readCSV();
+            FindObjectOfType<Codex>().resetDialogueNodesCount();
             start_manager.new_game = false;
         }
         else {
