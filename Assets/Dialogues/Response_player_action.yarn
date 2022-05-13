@@ -26,12 +26,12 @@ Mr. Rabbit: Amo, what are you doing? You can't just use a item on the door. If y
 title: Response_player_action.interact_door.1
 position: -45,-75
 ---
-Amo: With the help of neural implant, I now know how to fix it now, but I'd need some Mechanical Parts to achieve that.
+Amo: With the help of neural implant, I now know how to fix it now, but I'd need three Mechanical Parts to achieve that.
 ===
 title: Response_player_action.interact_door.2
 position: -45,-75
 ---
-Amo: I would need more Mechanical Parts to fix this door.
+Amo: I would need more Mechanical Parts to fix this door. Three shoule be good.
 ===
 title: Response_player_action.interact_door.3
 position: -45,-75
@@ -268,7 +268,6 @@ Mr. Rabbit: I think I can hack this arcade for you, but I would need the encodin
 title: Response.arcade_hacking_beat
 position: -45,-75
 ---
-Amo: Hey, Mr. Rabbit, can you help me speedrun this arcade.
 Mr. Rabbit: Alright, here we go. Hacking….
 <<SE System_sounds_effect broken_arcade>>
 Mr. Rabbit: Hacking complete, and we break this machine again.
@@ -307,4 +306,13 @@ title: Response.security_station_2
 position: -45,-75
 ---
 Mr. Rabbit: I already have access to this station. There is nothing to do in here.
+===
+title: Response.use_robot_on_door
+position: -45,-75
+---
+Mr. Rabbit: Amo, you cannot just use the robot here. You must put it through the tunnel on the second floor first.
+Amo: Why does it have to be so complicated! I have already brought the robot here. Why can't it just fix the door?
+Mr. Rabbit: It must be assigned task first. To do so, it must go through the tunnel properly.
+Amo: Alright, I will do it. Put this robot on the second-floor coffee bean delivery tunnel, right?
+Mr. Rabbit: Yup. That tunnel has a coffee bean icon.
 ===

@@ -77,7 +77,13 @@ public class BrokenDoor : InteractiveObj
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        player.talkToSelf("Response_player_action.use_item_on_door");
+        Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
+        if (currentItem.ItemName.ToLower().Trim().Contains("Maintenance Robot".ToLower().Trim()))
+        {
+            player.talkToSelf("Response.use_robot_on_door");
+
+        } else { player.talkToSelf("Response_player_action.use_item_on_door"); }
+       
         base.useItem();
     }
 
