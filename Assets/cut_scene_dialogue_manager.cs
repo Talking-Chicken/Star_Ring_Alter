@@ -140,12 +140,17 @@ public class cut_scene_dialogue_manager : MonoBehaviour
                     if (Input.GetKey(KeyCode.Space))
                     {
                         interaction_text.text = "";
-                        audio.PlayOneShot(light_off);
-                        audio.PlayOneShot(robot);
+                        if (looptime.Equals("1"))
+                        {
+                            audio.PlayOneShot(light_off);
+                            audio.PlayOneShot(robot);
+                        }
+                         
 
                         if (looptime.Equals("2"))
                         {
                             memory_2.GetComponent<Animator>().Play("light_on");
+                            audio.PlayOneShot(light_off);
                             runner.startNode = "Random_dialogue.Memory_3";
                         }
                         else if (looptime.Equals("1"))

@@ -113,12 +113,30 @@ public class Rita : InteractiveObj
         Item deliveryItem = InventoryGUIControl.currentUnit.items.Dequeue();
         if (deliveryItem.ItemName.ToLower().Trim().Contains("mechanical parts"))
             TalkingNode = "Rita.React_Gear";
-        else if(deliveryItem.ItemName.ToLower().Trim().Contains("access card"))
+        else if (deliveryItem.ItemName.ToLower().Trim().Contains("access card"))
             TalkingNode = "Rita.React_Access";
         else if (deliveryItem.ItemName.ToLower().Trim().Contains("electronic components"))
             TalkingNode = "Rita.React_epart";
         else if (deliveryItem.ItemName.ToLower().Trim().Contains("strange message"))
+        {
+            for (var i = 0; i < random_conversation.lines.Length; i++)
+            {
+                parts = random_conversation.lines[i].Split(',');
+                parts[0] = parts[0].Replace("\r", "");
+
+                if (parts[0].Equals("hint_checked"))
+                {
+
+                    vending_manager.clue = true;
+                    random_conversation.lines[i] = parts[0] + "," + parts[1] + "," + "TRUE" + "," + parts[3];
+
+                    break;
+                }
+
+
+            }
             TalkingNode = "Rita.React_message";
+        }  
         else
             TalkingNode = "Rita.React_Other";
 
