@@ -9,6 +9,8 @@ public class locker : InteractiveObj
     [SerializeField]GameObject hint;
     [SerializeField] AudioClip pickup;
     [SerializeField] AudioSource audio;
+    bool taken = false;
+    [SerializeField] Animator lock_er;
     private void Start()
     {
         playerBackpack = FindObjectOfType<PlayerBackpack>();
@@ -17,9 +19,14 @@ public class locker : InteractiveObj
     {
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
-        if (playerBackpack.contains("Access Card".ToLower().Trim()))
-        { player.talkToSelf("Investigate.12"); }
-        else { player.talkToSelf("Investigate.6"); }
+        if (taken) { player.talkToSelf("Investigate.15"); }
+        else
+        {
+            if (playerBackpack.contains("Access Card".ToLower().Trim()))
+            { player.talkToSelf("Investigate.12"); }
+            else { player.talkToSelf("Investigate.6"); }
+        }
+      
 
     }
     public override void useItem()
@@ -27,22 +34,26 @@ public class locker : InteractiveObj
         Item currentItem = InventoryGUIControl.currentUnit.items.Peek();
         PlayerControl player = FindObjectOfType<PlayerControl>();
 
-
-        if (currentItem.ItemName.ToLower().Trim().Contains("Access Card".ToLower().Trim()))
-        {
-            player.ChangeState(player.stateExplore);
-            player.talkToSelf("Investigate.14");
-            playerBackpack.add(hint);
-            audio.PlayOneShot(pickup);
-            hint.SetActive(false);
-           
-        }
+        if (taken) { player.talkToSelf("Investigate.15"); }
         else
         {
-            player.ChangeState(player.stateExplore);
-            player.talkToSelf("Investigate.13");
+            if (currentItem.ItemName.ToLower().Trim().Contains("Access Card".ToLower().Trim()))
+            {
+               lock_er.Play("locker_moving_up");
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Investigate.14");
+                playerBackpack.add(hint);
+                audio.PlayOneShot(pickup);
+                hint.SetActive(false);
+                taken = true;
+               
+            }
+            else
+            {
+                player.ChangeState(player.stateExplore);
+                player.talkToSelf("Investigate.13");
+            }
         }
-
         base.useItem();
     }
 }

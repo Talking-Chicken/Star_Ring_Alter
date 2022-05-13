@@ -76,9 +76,7 @@ Amo: Oh, it is pretty empty. Hmm, this is weird. What is this?
 title: Investigate.15
 position: 0,0.5
 ---
-<<Image Invest_Image_Canvas hint true>>
-Amo: What could this message mean? 
-<<Image Invest_Image_Canvas hint false>>
+Amo: There is nothing to check in this locker.
 ===
 title: Investigate.16
 position: 0,0.5
@@ -86,4 +84,34 @@ position: 0,0.5
 <<Image Invest_Image_Canvas hint true>>
 Amo: What could this message mean? 
 <<Image Invest_Image_Canvas hint false>>
+===
+title: Investigate.spy_terminal
+position: 0,0.5
+---
+Vending Machine: Terminal has activated. 
+Amo: Hey! Rabbit! There is a talking vending machine here.
+Mr. Rabbit: Hmmm, is this one of those smart vending machines? I thought this one had broken long ago. What did you do to make it awake?
+Vending Machine: Terminal has activated. Connecting with nearby Neural Implant.
+Amo: And is trying to access my neural implant. Gosh, I am still not comfortable with the fact that every device on the street can connect to my brain.
+Vending Machine: Operator LA-2401, please respond.
+Mr. Rabbit: That is wizard-level encrypted data transmission. What exactly is this machine?
+Vending Machine: You are not Operator LA-2401… That is strange...
+Mr. Rabbit: Wait, that encryption method, it is Cat Technology!
+Spy Terminal: Don't make a fuss, my friend. We have eyes all over the city. You are looking at one of the thousand spy terminals we have placed in the city.
+Amo: Why is a mega-corporation like Cat Technology keep an eye on this little convenience store?
+Spy Terminal: Please understand that collecting information to help our executive committee is standard behavior in this city. 
+Spy Terminal: But I have to admit that this so-called Star Ring convenience store indeed has many strange readings. That is why we even send an operator to investigate.
+Spy Terminal: However, we have lost contact with him today. I don't know how you find this terminal, but you must be more susceptible than ordinary. 
+Spy Terminal: What do you think? Do you want to sign a contract now and be an indurtsial spy for our company?
+Mr. Rabbit: Amo, Cat Technology is a rival to Rabbit Heavy Industry in many fields. I don't think, especially because we are experiencing a phenomenon they can never believe, it is a good idea to get involved with them.
+Amo:  I really appreciate the job offer, but today is my first workday. I cannot take another invitation.
+Spy Terminal: What a pity. We are the only two companies in this city that offer compensation for injured employees and our lunch is great.
+Spy Terminal: How about we offer you a little gift. Maybe you will reconsider this deal later. Transmitting data to your neural implant now.
+Spy Terminal: I believe our little add-on can assist your first day of work.
+System: Pickable items will now be marked on Mr. Rabbit's Map. You may press TAB to check the map.
+===
+title: Investigate.spy_terminal_2
+position: 0,0.5
+---
+Spy Terminal: I believe we can have excellent cooperation. Let me know when you have changed your mind.
 ===
