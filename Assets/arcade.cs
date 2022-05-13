@@ -146,6 +146,7 @@ public class arcade : InteractiveObj
                 player.talkToSelf("Response.Arcade_wrong_item");
             }
         }
+        base.useItem();
     }
 
     public override void useNeuroImplant()
@@ -181,5 +182,6 @@ public class arcade : InteractiveObj
 
 
         }
+        base.useNeuroImplant();
     }
 }

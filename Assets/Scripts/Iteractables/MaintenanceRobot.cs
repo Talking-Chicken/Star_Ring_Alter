@@ -76,6 +76,7 @@ public class MaintenanceRobot : InteractiveObj
             player.ChangeState(player.stateExplore);
             player.talkToSelf("Response_player_action.interact_robot.3");
         }
+        base.useItem();
     }
 
     public override void useNeuroImplant()
@@ -84,6 +85,7 @@ public class MaintenanceRobot : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         player.talkToSelf("Response_player_action.interact_door.6");
+        base.useNeuroImplant();
     }
 
     public void exitUI()

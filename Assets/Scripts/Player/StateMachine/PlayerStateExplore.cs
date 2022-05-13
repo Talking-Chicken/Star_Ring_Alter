@@ -9,6 +9,8 @@ public class PlayerStateExplore : PlayerStateBase
         PlayerControl.show_invest=true;
         //player.InteractingObj = null;
         player.UIControl.openTime();
+        player.UIControl.ChangeState(player.UIControl.stateIdle);
+        player.DetectingObj = player.gameObject;
     }
     public override void UpdateState(PlayerControl player) {
         if (PlayerControl.canTalk)

@@ -88,11 +88,13 @@ public class InteractiveObj : MonoBehaviour
     }
 
     public virtual void useItem() {
-        Debug.Log("using item");
+        //Debug.Log("using item");
+        playerControl.InteractingObj = playerControl.gameObject;
     }
 
     public virtual void useNeuroImplant() {
-        Debug.Log("using neuro implant");
+        //Debug.Log("using neuro implant");
+        playerControl.InteractingObj = playerControl.gameObject;
     }
 
     public IEnumerator waitToChangeToExploreState() {

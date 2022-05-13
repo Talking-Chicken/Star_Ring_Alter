@@ -96,6 +96,7 @@ public class elevator_control : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         player.talkToSelf("Response_player_action.interact_elevator.1");
+        base.useItem();
     }
 
     public override void useNeuroImplant()
@@ -159,6 +160,7 @@ public class elevator_control : InteractiveObj
         else {
             player.talkToSelf("Response.elevator_unlocked");
         }
+        base.useNeuroImplant();
     }
     IEnumerator moving_up()
     {

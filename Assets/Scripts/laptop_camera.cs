@@ -63,8 +63,8 @@ public class laptop_camera : InteractiveObj
                 player.ChangeState(player.stateExplore);
                 player.talkToSelf("Response_player_action.Rita.1");
             }
-        
-        
+
+        base.useItem();
     }
 
     public override void useNeuroImplant()
@@ -72,6 +72,7 @@ public class laptop_camera : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         player.talkToSelf("Response_player_action.Rita.2");
+        base.useNeuroImplant();
     }
 
     IEnumerator waitToChangeState(PlayerStateBase newState) {

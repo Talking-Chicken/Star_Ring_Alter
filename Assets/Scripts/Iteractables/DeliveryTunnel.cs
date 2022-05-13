@@ -75,7 +75,7 @@ public class DeliveryTunnel : InteractiveObj
             player.talkToSelf("Response_player_action.interact_tunnel.3");
         }
         FindObjectOfType<PlayerControl>().UIControl.ChangeToIdleState();
-        
+        base.useItem();
     }
 
     public override void useNeuroImplant()
@@ -83,6 +83,7 @@ public class DeliveryTunnel : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         player.talkToSelf("Response_player_action.interact_tunnel.2");
+        base.useNeuroImplant();
     }
 
     public void exit()

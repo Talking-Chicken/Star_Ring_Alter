@@ -78,6 +78,7 @@ public class BrokenDoor : InteractiveObj
         PlayerControl player = FindObjectOfType<PlayerControl>();
         player.ChangeState(player.stateExplore);
         player.talkToSelf("Response_player_action.use_item_on_door");
+        base.useItem();
     }
 
     public override void useNeuroImplant()
@@ -109,7 +110,8 @@ public class BrokenDoor : InteractiveObj
             PlayerControl player = FindObjectOfType<PlayerControl>();
             player.ChangeState(player.stateExplore);
             player.talkToSelf("Response_player_action.interact_door.4");
-        }  
+        }
+        base.useNeuroImplant();
     }
 
     public int getGearCount() {

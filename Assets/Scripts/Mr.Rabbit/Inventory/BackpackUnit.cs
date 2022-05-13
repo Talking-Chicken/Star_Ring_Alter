@@ -136,7 +136,7 @@ public class BackpackUnit : MonoBehaviour
         
         if (currentItem != null)
         {
-            if (playerControl.InteractingObj == null) {
+            if (playerControl.InteractingObj == null || playerControl.InteractingObj == playerControl.gameObject) {
                 currentItem.useItem();
             } else {
                 playerControl.InteractingObj.GetComponent<InteractiveObj>().useItem();

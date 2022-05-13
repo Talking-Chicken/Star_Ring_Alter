@@ -42,5 +42,7 @@ public class locker : InteractiveObj
             player.ChangeState(player.stateExplore);
             player.talkToSelf("Investigate.13");
         }
+
+        base.useItem();
     }
 }
