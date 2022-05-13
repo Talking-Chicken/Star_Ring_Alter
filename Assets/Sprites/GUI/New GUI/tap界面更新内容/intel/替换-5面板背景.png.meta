@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 9e9e2b32a8ec9334d93b9cfb455cf7a5
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8561508289191016241
+    second: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_0"
+  - first:
+      213: 5832855364893080125
+    second: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_1"
+  - first:
+      213: -8312271508264755710
+    second: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_2"
+  - first:
+      213: -6106598000252401230
+    second: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_3"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -31,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +83,117 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_0"
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 368
+        width: 2595
+        height: 1094
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8053162996f2980800000000000000
+      internalID: -8561508289191016241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_1"
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 886
+        width: 34
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3afea2fc0772f050800000000000000
+      internalID: 5832855364893080125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_2"
+      rect:
+        serializedVersion: 2
+        x: 2917
+        y: 402
+        width: 823
+        height: 1026
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e57418a11e4ac80800000000000000
+      internalID: -8312271508264755710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u66FF\u6362-5\u9762\u677F\u80CC\u666F_3"
+      rect:
+        serializedVersion: 2
+        x: 2001
+        y: 1468
+        width: 700
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b948d01971014ba0800000000000000
+      internalID: -6106598000252401230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
