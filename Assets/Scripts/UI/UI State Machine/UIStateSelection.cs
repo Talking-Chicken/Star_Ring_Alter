@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UIStateSelection : UIStateBase
 {
@@ -10,10 +11,10 @@ public class UIStateSelection : UIStateBase
     public override void EnterState(UIControl UI) {
         UI.openSelectionMenu();
         currentSelectionIndex = 0;
+        EventSystem.current.SetSelectedGameObject(null);
     }
     public override void UpdateState(UIControl UI) {
-        //put indicator to correct position
-        UI.SelectionIndicator.transform.position = UI.SelectionButtons[currentSelectionIndex].transform.position;
+        UI.SelectionButtons[currentSelectionIndex].Select();
         if (!UI.Player.InteractingObj.GetComponent<InteractiveObj>().CanInven && !UI.Player.InteractingObj.GetComponent<InteractiveObj>().CanNeuro)
         { UI.IsInvestigateOnly = true;
           UI.QEkeyContainer.SetActive(false);
@@ -21,10 +22,10 @@ public class UIStateSelection : UIStateBase
 
         if (!UI.IsInvestigateOnly) {
            UI.QEkeyContainer.SetActive(true);
-            if (Input.GetKeyUp(UI.Key.next)) {
+            if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S)) {
                 
                 currentSelectionIndex = Mathf.Min(currentSelectionIndex + 1, UI.SelectionButtons.Count - 1);
-            } else if (Input.GetKeyUp(UI.Key.previous)) {
+            } else if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W)) {
                 
                 currentSelectionIndex = Mathf.Max(currentSelectionIndex - 1, 0);
             }

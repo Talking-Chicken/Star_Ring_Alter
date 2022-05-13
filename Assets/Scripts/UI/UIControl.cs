@@ -8,15 +8,13 @@ using UnityEngine.SceneManagement;
 public class UIControl : MonoBehaviour
 {
     [SerializeField, BoxGroup("Mr.Rabbit System GUI Container")] private GameObject inventoryContainer, neuroContainer, mapContainer, intelContainer;
-    [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, selectionIndicator, useButton, invenButton, neuroButton;
+    [SerializeField, BoxGroup("Selection Menu")] private GameObject selectionMenu, useButton, invenButton, neuroButton;
     [SerializeField, BoxGroup("Selection Menu"), ReorderableList] private List<Button> selectionButtons;
 
     [SerializeField, BoxGroup("Player")] private PlayerControl player;
     private KeyManager _key;
     [SerializeField, BoxGroup("General GUI")] private GameObject backgroundContainer, tabContainer;
-    [SerializeField, BoxGroup("Inventory GUI")] private InventoryGUI inventoryGUI; //class that take care of present inventory
     [SerializeField, BoxGroup("Inventory GUI")] private InventoryGUIControl inventoryControl;
-    [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroImplantGUI neuroGUI;
     [SerializeField, BoxGroup("Neuro Implant GUI")] private NeuroGUIControl neuroControl;
     [SerializeField, BoxGroup("Time GUI")] private GameObject timeGUI;
     [SerializeField, BoxGroup("Inventory GUI")] private Button inventoryTab;
@@ -41,7 +39,6 @@ public class UIControl : MonoBehaviour
     //getters & setters
     public PlayerControl Player {get {return player;} private set {Debug.Log("setting player");player = value;}}
     public List<Button> SelectionButtons {get {return selectionButtons;} private set {selectionButtons = value;}}
-    public GameObject SelectionIndicator {get {return selectionIndicator;} private set {selectionIndicator = value;}}
     public KeyManager Key {get {return _key;} private set {_key = value;}}
     public bool IsInventoryOnly {get => isInventoryOnly; set => isInventoryOnly = value;}
     public bool IsNeuroOnly {get => isNeuroOnly; set => isNeuroOnly = value;}
@@ -83,6 +80,7 @@ public class UIControl : MonoBehaviour
     public void ChangeToInvestigateState() {ChangeState(stateInvestigate);}
     public void ChangeToSelectionState() {ChangeState(stateSelection);}
     public void ChangeToMapState() {ChangeState(stateMap);}
+    public void ChangeToIntelState() {ChangeState(stateIntel);}
 
     //change player state
     public void ChangePlayerState(PlayerStateBase newState) {Player.ChangeState(newState);}
