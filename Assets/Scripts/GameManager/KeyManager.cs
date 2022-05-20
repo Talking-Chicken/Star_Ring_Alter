@@ -42,6 +42,9 @@ public class KeyManager : MonoBehaviour
             SceneManager.LoadScene(scene.name);
         }*/
 
+        if (Input.GetKey(KeyCode.LeftControl) && Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene("Start");
+
         if (Input.GetKeyUp(KeyCode.CapsLock)) {
             Debug.Log("cap");
             Screen.fullScreen = !Screen.fullScreen;
