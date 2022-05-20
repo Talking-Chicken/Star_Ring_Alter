@@ -274,7 +274,8 @@ colorID: 5
 position: 4334,772
 ---
 <<if visitCount() < 2>>
-    Mr. Rabbit: Amo, your access level is zero. We need at least one official employee's access card to enter the manager's office.
+    Mr. Rabbit: Amo, your access level is zero. We need at least one official employee's access card to enter the manager's office. Looking around and try to find a access card.
+    Amo: The only official employee in the store now is Lacey. I wonder where he would put his access card. He spent most of his time at the counter and his room.
 <<endif>>
 ===
 title: MrRabbit.Manager_Office_Elevator_Access_Fixed

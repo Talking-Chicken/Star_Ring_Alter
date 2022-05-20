@@ -23,6 +23,7 @@ public class IntelUnit : MonoBehaviour
     {
         intelNameText.text = intelName;
         intelIconImage.sprite = intelIcon;
+       
     }
 
     public void chooseThisUnit()
