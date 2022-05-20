@@ -61,8 +61,9 @@ public class DialogueControl : MonoBehaviour
             UI.MarkLineComplete();
 
         //FOR TESTING   
+        /*
         if (Input.GetKey(KeyCode.LeftControl))
-            UI.MarkLineComplete();
+            UI.MarkLineComplete();*/
     }
 
     /**

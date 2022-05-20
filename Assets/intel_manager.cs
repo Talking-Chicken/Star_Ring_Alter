@@ -12,6 +12,9 @@ public class intel_manager : MonoBehaviour
     [SerializeField] GameObject[] office;
     [SerializeField] GameObject[] office_1;
     [SerializeField] GameObject[] lock_down;
+    [SerializeField] GameObject[] beat_arcade;
+    [SerializeField] GameObject[] hint;
+    [SerializeField] GameObject[] spy;
     void Start()
     {
         codex = FindObjectOfType<Codex>();
@@ -66,7 +69,7 @@ public class intel_manager : MonoBehaviour
 
                 for (int j = 0; j < OS.Length; j++)
                 {
-                    OS[i].SetActive(true);
+                    OS[j].SetActive(true);
                 }
 
             }
@@ -74,13 +77,42 @@ public class intel_manager : MonoBehaviour
             if (parts[0].Equals("elevator_unlocked") && parts[2].Equals("TRUE"))
             {
 
-                for (int j = 0; j < OS.Length; j++)
+                for (int j = 0; j < lock_down.Length; j++)
                 {
-                   lock_down[i].SetActive(true);
+                   lock_down[j].SetActive(true);
                 }
 
             }
 
+            if (parts[0].Equals("beat_arcade") && parts[2].Equals("TRUE"))
+            {
+
+                for (int j = 0; j < beat_arcade.Length; j++)
+                {
+                    beat_arcade[j].SetActive(true);
+                }
+
+            }
+
+            if (parts[0].Equals("hint_checked") && parts[2].Equals("TRUE"))
+            {
+
+                for (int j = 0; j < hint.Length; j++)
+                {
+                    hint[j].SetActive(true);
+                }
+
+            }
+
+            if (parts[0].Equals("spy_terminal") && parts[2].Equals("TRUE"))
+            {
+
+                for (int j = 0; j < spy.Length; j++)
+                {
+                    spy[j].SetActive(true);
+                }
+
+            }
         }
     }
 }
