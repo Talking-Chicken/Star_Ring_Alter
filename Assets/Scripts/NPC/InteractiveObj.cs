@@ -13,7 +13,7 @@ public class InteractiveObj : MonoBehaviour
     [SerializeField] private GameObject main_character;
 
     [SerializeField] private bool canUse = true, canInven = true, canNeuro = true;
-    [SerializeField]private GameObject invest_icon;
+    [SerializeField]private InvestIcon invest_icon;
     public DialogueRunner runner;
     PlayerControl playerControl;
 
@@ -34,7 +34,7 @@ public class InteractiveObj : MonoBehaviour
     public PlayerControl Player { get => playerControl; }
 
    void Awake() {
-       invest_icon = GameObject.FindGameObjectWithTag("invest_icon");
+       invest_icon = GameObject.FindGameObjectWithTag("invest_icon").GetComponent<InvestIcon>();
    }
 
     void Start()
@@ -48,14 +48,13 @@ public class InteractiveObj : MonoBehaviour
 
     void Update()
     {
-        if (invest_icon == null) GameObject.FindGameObjectWithTag("invest_icon");
         if (playerControl == null) playerControl = FindObjectOfType<PlayerControl>();   
         if (main_character == null) main_character = FindObjectOfType<PlayerControl>().gameObject;
         if (playerControl.DetectingObj != null && playerControl.DetectingObj != main_character && PlayerControl.show_invest)
         {
             invest_icon_set();
         }
-        else { invest_icon.SetActive(false); }
+        else { invest_icon.gameObject.SetActive(false); }
 
     }
 
@@ -76,7 +75,7 @@ public class InteractiveObj : MonoBehaviour
     }
     private void invest_icon_set()
     {
-        invest_icon.SetActive(true);
+        invest_icon.gameObject.SetActive(true);
 
         invest_icon.transform.position = Camera.main.WorldToScreenPoint(new Vector3(playerControl.DetectingObj.transform.position.x, playerControl.DetectingObj.transform.position.y +2+invest_icon_offset, playerControl.DetectingObj.transform.position.z));
     }
