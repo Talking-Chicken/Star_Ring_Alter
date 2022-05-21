@@ -5,7 +5,6 @@ using UnityEngine;
 public class arcade : InteractiveObj
 {
     PlayerBackpack playerBackpack;
-    StateManager state;
     [SerializeField] GameObject Arcade;
     [SerializeField] GameObject ArcadePOV;
     [SerializeField] AudioSource audio;
@@ -21,7 +20,6 @@ public class arcade : InteractiveObj
     private void Start()
     {
         beat = false;
-        state = FindObjectOfType<StateManager>();
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         talk = GetComponent<Talkable>();
         for (var i = 0; i < random_conversation.lines.Length; i++)

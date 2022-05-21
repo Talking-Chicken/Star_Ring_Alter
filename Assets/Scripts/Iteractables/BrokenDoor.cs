@@ -16,13 +16,11 @@ public class BrokenDoor : InteractiveObj
 
     private NeuroImplantDevice playerNeuroDevice;
     private PlayerBackpack playerBackpack;
-    private StateManager state;
 
     private void Start()
     {
         playerNeuroDevice = FindObjectOfType<PlayerControl>().GetComponent<NeuroImplantDevice>();
         playerBackpack = FindObjectOfType<PlayerBackpack>();
-        state = FindObjectOfType<StateManager>();
     }
 
     public override void interact()
@@ -62,14 +60,12 @@ public class BrokenDoor : InteractiveObj
             }
         }
         UIContainer.SetActive(false);
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 
     public void exit()
     {
         UIContainer.SetActive(false);
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 

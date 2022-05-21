@@ -13,7 +13,6 @@ public class DeliveryTunnel : InteractiveObj
     [SerializeField] AudioSource audio;
     [SerializeField] AudioClip clip;
     private PlayerBackpack playerBackpack;
-    private StateManager state;
 
     [SerializeField] private GameObject cofeeBeanCover;
 
@@ -24,7 +23,6 @@ public class DeliveryTunnel : InteractiveObj
     void Start()
     {
         playerBackpack = FindObjectOfType<PlayerBackpack>();
-        state = FindObjectOfType<StateManager>();
 
         if (cofeeBeanCover == null)
             Debug.LogWarning("haven't set coffee bean console yet");
@@ -89,7 +87,6 @@ public class DeliveryTunnel : InteractiveObj
     public void exit()
     {
         UIContainer.SetActive(false);
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 

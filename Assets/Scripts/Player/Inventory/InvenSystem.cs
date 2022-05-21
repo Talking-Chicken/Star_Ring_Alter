@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class InvenSystem : MonoBehaviour
 {
-    private StateManager stateManager;
     private static KeyManager key;
     private RabbitSystemControl rabbit;
     //[SerializeField] private IsometricPlayerMovementController player;
@@ -26,7 +25,6 @@ public class InvenSystem : MonoBehaviour
 
     void Start()
     {
-        stateManager = FindObjectOfType<StateManager>();
         key = FindObjectOfType<KeyManager>();
         rabbit = FindObjectOfType<RabbitSystemControl>();
         playerBackpack = gameObject.GetComponent<BackPack>();
@@ -36,15 +34,7 @@ public class InvenSystem : MonoBehaviour
     
     void Update()
     {
-        //CAN detect and pickup items
-        if (canInven && (stateManager.getCurrentState() == State.Explore)) {
-            detectItem();
-            updateIndicator();
-            interact();
-        }
-       
-        if (stateManager.getCurrentState() == State.Explore || stateManager.getCurrentState() == State.UI)
-            playerBackpackOpen();
+
     }
 
     /**
@@ -134,7 +124,6 @@ public class InvenSystem : MonoBehaviour
     public void backpackOpen(BackPack b)
     {
         b.backpackOpen();
-        stateManager.transitionState(State.UI);
     }
 
     /**
@@ -146,7 +135,6 @@ public class InvenSystem : MonoBehaviour
     public void backpackClose(BackPack b)
     {
         b.backpackClose();
-        stateManager.transitionState(State.Explore);
     }
     
     /**

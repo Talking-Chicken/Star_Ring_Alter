@@ -10,6 +10,7 @@ using NaughtyAttributes;
 public class PlayerControl : MonoBehaviour
 {   
     public bool CanMove {get; set;}
+    public bool CanUI { get; set;}
     [SerializeField] AudioClip pickup;
     [SerializeField] AudioSource audio;
 
@@ -17,6 +18,7 @@ public class PlayerControl : MonoBehaviour
     public static bool canTalk = false;
     [SerializeField, BoxGroup("Dialogue")] public DialogueRunner dialogueRunner;
     [SerializeField, BoxGroup("Dialogue")] private DialogueUI dialogueUI;
+    [SerializeField, BoxGroup("Dialogue")] private DialogueControl dialogueControl;
 
     public static bool show_invest;
 
@@ -37,6 +39,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject InteractingObj {get {return interactingObj;} set {interactingObj = value;}}
     public KeyManager KeyManager {get {return key;} private set {key = value;}}
     public UIControl UIControl {get {return uiControl;} private set {uiControl = value;}}
+    public DialogueControl DialogueControl { get => dialogueControl;}
     
 
     //state machine

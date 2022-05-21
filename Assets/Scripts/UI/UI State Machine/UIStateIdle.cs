@@ -11,13 +11,15 @@ public class UIStateIdle : UIStateBase
     public override void UpdateState(UIControl UI) {
         if (!UI.isInMain_1)
         {
-            
-            if (Input.GetKeyUp(KeyCode.Tab))
-                UI.ChangeToIntelState();
-            if (Input.GetKeyUp(UI.Key.openBackpack))
-                UI.openInventory();
-            if (Input.GetKeyUp(UI.Key.openNeuro))
-                UI.openNeuro();
+            if (UI.Player.CanUI)
+            {
+                if (Input.GetKeyUp(KeyCode.Tab))
+                    UI.ChangeToIntelState();
+                if (Input.GetKeyUp(UI.Key.openBackpack))
+                    UI.openInventory();
+                if (Input.GetKeyUp(UI.Key.openNeuro))
+                    UI.openNeuro();
+            }
         }
     }
     public override void LeaveState(UIControl UI) {

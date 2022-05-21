@@ -6,7 +6,6 @@ using Yarn.Unity;
 public class laptop_camera : InteractiveObj
 {
     PlayerBackpack playerBackpack;
-    StateManager state;
     [SerializeField] GameObject laptop;
     [SerializeField] GameObject laptopPOV;
     public static bool workdone;
@@ -14,7 +13,6 @@ public class laptop_camera : InteractiveObj
     private Talkable talk;
     private void Start()
     {
-        state = FindObjectOfType<StateManager>();
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         talk = GetComponent<Talkable>();
     }

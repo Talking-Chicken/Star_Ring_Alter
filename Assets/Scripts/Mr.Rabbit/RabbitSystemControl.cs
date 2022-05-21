@@ -11,12 +11,10 @@ public enum UIState
 
 public class RabbitSystemControl : MonoBehaviour
 {
-    StateManager state;
     [SerializeField, BoxGroup("Functions")] GameObject background, status, inventory, quest, codex, map, neuro;
 
     public static UIState currentUIState = UIState.Empty;
         
-    private StateManager stateManager;
     private KeyManager key;
 
     [Header("Debug - optional"), SerializeField]
@@ -24,7 +22,6 @@ public class RabbitSystemControl : MonoBehaviour
     
     void Start()
     {
-        stateManager = FindObjectOfType<StateManager>();
         key = FindObjectOfType<KeyManager>();
     }
 
@@ -63,143 +60,6 @@ public class RabbitSystemControl : MonoBehaviour
      */
     public void transitionUIState(UIState newState)
     {
-        switch (newState)
-        {
-            case UIState.Status:
-                if (currentUIState == newState && state.getCurrentState() != State.UI)
-                {
-                    onCloseStatus();
-                    transitionUIState(UIState.Empty);
-                    break;
-                }
-                else
-                {
-                    stateManager.transitionState(State.UI);
-                    onOpenBackground();
-                    onCloseInventory();
-                    onCloseQuest();
-                    onCloseCodex();
-                    onCloseNeuro();
-                    onOpenStatus();
-                    currentUIState = newState;
-                    break;
-                }
-            case UIState.Quest:
-                if (currentUIState == newState)
-                {
-                    onCloseQuest();
-                    transitionUIState(UIState.Empty);
-                    break;
-                }
-                else
-                {
-                    stateManager.transitionState(State.UI);
-                    onCloseCodex();
-                    onCloseNeuro();
-                    onOpenQuest();
-                    currentUIState = newState;
-                    break;
-                }
-            case UIState.Inventory:
-                if (currentUIState == newState)
-                {
-                    //exitUI();
-                    break;
-                }
-                else
-                {
-                    stateManager.transitionState(State.UI);
-                    onOpenBackground();
-                    onCloseQuest();
-                    onCloseMap();
-                    onCloseCodex();
-                    onCloseStatus();
-                    onCloseNeuro();
-                    onOpenInventory();
-                    currentUIState = newState;
-                    break;
-                }
-            case UIState.Codex:
-                if (currentUIState == newState)
-                {
-                    onCloseCodex();
-                    transitionUIState(UIState.Empty);
-                    break;
-                }
-                else
-                {
-                    stateManager.transitionState(State.UI);
-                    onCloseInventory();
-                    onCloseQuest();
-                    onCloseNeuro();
-                    onOpenCodex();
-                    currentUIState = newState;
-                    break;
-                }
-            case UIState.Map:
-                if (currentUIState == newState)
-                {
-                    onCloseMap();
-                    transitionUIState(UIState.Empty);
-                    currentUIState = newState;
-                    break;
-                } else
-                {
-                    stateManager.transitionState(State.UI);
-                    onCloseCodex();
-                    onCloseInventory();
-                    onCloseQuest();
-                    onCloseNeuro();
-                    onOpenMap();
-                    currentUIState = newState;
-                    break;
-                }
-            case UIState.Neuro:
-                if (currentUIState == newState)
-                {
-                    //exitUI();
-                    break;
-                } else
-                {
-                    stateManager.transitionState(State.UI);
-                    onCloseCodex();
-                    onCloseInventory();
-                    onCloseMap();
-                    onCloseQuest();
-                    onCloseStatus();
-                    onOpenNeuro();
-                    currentUIState = newState;
-                    break;
-                }
-            case UIState.Test:
-                if (currentUIState == newState)
-                {
-                    //exitUI();
-                    Debug.Log("closing test UIstate");
-                    break;
-                } else
-                {
-                    stateManager.transitionState(State.UI);
-                    onCloseCodex();
-                    onCloseInventory();
-                    onCloseMap();
-                    onCloseQuest();
-                    onCloseStatus();
-                    onCloseNeuro();
-                    currentUIState = newState;
-                    Debug.Log("entering testing state");
-                    break;
-                }
-            case UIState.Empty:
-                onCloseInventory();
-                onCloseQuest();
-                onCloseCodex();
-                onCloseStatus();
-                onCloseBackground();
-                onCloseNeuro();
-                currentUIState = newState;
-                break;
-        }
     }
 
     void onOpenStatus()
@@ -296,7 +156,6 @@ public class RabbitSystemControl : MonoBehaviour
     public void exitUI()
     {
         transitionUIState(UIState.Empty);
-        stateManager.transitionState(State.Explore);
     }
 
 }

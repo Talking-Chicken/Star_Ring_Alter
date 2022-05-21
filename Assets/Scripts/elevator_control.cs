@@ -19,7 +19,6 @@ public class elevator_control : InteractiveObj
 
     private PlayerBackpack playerBackpack;
     private NeuroImplantDevice playerNeuroDevice;
-    private StateManager stateManager;
     public AudioClip machine;
     public AudioSource sound_effect;
     string[] parts;
@@ -37,7 +36,6 @@ public class elevator_control : InteractiveObj
 
         playerBackpack = FindObjectOfType<PlayerBackpack>();
         playerNeuroDevice = FindObjectOfType<PlayerControl>().GetComponent<NeuroImplantDevice>();
-        stateManager = FindObjectOfType<StateManager>();
 
  
     }
@@ -245,7 +243,6 @@ public class elevator_control : InteractiveObj
                 to_roof_top.SetActive(false);
             }
             UIContainer.SetActive(false);
-            stateManager.transitionState(State.Explore);
             FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
         }
     }
@@ -253,7 +250,6 @@ public class elevator_control : InteractiveObj
     public void exit()
     {
         UIContainer.SetActive(false);
-        stateManager.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 

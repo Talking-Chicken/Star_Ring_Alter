@@ -44,7 +44,6 @@ public class TimeLoopSystem : MonoBehaviour
         
        FindObjectOfType<Codex>().saveDialgoueNodesCount();
 
-        FindObjectOfType<StateManager>().transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
         for (var i = 0; i < random_conversation.lines.Length; i++)
         {

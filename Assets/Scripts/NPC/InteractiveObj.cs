@@ -5,7 +5,6 @@ using Yarn.Unity;
 
 public class InteractiveObj : MonoBehaviour
 {
-    private StateManager stateManager;
 
     //COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON     COMMON
     private Vector2 position;

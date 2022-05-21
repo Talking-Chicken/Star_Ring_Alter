@@ -40,6 +40,7 @@ public class cut_scene_dialogue_manager : MonoBehaviour
             // Update is called once per frame
 
         }
+        cutscene = 0;
         GraphicsSettings.defaultRenderPipeline = null;
     }
     private void Update()
@@ -52,9 +53,11 @@ public class cut_scene_dialogue_manager : MonoBehaviour
         {
             case (0):  
                 {
-                    if (looptime.Equals("1")) { runner.startNode = "Random_dialogue.End_of_loop"; }
-                    else { runner.startNode = "Random_dialogue.End_of_loop_1"; }
-                   // cutscene = 1;
+                   if (looptime.Equals("1")) {
+                        runner.startNode = "Random_dialogue.End_of_loop"; 
+                }
+                   else { runner.startNode = "Random_dialogue.End_of_loop_1"; }
+                   //scutscene = 1;
                     break;//Intro
                 }
 

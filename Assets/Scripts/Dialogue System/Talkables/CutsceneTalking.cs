@@ -22,7 +22,6 @@ public class CutsceneTalking : MonoBehaviour
     IEnumerator waitToStart()
     {
         yield return new WaitForSeconds(1.0f);
-        FindObjectOfType<StateManager>().transitionState(State.Dialogue);
         runner.StartDialogue();
     }
 }

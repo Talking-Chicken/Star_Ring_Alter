@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class DialogueControl : MonoBehaviour
 {
-    private StateManager stateManager;
     private KeyManager key;
     private DialogueRunner runner;
     [SerializeField] private DialogueUI UI;
@@ -15,8 +14,11 @@ public class DialogueControl : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     public GameObject[] portraits;
 
+    //player control
+    private PlayerControl player;
+
     //options
-    private int currentOption = 0;
+    public int currentOption = 0;
     private bool isOptionStarted = false;
 
     //those are text and name of current displaying text
@@ -25,8 +27,8 @@ public class DialogueControl : MonoBehaviour
 
     void Start()
     {
+        player = FindObjectOfType<PlayerControl>();
         runner = GetComponentInChildren<DialogueRunner>();
-        stateManager = FindObjectOfType<StateManager>();
         key = FindObjectOfType<KeyManager>();
 
         //check whether all things are set up
@@ -37,6 +39,7 @@ public class DialogueControl : MonoBehaviour
     
     void Update()
     {
+        /*
         switch (stateManager.getCurrentState())
         {
             case State.Explore:
@@ -48,7 +51,12 @@ public class DialogueControl : MonoBehaviour
                 switchOption();
                 chooseOption(currentOption);
                 break;
-        }
+        }*/
+        displayName();
+        continueDialogue();
+        switchOption();
+        chooseOption(currentOption);
+
     }
 
     /**
@@ -85,7 +93,7 @@ public class DialogueControl : MonoBehaviour
      * player exit animation for the one that just deselect, and play enter animation for one that just select
      * when a option contains nothing (""), it will not be able to selected
      */
-    private void switchOption()
+    public void switchOption()
     {
         if (Input.GetKeyDown(key.previous) && currentOption > 0)
             currentOption--;
@@ -99,7 +107,7 @@ public class DialogueControl : MonoBehaviour
     /**
      * press [interact] to choose the current options, and play the animation
      */
-    private void chooseOption(int currentOption)
+    public void chooseOption(int currentOption)
     {
         if (Input.GetKeyDown(key.interact) && isOptionStarted)
         {

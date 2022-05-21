@@ -13,11 +13,13 @@ public class UIStateIntel : UIStateBase
 
     public override void UpdateState(UIControl UI)
     {
-        if (Input.GetKeyUp(UI.Key.openRabbit) || Input.GetKeyUp(KeyCode.Escape))
-        {
-            UI.closeGUI();
-            UI.Player.ChangeState(UI.Player.stateExplore);
-            UI.ChangeState(UI.stateIdle);
+        if (UI.Player.CanUI) {
+            if (Input.GetKeyUp(UI.Key.openRabbit) || Input.GetKeyUp(KeyCode.Escape))
+            {
+                UI.closeGUI();
+                UI.ChangeState(UI.stateIdle);
+                UI.Player.ChangeState(UI.Player.stateExplore);
+            }
         }
 
         if (Input.GetKeyDown(UI.Key.next)) {

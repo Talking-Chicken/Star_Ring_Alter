@@ -13,7 +13,6 @@ public class MaintenanceRobot : InteractiveObj
     Sprite itemIcon;
 
     private PlayerBackpack playerbackpack;
-    private StateManager state;
     private Talkable talk;
     private bool first_time;
 
@@ -23,7 +22,6 @@ public class MaintenanceRobot : InteractiveObj
     void Start()
     {
         playerbackpack = FindObjectOfType<PlayerBackpack>();
-        state = FindObjectOfType<StateManager>();
         talk = GetComponent<Talkable>();
     }
 
@@ -91,7 +89,6 @@ public class MaintenanceRobot : InteractiveObj
     public void exitUI()
     {
         UIContainer.SetActive(false);
-        state.transitionState(State.Explore);
         FindObjectOfType<PlayerControl>().ChangeState(FindObjectOfType<PlayerControl>().stateExplore);
     }
 
