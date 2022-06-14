@@ -51,7 +51,8 @@ public class intel_manager : MonoBehaviour
             {
                 for (int i = 0; i < elevator_door.Length; i++)
                 {
-                    office_1[i].SetActive(true);
+                    if (office_1.Length > i)
+                        office_1[i].SetActive(true);
                 }
 
 
