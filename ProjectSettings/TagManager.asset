@@ -22,7 +22,7 @@ TagManager:
   - 
   - 
   - mini_map
-  - 
+  - Ignore 2D Light
   - 
   - 
   - 
@@ -51,4 +51,7 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: 2D Light
+    uniqueID: 924826891
     locked: 0
