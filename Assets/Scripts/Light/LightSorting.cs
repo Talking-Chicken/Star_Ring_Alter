@@ -20,6 +20,12 @@ public class LightSorting : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.GetComponent<PlayerControl>() != null)
-            collision.GetComponent<SpriteRenderer>().sortingLayerID = 2;
+            collision.GetComponent<SpriteRenderer>().sortingLayerName = "2D Light";
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.GetComponent<PlayerControl>() != null)
+            collision.GetComponent<SpriteRenderer>().sortingLayerName = "Default";
     }
 }
