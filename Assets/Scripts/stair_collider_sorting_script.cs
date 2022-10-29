@@ -31,10 +31,12 @@ public class stair_collider_sorting_script : MonoBehaviour
     {
       
             Collider2D triggerbox = GetComponent<PolygonCollider2D>();
-      
-        if (other.transform.position.y < detection.bounds.center.y)
+        Debug.Log(other.transform.position.y);
+        Debug.Log(detection.bounds.center.y);
+        if ((other.transform.position.y -1.1f)< detection.bounds.center.y)
         {
             stair_active = true;
+            Debug.Log("stair_active");
             active_stair();
            
         }
@@ -46,7 +48,7 @@ public class stair_collider_sorting_script : MonoBehaviour
 
         Collider2D triggerbox = GetComponent<PolygonCollider2D>();
 
-        if (other.transform.position.y < detection.bounds.center.y)
+        if ((other.transform.position.y - 1.1f) < detection.bounds.center.y)
         {
            
             stair_active = false;
