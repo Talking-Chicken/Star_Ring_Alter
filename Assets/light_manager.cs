@@ -8,9 +8,12 @@ public class light_manager : MonoBehaviour
     // Start is called before the first frame update
     bool once = true;
     public Light2D light;
-    int interpolationFramesCount = 200; // Number of frames to completely interpolate between the 2 positions
-    int elapsedFrames = 0;
-  
+    public Light2D[] light_list;
+    float timeElapsed;
+    float lerpDuration = 3;
+    float startValue = 0;
+    float endValue = 10;
+    float valueToLerp;
     void Start()
     {  
     }
@@ -20,9 +23,18 @@ public class light_manager : MonoBehaviour
     {
         if (Time_text.time_2.Minute >= 22)
         {
-            float interpolationRatio = (float)elapsedFrames / interpolationFramesCount;
-            elapsedFrames = (elapsedFrames + 1) % (interpolationFramesCount + 1);  // reset elapsedFrames to zero after it reached (interpolationFramesCount + 1)
-            light.intensity = 0.2f;
+            if (timeElapsed < lerpDuration)
+            {
+                valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
+                timeElapsed += Time.deltaTime;
+                light.intensity = Mathf.Lerp(1f, 0.2f, timeElapsed);
+            }
+            for (int i= 0;i<light_list.Length;i++) 
+            {
+                light_list[i].GetComponent<Light2D>().enabled = true;
+            }
+            
+            
 
            once = false;
 
