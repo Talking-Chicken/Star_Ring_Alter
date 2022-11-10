@@ -117,6 +117,7 @@ public class PlayerControl : MonoBehaviour
      */
     public void talkToSelf(string startNode)
     {
+        Debug.Log("Talking to self with " + startNode);
         ChangeState(stateDialogue);
         dialogueRunner.startNode = startNode;
         dialogueRunner.StartDialogue();

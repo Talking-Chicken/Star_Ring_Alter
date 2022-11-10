@@ -19,6 +19,7 @@ public class name_color : MonoBehaviour
     
         if (textobj.text.Equals("Amo")) { textobj.color = new Color(0.94f, 0.97f, 1.00f); }
         if (textobj.text.Equals("Mr. Rabbit")) { textobj.color = new Color(0.49f, 0.73f, 0.91f); }
+        //    if (textobj.text.Equals("Contractor")) { textobj.color = new Color(0.34f, 1f, 1f); }
 
     }
 }

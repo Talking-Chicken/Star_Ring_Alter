@@ -80,8 +80,14 @@ public class DialogueControl : MonoBehaviour
     public void displayName()
     {
         if (UI != null) {
-            if (UI.getLineText().Contains(":"))
-                characterName = UI.getLineText().Substring(0, UI.getLineText().IndexOf(":"));
+            if (UI.getLineText() != null)
+            {
+                if (UI.getLineText().Contains(":"))
+                    characterName = UI.getLineText().Substring(0, UI.getLineText().IndexOf(":"));
+            } else
+            {
+                characterName = "";
+            }
             this.nameText.text = characterName;
         } else {
             Debug.Log("cannot find dialogue UI");

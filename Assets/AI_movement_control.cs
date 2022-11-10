@@ -50,7 +50,7 @@ public class AI_movement_control : MonoBehaviour
     }
     void setDir() //give dir a Vector2 value, according to WASD that player is pressing
     {
-        Debug.Log(movement);
+      //  Debug.Log(movement);
         if (differencePos.y > 0)
         {
             if (differencePos.x < 0)
