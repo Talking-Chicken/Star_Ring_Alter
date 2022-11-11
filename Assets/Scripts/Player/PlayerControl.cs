@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     public bool CanUI { get; set;}
     [SerializeField] AudioClip pickup;
     [SerializeField] AudioSource audio;
-
+    public dialogue_direction_adjuster adjuster;
     [BoxGroup("Dialogue")] public GameObject NPCToTalk;
     public static bool canTalk = false;
     [SerializeField, BoxGroup("Dialogue")] public DialogueRunner dialogueRunner;
@@ -70,6 +70,7 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
+        adjuster = FindObjectOfType<dialogue_direction_adjuster>();
         UIControl = FindObjectOfType<UIControl>();
         ChangeState(stateExplore);
         myBody = GetComponent<Rigidbody2D>();

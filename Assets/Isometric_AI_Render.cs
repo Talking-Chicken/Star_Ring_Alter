@@ -31,13 +31,14 @@ public class Isometric_AI_Render : MonoBehaviour
         string[] directionArray = null;
 
         //measure the magnitude of the input.
-        if (!move)
+        if (direction.magnitude < .01f)
         {
             //if we are basically standing still, we'll use the Static states
             //we won't be able to calculate a direction if the user isn't pressing one, anyway!
             directionArray = staticDirections;
-          //  audio_source.Stop();
+           // audio_source.Stop();
         }
+       
         else
         {
             //we can calculate which direction we are going in
@@ -51,7 +52,10 @@ public class Isometric_AI_Render : MonoBehaviour
         //tell the animator to play the requested state
         animator.Play(directionArray[lastDirection]);
     }
-
+    public void resetdir(Vector2 newdir)
+    {
+        lastDirection = DirectionToIndex(newdir, 8);
+    }
     //helper functions
 
     //this function converts a Vector2 direction to an index to a slice around a circle

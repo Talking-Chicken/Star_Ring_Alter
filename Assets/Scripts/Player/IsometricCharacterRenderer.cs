@@ -50,7 +50,10 @@ public class IsometricCharacterRenderer : MonoBehaviour
         //tell the animator to play the requested state
         animator.Play(directionArray[lastDirection]);
     }
-
+    public void resetdir(Vector2 newdir)
+    {
+        lastDirection = DirectionToIndex(newdir, 8);
+    }
     //helper functions
 
     //this function converts a Vector2 direction to an index to a slice around a circle

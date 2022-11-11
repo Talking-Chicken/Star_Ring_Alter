@@ -18,7 +18,7 @@ public class AI_movement_control : MonoBehaviour
     Vector2 differencePos;
     Vector2 last_Pos;
     Vector2 current_Pos;
-
+    public float stoppingDistance;
     private void Awake()
     {
       agent = GetComponentInChildren<NavMeshAgent>();
@@ -45,6 +45,12 @@ public class AI_movement_control : MonoBehaviour
         differencePos = currentPos - last_Pos;
       //  Vector2 newPos = currentPos + movement * Time.fixedDeltaTime*movementSpeed;
         agent.SetDestination(targetPos);
+        if (Vector3.Distance(targetPos, transform.position) <= stoppingDistance)
+                {
+            dir = new Vector2(0, 0);
+            agent.isStopped = true;
+            Debug.Log("helmet chan reach dest");
+        }
         //rbody.MovePosition(newPos);
 
     }

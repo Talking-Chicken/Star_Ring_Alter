@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerStateDialogue : PlayerStateBase
 {
+    
     public override void EnterState(PlayerControl player) {
         player.CanUI = false;
     }
@@ -11,6 +12,7 @@ public class PlayerStateDialogue : PlayerStateBase
         player.DialogueControl.displayName();
         player.DialogueControl.continueDialogue();
         player.DialogueControl.switchOption();
+        player.adjuster.set_direction();
         player.DialogueControl.chooseOption(player.DialogueControl.currentOption);
     }
     public override void FixedupdateState(PlayerControl player) {

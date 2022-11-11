@@ -47,6 +47,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
 
     }
+   
     void setDir() //give dir a Vector2 value, according to WASD that player is pressing
     {
         if (Input.GetAxis("Vertical") > 0)
