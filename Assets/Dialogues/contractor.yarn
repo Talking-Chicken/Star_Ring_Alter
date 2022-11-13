@@ -15,3 +15,32 @@ Contractor: I think you should try to get some kinda neural implant that special
 Amo: Hmm… I'll see what I can do.
 Contractor: Thank me later! Also, restock your sodas while you're at it!
 ===
+title: contractor.loop2
+position: -6,-63
+---
+Contractor: …
+Amo: Hey, stop kicking the vending machine.
+Contractor: Huh? If you don't want me to do that, then you should-
+Amo: …Fix the vending machine, yeah. I know. We've been trying to do that. This thing has never worked since Lacey brought it in, and I have no idea how to make it work.
+Contractor: Yeah, yeah. Whatever. It's kinda weird to see an actual vending machine in the first place anyway.
+Contractor: And this one… I think there's something different about it. Right, must be my superior contractor instincts!
+Contractor: You know, if there's more people here, I'll be getting jobs in no time!
+Contractor: Anyway, you want to fix that thing? You-
+Amo: …Should get some kind of engineering neural implant?
+Contractor: Stop interrupting me! If you already know what to do to fix it, then go ahead and do it!
+===
+title: contractor.fix_vending_machine
+position: 10,10
+---
+Amo: I fixed it, with your advice.
+Contractor: Took you long enough! …Thanks, though.
+Amo: No problem. It's all part of the job.
+Amo: Say, what's your name? Feels like I should get to know our customers better.
+Contractor: Contractors don't give out names! We're professionals, and we have callsigns for a reason!
+Amo: I see. What's your callsign, then?
+Stray: It's Stray. Just call me that from now on!
+Amo: Alright, got it. Glad to have you here, Stray. I'm Amo.
+Stray: Yeah, I know that! It's displayed on your neural implant!
+Amo: Huh… guess I still don't really know how to configure the whole permissions thing.
+Amo: I'll figure it out someday…
+===
