@@ -10,8 +10,8 @@ public class InteractiveObj : MonoBehaviour
     private Vector2 position;
     private Color themeColor;
     [SerializeField] private GameObject main_character;
-
-    [SerializeField] private bool canUse = true, canInven = true, canNeuro = true;
+    public bool interactonly;
+   [SerializeField] private bool canUse = true, canInven = true, canNeuro = true;
     [SerializeField]private InvestIcon invest_icon;
     public DialogueRunner runner;
     PlayerControl playerControl;

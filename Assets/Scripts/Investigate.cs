@@ -5,9 +5,11 @@ using UnityEngine;
 public class Investigate : InteractiveObj
 {
     [SerializeField] private string talkingNode;
+   
     // Start is called before the first frame update
     void Start()
     {
+    interactonly=true;
         
     }
 

@@ -210,8 +210,12 @@ public class PlayerControl : MonoBehaviour
         {
             this.InteractingObj = interactingObject;
             //UIControl.openSelectionMenu();
-            ChangeState(stateUI);
-            UIControl.ChangeToSelectionState();
+            if (this.InteractingObj.GetComponent<InteractiveObj>().interactonly) { 
+                this.InteractingObj.GetComponent<InteractiveObj>().interact(); } else
+            {  ChangeState(stateUI);
+               UIControl.ChangeToSelectionState(); }
+
+            
             IsometricPlayerMovementController.movement = new Vector2(0,0);
         } else
         {
