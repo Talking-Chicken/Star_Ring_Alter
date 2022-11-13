@@ -109,15 +109,17 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.postprocessing": {
-      "version": "3.0.1",
-      "depth": 1,
+      "version": "3.0.3",
+      "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.modules.physics": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.core": {
       "version": "7.5.3",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
@@ -125,19 +127,9 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.unity.render-pipelines.lightweight": {
-      "version": "7.5.3",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.render-pipelines.universal": "7.5.3",
-        "com.unity.postprocessing": "3.0.1"
-      },
-      "url": "https://packages.unity.com"
-    },
     "com.unity.render-pipelines.universal": {
       "version": "7.5.3",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.render-pipelines.core": "7.5.3",
@@ -147,7 +139,7 @@
     },
     "com.unity.shadergraph": {
       "version": "7.5.3",
-      "depth": 2,
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.render-pipelines.core": "7.5.3"

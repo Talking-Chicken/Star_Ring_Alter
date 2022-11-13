@@ -14,6 +14,7 @@ public class light_manager : MonoBehaviour
     float startValue = 0;
     float endValue = 10;
     float valueToLerp;
+    public float end_light;
     AudioSource BGM;
     public AudioClip[] BGMs;
     bool once;
@@ -42,7 +43,7 @@ public class light_manager : MonoBehaviour
             {
                 valueToLerp = Mathf.Lerp(startValue, endValue, timeElapsed / lerpDuration);
                 timeElapsed += Time.deltaTime;
-                light.intensity = Mathf.Lerp(1f, 0.2f, timeElapsed);
+                light.intensity = Mathf.Lerp(1f, end_light, timeElapsed);
             }
             for (int i= 0;i<light_list.Length;i++)
             {
