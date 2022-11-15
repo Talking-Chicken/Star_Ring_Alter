@@ -1430,6 +1430,17 @@ PrefabInstance:
       propertyPath: m_margin.z
       value: -108.5831
       objectReference: {fileID: 0}
+    - target: {fileID: 2904160362190626953, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91,
+        type: 2}
+    - target: {fileID: 2904160362190626953, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93b173fbc1c022843b157310e9aa4e8a, type: 3}
 --- !u!1 &1716145049 stripped
