@@ -36,11 +36,11 @@ MonoBehaviour:
     - YarnSpinner.Unity
     - YarnSpinner.Unity.Example
     - YarnSpinnerTests
+    - PsdPlugin
     - com.talecrafter.animationimporter.Editor
     - YarnSpinner.Unity.Editor
     - NaughtyAttributes.Editor
     - NavMeshComponentsEditor
-    - PsdPlugin
     - YarnSpinnerEditorTests
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
