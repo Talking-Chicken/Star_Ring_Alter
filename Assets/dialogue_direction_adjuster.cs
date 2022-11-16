@@ -35,6 +35,14 @@ public class dialogue_direction_adjuster : MonoBehaviour
             setDir();
             player.InteractingObj.transform.parent.GetComponent<Isometric_AI_Render>().resetdir(movement);
         }
+        if (player.InteractingObj.GetComponent<Investigate>() != null)
+        {
+            differencePos = player.InteractingObj.transform.parent.transform.position - player.transform.position;
+            setDir();
+            player.transform.GetComponent<IsometricCharacterRenderer>().resetdir(movement);
+
+          
+        }
 
     }
     void setDir() //give dir a Vector2 value, according to WASD that player is pressing

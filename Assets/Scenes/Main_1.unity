@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -899,9 +899,32 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1295384766463055073}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &39912042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39912041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 560970003f8571540adcf07074b1a564, type: 2}
 --- !u!4 &39912044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1295384766490252941, guid: 01dc9402175b2ea40932bf5504e721de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1295384766463055073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &39912046 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1295384766490252938, guid: 01dc9402175b2ea40932bf5504e721de,
     type: 3}
   m_PrefabInstance: {fileID: 1295384766463055073}
   m_PrefabAsset: {fileID: 0}
@@ -1047,6 +1070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -2051,7 +2075,6 @@ GameObject:
   - component: {fileID: 154820789}
   - component: {fileID: 154820788}
   - component: {fileID: 154820792}
-  - component: {fileID: 154820793}
   m_Layer: 0
   m_Name: moon_lander_camera
   m_TagString: Untagged
@@ -2123,13 +2146,13 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 65.3
+  field of view: 108
   orthographic: 1
-  orthographic size: 6
-  m_Depth: 0
+  orthographic size: 5.66
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2165,39 +2188,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 154820787}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdf678490122e1f42aa56c26821b65c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redOffset: {x: 0.001, y: 0.001}
-  greenOffset: {x: 0, y: 0}
-  blueOffset: {x: 0, y: 0}
---- !u!114 &154820793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 154820787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5aab39654f17b59439d44e1c9cbc9be5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 47fa49ebdbfdba7449d23805790eec05, type: 3}
-  bend: 4
-  scanlineSize1: 100
-  scanlineSpeed1: -5
-  scanlineSize2: 10
-  scanlineSpeed2: -3
-  scanlineAmount: 0.05
-  vignetteSize: 2.2
-  vignetteSmoothness: 0.64
-  vignetteEdgeRound: 11.7
-  noiseSize: 10
-  noiseAmount: 0.05
-  redOffset: {x: 0, y: -0.01}
-  blueOffset: {x: 0, y: 0}
-  greenOffset: {x: 0, y: 0.01}
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 17911b4e4c6901b449a97ebf399df675, type: 2}
 --- !u!1 &158225413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4498,6 +4496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -4722,6 +4721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -7567,7 +7567,6 @@ GameObject:
   - component: {fileID: 467057091}
   - component: {fileID: 467057093}
   - component: {fileID: 467057092}
-  - component: {fileID: 467057094}
   m_Layer: 0
   m_Name: Interactive Area
   m_TagString: Untagged
@@ -7598,9 +7597,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 467057090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a6506c0416ebf48b4167d9e09c4206, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a3de65e2a91d9a40a381b9eb8057da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  main_character: {fileID: 0}
+  interactonly: 0
+  canUse: 1
+  canInven: 1
+  canNeuro: 1
+  invest_icon: {fileID: 0}
+  runner: {fileID: 0}
+  isTimeToTalk: 0
+  indicator: {fileID: 0}
+  indicatorYPos: 0
+  invest_icon_offset: 0
+  talkingNode: MrRabbit.Oven_Start
 --- !u!58 &467057093
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7617,28 +7628,6 @@ CircleCollider2D:
   m_Offset: {x: -0.1105423, y: 0}
   serializedVersion: 2
   m_Radius: 2.15
---- !u!114 &467057094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 467057090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  main_character: {fileID: 0}
-  canUse: 1
-  canInven: 0
-  canNeuro: 0
-  invest_icon: {fileID: 0}
-  runner: {fileID: 0}
-  isTimeToTalk: 0
-  indicator: {fileID: 0}
-  indicatorYPos: 0
-  invest_icon_offset: 0
 --- !u!1 &477247015
 GameObject:
   m_ObjectHideFlags: 0
@@ -10314,6 +10303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -10448,6 +10438,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &729214579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1295384765843225660, guid: 01dc9402175b2ea40932bf5504e721de,
+    type: 3}
+  m_PrefabInstance: {fileID: 1295384766463055073}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &729214582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729214579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f6706fab8fdb114da9b391d3059978c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730920251
 GameObject:
   m_ObjectHideFlags: 0
@@ -10803,6 +10811,7 @@ MonoBehaviour:
   itemIcon: {fileID: 684658674854884365, guid: 0ee7beb5594afb2469d63200d6484483, type: 3}
   interactiIcon: {fileID: 6769845424647146475, guid: e1b6f69c966009f499cd36252dcd4126,
     type: 3}
+  conversation: {fileID: 0}
 --- !u!1 &743504502
 GameObject:
   m_ObjectHideFlags: 0
@@ -15185,7 +15194,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1044957004}
   - component: {fileID: 1044957007}
-  - component: {fileID: 1044957006}
   - component: {fileID: 1044957005}
   m_Layer: 0
   m_Name: Interactive Area (5)
@@ -15217,31 +15225,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1044957003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a3de65e2a91d9a40a381b9eb8057da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
-  canInven: 0
-  canNeuro: 0
+  canInven: 1
+  canNeuro: 1
   invest_icon: {fileID: 0}
   runner: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
   invest_icon_offset: 0
---- !u!114 &1044957006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1044957003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a6506c0416ebf48b4167d9e09c4206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  talkingNode: MrRabbit.White_Board_Start
 --- !u!58 &1044957007
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -16514,6 +16512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 0
   canNeuro: 0
@@ -16613,6 +16612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -17137,6 +17137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -17174,7 +17175,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1186866664}
   - component: {fileID: 1186866667}
-  - component: {fileID: 1186866666}
   - component: {fileID: 1186866665}
   m_Layer: 0
   m_Name: Interactive Area (2)
@@ -17206,31 +17206,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1186866663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a3de65e2a91d9a40a381b9eb8057da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
-  canInven: 0
-  canNeuro: 0
+  canInven: 1
+  canNeuro: 1
   invest_icon: {fileID: 0}
   runner: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
   invest_icon_offset: 0
---- !u!114 &1186866666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186866663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a6506c0416ebf48b4167d9e09c4206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  talkingNode: MrRabbit.Book_Start
 --- !u!58 &1186866667
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17466,7 +17456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1200730492
 Transform:
   m_ObjectHideFlags: 0
@@ -17488,7 +17478,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200730491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2799fe465ad3f042be9d84343d59edd, type: 3}
   m_Name: 
@@ -18962,6 +18952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -23587,6 +23578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -24962,6 +24954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -29539,7 +29532,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1679210312}
   - component: {fileID: 1679210315}
-  - component: {fileID: 1679210314}
   - component: {fileID: 1679210313}
   m_Layer: 0
   m_Name: Interactive Area (3)
@@ -29571,31 +29563,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1679210311}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a3de65e2a91d9a40a381b9eb8057da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
-  canInven: 0
-  canNeuro: 0
+  canInven: 1
+  canNeuro: 1
   invest_icon: {fileID: 0}
   runner: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
   invest_icon_offset: 0
---- !u!114 &1679210314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679210311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a6506c0416ebf48b4167d9e09c4206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  talkingNode: MrRabbit.Communication_Device_Start
 --- !u!58 &1679210315
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -34378,9 +34360,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2904160361801640344, guid: 93b173fbc1c022843b157310e9aa4e8a,
         type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91,
+        type: 2}
+    - target: {fileID: 2904160361801640344, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
       propertyPath: m_fontSizeBase
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 2904160361801640344, guid: 93b173fbc1c022843b157310e9aa4e8a,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93b173fbc1c022843b157310e9aa4e8a, type: 3}
 --- !u!114 &1946369523 stripped
@@ -35058,6 +35051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
   canInven: 1
   canNeuro: 1
@@ -36619,7 +36613,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2049495823}
   - component: {fileID: 2049495826}
-  - component: {fileID: 2049495825}
   - component: {fileID: 2049495824}
   m_Layer: 0
   m_Name: Interactive Area (4)
@@ -36651,31 +36644,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2049495822}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6253ae231ecac3640a8a2b040d34f2aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a3de65e2a91d9a40a381b9eb8057da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   main_character: {fileID: 0}
+  interactonly: 0
   canUse: 1
-  canInven: 0
-  canNeuro: 0
+  canInven: 1
+  canNeuro: 1
   invest_icon: {fileID: 0}
   runner: {fileID: 0}
   isTimeToTalk: 0
   indicator: {fileID: 0}
   indicatorYPos: 0
   invest_icon_offset: 0
---- !u!114 &2049495825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2049495822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16a6506c0416ebf48b4167d9e09c4206, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  talkingNode: MrRabbit.Amo_Toy_Start
 --- !u!58 &2049495826
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -37296,6 +37279,7 @@ MonoBehaviour:
   itemIcon: {fileID: 684658674854884365, guid: 0ee7beb5594afb2469d63200d6484483, type: 3}
   interactiIcon: {fileID: 6769845424647146475, guid: e1b6f69c966009f499cd36252dcd4126,
     type: 3}
+  conversation: {fileID: 0}
 --- !u!1 &2094655088
 GameObject:
   m_ObjectHideFlags: 0
@@ -38209,6 +38193,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1843365636, guid: 01dc9402175b2ea40932bf5504e721de, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201189, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_Name
@@ -38222,12 +38210,12 @@ PrefabInstance:
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.51
+      value: -29.76
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 163.94
+      value: 165.14
       objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201190, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
@@ -38274,11 +38262,82 @@ PrefabInstance:
       propertyPath: audio_source
       value: 
       objectReference: {fileID: 198687947}
+    - target: {fileID: 1295384764881201194, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bea48886de1ac624e895393ae32e4b54,
+        type: 3}
+    - target: {fileID: 1295384764881201196, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: SorterPositionOffset.x
+      value: -0.12830544
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201196, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: SorterPositionOffset.y
+      value: -2.2959137
+      objectReference: {fileID: 0}
     - target: {fileID: 1295384764881201196, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: movingDependencies.Array.data[0]
       value: 
       objectReference: {fileID: 1014633928}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.7637558
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.46691895
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.041438714
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -1.7232673
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3.200349
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201197, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.685
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201198, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: moving_fov
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201198, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: static_fov
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384764881201198, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: main_camera
+      value: 
+      objectReference: {fileID: 39912046}
     - target: {fileID: 1295384764881201199, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: downloadedApps.Array.data[0]
@@ -38304,10 +38363,55 @@ PrefabInstance:
       propertyPath: floor_name
       value: 
       objectReference: {fileID: 1254714642}
+    - target: {fileID: 1295384765843225660, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384765843225663, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384766490252936, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384766490252936, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384766490252938, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_TargetDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384766490252938, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1295384766490252938, guid: 01dc9402175b2ea40932bf5504e721de,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384766490252940, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295384766490252941, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 1476548927565494336, guid: 01dc9402175b2ea40932bf5504e721de,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 01dc9402175b2ea40932bf5504e721de, type: 3}
